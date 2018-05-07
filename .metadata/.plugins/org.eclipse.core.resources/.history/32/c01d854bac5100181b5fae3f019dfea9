@@ -1,0 +1,7 @@
+package domain;
+
+public class Habitacion {
+
+	private int idHabitacion;
+	private Pair<String, Integer>
+}

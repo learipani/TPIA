@@ -1,0 +1,10 @@
+package domain;
+
+public class TerrenoAdverso extends Objeto {
+
+	public TerrenoAdverso(int id, int alto, int ancho, int posY, int posX) 
+	{
+		super(id, alto, ancho, posY, posX);
+	}
+
+}

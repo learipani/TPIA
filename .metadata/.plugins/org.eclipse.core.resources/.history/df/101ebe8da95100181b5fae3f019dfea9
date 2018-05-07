@@ -1,0 +1,15 @@
+package domain;
+
+public class Puerta {
+
+	private int numeroPuerta;
+	private int[] posicionIngreso = new int[2]; 
+	private int[] posicionEngreso = new int[2];
+	
+	public Puerta(int numeroPuerta, int[] posicionIngreso, int[] posicionEngreso) {
+		super();
+		this.numeroPuerta = numeroPuerta;
+		this.posicionIngreso = posicionIngreso;
+		this.posicionEngreso = posicionEngreso;
+	}
+}

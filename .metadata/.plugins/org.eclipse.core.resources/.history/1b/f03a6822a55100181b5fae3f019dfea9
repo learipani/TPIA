@@ -1,0 +1,16 @@
+package domain;
+
+public class Objeto {
+
+	private int idHabitacion;
+	private int[] tamano = new int[2];
+	private int[] ubicacionEnHabitacion = new int[2];
+	
+    public Objeto(int id, int alto, int ancho, int posY, int posX){
+    	this.idHabitacion = id;
+    	this.tamano[0] = alto;
+    	this.tamano[1] = ancho;
+    	this.ubicacionEnHabitacion[0] = posY;
+    	this.ubicacionEnHabitacion[1] = posX;
+    }
+}

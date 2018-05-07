@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<idemia:AgentModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:idemia="utn.frsf.cidisi">
+  <Environment name="EnvironmentSmartToy">
+    <EnvironmentState name="EnvironmentState">
+      <DataStructure name="plano" type="Other"/>
+      <DataStructure name="ubicacionAgente" type="Other"/>
+      <DataStructure name="ubicacionSmartPhone" type="Other"/>
+    </EnvironmentState>
+  </Environment>
+  <Agent name="AgentSmartToy">
+    <Strategy xsi:type="idemia:Search"/>
+    <Goal name="GoalSmartToy" value="normaVectorialIn(ubicacionAgente(),UbicacionSmartPhone()) == 1"/>
+    <AgentState name="SmartToyState">
+      <DataStructure name="ubicacionAgente" type="Other"/>
+      <DataStructure name="ubicacionInicial" type="Other"/>
+      <DataStructure name="plano" type="Other"/>
+      <DataStructure name="orientacion" type="Other"/>
+    </AgentState>
+  </Agent>
+  <Actions execute_by="//@Agent" executed_on="//@Environment" name="GirarDerecha"/>
+  <Actions execute_by="//@Agent" executed_on="//@Environment" name="GirarIzquierda"/>
+  <Actions execute_by="//@Agent" executed_on="//@Environment" name="Avanzar"/>
+  <Actions execute_by="//@Agent" executed_on="//@Environment" name="Retroceder"/>
+  <Perceptions perceived_on="//@Environment" perceived_by="//@Agent" name="smartphone" type="Other"/>
+  <Perceptions perceived_on="//@Environment" perceived_by="//@Agent" name="sensorfrontal" type="Other"/>
+  <Perceptions perceived_on="//@Environment" perceived_by="//@Agent" name="sensorlateralizquierdo"/>
+  <Perceptions perceived_on="//@Environment" perceived_by="//@Agent" name="sensorlateralderecho"/>
+  <Perceptions perceived_on="//@Environment" perceived_by="//@Agent" name="sensortrasero"/>
+</idemia:AgentModel>

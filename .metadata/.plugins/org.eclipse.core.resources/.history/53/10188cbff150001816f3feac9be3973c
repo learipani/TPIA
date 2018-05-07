@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<idemia:AgentModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:idemia="utn.frsf.cidisi">
+  <Environment>
+    <EnvironmentState>
+      <DataStructure/>
+    </EnvironmentState>
+  </Environment>
+  <Agent>
+    <Strategy xsi:type="idemia:Search"/>
+    <Goal/>
+    <AgentState>
+      <DataStructure/>
+    </AgentState>
+  </Agent>
+  <Actions execute_by="//@Agent" executed_on="//@Environment"/>
+  <Perceptions perceived_on="//@Environment" perceived_by="//@Agent"/>
+</idemia:AgentModel>

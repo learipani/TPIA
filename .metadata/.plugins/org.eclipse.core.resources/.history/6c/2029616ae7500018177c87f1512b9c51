@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<idemia:AgentModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:idemia="utn.frsf.cidisi">
+  <Environment name="PlanetaTierra">
+    <EnvironmentState name="EstadoAmbiente">
+      <DataStructure name="mapa" type="Other"/>
+    </EnvironmentState>
+  </Environment>
+  <Agent name="Robot">
+    <Strategy xsi:type="idemia:Search"/>
+    <Goal name="GoalRobot" value="posicion=B"/>
+    <AgentState name="EstadoRobot">
+      <DataStructure name="posicion" type="String"/>
+      <DataStructure name="mapa" type="Other"/>
+    </AgentState>
+  </Agent>
+  <Actions execute_by="//@Agent" executed_on="//@Environment" name="IrA"/>
+  <Actions execute_by="//@Agent" executed_on="//@Environment" name="IrB"/>
+  <Actions execute_by="//@Agent" executed_on="//@Environment" name="IrC"/>
+  <Actions execute_by="//@Agent" executed_on="//@Environment" name="IrD"/>
+  <Actions execute_by="//@Agent" executed_on="//@Environment" name="IrE"/>
+  <Actions execute_by="//@Agent" executed_on="//@Environment" name="IrF"/>
+  <Actions execute_by="//@Agent" executed_on="//@Environment" name="IrG"/>
+  <Perceptions perceived_on="//@Environment" perceived_by="//@Agent" name="vida"/>
+</idemia:AgentModel>
