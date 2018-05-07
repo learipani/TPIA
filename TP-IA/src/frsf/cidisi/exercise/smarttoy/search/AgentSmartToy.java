@@ -22,7 +22,7 @@ public class AgentSmartToy extends SearchBasedAgent {
         // The Agent Goal
         GoalSmartToy agGoal = new GoalSmartToy();
 
-        // The Agent State sadasdasdsad
+        // The Agent State
         AgentSmartToyState agState = new AgentSmartToyState();
         this.setAgentState(agState);
 
