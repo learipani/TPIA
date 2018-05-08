@@ -111,8 +111,28 @@ public class AgentSmartToyState extends SearchBasedAgentState {
     public boolean equals(Object obj) {
        
        //TODO: Complete Method
-        
-        return true;
+    	//Dos estados son iguales si se encuentran en la misma habitacion, y en la misma posicion
+    	//se puede contemplar si la lista de habitaciones visitadas es la misma,
+    	//pero en este momento no hay un metodo que diga las habitaciones visitadas    	
+
+    	AgentSmartToyState estadoComparado = (AgentSmartToyState)obj;
+    	
+    	Habitacion habitacionActual= estadoComparado.getUbicacionAgente().getFirst();//obtiene la habitacion actual
+    	int[] posicionActual = estadoComparado.getUbicacionAgente().getSecond();//obtiene la posicion en la habitacion actual
+    	
+    	boolean mismaHabitacionActual = false;
+    	boolean mismaPosicion = false;
+    	
+        //compara habitacion actual
+    	if(habitacionActual.getIdHabitacion()==(this.getUbicacionAgente().getFirst().getIdHabitacion())){
+    		mismaHabitacionActual = true;
+    	};
+    	//compara posicion actual
+    	if(posicionActual.equals(this.getUbicacionAgente().getSecond())){
+    		mismaPosicion=true;
+    	}
+   
+        return (mismaHabitacionActual && mismaPosicion);
     }
 
 	public Pair<Habitacion, int[]> getUbicacionAgente() {

@@ -5869,3 +5869,22 @@ java.lang.ArrayIndexOutOfBoundsException
 	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:102)
 	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:77)
 	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:206)
+<<<<<<< HEAD
+
+!ENTRY org.eclipse.osgi 2 1 2018-05-08 14:24:10.303
+!MESSAGE NLS unused message: Reflective3CreationTool_title in: messages
+
+!ENTRY org.eclipse.osgi 2 1 2018-05-08 14:24:10.331
+!MESSAGE NLS unused message: Reflective3CreationTool_desc in: messages
+=======
+!SESSION 2018-05-08 18:16:46.174 -----------------------------------------------
+eclipse.buildId=I20090611-1540
+java.version=1.6.0_45
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=es_AR
+Framework arguments:  -product org.eclipse.epp.package.modeling.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.modeling.product
+
+!ENTRY org.eclipse.emf.ecore 2 0 2018-05-08 18:17:39.169
+!MESSAGE Both 'org.pnml.tools.epnk' and 'org.pnml.tools.epnk.diagram' register an extension parser for 'pnx'
+>>>>>>> d5dc96f6192988181c8a0a4edc004f21bfa1833a
