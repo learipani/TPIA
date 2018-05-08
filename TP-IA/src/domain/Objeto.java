@@ -1,5 +1,10 @@
 package domain;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import frsf.cidisi.faia.state.datastructure.Pair;
+
 public class Objeto {
 
 	protected int idHabitacion;
@@ -13,6 +18,10 @@ public class Objeto {
 		this.idHabitacion = idHabitacion;
 		this.tamano = tamano;
 		this.ubicacionEnHabitacion = ubicacionEnHabitacion;
+	}
+    
+	public Objeto() {
+		// TODO Auto-generated constructor stub
 	}
 
 	public int getIdHabitacion() {
@@ -37,5 +46,13 @@ public class Objeto {
 
 	public void setUbicacionEnHabitacion(int[] ubicacionEnHabitacion) {
 		this.ubicacionEnHabitacion = ubicacionEnHabitacion;
+	}
+	
+	// metodo clone (hacerlo)
+	
+	public Objeto clone(){
+		Objeto newObjeto = new Objeto();
+		
+		return newObjeto;
 	}
 }

@@ -30,18 +30,12 @@ public class AgentSmartToyState extends SearchBasedAgentState {
 		this.plano = plano;
 		this.orientacion = orientacion;
 	}
-	 
-	/* (lea)Agregué este constructor vacio para poder hacer el metodo clone sin que tire error
-	** cuando creo una instancia.
-	*/
-	public AgentSmartToyState() {
-		Pair<Habitacion, int[]> ubicacionAgente;
-	    Pair<Habitacion, int[]> ubicacionInicial;
-	    List<Habitacion> plano;
-		boolean[] orientacion = new boolean[4];
-	}
 	
-    /**
+    public AgentSmartToyState() {
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
      * This method clones the state of the agent. It's used in the search
      * process, when creating the search tree.
      */
@@ -54,13 +48,19 @@ public class AgentSmartToyState extends SearchBasedAgentState {
     	//Los atributos de tipo primitvos se pasan por copia(no hay)
     	
     	
-    	//(lea) No se si hay que clonar cada arreglo del par por separado (creo que esta mal) 
+    	//(lea) No se si hay que clonar cada arreglo del par por separado (creo que esta mal)
+    	newAgentSmartToyState.setOrientacion(this.getOrientacion().clone());
+    	
     	Pair<Habitacion, int[]> newUbicacionAgente = new Pair<Habitacion, int[]>(null, null);
-    	newUbicacionAgente = this.getUbicacionAgente();
+    	newUbicacionAgente.setFirst(this.getUbicacionAgente().getFirst().clone());
+    	newUbicacionAgente.setSecond(this.getUbicacionAgente().getSecond().clone());
+    	newAgentSmartToyState.setUbicacionAgente(newUbicacionAgente);
     	
     	Pair<Habitacion, int[]> newUbicacionInicial = new Pair<Habitacion, int[]>(null, null);
-    	newUbicacionInicial = this.getUbicacionInicial();
-
+    	newUbicacionInicial.setFirst(this.getUbicacionInicial().getFirst().clone());
+    	newUbicacionInicial.setSecond(this.getUbicacionInicial().getSecond().clone());
+    	newAgentSmartToyState.setUbicacionInicial(newUbicacionInicial);
+    	
     	//Los atributos que son objetos (los arrays también son de tipo objeto) se pasan por
     	//referencia; luego, es necesario clonarlos
     	List<Habitacion> newPlano = new ArrayList<Habitacion>();

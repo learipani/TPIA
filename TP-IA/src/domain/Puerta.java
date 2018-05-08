@@ -13,6 +13,10 @@ public class Puerta {
 		this.posicionEngreso = posicionEngreso;
 	}
 
+	public Puerta() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public int getNumeroPuerta() {
 		return numeroPuerta;
 	}
@@ -35,5 +39,13 @@ public class Puerta {
 
 	public void setPosicionEngreso(int[] posicionEngreso) {
 		this.posicionEngreso = posicionEngreso;
+	}
+	
+	// metodo clone (hacerlo)
+	
+	public Puerta clone(){
+		Puerta newPuerta = new Puerta();
+		
+		return newPuerta;
 	}
 }

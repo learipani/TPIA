@@ -1,6 +1,7 @@
 package domain;
 
 
+import java.util.ArrayList;
 import java.util.List;
 import frsf.cidisi.faia.state.datastructure.Pair;
 
@@ -30,16 +31,12 @@ public class Habitacion {
 		this.objetos = objetos;
 	}
 	
-	/* Agregue este metodo para poder hacer el clone 
-	 * 
-	*/	
-	protected Habitacion() {
-		this.idHabitacion = idHabitacion;
-		this.habitacionesContiguas = habitacionesContiguas;
-		this.tamano = tamano;
-		this.objetos = objetos;
-	}
 	
+	public Habitacion() {
+		// TODO Auto-generated constructor stub
+	}
+
+
 	public int getIdHabitacion() {
 		return idHabitacion;
 	}
@@ -78,10 +75,24 @@ public class Habitacion {
 	public Habitacion clone(){
 		Habitacion newHabitacion = new Habitacion();
 		
-		newHabitacion.setHabitacionesContiguas(habitacionesContiguas);
-		newHabitacion.setIdHabitacion(idHabitacion);
-		newHabitacion.setObjetos(objetos);
-		newHabitacion.setTamano(tamano);
+		newHabitacion.setIdHabitacion(this.getIdHabitacion());
+		
+		List<Pair<Habitacion, Puerta>> newHabitacionesContiguas = new ArrayList<Pair<Habitacion, Puerta>>();
+		for(Pair<Habitacion, Puerta> p : this.getHabitacionesContiguas()){
+			Pair<Habitacion, Puerta> habitacionContigua = new Pair<Habitacion, Puerta>(null, null); 
+			habitacionContigua.setFirst(p.getFirst().clone());
+			habitacionContigua.setSecond(p.getSecond().clone());
+			newHabitacionesContiguas.add(habitacionContigua);
+		}
+		newHabitacion.setHabitacionesContiguas(newHabitacionesContiguas);
+		
+		newHabitacion.setTamano(this.getTamano().clone());
+		
+		List<Objeto> newObjetos = new ArrayList<Objeto>();
+		for(Objeto objeto : this.getObjetos()){
+			newObjetos.add(objeto.clone());
+		}
+		newHabitacion.setObjetos(newObjetos);
 		
 		return newHabitacion;
 	}
