@@ -41,10 +41,14 @@ public class Puerta {
 		this.posicionEngreso = posicionEngreso;
 	}
 	
-	// metodo clone (hacerlo)
+	// metodo clone 
 	
 	public Puerta clone(){
 		Puerta newPuerta = new Puerta();
+		
+		newPuerta.setNumeroPuerta(this.getNumeroPuerta());
+		newPuerta.setPosicionIngreso(this.getPosicionIngreso().clone());
+		newPuerta.setPosicionEngreso(this.getPosicionEngreso().clone());
 		
 		return newPuerta;
 	}
