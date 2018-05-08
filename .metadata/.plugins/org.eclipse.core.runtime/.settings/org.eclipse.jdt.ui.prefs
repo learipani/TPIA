@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #Tue May 08 17:25:39 ART 2018
+=======
+#Tue May 08 18:17:36 GMT 2018
+>>>>>>> d5dc96f6192988181c8a0a4edc004f21bfa1833a
 =======
 #Tue May 08 18:17:36 GMT 2018
 >>>>>>> d5dc96f6192988181c8a0a4edc004f21bfa1833a
@@ -18,8 +22,12 @@ org.eclipse.jdt.ui.javadoclocations.migrated=true
 proposalOrderMigrated=true
 content_assist_proposals_background=255,255,255
 <<<<<<< HEAD
+<<<<<<< HEAD
 org.eclipse.jdt.ui.formatterprofiles.version=11
 content_assist_number_of_computers=20
+=======
+content_assist_number_of_computers=19
+>>>>>>> d5dc96f6192988181c8a0a4edc004f21bfa1833a
 =======
 content_assist_number_of_computers=19
 >>>>>>> d5dc96f6192988181c8a0a4edc004f21bfa1833a

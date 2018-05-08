@@ -1,5 +1,6 @@
 what,kind,bundleId,bundleVersion,description,time
 <<<<<<< HEAD
+<<<<<<< HEAD
 activated,view,org.eclipse.jdt.ui,3.5.0.v20090604,"org.eclipse.jdt.ui.PackageExplorer",1525800677904
 opened,editor,utn.frsf.cidisi.idemia.diagram,1.0.0.201011251812,"utn.frsf.cidisi.idemia.diagram.part.IdemiaDiagramEditorID",1525800685467
 activated,editor,utn.frsf.cidisi.idemia.diagram,1.0.0.201011251812,"utn.frsf.cidisi.idemia.diagram.part.IdemiaDiagramEditorID",1525800685652
@@ -76,6 +77,8 @@ stopped,bundle,org.eclipse.mylyn.java.tasks,3.2.3.v20100217-0100-e3x,"org.eclips
 stopped,bundle,org.eclipse.mylyn.java.ui,3.2.3.v20100217-0100-e3x,"org.eclipse.mylyn.java.ui",1525811144280
 stopped,bundle,org.eclipse.jst.server.tomcat.ui,1.1.102.v20090424,"org.eclipse.jst.server.tomcat.ui",1525811144433
 =======
+=======
+>>>>>>> d5dc96f6192988181c8a0a4edc004f21bfa1833a
 closed,editor,org.eclipse.jdt.ui,3.5.0.v20090604,"org.eclipse.jdt.ui.CompilationUnitEditor",1525803662671
 activated,view,org.eclipse.jdt.ui,3.5.0.v20090604,"org.eclipse.jdt.ui.PackageExplorer",1525803664765
 started,bundle,org.eclipse.gmf.xpand.migration,1.0.0.v20090608-0720,"org.eclipse.gmf.xpand.migration",1525803664779
@@ -326,4 +329,7 @@ activated,editor,org.eclipse.jdt.ui,3.5.0.v20090604,"org.eclipse.jdt.ui.Compilat
 activated,editor,org.eclipse.jdt.ui,3.5.0.v20090604,"org.eclipse.jdt.ui.CompilationUnitEditor",1525806435427
 closed,editor,org.eclipse.jdt.ui,3.5.0.v20090604,"org.eclipse.jdt.ui.CompilationUnitEditor",1525806435427
 deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1525806437473
+<<<<<<< HEAD
+>>>>>>> d5dc96f6192988181c8a0a4edc004f21bfa1833a
+=======
 >>>>>>> d5dc96f6192988181c8a0a4edc004f21bfa1833a
