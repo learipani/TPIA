@@ -26,7 +26,11 @@ public class EnvironmentSmartToyState extends EnvironmentState {
 		this.ubicacionSmartPhone = ubicacionSmartPhone;
 	}
 
-    /**
+    public EnvironmentSmartToyState() {
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
      * This method is used to setup the initial real world.
      */
     @Override
