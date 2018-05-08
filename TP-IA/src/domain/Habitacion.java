@@ -1,5 +1,6 @@
 package domain;
 
+
 import java.util.List;
 import frsf.cidisi.faia.state.datastructure.Pair;
 
@@ -23,6 +24,16 @@ public class Habitacion {
 			List<Pair<Habitacion, Puerta>> habitacionesContiguas, int[] tamano,
 			List<Objeto> objetos) {
 		super();
+		this.idHabitacion = idHabitacion;
+		this.habitacionesContiguas = habitacionesContiguas;
+		this.tamano = tamano;
+		this.objetos = objetos;
+	}
+	
+	/* Agregue este metodo para poder hacer el clone 
+	 * 
+	*/	
+	protected Habitacion() {
 		this.idHabitacion = idHabitacion;
 		this.habitacionesContiguas = habitacionesContiguas;
 		this.tamano = tamano;
@@ -60,6 +71,19 @@ public class Habitacion {
 
 	public void setObjetos(List<Objeto> objetos) {
 		this.objetos = objetos;
+	}
+	
+	//Metodo clone para poder clonar AgentSmartToyState (no estoy seguro si hay que clonar todo por separado)
+	
+	public Habitacion clone(){
+		Habitacion newHabitacion = new Habitacion();
+		
+		newHabitacion.setHabitacionesContiguas(habitacionesContiguas);
+		newHabitacion.setIdHabitacion(idHabitacion);
+		newHabitacion.setObjetos(objetos);
+		newHabitacion.setTamano(tamano);
+		
+		return newHabitacion;
 	}
 	
 }

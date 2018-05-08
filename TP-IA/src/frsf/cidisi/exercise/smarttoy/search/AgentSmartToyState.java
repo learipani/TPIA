@@ -1,5 +1,6 @@
 package frsf.cidisi.exercise.smarttoy.search;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import domain.Habitacion;
@@ -29,6 +30,16 @@ public class AgentSmartToyState extends SearchBasedAgentState {
 		this.plano = plano;
 		this.orientacion = orientacion;
 	}
+	 
+	/* (lea)Agregué este constructor vacio para poder hacer el metodo clone sin que tire error
+	** cuando creo una instancia.
+	*/
+	public AgentSmartToyState() {
+		Pair<Habitacion, int[]> ubicacionAgente;
+	    Pair<Habitacion, int[]> ubicacionInicial;
+	    List<Habitacion> plano;
+		boolean[] orientacion = new boolean[4];
+	}
 	
     /**
      * This method clones the state of the agent. It's used in the search
@@ -38,8 +49,26 @@ public class AgentSmartToyState extends SearchBasedAgentState {
     public SearchBasedAgentState clone() {
         
 		//TODO: Complete Method
-		
-        return null;
+    	AgentSmartToyState newAgentSmartToyState = new AgentSmartToyState();
+    	
+    	//Los atributos de tipo primitvos se pasan por copia(no hay)
+    	
+    	
+    	//(lea) No se si hay que clonar cada arreglo del par por separado (creo que esta mal) 
+    	Pair<Habitacion, int[]> newUbicacionAgente = new Pair<Habitacion, int[]>(null, null);
+    	newUbicacionAgente = this.getUbicacionAgente();
+    	
+    	Pair<Habitacion, int[]> newUbicacionInicial = new Pair<Habitacion, int[]>(null, null);
+    	newUbicacionInicial = this.getUbicacionInicial();
+
+    	//Los atributos que son objetos (los arrays también son de tipo objeto) se pasan por
+    	//referencia; luego, es necesario clonarlos
+    	List<Habitacion> newPlano = new ArrayList<Habitacion>();
+    	for(Habitacion h : this.getPlano())
+    		newPlano.add(h.clone());
+    	newAgentSmartToyState.setPlano(newPlano);
+    	
+        return newAgentSmartToyState;
     }
 
     /**
