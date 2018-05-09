@@ -156,8 +156,39 @@ public class CreacionHabitaciones {
 		return h4;
 	}
 	
-	public void createHabitacion5(){
+	public Habitacion createHabitacion5(){
+		/**Instanciación de la habitación, los obstaculos, terrenos y puertas**/
 		
+		//Habitacion h4 = new Habitacion(NUMERO_HABITACION, new ArrayList<Pair<Habitacion, Puerta>>(), new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new ArrayList<Objeto>());
+		Habitacion h5 = new Habitacion(5, new ArrayList<Pair<Habitacion, Puerta>>(), new int[]{20,29}, new ArrayList<Objeto>());
+		
+		//Paredes
+		//h2.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
+		h5.addObjeto(new Obstaculo(5, new int[]{1,10}, new int[]{0,0}));
+		h5.addObjeto(new Obstaculo(5, new int[]{1,7}, new int[]{0,13}));
+		h5.addObjeto(new Obstaculo(5, new int[]{1,9}, new int[]{3,20}));
+		h5.addObjeto(new Obstaculo(5, new int[]{1,20}, new int[]{19,0}));
+		h5.addObjeto(new Obstaculo(5, new int[]{1,9}, new int[]{16,20}));
+		h5.addObjeto(new Obstaculo(5, new int[]{18,1}, new int[]{1,0}));
+		h5.addObjeto(new Obstaculo(5, new int[]{3,1}, new int[]{1,19}));
+		h5.addObjeto(new Obstaculo(5, new int[]{3,1}, new int[]{16,19}));
+		h5.addObjeto(new Obstaculo(5, new int[]{12,1}, new int[]{4,28}));
+		
+		//Obstaculos
+		//h1.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
+
+		//Terrenos
+		//h1.addObjeto( new TerrenoAdverso(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}, COSTO_TERRENO) );
+
+		//Puertas
+		//Puerta pu1 = new Puerta(NUMERO_PUERTA, new int[]{FILA_EN_HAB_ACTUAL, COLUMNA_EN_HAB_ACTUAL}, new int[]{FILA_EN_HAB_DESTINO, COLUMNA_EN_HAB_DESTINO})
+		Habitacion h9= new Habitacion(9, null, null, null);
+		
+		h5.addHabitacionesContigua(new Pair<Habitacion, Puerta>(h9, new Puerta(1, new int[]{0,10}, new int[]{48,3}) ));
+		h5.addHabitacionesContigua(new Pair<Habitacion, Puerta>(h9, new Puerta(1, new int[]{0,11}, new int[]{48,4}) ));
+		h5.addHabitacionesContigua(new Pair<Habitacion, Puerta>(h9, new Puerta(1, new int[]{0,12}, new int[]{48,5}) ));
+		
+		return h5;
 	}
 	
 	public void createHabitacion6(){
