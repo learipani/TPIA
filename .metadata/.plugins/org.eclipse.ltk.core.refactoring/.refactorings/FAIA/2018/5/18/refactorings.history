@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Move 1 elements(s) to &apos;TP-IA&apos;&#x0D;&#x0A;- Original project: &apos;FAIA&apos;&#x0D;&#x0A;- Destination element: &apos;TP-IA&apos;&#x0D;&#x0A;- Original element: &apos;ar.edu.utn.frsf.cidisi.faia&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move folder" element1="ar.edu.utn.frsf.cidisi.faia" files="0" flags="589830" folders="1" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1525581317970" target="/TP-IA" units="0" version="1.0"/>
-</session>

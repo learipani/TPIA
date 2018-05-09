@@ -47,6 +47,7 @@ public class EstadoAmbiente extends EnvironmentState {
     	
         String str = "";
         
+        
         str += "Habitaciones sucias: {";
         for(Habitacion h : habitacionesSucias)
         	str+= h.toString() + ", ";

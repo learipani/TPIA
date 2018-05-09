@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:idemia="utn.frsf.cidisi" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_BSLqIFGDEeiMroKP12OYew" type="Idemia" name="smartToy.idemia_diagram" measurementUnit="Pixel">
-  <styles xmi:type="notation:DiagramStyle" xmi:id="_BSLqIVGDEeiMroKP12OYew"/>
-  <element xmi:type="idemia:AgentModel" href="default.idemia#/"/>
-</notation:Diagram>

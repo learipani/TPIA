@@ -63,6 +63,7 @@ public class EstadoAspiradora extends SearchBasedAgentState {
     			newState.setposicion(h);
     	
         return newState;
+        
     }
 
     /**
@@ -99,6 +100,7 @@ public class EstadoAspiradora extends SearchBasedAgentState {
     		if(habActual != null)
     			this.gethabitacionesSucias().remove(habActual);
     	}
+        
     }
 
     /**

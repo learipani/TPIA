@@ -37,6 +37,11 @@ public class EnvironmentSmartToyState extends EnvironmentState {
     public void initState() {
 
         //TODO: Complete Method
+    	
+    	/**Acá hay que pones el estado inicial del agente, es decir:
+    	 * 1) Instanciar todas las habitaciones y agregarlas a al plano     	plano.add(habitacionInstanciada);
+    	 * 2) Instanciar un array con la posicion del jueguete y agregarlo al ubicacionAgente		ubicacionAgente = new Pair<Habitacion, int[]>(habitacionAgente, posicionAgente)
+    	 * 3) Lo mismo que 2 pero con la posicion del llamado**/
     }
 
     /**
@@ -45,8 +50,10 @@ public class EnvironmentSmartToyState extends EnvironmentState {
     @Override
     public String toString() {
         String str = "";
-
-        //TODO: Complete Method
+        
+        str += "\nAgente ubicado en la posicion ["+ ubicacionAgente.getSecond()[0] +";"+ubicacionAgente.getSecond()[1] +"] de la habitación "+  ubicacionAgente.getFirst().getIdHabitacion();
+        
+        str += "\nLlamado realizado desde posicion ["+ ubicacionSmartPhone.getSecond()[0] +";"+ubicacionSmartPhone.getSecond()[1] +"] de la habitación "+  ubicacionSmartPhone.getFirst().getIdHabitacion();
 
         return str;
     }

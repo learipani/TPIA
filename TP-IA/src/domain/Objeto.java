@@ -8,7 +8,7 @@ public class Objeto {
 	
 	
 	
-    protected Objeto(int idHabitacion, int[] tamano, int[] ubicacionEnHabitacion) {
+	public Objeto(int idHabitacion, int[] tamano, int[] ubicacionEnHabitacion) {
 		super();
 		this.idHabitacion = idHabitacion;
 		this.tamano = tamano;

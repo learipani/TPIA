@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;FAIA&apos;" deleteContents="true" description="Delete resource &apos;FAIA&apos;" element1="/FAIA" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1525581391497"/>&#x0A;<refactoring comment="Delete resource &apos;TP-IA&apos;" deleteContents="false" description="Delete resource &apos;TP-IA&apos;" element1="/TP-IA" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1525585776336"/>
-</session>

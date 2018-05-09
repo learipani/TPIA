@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 INDEX VERSION 1.126+C:\Users\lea_r\Documents\GitHub\TPIA\.metadata\.plugins\org.eclipse.jdt.core
 305854171.index
 1657330681.index
@@ -18,3 +19,11 @@ INDEX VERSION 1.126+C:\Users\lea_r\Documents\GitHub\TPIA\.metadata\.plugins\org.
 1697886153.index
 30765161.index
 3133528496.index
+=======
+INDEX VERSION 1.126+C:\Users\Luciano Arrúa\Desktop\TP-IA\TPIA\.metadata\.plugins\org.eclipse.jdt.core
+1657330681.index
+3706019711.index
+3792919871.index
+898289412.index
+4146874359.index
+>>>>>>> 4492e368147802c39032ce6b0702253199453cc6
