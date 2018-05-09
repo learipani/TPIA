@@ -74,3 +74,15 @@ deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",152588621
 activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1525886222385
 executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.file.save",1525886235704
 deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1525886240642
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1525886263967
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1525886267326
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1525886268311
+closed,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1525886270452
+stopped,bundle,org.eclipse.uml2.diagram.codegen.edit,0.9.0.v200906190654,"org.eclipse.uml2.diagram.codegen.edit",1525886278934
+stopped,bundle,org.eclipse.uml2.diagram.codegen,0.9.0.v200906190654,"org.eclipse.uml2.diagram.codegen",1525886278996
+stopped,bundle,org.eclipse.gmf.codegen.ui,1.1.100.v20090424-1042,"org.eclipse.gmf.codegen.ui",1525886280674
+stopped,bundle,org.eclipse.m2m.qvt.oml.ui,2.0.0.v20090526-1940,"org.eclipse.m2m.qvt.oml.ui",1525886280737
+stopped,bundle,org.eclipse.mylyn.pde.ui,3.2.3.v20100217-0100-e3x,"org.eclipse.mylyn.pde.ui",1525886280811
+stopped,bundle,org.eclipse.pde.api.tools.ui,1.0.100.v20090526,"org.eclipse.pde.api.tools.ui",1525886280975
+stopped,bundle,org.eclipse.pde.ds.ui,1.0.0.v20090527,"org.eclipse.pde.ds.ui",1525886281085
+stopped,bundle,org.eclipse.pde.runtime,3.4.100.v20090527,"org.eclipse.pde.runtime",1525886281116
