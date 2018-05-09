@@ -21,7 +21,7 @@ public class Habitacion {
 	private int[] tamano;
 	private List<Objeto> objetos;
 	
-	protected Habitacion(int idHabitacion,
+	public Habitacion(int idHabitacion,
 			List<Pair<Habitacion, Puerta>> habitacionesContiguas, int[] tamano,
 			List<Objeto> objetos) {
 		super();
@@ -30,7 +30,6 @@ public class Habitacion {
 		this.tamano = tamano;
 		this.objetos = objetos;
 	}
-	
 	
 	public Habitacion() {
 		// TODO Auto-generated constructor stub
@@ -53,6 +52,10 @@ public class Habitacion {
 			List<Pair<Habitacion, Puerta>> habitacionesContiguas) {
 		this.habitacionesContiguas = habitacionesContiguas;
 	}
+	
+	public void addHabitacionesContigua(Pair<Habitacion, Puerta> habitacionContigua) {
+		this.habitacionesContiguas.add(habitacionContigua);
+	}
 
 	public int[] getTamano() {
 		return tamano;
@@ -68,6 +71,10 @@ public class Habitacion {
 
 	public void setObjetos(List<Objeto> objetos) {
 		this.objetos = objetos;
+	}
+	
+	public void addObjeto(Objeto objeto) {
+		this.objetos.add(objeto);
 	}
 	
 	//Metodo clone para poder clonar AgentSmartToyState (no estoy seguro si hay que clonar todo por separado)
