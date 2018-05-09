@@ -31,7 +31,32 @@ public class GirarIzquierda extends SearchAction {
         EnvironmentSmartToyState environmentState = (EnvironmentSmartToyState) est;
         AgentSmartToyState agState = ((AgentSmartToyState) ast);
 
-        // TODO: Use this conditions
+        boolean[] agentOrientation = agState.getOrientacion();
+        
+
+        //[norte oeste este sur]   = [arriba izq abajo der]
+            if (agentOrientation[0]==true){//arriba
+            	agentOrientation[0]=false;
+            	agentOrientation[1]=true;
+            }
+            else if (agentOrientation[1]==true){//izq
+            	agentOrientation[1]=false;
+            	agentOrientation[2]=true;
+            }
+            else if (agentOrientation[2]==true){//abajo
+            	agentOrientation[2]=false;
+            	agentOrientation[3]=true;
+            }
+            else if (agentOrientation[3]==true){//der
+            	agentOrientation[3]=false;
+            	agentOrientation[0]=true;
+            }
+                
+            agState.setOrientacion(agentOrientation);
+
+            return environmentState;
+        
+       /* // TODO: Use this conditions
         // PreConditions: null
         // PostConditions: null
         
@@ -43,7 +68,7 @@ public class GirarIzquierda extends SearchAction {
             return environmentState;
         }
 
-        return null;
+        return null;*/
     }
 
     /**

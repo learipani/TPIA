@@ -1,10 +1,11 @@
 package frsf.cidisi.exercise.smarttoy.search.actions;
 
+import domain.Habitacion;
 import frsf.cidisi.exercise.smarttoy.search.*;
 import frsf.cidisi.faia.agent.search.SearchAction;
 import frsf.cidisi.faia.agent.search.SearchBasedAgentState;
-import frsf.cidisi.faia.state.AgentState;
-import frsf.cidisi.faia.state.EnvironmentState;
+import frsf.cidisi.faia.state.*;
+import frsf.cidisi.faia.state.datastructure.Pair;
 
 public class Avanzar extends SearchAction {
 
@@ -31,7 +32,32 @@ public class Avanzar extends SearchAction {
         EnvironmentSmartToyState environmentState = (EnvironmentSmartToyState) est;
         AgentSmartToyState agState = ((AgentSmartToyState) ast);
 
-        // TODO: Use this conditions
+
+    boolean[] agentOrientation = agState.getOrientacion();
+    int fila = environmentState.getUbicacionAgente().getSecond()[0];
+    int columna = environmentState.getUbicacionAgente().getSecond()[1];
+
+    int newFila = fila, newCol = columna;
+
+//[norte oeste este sur]   = [arriba izq abajo der]
+    if (agentOrientation[0]==true)//arriba
+        newFila = fila - 1;
+    else if (agentOrientation[1]==true)//izq
+        newCol = columna - 1;
+    else if (agentOrientation[2]==true)//abajo
+        newFila = fila + 1;
+    else if (agentOrientation[3]==true)//der
+        newCol = columna + 1;
+    
+    Habitacion h = environmentState.getUbicacionAgente().getFirst();
+    int[] newPos = {newFila, newCol};
+    Pair<Habitacion, int[]> ubicacionNueva = new Pair(h,newPos);
+
+    environmentState.setUbicacionAgente(ubicacionNueva);
+
+    return environmentState;
+        
+       /* // TODO: Use this conditions
         // PreConditions: null
         // PostConditions: null
         
@@ -43,7 +69,7 @@ public class Avanzar extends SearchAction {
             return environmentState;
         }
 
-        return null;
+        return null;*/
     }
 
     /**
