@@ -117,20 +117,155 @@ public class CreacionHabitaciones {
 		
 	}
 	
-	public void createHabitacion10(){
+	public Habitacion createHabitacion10(){
+/**Instanciación de la habitación, los obstaculos, terrenos y puertas**/
 		
+		//Habitacion h10 = new Habitacion(NUMERO_HABITACION, new ArrayList<Pair<Habitacion, Puerta>>(), new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new ArrayList<Objeto>());
+		Habitacion h10 = new Habitacion(10, new ArrayList<Pair<Habitacion, Puerta>>(), new int[]{14,18}, new ArrayList<Objeto>());
+		
+		//Paredes
+		//h10.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
+		//verticales
+		h10.addObjeto(new Obstaculo(10, new int[]{9,1}, new int[]{4,0}));
+		h10.addObjeto(new Obstaculo(10, new int[]{12,1}, new int[]{1,17}));   
+		
+		//horizontales
+		h10.addObjeto(new Obstaculo(10, new int[]{1,18}, new int[]{0,0}));
+		h10.addObjeto(new Obstaculo(10, new int[]{1,18}, new int[]{13,0}));  
+		h10.addObjeto(new Obstaculo(10, new int[]{1,1}, new int[]{4,1}));  
+		
+		
+		//Obstaculos
+		//h10.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
+
+		//Terrenos
+		//h10.addObjeto( new TerrenoAdverso(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}, COSTO_TERRENO) );
+
+		//Puertas
+		//Puerta pu1 = new Puerta(NUMERO_PUERTA, new int[]{FILA_EN_HAB_ACTUAL, COLUMNA_EN_HAB_ACTUAL}, new int[]{FILA_EN_HAB_DESTINO, COLUMNA_EN_HAB_DESTINO})
+		
+		Puerta p1 = new Puerta(1, new int[]{2, 0}, new int[]{29, 6});
+		Puerta p2 = new Puerta(1, new int[]{3, 0}, new int[]{30, 6});
+		Puerta p3 = new Puerta(1, new int[]{4, 0}, new int[]{31, 6});
+				
+		Habitacion h9 = new Habitacion(9, null, null, null);
+
+		addHabitacionesContigua(h9, new ArrayList<Puerta>(){pu1, pu2, pu3})
+		 		
+		return h10;
 	}
 	
-	public void createHabitacion11(){
+	public Habitacion createHabitacion11(){
+/**Instanciación de la habitación, los obstaculos, terrenos y puertas**/
 		
+		//Habitacion h11 = new Habitacion(NUMERO_HABITACION, new ArrayList<Pair<Habitacion, Puerta>>(), new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new ArrayList<Objeto>());
+		Habitacion h11 = new Habitacion(11, new ArrayList<Pair<Habitacion, Puerta>>(), new int[]{10,12}, new ArrayList<Objeto>());
+		
+		//Paredes
+		//h11.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
+		//verticales
+		h11.addObjeto(new Obstaculo(11, new int[]{5,1}, new int[]{4,0}));
+		h11.addObjeto(new Obstaculo(11, new int[]{8,1}, new int[]{1,11}));   
+		
+		//horizontales
+		h11.addObjeto(new Obstaculo(11, new int[]{1,12}, new int[]{0,0}));
+		h11.addObjeto(new Obstaculo(11, new int[]{1,12}, new int[]{9,0}));  
+		
+		
+		//Obstaculos
+		//h11.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
+
+		//Terrenos
+		//h11.addObjeto( new TerrenoAdverso(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}, COSTO_TERRENO) );
+
+		//Puertas
+		//Puerta pu1 = new Puerta(NUMERO_PUERTA, new int[]{FILA_EN_HAB_ACTUAL, COLUMNA_EN_HAB_ACTUAL}, new int[]{FILA_EN_HAB_DESTINO, COLUMNA_EN_HAB_DESTINO})
+		
+		Puerta p1 = new Puerta(1, new int[]{2, 0}, new int[]{20, 10});
+		Puerta p2 = new Puerta(1, new int[]{3, 0}, new int[]{21, 10});
+		Puerta p3 = new Puerta(1, new int[]{4, 0}, new int[]{22, 10});
+				
+		Habitacion h9 = new Habitacion(9, null, null, null);
+
+		addHabitacionesContigua(h9, new ArrayList<Puerta>(){pu1, pu2, pu3})
+		 		
+		return h11;
 	}
 	
-	public void createHabitacion12(){
+	public Habitacion createHabitacion12(){
+/**Instanciación de la habitación, los obstaculos, terrenos y puertas**/
 		
+		//Habitacion h12 = new Habitacion(NUMERO_HABITACION, new ArrayList<Pair<Habitacion, Puerta>>(), new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new ArrayList<Objeto>());
+		Habitacion h12 = new Habitacion(12, new ArrayList<Pair<Habitacion, Puerta>>(), new int[]{12,18}, new ArrayList<Objeto>());
+		
+		//Paredes
+		//h12.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
+		//verticales
+		h12.addObjeto(new Obstaculo(12, new int[]{8,1}, new int[]{0,0}));
+		h12.addObjeto(new Obstaculo(12, new int[]{12,1}, new int[]{0,17}));   
+		
+		//horizontales
+		h12.addObjeto(new Obstaculo(12, new int[]{1,1}, new int[]{6,1}));
+		h12.addObjeto(new Obstaculo(12, new int[]{1,16}, new int[]{0,1}));
+		h12.addObjeto(new Obstaculo(12, new int[]{1,17}, new int[]{11,0}));  
+		
+		
+		//Obstaculos
+		//h12.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
+
+		//Terrenos
+		//h12.addObjeto( new TerrenoAdverso(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}, COSTO_TERRENO) );
+
+		//Puertas
+		//Puerta pu1 = new Puerta(NUMERO_PUERTA, new int[]{FILA_EN_HAB_ACTUAL, COLUMNA_EN_HAB_ACTUAL}, new int[]{FILA_EN_HAB_DESTINO, COLUMNA_EN_HAB_DESTINO})
+		
+		Puerta p1 = new Puerta(1, new int[]{8, 0}, new int[]{16, 6});
+		Puerta p2 = new Puerta(1, new int[]{9, 0}, new int[]{17, 6});
+		Puerta p3 = new Puerta(1, new int[]{10, 0}, new int[]{18, 6});
+				
+		Habitacion h9 = new Habitacion(9, null, null, null);
+
+		addHabitacionesContigua(h9, new	 ArrayList<Puerta>(){p1, p2, p3})
+		 		
+		return h12;
 	}
 	
-	public void createHabitacion13(){
+	public Habitacion createHabitacion13(){
+/**Instanciación de la habitación, los obstaculos, terrenos y puertas**/
 		
+		//Habitacion h13 = new Habitacion(NUMERO_HABITACION, new ArrayList<Pair<Habitacion, Puerta>>(), new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new ArrayList<Objeto>());
+		Habitacion h13 = new Habitacion(13, new ArrayList<Pair<Habitacion, Puerta>>(), new int[]{11,16}, new ArrayList<Objeto>());
+		
+		//Paredes
+		//h13.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
+		//verticales
+		h13.addObjeto(new Obstaculo(13, new int[]{11,1}, new int[]{0,0}));
+		h13.addObjeto(new Obstaculo(13, new int[]{11,1}, new int[]{0,15}));   
+		h13.addObjeto(new Obstaculo(13, new int[]{5,1}, new int[]{5,4}));  
+		
+		//horizontales
+		h13.addObjeto(new Obstaculo(13, new int[]{1,14}, new int[]{10,1}));
+		h13.addObjeto(new Obstaculo(13, new int[]{1,11}, new int[]{0,4}));
+		
+		
+		//Obstaculos
+		//h13.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
+
+		//Terrenos
+		//h13.addObjeto( new TerrenoAdverso(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}, COSTO_TERRENO) );
+
+		//Puertas
+		//Puerta pu1 = new Puerta(NUMERO_PUERTA, new int[]{FILA_EN_HAB_ACTUAL, COLUMNA_EN_HAB_ACTUAL}, new int[]{FILA_EN_HAB_DESTINO, COLUMNA_EN_HAB_DESTINO})
+							
+		Puerta p1 = new Puerta(1, new int[]{0, 1}, new int[]{19, 17});
+		Puerta p2 = new Puerta(1, new int[]{0, 2}, new int[]{19, 18});
+		Puerta p3 = new Puerta(1, new int[]{0, 3}, new int[]{19, 19});
+				
+		Habitacion h14 = new Habitacion(14, null, null, null);
+
+		addHabitacionesContigua(h14, new ArrayList<Puerta>(){p1, p2, p3});
+		 		
+		return h13;
 	}
 	
 	public Habitacion createHabitacion14(){
