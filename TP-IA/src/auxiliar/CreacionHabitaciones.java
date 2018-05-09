@@ -227,8 +227,82 @@ public class CreacionHabitaciones {
 		return h6;
 	}
 	
-	public void createHabitacion7(){
+	public Habitacion createHabitacion7(){
+/**Instanciación de la habitación, los obstaculos, terrenos y puertas**/
 		
+		//Habitacion h7 = new Habitacion(NUMERO_HABITACION, new ArrayList<Pair<Habitacion, Puerta>>(), new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new ArrayList<Objeto>());
+		Habitacion h7 = new Habitacion(7, new ArrayList<Pair<Habitacion, Puerta>>(), new int[]{36,23}, new ArrayList<Objeto>());
+		
+		//Paredes
+		//h7.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
+		//verticales
+		h7.addObjeto(new Obstaculo(7, new int[]{18,1}, new int[]{0,5}));
+		h7.addObjeto(new Obstaculo(7, new int[]{8,1}, new int[]{25,0}));   
+		h7.addObjeto(new Obstaculo(7, new int[]{4,1}, new int[]{32,4}));
+		h7.addObjeto(new Obstaculo(7, new int[]{4,1}, new int[]{31,22}));   
+		h7.addObjeto(new Obstaculo(7, new int[]{19,1}, new int[]{12,19}));   
+		h7.addObjeto(new Obstaculo(7, new int[]{5,1}, new int[]{0,21}));   
+		h7.addObjeto(new Obstaculo(7, new int[]{5,1}, new int[]{0,11}));   
+
+		
+		//horizontales
+		h7.addObjeto(new Obstaculo(7, new int[]{1,5}, new int[]{17,0}));
+		h7.addObjeto(new Obstaculo(7, new int[]{1,18}, new int[]{35,5}));  
+		h7.addObjeto(new Obstaculo(7, new int[]{1,3}, new int[]{31,19}));  
+		h7.addObjeto(new Obstaculo(7, new int[]{1,2}, new int[]{20,12}));		
+		h7.addObjeto(new Obstaculo(7, new int[]{1,9}, new int[]{0,12}));
+		
+		
+		//Obstaculos
+		//h7.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
+
+		//Terrenos
+		//h7.addObjeto( new TerrenoAdverso(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}, COSTO_TERRENO) );
+
+		//Puertas
+		//Puerta pu1 = new Puerta(NUMERO_PUERTA, new int[]{FILA_EN_HAB_ACTUAL, COLUMNA_EN_HAB_ACTUAL}, new int[]{FILA_EN_HAB_DESTINO, COLUMNA_EN_HAB_DESTINO})
+		
+		Puerta p11 = new Puerta(1, new int[]{0, 6}, new int[]{15, 1});
+		Puerta p12 = new Puerta(1, new int[]{0, 7}, new int[]{15, 2});
+		Puerta p13 = new Puerta(1, new int[]{0, 8}, new int[]{15, 3});
+		Puerta p14 = new Puerta(1, new int[]{0, 9}, new int[]{15, 4});
+		Puerta p15 = new Puerta(1, new int[]{0, 10}, new int[]{15, 5});
+		
+		Puerta p21 = new Puerta(2, new int[]{5, 21}, new int[]{18, 0});
+		Puerta p22 = new Puerta(2, new int[]{6, 21}, new int[]{19, 0});
+		Puerta p23 = new Puerta(2, new int[]{7, 21}, new int[]{20, 0});
+		Puerta p24 = new Puerta(2, new int[]{8, 21}, new int[]{21, 0});
+		Puerta p25 = new Puerta(2, new int[]{9, 21}, new int[]{22, 0});
+		Puerta p26 = new Puerta(2, new int[]{10, 21}, new int[]{23, 0});
+		Puerta p27 = new Puerta(2, new int[]{11, 21}, new int[]{24, 0});
+		
+		Puerta p31 = new Puerta(3, new int[]{18, 0}, new int[]{13, 8});
+		Puerta p22 = new Puerta(3, new int[]{19, 0}, new int[]{14, 8});
+		Puerta p33 = new Puerta(3, new int[]{20, 0}, new int[]{15, 8});
+		Puerta p34 = new Puerta(4, new int[]{21, 0}, new int[]{16, 8});
+		Puerta p35 = new Puerta(4, new int[]{22, 0}, new int[]{17, 8});
+		Puerta p36 = new Puerta(4, new int[]{23, 0}, new int[]{18, 8});
+		Puerta p37 = new Puerta(5, new int[]{24, 0}, new int[]{19, 8});
+		
+		Puerta p41 = new Puerta(5, new int[]{32, 1}, new int[]{0, 3});
+		Puerta p42 = new Puerta(5, new int[]{32, 2}, new int[]{0, 4});
+		Puerta p43 = new Puerta(6, new int[]{32, 3}, new int[]{0, 5});
+		
+		
+		Habitacion h15 = new Habitacion(5, null, null, null);
+		Habitacion h9 = new Habitacion(7, null, null, null);
+		Habitacion h6 = new Habitacion(8, null, null, null);
+		Habitacion h2 = new Habitacion(10, null, null, null);
+
+				
+
+		h7.addHabitacionesContigua(h15, new ArrayList<Puerta>(){p11, p12, p13,p14,p15});
+		h7.addHabitacionesContigua(h9, new ArrayList<Puerta>(){p21, p22, p23,p24,p25,p26,p27});
+		h7.addHabitacionesContigua(h6, new ArrayList<Puerta>(){p31, p32, p33,p34,p35,p36,p37});
+		h7.addHabitacionesContigua(h2, new ArrayList<Puerta>(){p41, p42, p43});
+
+		 		
+		return h7;
 	}
 	
 	public Habitacion createHabitacion8(){
@@ -337,13 +411,13 @@ public class CreacionHabitaciones {
 		Habitacion h14 = new Habitacion(14, null, null, null);
 				
 
-		addHabitacionesContigua(h14, new ArrayList<Puerta>(){p11, p12, p13,p14,p15});
-		addHabitacionesContigua(h7, new ArrayList<Puerta>(){p21, p22, p23,p24,p25,p26,p27});
-		addHabitacionesContigua(h12, new ArrayList<Puerta>(){p31, p32, p33});
-		addHabitacionesContigua(h11, new ArrayList<Puerta>(){p41, p42, p43});
-		addHabitacionesContigua(h10, new ArrayList<Puerta>(){p51, p52, p53});
-		addHabitacionesContigua(h8, new ArrayList<Puerta>(){p61, p62, p63,p64});
-		addHabitacionesContigua(h5, new ArrayList<Puerta>(){p71, p72, p73});
+		h9.addHabitacionesContigua(h14, new ArrayList<Puerta>(){p11, p12, p13,p14,p15});
+		h9.addHabitacionesContigua(h7, new ArrayList<Puerta>(){p21, p22, p23,p24,p25,p26,p27});
+		h9.addHabitacionesContigua(h12, new ArrayList<Puerta>(){p31, p32, p33});
+		h9.addHabitacionesContigua(h11, new ArrayList<Puerta>(){p41, p42, p43});
+		h9.addHabitacionesContigua(h10, new ArrayList<Puerta>(){p51, p52, p53});
+		h9.addHabitacionesContigua(h8, new ArrayList<Puerta>(){p61, p62, p63,p64});
+		h9.addHabitacionesContigua(h5, new ArrayList<Puerta>(){p71, p72, p73});
 		
 		 		
 		return h9;
@@ -382,7 +456,7 @@ public class CreacionHabitaciones {
 				
 		Habitacion h9 = new Habitacion(9, null, null, null);
 
-		addHabitacionesContigua(h9, new ArrayList<Puerta>(){pu1, pu2, pu3})
+		h10.addHabitacionesContigua(h9, new ArrayList<Puerta>(){pu1, pu2, pu3});
 		 		
 		return h10;
 	}
@@ -419,7 +493,7 @@ public class CreacionHabitaciones {
 				
 		Habitacion h9 = new Habitacion(9, null, null, null);
 
-		addHabitacionesContigua(h9, new ArrayList<Puerta>(){pu1, pu2, pu3})
+		h11.addHabitacionesContigua(h9, new ArrayList<Puerta>(){pu1, pu2, pu3});
 		 		
 		return h11;
 	}
@@ -457,7 +531,7 @@ public class CreacionHabitaciones {
 				
 		Habitacion h9 = new Habitacion(9, null, null, null);
 
-		addHabitacionesContigua(h9, new	 ArrayList<Puerta>(){p1, p2, p3})
+		h12.addHabitacionesContigua(h9, new	 ArrayList<Puerta>(){p1, p2, p3})
 		 		
 		return h12;
 	}
@@ -495,7 +569,7 @@ public class CreacionHabitaciones {
 				
 		Habitacion h14 = new Habitacion(14, null, null, null);
 
-		addHabitacionesContigua(h14, new ArrayList<Puerta>(){p1, p2, p3});
+		h13.addHabitacionesContigua(h14, new ArrayList<Puerta>(){p1, p2, p3});
 		 		
 		return h13;
 	}
