@@ -89,12 +89,71 @@ public class CreacionHabitaciones {
 		return h2;
 	}
 	
-	public void createHabitacion3(){
+	public Habitacion createHabitacion3(){
+		/**Instanciación de la habitación, los obstaculos, terrenos y puertas**/
 		
+		//Habitacion h3 = new Habitacion(NUMERO_HABITACION, new ArrayList<Pair<Habitacion, Puerta>>(), new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new ArrayList<Objeto>());
+		Habitacion h3 = new Habitacion(3, new ArrayList<Pair<Habitacion, Puerta>>(), new int[]{15,11}, new ArrayList<Objeto>());
+		
+		//Paredes
+		//h2.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
+		h3.addObjeto(new Obstaculo(3, new int[]{1,4}, new int[]{0,0}));
+		h3.addObjeto(new Obstaculo(3, new int[]{1,4}, new int[]{0,7}));
+		h3.addObjeto(new Obstaculo(3, new int[]{10,1}, new int[]{4,0}));
+		h3.addObjeto(new Obstaculo(3, new int[]{13,1}, new int[]{1,10}));
+		h3.addObjeto(new Obstaculo(3, new int[]{1,11}, new int[]{14,0}));
+		
+		//Obstaculos
+		//h1.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
+
+		//Terrenos
+		//h1.addObjeto( new TerrenoAdverso(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}, COSTO_TERRENO) );
+
+		//Puertas
+		//Puerta pu1 = new Puerta(NUMERO_PUERTA, new int[]{FILA_EN_HAB_ACTUAL, COLUMNA_EN_HAB_ACTUAL}, new int[]{FILA_EN_HAB_DESTINO, COLUMNA_EN_HAB_DESTINO})
+		Habitacion h2= new Habitacion(2, null, null, null);
+		Habitacion h4= new Habitacion(4, null, null, null);
+		
+		h3.addHabitacionesContigua(new Pair<Habitacion, Puerta>(h2, new Puerta(1, new int[]{1,0}, new int[]{10, 6}) ));
+		h3.addHabitacionesContigua(new Pair<Habitacion, Puerta>(h2, new Puerta(1, new int[]{2,0}, new int[]{11, 6}) ));
+		h3.addHabitacionesContigua(new Pair<Habitacion, Puerta>(h2, new Puerta(1, new int[]{3,0}, new int[]{12, 6}) ));
+		
+		h3.addHabitacionesContigua(new Pair<Habitacion, Puerta>(h4, new Puerta(2, new int[]{0,4}, new int[]{6, 4}) ));
+		h3.addHabitacionesContigua(new Pair<Habitacion, Puerta>(h4, new Puerta(2, new int[]{0,5}, new int[]{6, 5}) ));
+		h3.addHabitacionesContigua(new Pair<Habitacion, Puerta>(h4, new Puerta(2, new int[]{0,6}, new int[]{6, 6}) ));
+				
+		return h3;
 	}
 	
-	public void createHabitacion4(){
+	public Habitacion createHabitacion4(){
+		/**Instanciación de la habitación, los obstaculos, terrenos y puertas**/
 		
+		//Habitacion h4 = new Habitacion(NUMERO_HABITACION, new ArrayList<Pair<Habitacion, Puerta>>(), new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new ArrayList<Objeto>());
+		Habitacion h4 = new Habitacion(4, new ArrayList<Pair<Habitacion, Puerta>>(), new int[]{7,11}, new ArrayList<Objeto>());
+		
+		//Paredes
+		//h2.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
+		h4.addObjeto(new Obstaculo(3, new int[]{1,11}, new int[]{0,0}));
+		h4.addObjeto(new Obstaculo(3, new int[]{5,1}, new int[]{1,0}));
+		h4.addObjeto(new Obstaculo(3, new int[]{5,1}, new int[]{1,10}));
+		h4.addObjeto(new Obstaculo(3, new int[]{1,4}, new int[]{6,0}));
+		h4.addObjeto(new Obstaculo(3, new int[]{1,4}, new int[]{6,7}));
+		
+		//Obstaculos
+		//h1.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
+
+		//Terrenos
+		//h1.addObjeto( new TerrenoAdverso(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}, COSTO_TERRENO) );
+
+		//Puertas
+		//Puerta pu1 = new Puerta(NUMERO_PUERTA, new int[]{FILA_EN_HAB_ACTUAL, COLUMNA_EN_HAB_ACTUAL}, new int[]{FILA_EN_HAB_DESTINO, COLUMNA_EN_HAB_DESTINO})
+		Habitacion h3= new Habitacion(3, null, null, null);
+		
+		h4.addHabitacionesContigua(new Pair<Habitacion, Puerta>(h3, new Puerta(1, new int[]{6,4}, new int[]{0,4}) ));
+		h4.addHabitacionesContigua(new Pair<Habitacion, Puerta>(h3, new Puerta(1, new int[]{6,5}, new int[]{0,5}) ));
+		h4.addHabitacionesContigua(new Pair<Habitacion, Puerta>(h3, new Puerta(1, new int[]{6,6}, new int[]{0,6}) ));
+		
+		return h4;
 	}
 	
 	public void createHabitacion5(){
@@ -156,7 +215,7 @@ public class CreacionHabitaciones {
 	}
 	
 	public Habitacion createHabitacion11(){
-/**Instanciación de la habitación, los obstaculos, terrenos y puertas**/
+		/**Instanciación de la habitación, los obstaculos, terrenos y puertas**/
 		
 		//Habitacion h11 = new Habitacion(NUMERO_HABITACION, new ArrayList<Pair<Habitacion, Puerta>>(), new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new ArrayList<Objeto>());
 		Habitacion h11 = new Habitacion(11, new ArrayList<Pair<Habitacion, Puerta>>(), new int[]{10,12}, new ArrayList<Objeto>());
