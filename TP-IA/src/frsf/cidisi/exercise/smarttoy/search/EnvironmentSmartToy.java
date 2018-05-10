@@ -1,14 +1,20 @@
 package frsf.cidisi.exercise.smarttoy.search;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import domain.Habitacion;
+import domain.Objeto;
 import frsf.cidisi.faia.agent.Action;
 import frsf.cidisi.faia.agent.Perception;
 import frsf.cidisi.faia.environment.Environment;
+import frsf.cidisi.faia.state.datastructure.Pair;
 
 public class EnvironmentSmartToy extends Environment {
 
     public EnvironmentSmartToy() {
         // Create the environment state
-        this.environmentState = new EnvironmentSmartToyState();
+        this.environmentState = new EnvironmentSmartToyState(new ArrayList<Habitacion>(), new Pair<Habitacion, int[]>(null,  new int[] {0,0}), new Pair<Habitacion, int[]>(null, new int[] {0,0}));
     }
 
     public EnvironmentSmartToyState getEnvironmentState() {

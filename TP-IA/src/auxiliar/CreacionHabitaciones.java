@@ -13,7 +13,7 @@ import frsf.cidisi.faia.state.datastructure.Pair;
 
 public class CreacionHabitaciones {
 
-	public Habitacion createHabitacion1(){
+	public static Habitacion createHabitacion1(){
 		/**Instanciación de la habitación, los obstaculos, terrenos y puertas**/
 		
 		//Habitacion h1 = new Habitacion(NUMERO_HABITACION,  new ArrayList<Pair<Integer, List<Puerta>>>(), new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new ArrayList<Objeto>());
@@ -41,11 +41,10 @@ public class CreacionHabitaciones {
 		Puerta pu5 = new Puerta(1, new int[]{6,5}, new int[]{5, 0});
 		h1.addHabitacionContigua(new Pair<Integer, List<Puerta>> (2, new ArrayList<Puerta>(Arrays.asList(pu1, pu2, pu3, pu4, pu5))));
 
-		
 		return h1;
 	}
 	
-	public Habitacion createHabitacion2(){
+	public static Habitacion createHabitacion2(){
 		/**Instanciación de la habitación, los obstaculos, terrenos y puertas**/
 		
 		//Habitacion h2 = new Habitacion(NUMERO_HABITACION,  new ArrayList<Pair<Integer, List<Puerta>>>(), new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new ArrayList<Objeto>());
@@ -89,7 +88,7 @@ public class CreacionHabitaciones {
 		return h2;
 	}
 	
-	public Habitacion createHabitacion3(){
+	public static Habitacion createHabitacion3(){
 		/**Instanciación de la habitación, los obstaculos, terrenos y puertas**/
 		
 		//Habitacion h3 = new Habitacion(NUMERO_HABITACION,  new ArrayList<Pair<Integer, List<Puerta>>>(), new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new ArrayList<Objeto>());
@@ -125,7 +124,7 @@ public class CreacionHabitaciones {
 		return h3;
 	}
 	
-	public Habitacion createHabitacion4(){
+	public static Habitacion createHabitacion4(){
 		/**Instanciación de la habitación, los obstaculos, terrenos y puertas**/
 		
 		//Habitacion h4 = new Habitacion(NUMERO_HABITACION,  new ArrayList<Pair<Integer, List<Puerta>>>(), new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new ArrayList<Objeto>());
@@ -156,7 +155,7 @@ public class CreacionHabitaciones {
 		return h4;
 	}
 	
-	public Habitacion createHabitacion5(){
+	public static Habitacion createHabitacion5(){
 		/**Instanciación de la habitación, los obstaculos, terrenos y puertas**/
 		
 		//Habitacion h5 = new Habitacion(NUMERO_HABITACION,  new ArrayList<Pair<Integer, List<Puerta>>>(), new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new ArrayList<Objeto>());
@@ -190,7 +189,7 @@ public class CreacionHabitaciones {
 		return h5;
 	}
 	
-	public Habitacion createHabitacion6(){
+	public static Habitacion createHabitacion6(){
 		/**Instanciación de la habitación, los obstaculos, terrenos y puertas**/
 		
 		//Habitacion h6 = new Habitacion(NUMERO_HABITACION,  new ArrayList<Pair<Integer, List<Puerta>>>(), new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new ArrayList<Objeto>());
@@ -226,7 +225,7 @@ public class CreacionHabitaciones {
 		return h6;
 	}
 	
-	public Habitacion createHabitacion7(){
+	public static Habitacion createHabitacion7(){
 /**Instanciación de la habitación, los obstaculos, terrenos y puertas**/
 		
 		//Habitacion h7 = new Habitacion(NUMERO_HABITACION,  new ArrayList<Pair<Integer, List<Puerta>>>(), new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new ArrayList<Objeto>());
@@ -294,7 +293,7 @@ public class CreacionHabitaciones {
 		return h7;
 	}
 	
-	public Habitacion createHabitacion8(){
+	public static Habitacion createHabitacion8(){
 		/**Instanciación de la habitación, los obstaculos, terrenos y puertas**/
 		
 		//Habitacion h8 = new Habitacion(NUMERO_HABITACION,  new ArrayList<Pair<Integer, List<Puerta>>>(), new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new ArrayList<Objeto>());
@@ -326,7 +325,7 @@ public class CreacionHabitaciones {
 		return h8;
 	}
 	
-	public Habitacion createHabitacion9(){
+	public static Habitacion createHabitacion9(){
 /**Instanciación de la habitación, los obstaculos, terrenos y puertas**/
 		
 		//Habitacion h9 = new Habitacion(NUMERO_HABITACION,  new ArrayList<Pair<Integer, List<Puerta>>>(), new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new ArrayList<Objeto>());
@@ -401,7 +400,7 @@ public class CreacionHabitaciones {
 		return h9;
 	}
 	
-	public Habitacion createHabitacion10(){
+	public static Habitacion createHabitacion10(){
 /**Instanciación de la habitación, los obstaculos, terrenos y puertas**/
 		
 		//Habitacion h10 = new Habitacion(NUMERO_HABITACION,  new ArrayList<Pair<Integer, List<Puerta>>>(), new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new ArrayList<Objeto>());
@@ -435,7 +434,7 @@ public class CreacionHabitaciones {
 		return h10;
 	}
 	
-	public Habitacion createHabitacion11(){
+	public static Habitacion createHabitacion11(){
 		/**Instanciación de la habitación, los obstaculos, terrenos y puertas**/
 		
 		//Habitacion h11 = new Habitacion(NUMERO_HABITACION,  new ArrayList<Pair<Integer, List<Puerta>>>(), new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new ArrayList<Objeto>());
@@ -467,7 +466,7 @@ public class CreacionHabitaciones {
 		return h11;
 	}
 	
-	public Habitacion createHabitacion12(){
+	public static Habitacion createHabitacion12(){
 /**Instanciación de la habitación, los obstaculos, terrenos y puertas**/
 		
 		//Habitacion h12 = new Habitacion(NUMERO_HABITACION,  new ArrayList<Pair<Integer, List<Puerta>>>(), new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new ArrayList<Objeto>());
@@ -502,7 +501,7 @@ public class CreacionHabitaciones {
 		return h12;
 	}
 	
-	public Habitacion createHabitacion13(){
+	public static Habitacion createHabitacion13(){
 /**Instanciación de la habitación, los obstaculos, terrenos y puertas**/
 		
 		//Habitacion h13 = new Habitacion(NUMERO_HABITACION,  new ArrayList<Pair<Integer, List<Puerta>>>(), new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new ArrayList<Objeto>());
@@ -538,7 +537,7 @@ public class CreacionHabitaciones {
 		return h13;
 	}
 	
-	public Habitacion createHabitacion14(){
+	public static Habitacion createHabitacion14(){
 		/**Instanciación de la habitación, los obstaculos, terrenos y puertas**/
 		
 		//Habitacion h14 = new Habitacion(NUMERO_HABITACION,  new ArrayList<Pair<Integer, List<Puerta>>>(), new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new ArrayList<Objeto>());
@@ -582,7 +581,7 @@ public class CreacionHabitaciones {
 		return h14;
 	}
 	
-	public Habitacion createHabitacion15(){
+	public static Habitacion createHabitacion15(){
 		//Habitacion h14 = new Habitacion(NUMERO_HABITACION,  new ArrayList<Pair<Integer, List<Puerta>>>(), new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new ArrayList<Objeto>());
 		Habitacion h15 = new Habitacion(14, new ArrayList<Pair<Integer, List<Puerta>>>(), new int[]{16,17}, new ArrayList<Objeto>());
 		

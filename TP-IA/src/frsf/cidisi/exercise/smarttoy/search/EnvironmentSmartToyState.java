@@ -2,6 +2,8 @@ package frsf.cidisi.exercise.smarttoy.search;
 
 import java.util.List;
 
+import auxiliar.CreacionHabitaciones;
+
 import domain.Habitacion;
 import frsf.cidisi.faia.state.EnvironmentState;
 import frsf.cidisi.faia.state.datastructure.Pair;
@@ -24,24 +26,40 @@ public class EnvironmentSmartToyState extends EnvironmentState {
 		this.plano = plano;
 		this.ubicacionAgente = ubicacionAgente;
 		this.ubicacionSmartPhone = ubicacionSmartPhone;
+		initState();
 	}
-
-    public EnvironmentSmartToyState() {
-		// TODO Auto-generated constructor stub
-	}
-
+    
 	/**
      * This method is used to setup the initial real world.
      */
     @Override
     public void initState() {
-
-        //TODO: Complete Method
+    	//Add de habitaciones al plano
+    	this.plano.add(CreacionHabitaciones.createHabitacion1());
+    	this.plano.add(CreacionHabitaciones.createHabitacion2());
+    	this.plano.add(CreacionHabitaciones.createHabitacion3());
+    	this.plano.add(CreacionHabitaciones.createHabitacion4());
+    	this.plano.add(CreacionHabitaciones.createHabitacion5());
+    	this.plano.add(CreacionHabitaciones.createHabitacion6());
+    	this.plano.add(CreacionHabitaciones.createHabitacion7());
+    	this.plano.add(CreacionHabitaciones.createHabitacion8());
+    	this.plano.add(CreacionHabitaciones.createHabitacion9());
+    	this.plano.add(CreacionHabitaciones.createHabitacion10());
+    	this.plano.add(CreacionHabitaciones.createHabitacion11());
+    	this.plano.add(CreacionHabitaciones.createHabitacion11());
+    	this.plano.add(CreacionHabitaciones.createHabitacion12());
+    	this.plano.add(CreacionHabitaciones.createHabitacion13());
+    	this.plano.add(CreacionHabitaciones.createHabitacion14());
+    	this.plano.add(CreacionHabitaciones.createHabitacion15());
     	
-    	/**Acá hay que pones el estado inicial del agente, es decir:
-    	 * 1) Instanciar todas las habitaciones y agregarlas a al plano     	plano.add(habitacionInstanciada);
-    	 * 2) Instanciar un array con la posicion del jueguete y agregarlo al ubicacionAgente		ubicacionAgente = new Pair<Habitacion, int[]>(habitacionAgente, posicionAgente)
-    	 * 3) Lo mismo que 2 pero con la posicion del llamado**/
+    	//Setea la posicion inicial del agente
+    	this.ubicacionAgente.setFirst(this.getPlano().get(0)); //Habitacion .get(HABITACION)
+    	this.ubicacionAgente.setSecond(new int[]{3,3}); //Posicion dentro de la habitación {FILA, COLUMNA})
+    	
+    	//Setea la posicion del llamado
+    	this.ubicacionSmartPhone.setFirst(this.getPlano().get(1)); //Habitacion .get(HABITACION)
+    	this.ubicacionSmartPhone.setSecond(new int[]{13,4}); //Posicion dentro de la habitación {FILA, COLUMNA})
+    	
     }
 
     /**

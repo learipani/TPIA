@@ -6,6 +6,8 @@
 .metadata
 .metadata/
 .metadata/.plugins/*
+.metadata/.mylyn/*
+.metadata/.log
 .metadata/*
 bin/**
 tmp/**
