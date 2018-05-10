@@ -54,7 +54,7 @@ public class CreacionHabitaciones {
 		//Paredes
 		//h2.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
 		h2.addObjeto(new Obstaculo(2, new int[]{1,3}, new int[]{0,0}));
-		h2.addObjeto(new Obstaculo(2, new int[]{1,3}, new int[]{15,0}));
+		h2.addObjeto(new Obstaculo(2, new int[]{1,6}, new int[]{15,0}));
 		h2.addObjeto(new Obstaculo(2, new int[]{3,1}, new int[]{13,6}));
 		h2.addObjeto(new Obstaculo(2, new int[]{9,1}, new int[]{6,0}));
 		h2.addObjeto(new Obstaculo(2, new int[]{10,1}, new int[]{0,6}));

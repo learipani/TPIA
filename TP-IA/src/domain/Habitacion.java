@@ -84,11 +84,15 @@ public class Habitacion {
 		
 		newHabitacion.setIdHabitacion(this.getIdHabitacion());
 		
-		List<Pair<Habitacion, Puerta>> newHabitacionesContiguas = new ArrayList<Pair<Habitacion, Puerta>>();
-		for(Pair<Habitacion, Puerta> p : this.getHabitacionesContiguas()){
-			Pair<Habitacion, Puerta> habitacionContigua = new Pair<Habitacion, Puerta>(null, null); 
-			habitacionContigua.setFirst(p.getFirst().clone());
-			habitacionContigua.setSecond(p.getSecond().clone());
+		List<Pair<Integer, List<Puerta>>> newHabitacionesContiguas = new ArrayList<Pair<Integer, List<Puerta>>>();
+		for(Pair<Integer, List<Puerta>> p : this.getHabitacionesContiguas()){
+			Pair<Integer, List<Puerta>> habitacionContigua = new Pair<Integer, List<Puerta>>(null, null); 
+			habitacionContigua.setFirst(p.getFirst());
+			List<Puerta> newListaPuertas = new ArrayList<Puerta>();
+			for(Puerta i : p.getSecond()){
+				newListaPuertas.add(i.clone()); 
+			}
+			habitacionContigua.setSecond(newListaPuertas);
 			newHabitacionesContiguas.add(habitacionContigua);
 		}
 		newHabitacion.setHabitacionesContiguas(newHabitacionesContiguas);

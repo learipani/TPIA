@@ -47,8 +47,7 @@ public class AgentSmartToyState extends SearchBasedAgentState {
     	
     	//Los atributos de tipo primitvos se pasan por copia(no hay)
     	
-    	
-    	//(lea) No se si hay que clonar cada arreglo del par por separado (creo que esta mal)
+    	//No se si hay que clonar cada arreglo del par por separado
     	newAgentSmartToyState.setOrientacion(this.getOrientacion().clone());
     	
     	Pair<Habitacion, int[]> newUbicacionAgente = new Pair<Habitacion, int[]>(null, null);
