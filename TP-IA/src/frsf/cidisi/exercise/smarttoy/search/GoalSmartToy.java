@@ -15,7 +15,7 @@ public class GoalSmartToy extends GoalTest {
     	 int habitacionAgente= estadoAgente.getUbicacionInicial().getFirst().getIdHabitacion();
     	 int habitacionSmartphone = estadoAgente.getUbicacionInicial().getFirst().getIdHabitacion();
     	 int ubicacionAgente[] = estadoAgente.getUbicacionAgente().getSecond();
-    	 int ubicacionSmartphone[] = estadoAgente.getUbicacionAgente().getSecond(); 
+    	 int ubicacionSmartphone[] = estadoAgente.getUbicacionInicial().getSecond(); 
     
     	if(habitacionAgente == habitacionSmartphone & //habitacion smartphone misma que smartoy
     			ubicacionAgente[0]==ubicacionSmartphone[0] & //ubicacion en la pieza es la misma
@@ -25,12 +25,5 @@ public class GoalSmartToy extends GoalTest {
     	else{
     		return false;
     	}
-    	/*
-    	// TODO: Complete Method
-        if  (true) //(normaVectorialIn(ubicacionAgente(),UbicacionSmartPhone()) == 1)
-        	{
-            return true;
-        	}
-        return false;*/
 	}
 }
