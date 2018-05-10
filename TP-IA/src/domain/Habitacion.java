@@ -17,12 +17,12 @@ public class Habitacion {
 	 * */
 	
 	private int idHabitacion;
-	private List<Pair<Habitacion, Puerta>> habitacionesContiguas;
+	private List<Pair<Integer, List<Puerta>>> habitacionesContiguas;
 	private int[] tamano;
 	private List<Objeto> objetos;
 	
 	public Habitacion(int idHabitacion,
-			List<Pair<Habitacion, Puerta>> habitacionesContiguas, int[] tamano,
+			List<Pair<Integer, List<Puerta>>> habitacionesContiguas, int[] tamano,
 			List<Objeto> objetos) {
 		super();
 		this.idHabitacion = idHabitacion;
@@ -44,16 +44,16 @@ public class Habitacion {
 		this.idHabitacion = idHabitacion;
 	}
 
-	public List<Pair<Habitacion, Puerta>> getHabitacionesContiguas() {
+	public List<Pair<Integer, List<Puerta>>> getHabitacionesContiguas() {
 		return habitacionesContiguas;
 	}
 
 	public void setHabitacionesContiguas(
-			List<Pair<Habitacion, Puerta>> habitacionesContiguas) {
+			List<Pair<Integer, List<Puerta>>> habitacionesContiguas) {
 		this.habitacionesContiguas = habitacionesContiguas;
 	}
 	
-	public void addHabitacionesContigua(Pair<Habitacion, Puerta> habitacionContigua) {
+	public void addHabitacionContigua(Pair<Integer, List<Puerta>> habitacionContigua) {
 		this.habitacionesContiguas.add(habitacionContigua);
 	}
 

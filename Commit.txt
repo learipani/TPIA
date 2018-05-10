@@ -1,6 +1,0 @@
-*Genera el código FAIA a partir del diagrama de IDEMIA
-*Crea el paquete domain, el cual contiene clases que son parte del dominio del trabajo práctico.
-*Agrega al paquete domain clases que son parte del dominio con sus respectivos constructores, getters y setters.
-*Modifica la clase Pair del paquete dataStructure del proyecto Faia de modo que sea una clase genérica que recibe como argumento los dos DataType del par.
-*Modifica la clase AgentSmartToyState (estado del agente) para agregar las estructuras de datos que la componen con sus respectivos constructores, getters y setters. 
-*Modifica la clase EnvironmentSmartToyState (estado del ambiente) para agregar las estructuras de datos que la componen con sus respectivos constructores, getters y setters. 
