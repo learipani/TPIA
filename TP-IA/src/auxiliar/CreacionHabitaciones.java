@@ -277,7 +277,7 @@ public class CreacionHabitaciones {
 		Puerta p27 = new Puerta(2, new int[]{11, 21}, new int[]{24, 0});
 		
 		Puerta p31 = new Puerta(3, new int[]{18, 0}, new int[]{13, 8});
-		Puerta p22 = new Puerta(3, new int[]{19, 0}, new int[]{14, 8});
+		Puerta p32 = new Puerta(3, new int[]{19, 0}, new int[]{14, 8});
 		Puerta p33 = new Puerta(3, new int[]{20, 0}, new int[]{15, 8});
 		Puerta p34 = new Puerta(4, new int[]{21, 0}, new int[]{16, 8});
 		Puerta p35 = new Puerta(4, new int[]{22, 0}, new int[]{17, 8});

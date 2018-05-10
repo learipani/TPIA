@@ -29,33 +29,33 @@ public class Avanzar extends SearchAction {
      */
     @Override
     public EnvironmentState execute(AgentState ast, EnvironmentState est) {
-        EnvironmentSmartToyState environmentState = (EnvironmentSmartToyState) est;
+        
+    	EnvironmentSmartToyState environmentState = (EnvironmentSmartToyState) est;
         AgentSmartToyState agState = ((AgentSmartToyState) ast);
 
-
-    boolean[] agentOrientation = agState.getOrientacion();
-    int fila = environmentState.getUbicacionAgente().getSecond()[0];
-    int columna = environmentState.getUbicacionAgente().getSecond()[1];
-
-    int newFila = fila, newCol = columna;
-
-//[norte oeste este sur]   = [arriba izq abajo der]
-    if (agentOrientation[0]==true)//arriba
-        newFila = fila - 1;
-    else if (agentOrientation[1]==true)//izq
-        newCol = columna - 1;
-    else if (agentOrientation[2]==true)//abajo
-        newFila = fila + 1;
-    else if (agentOrientation[3]==true)//der
-        newCol = columna + 1;
-    
-    Habitacion h = environmentState.getUbicacionAgente().getFirst();
-    int[] newPos = {newFila, newCol};
-    Pair<Habitacion, int[]> ubicacionNueva = new Pair(h,newPos);
-
-    environmentState.setUbicacionAgente(ubicacionNueva);
-
-    return environmentState;
+	    boolean[] agentOrientation = agState.getOrientacion();
+	    int fila = environmentState.getUbicacionAgente().getSecond()[0];
+	    int columna = environmentState.getUbicacionAgente().getSecond()[1];
+	
+	    int newFila = fila, newCol = columna;
+	
+	    //[norte oeste sur este]   = [arriba izq abajo der]
+	    if (agentOrientation[0]==true)//arriba
+	        newFila = fila - 1;
+	    else if (agentOrientation[1]==true)//izq
+	        newCol = columna - 1;
+	    else if (agentOrientation[2]==true)//abajo
+	        newFila = fila + 1;
+	    else if (agentOrientation[3]==true)//der
+	        newCol = columna + 1;
+	    
+	    Habitacion h = environmentState.getUbicacionAgente().getFirst();
+	    int[] newPos = {newFila, newCol};
+	    Pair<Habitacion, int[]> ubicacionNueva = new Pair(h,newPos);
+	
+	    environmentState.setUbicacionAgente(ubicacionNueva);
+	
+	    return environmentState;
         
        /* // TODO: Use this conditions
         // PreConditions: null

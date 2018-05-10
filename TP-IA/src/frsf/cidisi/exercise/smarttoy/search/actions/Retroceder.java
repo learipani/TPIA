@@ -39,7 +39,7 @@ public class Retroceder extends SearchAction {
 
         int newFila = fila, newCol = columna;
 
-    //[norte oeste este sur]   = [arriba izq abajo der]
+    //[norte oeste sur este]   = [arriba izq abajo der]
         if (agentOrientation[0]==true)//arriba
             newFila = fila + 1;
         else if (agentOrientation[1]==true)//izq

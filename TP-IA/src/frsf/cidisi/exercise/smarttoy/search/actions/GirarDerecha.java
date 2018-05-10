@@ -36,7 +36,7 @@ public class GirarDerecha extends SearchAction {
         boolean[] agentOrientation = agState.getOrientacion();
         
 
-    //[norte oeste este sur]   = [arriba izq abajo der]
+    //[norte oeste sur este]   = [arriba izq abajo der]
         if (agentOrientation[0]==true){//arriba
         	agentOrientation[0]=false;
         	agentOrientation[3]=true;
