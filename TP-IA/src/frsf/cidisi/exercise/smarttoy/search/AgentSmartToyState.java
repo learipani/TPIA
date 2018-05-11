@@ -17,7 +17,6 @@ public class AgentSmartToyState extends SearchBasedAgentState {
     private Pair<Habitacion, int[]> ubicacionInicial;
     private List<Habitacion> plano;
 	private boolean[] orientacion = new boolean[4];
-	
 
 	public AgentSmartToyState(
 			Pair<Habitacion, int[]> ubicacionAgente,

@@ -28,9 +28,9 @@ public class AgentSmartToy extends SearchBasedAgent {
 
         // Create the operators
         Vector<SearchAction> operators = new Vector<SearchAction>();
+        operators.addElement(new Avanzar());	
         operators.addElement(new GirarDerecha());	
         operators.addElement(new GirarIzquierda());	
-        operators.addElement(new Avanzar());	
         operators.addElement(new Retroceder());	
 
         // Create the Problem which the agent will resolve

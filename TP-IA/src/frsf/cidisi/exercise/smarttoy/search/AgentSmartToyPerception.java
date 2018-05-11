@@ -1,26 +1,35 @@
 package frsf.cidisi.exercise.smarttoy.search;
 
+import domain.Habitacion;
 import frsf.cidisi.faia.agent.Agent;
 import frsf.cidisi.faia.agent.Perception;
 import frsf.cidisi.faia.environment.Environment;
+import frsf.cidisi.faia.state.datastructure.Pair;
 
 public class AgentSmartToyPerception extends Perception {
 
 	//TODO: Setup Statics
-    //public static int UNKNOWN_PERCEPTION = -1;   
+    public static Object UNKNOWN_PERCEPTION = null;   
 	
 	
 	//TODO: Setup Sensors
-//	private Other smartphone;
-//	private Other sensorfrontal;
-	private int sensorlateralizquierdo;
-	private int sensorlateralderecho;
-	private int sensortrasero;
-	
- 
+	private Habitacion smartphone;	//Envía la habitacíon en la cual se encuentra el agente
+	/*Los sensores devuelven letras dependiendo lo que tengan en frente
+	 * pu = puerta
+	 * pa = pared
+	 * ta = terreno adverso
+	 * ob = obstaculo
+	 * */
+	private Object sensorfrontal;
+	private Object sensorlateralizquierdo;
+	private Object sensorlateralderecho;
+	private Object sensortrasero;
 
     public  AgentSmartToyPerception() {
-    	//TODO: Complete Method
+    	sensorfrontal = UNKNOWN_PERCEPTION;
+    	sensorlateralizquierdo = UNKNOWN_PERCEPTION;
+    	sensorlateralderecho = UNKNOWN_PERCEPTION;
+    	sensortrasero = UNKNOWN_PERCEPTION;
     }
 
     public AgentSmartToyPerception(Agent agent, Environment environment) {
@@ -39,8 +48,7 @@ public class AgentSmartToyPerception extends Perception {
         //EnvironmentSmartToy environment = (EnvironmentSmartToy) environmentIn;
         //EnvironmentSmartToyState environmentState =
         //        environment.getEnvironmentState();
-       
-        
+
     }
     
     @Override
@@ -53,38 +61,44 @@ public class AgentSmartToyPerception extends Perception {
     }
 
     // The following methods are agent-specific:
-    //TODO: Complete this section with the agent-specific methods
-	
-//     public Other getsmartphone(){
-//        return smartphone;
-//     }
-//     public void setsmartphone(Other arg){
-//        this.smartphone = arg;
-//     }
-//     public Other getsensorfrontal(){
-//        return sensorfrontal;
-//     }
-//     public void setsensorfrontal(Other arg){
-//        this.sensorfrontal = arg;
-//     }
-     public int getsensorlateralizquierdo(){
-        return sensorlateralizquierdo;
-     }
-     public void setsensorlateralizquierdo(int arg){
-        this.sensorlateralizquierdo = arg;
-     }
-     public int getsensorlateralderecho(){
-        return sensorlateralderecho;
-     }
-     public void setsensorlateralderecho(int arg){
-        this.sensorlateralderecho = arg;
-     }
-     public int getsensortrasero(){
-        return sensortrasero;
-     }
-     public void setsensortrasero(int arg){
-        this.sensortrasero = arg;
-     }
-	
-   
+	public Habitacion getSmartphone() {
+		return smartphone;
+	}
+
+	public void setSmartphone(Habitacion smartphone) {
+		this.smartphone = smartphone;
+	}
+
+	public Object getSensorfrontal() {
+		return sensorfrontal;
+	}
+
+	public void setSensorfrontal(Object sensorfrontal) {
+		this.sensorfrontal = sensorfrontal;
+	}
+
+	public Object getSensorlateralizquierdo() {
+		return sensorlateralizquierdo;
+	}
+
+	public void setSensorlateralizquierdo(Object sensorlateralizquierdo) {
+		this.sensorlateralizquierdo = sensorlateralizquierdo;
+	}
+
+	public Object getSensorlateralderecho() {
+		return sensorlateralderecho;
+	}
+
+	public void setSensorlateralderecho(Object sensorlateralderecho) {
+		this.sensorlateralderecho = sensorlateralderecho;
+	}
+
+	public Object getSensortrasero() {
+		return sensortrasero;
+	}
+
+	public void setSensortrasero(Object sensortrasero) {
+		this.sensortrasero = sensortrasero;
+	}
+
 }

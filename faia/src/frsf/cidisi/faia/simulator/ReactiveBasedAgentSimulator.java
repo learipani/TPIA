@@ -30,6 +30,7 @@ public class ReactiveBasedAgentSimulator extends GoalBasedAgentSimulator {
     public ReactiveBasedAgentSimulator(Environment environment, Vector<Agent> agent) {
         super(environment, agent);
         // TODO Auto-generated constructor stub
+        
     }
 
     public ReactiveBasedAgentSimulator(Environment environment, Agent agent) {
