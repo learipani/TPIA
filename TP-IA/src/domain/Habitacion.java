@@ -140,8 +140,10 @@ public class Habitacion {
 		//Itero todas las puertas y las pongo en el plano
 		for (Iterator<Pair<Integer, List<Puerta>>> i = habitacionesContiguas.iterator(); i.hasNext();) {
 			Pair<Integer, List<Puerta>> item = i.next();
-			Puerta puertaAux = (Puerta)item.getSecond();
-			planoHabitacion[puertaAux.getPosicionIngreso()[0]][puertaAux.getPosicionIngreso()[1]] = "pu"; 
+			//Puerta puertaAux = (Puerta)item.getSecond();
+			for(Puerta puertaAux: item.getSecond()){
+				planoHabitacion[puertaAux.getPosicionIngreso()[0]][puertaAux.getPosicionIngreso()[1]] = "pu";
+			}
 		}
 		//Itero todos los objetos y los pongo en el plano
 		for (Iterator<Objeto> it = objetos.iterator(); it.hasNext();) {

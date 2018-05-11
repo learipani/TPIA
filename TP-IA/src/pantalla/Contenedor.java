@@ -16,11 +16,11 @@ public class Contenedor extends JComponent
 {
      static JPanel panel;
     
-     static int columna = 75;
+     static int columna = 60; //columna y fila se deberian iniciar en 0 
      
-     static int fila =75;
+     static int fila =60; 
      
-     static int numeroHabitacion =9; //1..15
+     static int numeroHabitacion =1; //1..15
      
      static int ampliacion;
      
