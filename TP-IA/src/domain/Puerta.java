@@ -14,7 +14,9 @@ public class Puerta {
 	}
 
 	public Puerta() {
-		// TODO Auto-generated constructor stub
+		this.numeroPuerta = numeroPuerta;
+		this.posicionIngreso = posicionIngreso;
+		this.posicionEngreso = posicionEngreso;
 	}
 
 	public int getNumeroPuerta() {

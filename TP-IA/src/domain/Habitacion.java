@@ -33,7 +33,10 @@ public class Habitacion {
 	}
 	
 	public Habitacion() {
-		// TODO Auto-generated constructor stub
+		this.idHabitacion = idHabitacion;
+		this.planoHabitacion = planoHabitacion;
+		this.habitacionesContiguas = habitacionesContiguas;
+		this.objetos = objetos;
 	}
 
 	public int getIdHabitacion() {
@@ -87,13 +90,14 @@ public class Habitacion {
 		this.planoHabitacion[fila][columna] = null;
 	}
 	
-	//Metodo clone para poder clonar AgentSmartToyState (no estoy seguro si hay que clonar todo por separado)
-	
+	//Metodo clone para poder clonar AgentSmartToyState
 	public Habitacion clone(){
 		Habitacion newHabitacion = new Habitacion();
 		
+		//clonacion id
 		newHabitacion.setIdHabitacion(this.getIdHabitacion());
 		
+		//clonacion habitacionescontiguas
 		List<Pair<Integer, List<Puerta>>> newHabitacionesContiguas = new ArrayList<Pair<Integer, List<Puerta>>>();
 		for(Pair<Integer, List<Puerta>> p : this.getHabitacionesContiguas()){
 			Pair<Integer, List<Puerta>> habitacionContigua = new Pair<Integer, List<Puerta>>(null, null); 
@@ -107,8 +111,20 @@ public class Habitacion {
 		}
 		newHabitacion.setHabitacionesContiguas(newHabitacionesContiguas);
 		
-		newHabitacion.setTamano(this.getTamano().clone());
+		//clonacion matriz
+		int fila = this.planoHabitacion.length;
+		int col = this.planoHabitacion[0].length;
+		String[][] newPlanoHabitacion = new String[fila][col];
+		//La linea de abajo reemplazaria el for si es que funciona bien el clone() para matrices
+		//newPlanoHabitacion = this.planoHabitacion.clone();
+		for(int i=0;i<fila;i++){
+			for(int j=0;j<col;j++){
+				newPlanoHabitacion[i][j]= this.planoHabitacion[i][j]; 
+			}
+		}
+		newHabitacion.setPlanoHabitacion(newPlanoHabitacion);
 		
+		//clonacion lista objetos
 		List<Objeto> newObjetos = new ArrayList<Objeto>();
 		for(Objeto objeto : this.getObjetos()){
 			newObjetos.add(objeto.clone());
