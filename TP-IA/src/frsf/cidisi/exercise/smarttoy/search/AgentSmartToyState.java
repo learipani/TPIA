@@ -164,7 +164,28 @@ public class AgentSmartToyState extends SearchBasedAgentState {
 	public void setOrientacion(boolean[] orientacion) {
 		this.orientacion = orientacion;
 	}
-
+	
+	public char getCharOrientacion() {
+		char orientacion;
+		if( this.orientacion[0] == true ){
+			orientacion = 'N';
+	    }
+	    else{
+	    	if( this.orientacion[1] == true ){
+				orientacion = 'O';
+		    }
+		    else{
+		    	if( this.orientacion[2] == true ){
+					orientacion = 'S';
+			    }
+			    else{
+			    	orientacion = 'E';
+			    }
+		    }
+	    }
+		return orientacion;
+	}
+	
 	
 }
 

@@ -1,10 +1,12 @@
 package frsf.cidisi.exercise.smarttoy.search;
 
+import java.util.Iterator;
 import java.util.List;
 
 import auxiliar.CreacionHabitaciones;
 
 import domain.Habitacion;
+import domain.Puerta;
 import frsf.cidisi.faia.state.EnvironmentState;
 import frsf.cidisi.faia.state.datastructure.Pair;
 
@@ -102,6 +104,16 @@ public class EnvironmentSmartToyState extends EnvironmentState {
 
 	public void setUbicacionSmartPhone(Pair<Habitacion, int[]> ubicacionSmartPhone) {
 		this.ubicacionSmartPhone = ubicacionSmartPhone;
+	}
+
+	public Habitacion getHabitacionDePlano(int idHabitacion) {
+		for (Iterator<Habitacion> i = plano.iterator(); i.hasNext();) {
+			Habitacion item = i.next();
+			if (item.getIdHabitacion() == idHabitacion) {
+				return item;
+			}
+		}
+		return null;
 	}
 }
 

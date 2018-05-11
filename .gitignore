@@ -5,7 +5,9 @@
 .project
 .metadata
 .metadata/
+.metadata/.plugins/
 .metadata/.plugins/*
+.metadata/.mylyn/
 .metadata/.mylyn/*
 .metadata/.log
 .metadata/*
