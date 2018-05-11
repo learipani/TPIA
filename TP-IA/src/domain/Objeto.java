@@ -16,7 +16,9 @@ public class Objeto {
 	}
     
 	public Objeto() {
-		// TODO Auto-generated constructor stub
+		this.idHabitacion = idHabitacion;
+		this.tamano = tamano;
+		this.ubicacionEnHabitacion = ubicacionEnHabitacion;
 	}
 
 	public int getIdHabitacion() {
