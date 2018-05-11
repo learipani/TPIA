@@ -55,6 +55,8 @@ public class Retroceder extends SearchAction {
 
         environmentState.setUbicacionAgente(ubicacionNueva);
 
+	    environmentState.celdasVisitadas = environmentState.celdasVisitadas+1;
+
         return environmentState;
        /* // TODO: Use this conditions
         // PreConditions: null

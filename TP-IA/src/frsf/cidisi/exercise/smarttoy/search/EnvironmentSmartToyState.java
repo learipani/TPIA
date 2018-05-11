@@ -17,6 +17,7 @@ public class EnvironmentSmartToyState extends EnvironmentState {
     private List<Habitacion> plano;
     private Pair<Habitacion, int[]> ubicacionAgente;
     private Pair<Habitacion, int[]> ubicacionSmartPhone;
+    public int celdasVisitadas;
 	
     
     public EnvironmentSmartToyState(List<Habitacion> plano,
@@ -60,6 +61,8 @@ public class EnvironmentSmartToyState extends EnvironmentState {
     	this.ubicacionSmartPhone.setFirst(this.getPlano().get(1)); //Habitacion .get(HABITACION)
     	this.ubicacionSmartPhone.setSecond(new int[]{13,4}); //Posicion dentro de la habitación {FILA, COLUMNA})
     	
+    	this.celdasVisitadas=0;    	
+    	
     }
 
     /**
@@ -73,6 +76,7 @@ public class EnvironmentSmartToyState extends EnvironmentState {
         
         str += "\nLlamado realizado desde posicion ["+ ubicacionSmartPhone.getSecond()[0] +";"+ubicacionSmartPhone.getSecond()[1] +"] de la habitación "+  ubicacionSmartPhone.getFirst().getIdHabitacion();
 
+        str+= "\n Celdas visitadas: " +celdasVisitadas;
         return str;
     }
 

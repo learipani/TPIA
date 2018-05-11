@@ -12,7 +12,7 @@ public class GoalSmartToy extends GoalTest {
     public boolean isGoalState (AgentState agentState) {
     	
     	 AgentSmartToyState estadoAgente = (AgentSmartToyState) agentState;
-    	 int habitacionAgente= estadoAgente.getUbicacionInicial().getFirst().getIdHabitacion();
+    	 int habitacionAgente= estadoAgente.getUbicacionAgente().getFirst().getIdHabitacion();
     	 int habitacionSmartphone = estadoAgente.getUbicacionInicial().getFirst().getIdHabitacion();
     	 int ubicacionAgente[] = estadoAgente.getUbicacionAgente().getSecond();
     	 int ubicacionSmartphone[] = estadoAgente.getUbicacionInicial().getSecond(); 

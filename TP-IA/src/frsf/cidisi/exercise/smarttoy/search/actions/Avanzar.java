@@ -54,6 +54,7 @@ public class Avanzar extends SearchAction {
 	    Pair<Habitacion, int[]> ubicacionNueva = new Pair(h,newPos);
 	
 	    environmentState.setUbicacionAgente(ubicacionNueva);
+	    environmentState.celdasVisitadas = environmentState.celdasVisitadas+1;
 	
 	    return environmentState;
         

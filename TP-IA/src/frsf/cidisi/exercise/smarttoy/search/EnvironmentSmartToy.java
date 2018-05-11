@@ -48,6 +48,9 @@ public class EnvironmentSmartToy extends Environment {
 
         EnvironmentSmartToyState envState =
                 this.getEnvironmentState();
+        if(envState.celdasVisitadas>2000){
+        	return true;
+        }
 
         // TODO: Complete Method        
 
