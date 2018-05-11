@@ -136,7 +136,7 @@ public class CreacionHabitaciones {
 		/**Instanciación de la habitación, los obstaculos, terrenos y puertas**/
 		
 		//Habitacion h4 = new Habitacion(NUMERO_HABITACION,  new ArrayList<Pair<Integer, List<Puerta>>>(), new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new ArrayList<Objeto>());
-		Habitacion h4 = new Habitacion(4, new String[7][11]  new ArrayList<Pair<Integer, List<Puerta>>>(), new int[]{7,11}, new ArrayList<Objeto>());
+		Habitacion h4 = new Habitacion(4, new String[7][11],  new ArrayList<Pair<Integer, List<Puerta>>>(), new ArrayList<Objeto>());
 		
 		//Paredes
 		//h2.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
@@ -169,7 +169,7 @@ public class CreacionHabitaciones {
 		/**Instanciación de la habitación, los obstaculos, terrenos y puertas**/
 		
 		//Habitacion h5 = new Habitacion(NUMERO_HABITACION,  new ArrayList<Pair<Integer, List<Puerta>>>(), new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new ArrayList<Objeto>());
-		Habitacion h5 = new Habitacion(5,  new ArrayList<Pair<Integer, List<Puerta>>>(), new int[]{20,29}, new ArrayList<Objeto>());
+		Habitacion h5 = new Habitacion(5, new String[20][29], new ArrayList<Pair<Integer, List<Puerta>>>(), new ArrayList<Objeto>());
 		
 		//Paredes
 		//h2.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
@@ -206,7 +206,7 @@ public class CreacionHabitaciones {
 		/**Instanciación de la habitación, los obstaculos, terrenos y puertas**/
 		
 		//Habitacion h6 = new Habitacion(NUMERO_HABITACION,  new ArrayList<Pair<Integer, List<Puerta>>>(), new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new ArrayList<Objeto>());
-		Habitacion h6 = new Habitacion(6,  new ArrayList<Pair<Integer, List<Puerta>>>(), new int[]{28,14}, new ArrayList<Objeto>());
+		Habitacion h6 = new Habitacion(6,new String[28][14],  new ArrayList<Pair<Integer, List<Puerta>>>(), new ArrayList<Objeto>());
 		
 		//Paredes
 		//h2.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
@@ -245,7 +245,7 @@ public class CreacionHabitaciones {
 /**Instanciación de la habitación, los obstaculos, terrenos y puertas**/
 		
 		//Habitacion h7 = new Habitacion(NUMERO_HABITACION,  new ArrayList<Pair<Integer, List<Puerta>>>(), new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new ArrayList<Objeto>());
-		Habitacion h7 = new Habitacion(7,  new ArrayList<Pair<Integer, List<Puerta>>>(), new int[]{36,23}, new ArrayList<Objeto>());
+		Habitacion h7 = new Habitacion(7,new String[36][23],  new ArrayList<Pair<Integer, List<Puerta>>>(), new ArrayList<Objeto>());
 		
 		//Paredes
 		//h7.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
@@ -316,7 +316,7 @@ public class CreacionHabitaciones {
 		/**Instanciación de la habitación, los obstaculos, terrenos y puertas**/
 		
 		//Habitacion h8 = new Habitacion(NUMERO_HABITACION,  new ArrayList<Pair<Integer, List<Puerta>>>(), new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new ArrayList<Objeto>());
-		Habitacion h8 = new Habitacion(8,  new ArrayList<Pair<Integer, List<Puerta>>>(), new int[]{11,13}, new ArrayList<Objeto>());
+		Habitacion h8 = new Habitacion(8,new String[11][13],  new ArrayList<Pair<Integer, List<Puerta>>>(), new ArrayList<Objeto>());
 		
 		//Paredes
 		//h2.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
@@ -351,7 +351,7 @@ public class CreacionHabitaciones {
 /**Instanciación de la habitación, los obstaculos, terrenos y puertas**/
 		
 		//Habitacion h9 = new Habitacion(NUMERO_HABITACION,  new ArrayList<Pair<Integer, List<Puerta>>>(), new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new ArrayList<Objeto>());
-		Habitacion h9 = new Habitacion(9,  new ArrayList<Pair<Integer, List<Puerta>>>(), new int[]{49,11}, new ArrayList<Objeto>());
+		Habitacion h9 = new Habitacion(9,new String[49][11],  new ArrayList<Pair<Integer, List<Puerta>>>(), new ArrayList<Objeto>());
 		
 		//Paredes
 		//h9.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
@@ -429,7 +429,7 @@ public class CreacionHabitaciones {
 /**Instanciación de la habitación, los obstaculos, terrenos y puertas**/
 		
 		//Habitacion h10 = new Habitacion(NUMERO_HABITACION,  new ArrayList<Pair<Integer, List<Puerta>>>(), new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new ArrayList<Objeto>());
-		Habitacion h10 = new Habitacion(10,  new ArrayList<Pair<Integer, List<Puerta>>>(), new int[]{14,18}, new ArrayList<Objeto>());
+		Habitacion h10 = new Habitacion(10,new String[14][18],  new ArrayList<Pair<Integer, List<Puerta>>>(), new ArrayList<Objeto>());
 		
 		//Paredes
 		//h10.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
@@ -466,7 +466,7 @@ public class CreacionHabitaciones {
 		/**Instanciación de la habitación, los obstaculos, terrenos y puertas**/
 		
 		//Habitacion h11 = new Habitacion(NUMERO_HABITACION,  new ArrayList<Pair<Integer, List<Puerta>>>(), new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new ArrayList<Objeto>());
-		Habitacion h11 = new Habitacion(11,  new ArrayList<Pair<Integer, List<Puerta>>>(), new int[]{10,12}, new ArrayList<Objeto>());
+		Habitacion h11 = new Habitacion(11,new String[10][12],  new ArrayList<Pair<Integer, List<Puerta>>>(), new ArrayList<Objeto>());
 		
 		//Paredes
 		//h11.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
@@ -501,7 +501,7 @@ public class CreacionHabitaciones {
 /**Instanciación de la habitación, los obstaculos, terrenos y puertas**/
 		
 		//Habitacion h12 = new Habitacion(NUMERO_HABITACION,  new ArrayList<Pair<Integer, List<Puerta>>>(), new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new ArrayList<Objeto>());
-		Habitacion h12 = new Habitacion(12,  new ArrayList<Pair<Integer, List<Puerta>>>(), new int[]{12,18}, new ArrayList<Objeto>());
+		Habitacion h12 = new Habitacion(12, new String[12][18], new ArrayList<Pair<Integer, List<Puerta>>>(), new ArrayList<Objeto>());
 		
 		//Paredes
 		//h12.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
@@ -539,7 +539,7 @@ public class CreacionHabitaciones {
 /**Instanciación de la habitación, los obstaculos, terrenos y puertas**/
 		
 		//Habitacion h13 = new Habitacion(NUMERO_HABITACION,  new ArrayList<Pair<Integer, List<Puerta>>>(), new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new ArrayList<Objeto>());
-		Habitacion h13 = new Habitacion(13,  new ArrayList<Pair<Integer, List<Puerta>>>(), new int[]{11,16}, new ArrayList<Objeto>());
+		Habitacion h13 = new Habitacion(13,new String[11][16],  new ArrayList<Pair<Integer, List<Puerta>>>(), new ArrayList<Objeto>());
 		
 		//Paredes
 		//h13.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
@@ -577,7 +577,7 @@ public class CreacionHabitaciones {
 		/**Instanciación de la habitación, los obstaculos, terrenos y puertas**/
 		
 		//Habitacion h14 = new Habitacion(NUMERO_HABITACION,  new ArrayList<Pair<Integer, List<Puerta>>>(), new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new ArrayList<Objeto>());
-		Habitacion h14 = new Habitacion(14, new ArrayList<Pair<Integer, List<Puerta>>>(), new int[]{22,24}, new ArrayList<Objeto>());
+		Habitacion h14 = new Habitacion(14,new String[22][24], new ArrayList<Pair<Integer, List<Puerta>>>(), new ArrayList<Objeto>());
 		
 		//Paredes
 		//h14.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
@@ -622,7 +622,7 @@ public class CreacionHabitaciones {
 	
 	public static Habitacion createHabitacion15(){
 		//Habitacion h14 = new Habitacion(NUMERO_HABITACION,  new ArrayList<Pair<Integer, List<Puerta>>>(), new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new ArrayList<Objeto>());
-		Habitacion h15 = new Habitacion(14, new ArrayList<Pair<Integer, List<Puerta>>>(), new int[]{16,17}, new ArrayList<Objeto>());
+		Habitacion h15 = new Habitacion(14,new String[16][17], new ArrayList<Pair<Integer, List<Puerta>>>(), new ArrayList<Objeto>());
 		
 		//Paredes
 		//h14.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
