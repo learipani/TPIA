@@ -1,7 +1,10 @@
 package frsf.cidisi.exercise.smarttoy.search;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
+
+import auxiliar.CreacionHabitaciones;
 
 import domain.Habitacion;
 import frsf.cidisi.faia.agent.Perception;
@@ -14,12 +17,15 @@ import frsf.cidisi.faia.state.datastructure.Pair;
 public class AgentSmartToyState extends SearchBasedAgentState {
 	
     private Pair<Habitacion, int[]> ubicacionAgente;
-    private Pair<Habitacion, int[]> ubicacionInicial;
     private List<Habitacion> plano;
-	private boolean[] orientacion = new boolean[4];
+	private boolean[] orientacion;
 
     public AgentSmartToyState() {
-		// TODO Auto-generated constructor stub
+    	ubicacionAgente = new Pair<Habitacion, int[]>(new Habitacion(),  new int[2]);
+        plano = new ArrayList<Habitacion>();
+    	orientacion = new boolean[4];
+    	
+    	this.initState();
 	}
 
 	/**
@@ -42,10 +48,7 @@ public class AgentSmartToyState extends SearchBasedAgentState {
     	newUbicacionAgente.setSecond(this.getUbicacionAgente().getSecond().clone());
     	newAgentSmartToyState.setUbicacionAgente(newUbicacionAgente);
     	
-    	Pair<Habitacion, int[]> newUbicacionInicial = new Pair<Habitacion, int[]>(null, null);
-    	newUbicacionInicial.setFirst(this.getUbicacionInicial().getFirst().clone());
-    	newUbicacionInicial.setSecond(this.getUbicacionInicial().getSecond().clone());
-    	newAgentSmartToyState.setUbicacionInicial(newUbicacionInicial);
+    	//Pair<Habitacion, int[]> newUbicacionInicial = new Pair<Habitacion, int[]>(null, null);
     	
     	//Los atributos que son objetos (los arrays también son de tipo objeto) se pasan por
     	//referencia; luego, es necesario clonarlos
@@ -73,7 +76,33 @@ public class AgentSmartToyState extends SearchBasedAgentState {
     @Override
     public void initState() {
         
-	//TODO: Complete Method
+    	//Add de habitaciones al plano
+    	this.plano.add(CreacionHabitaciones.createHabitacion1());
+    	this.plano.add(CreacionHabitaciones.createHabitacion2());
+    	this.plano.add(CreacionHabitaciones.createHabitacion3());
+    	this.plano.add(CreacionHabitaciones.createHabitacion4());
+    	this.plano.add(CreacionHabitaciones.createHabitacion5());
+    	this.plano.add(CreacionHabitaciones.createHabitacion6());
+    	this.plano.add(CreacionHabitaciones.createHabitacion7());
+    	this.plano.add(CreacionHabitaciones.createHabitacion8());
+    	this.plano.add(CreacionHabitaciones.createHabitacion9());
+    	this.plano.add(CreacionHabitaciones.createHabitacion10());
+    	this.plano.add(CreacionHabitaciones.createHabitacion11());
+    	this.plano.add(CreacionHabitaciones.createHabitacion11());
+    	this.plano.add(CreacionHabitaciones.createHabitacion12());
+    	this.plano.add(CreacionHabitaciones.createHabitacion13());
+    	this.plano.add(CreacionHabitaciones.createHabitacion14());
+    	this.plano.add(CreacionHabitaciones.createHabitacion15());
+    	
+    	//Setea la posicion inicial del agente
+    	this.ubicacionAgente.setFirst(this.getPlano().get(0)); //Habitacion .get(HABITACION)
+    	this.ubicacionAgente.setSecond(new int[]{3,3}); //Posicion dentro de la habitación {FILA, COLUMNA})
+    	
+    	//Setea la orientación inicial del agente
+    	orientacion[0] = true;
+    	orientacion[1] = false;
+    	orientacion[2] = false;
+    	orientacion[3] = false;
 
     }
 
@@ -84,10 +113,28 @@ public class AgentSmartToyState extends SearchBasedAgentState {
     public String toString() {
         String str = "";
 
-        //TODO: Complete Method
-
+        str += "\nHabitacón número: " + ubicacionAgente.getFirst().getIdHabitacion();
+        str += "\nPosicion: [" + ubicacionAgente.getSecond()[0]+";"+ubicacionAgente.getSecond()[1];
+        str += "\nOrientacion: "+ getCharOrientacion();
+        
+        String[][] planoAgente =  ubicacionAgente.getFirst().getPlanoHabitacion();
+        str = str + "\n\nPlano=\"[ \n";
+        for (int fila = 0; fila < planoAgente.length; fila++) {
+            str = str + "[ ";
+            for (int col = 0; col < planoAgente.length; col++) {
+            	if (planoAgente[fila][col] == null ) {
+                    str = str + AgentSmartToyPerception.UNKNOWN_PERCEPTION;
+                } else {
+                    str = str + planoAgente[fila][col] + " ";
+                }
+            }
+            str = str + " ]\n";
+        }
+        str = str + " ]\"";
+    
         return str;
     }
+
 
     /**
      * This method is used in the search process to verify if the node already
@@ -127,14 +174,6 @@ public class AgentSmartToyState extends SearchBasedAgentState {
 
 	public void setUbicacionAgente(Pair<Habitacion, int[]> ubicacionAgente) {
 		this.ubicacionAgente = ubicacionAgente;
-	}
-
-	public Pair<Habitacion, int[]> getUbicacionInicial() {
-		return ubicacionInicial;
-	}
-
-	public void setUbicacionInicial(Pair<Habitacion, int[]> ubicacionInicial) {
-		this.ubicacionInicial = ubicacionInicial;
 	}
 
 	public List<Habitacion> getPlano() {

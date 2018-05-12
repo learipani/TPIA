@@ -4,6 +4,8 @@ package domain;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+
+import frsf.cidisi.exercise.smarttoy.search.AgentSmartToyPerception;
 import frsf.cidisi.faia.state.datastructure.Pair;
 
 public class Habitacion {
@@ -33,10 +35,6 @@ public class Habitacion {
 	}
 	
 	public Habitacion() {
-		this.idHabitacion = idHabitacion;
-		this.planoHabitacion = planoHabitacion;
-		this.habitacionesContiguas = habitacionesContiguas;
-		this.objetos = objetos;
 	}
 
 	public int getIdHabitacion() {
@@ -135,14 +133,20 @@ public class Habitacion {
 	}
 	
 	public void ActualizarPlanoHabitacion(){
-		/*private List<Pair<Integer, List<Puerta>>> habitacionesContiguas;
-		private List<Objeto> objetos;*/
+
+		//Antes que nada, lleno todas las celdas con nada
+		for (int row = 0; row < planoHabitacion.length; row++) {
+            for (int col = 0; col < planoHabitacion.length; col++) {
+            	planoHabitacion[row][col] = AgentSmartToyPerception.EMPTY_PERCEPTION;
+            }
+        }
+		
 		//Itero todas las puertas y las pongo en el plano
 		for (Iterator<Pair<Integer, List<Puerta>>> i = habitacionesContiguas.iterator(); i.hasNext();) {
 			Pair<Integer, List<Puerta>> item = i.next();
 			//Puerta puertaAux = (Puerta)item.getSecond();
 			for(Puerta puertaAux: item.getSecond()){
-				planoHabitacion[puertaAux.getPosicionIngreso()[0]][puertaAux.getPosicionIngreso()[1]] = "pu";
+				planoHabitacion[puertaAux.getPosicionIngreso()[0]][puertaAux.getPosicionIngreso()[1]] = AgentSmartToyPerception.PUERTA_PERCEPTION;
 			}
 		}
 		//Itero todos los objetos y los pongo en el plano
@@ -151,14 +155,14 @@ public class Habitacion {
 			String claseObjeto;
 			//Me fijo que tipo de objeto es el que tengo y lo guardo en una variable
 			if(item.getClass().getName() == "Obstaculo"){
-				claseObjeto = "ob";
+				claseObjeto = AgentSmartToyPerception.OBSTACULO_PERCEPTION;
 			}
 			else{
 				if(item.getClass().getName() == "TerrenoAdverso"){
-					claseObjeto = "ta";
+					claseObjeto = AgentSmartToyPerception.TERRENO_PERCEPTION;
 				}
 				else{
-					claseObjeto = "uk";
+					claseObjeto = AgentSmartToyPerception.UNKNOWN_PERCEPTION;
 				}
 			}
 			//Recorro el objeto y voy actualizando el plano

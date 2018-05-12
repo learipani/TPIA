@@ -10,6 +10,11 @@ public class AgentSmartToyPerception extends Perception {
 
 	// TODO: Setup Statics
 	public static String UNKNOWN_PERCEPTION = "uk";
+	public static String EMPTY_PERCEPTION = "##";
+	public static String PUERTA_PERCEPTION = "pu";
+	public static String OBSTACULO_PERCEPTION = "ob";
+	public static String TERRENO_PERCEPTION = "ta";
+	public static String META_PERCEPTION = "go";
 
 	// TODO: Setup Sensors
 	// Envía la habitacíon en la cual se encuentra el agente
@@ -24,10 +29,6 @@ public class AgentSmartToyPerception extends Perception {
 	private Habitacion smartphone;
 
 	public AgentSmartToyPerception() {
-		sensorfrontal = UNKNOWN_PERCEPTION;
-		sensorlateralizquierdo = UNKNOWN_PERCEPTION;
-		sensorlateralderecho = UNKNOWN_PERCEPTION;
-		sensortrasero = UNKNOWN_PERCEPTION;
 	}
 
 	public AgentSmartToyPerception(Agent agent, Environment environment) {

@@ -26,9 +26,9 @@ public class EnvironmentSmartToyState extends EnvironmentState {
     public EnvironmentSmartToyState() {
     	
     	plano = new ArrayList<Habitacion>();
-    	ubicacionAgente = new Pair<Habitacion, int[]>(new Habitacion(),  new int[] {0,0});
+    	ubicacionAgente = new Pair<Habitacion, int[]>(new Habitacion(),  new int[2]);
     	orientacionAgente = new boolean[4];
-    	ubicacionSmartPhone = new Pair<Habitacion, int[]>(new Habitacion(), new int[] {0,0});
+    	ubicacionSmartPhone = new Pair<Habitacion, int[]>(new Habitacion(), new int[2]);
     	celdasVisitadas = 0;
     	this.initState();
 
@@ -70,6 +70,7 @@ public class EnvironmentSmartToyState extends EnvironmentState {
     	//Setea la posicion del llamado
     	this.ubicacionSmartPhone.setFirst(this.getPlano().get(1)); //Habitacion .get(HABITACION)
     	this.ubicacionSmartPhone.setSecond(new int[]{13,4}); //Posicion dentro de la habitación {FILA, COLUMNA})
+    	setCallStringInPlano(); //Este método pone una cadena "go" en plano de la habitacion donde esta el smartphone
     	
     	//Setea la cantidad inicial de celdas visitadas
     	this.celdasVisitadas = 0;    	
@@ -88,6 +89,23 @@ public class EnvironmentSmartToyState extends EnvironmentState {
         str += "\nLlamado realizado desde posicion ["+ ubicacionSmartPhone.getSecond()[0] +";"+ubicacionSmartPhone.getSecond()[1] +"] de la habitación "+  ubicacionSmartPhone.getFirst().getIdHabitacion();
 
         str+= "\n Celdas visitadas: " +celdasVisitadas;
+        
+        str += "\nHabitacón número: " + ubicacionAgente.getFirst().getIdHabitacion();
+        str += "\nPosicion: [" + ubicacionAgente.getSecond()[0]+";"+ubicacionAgente.getSecond()[1];
+        str += "\nOrientacion: "+ getCharOrientacionAgente();
+        str += "\nCeldas visitadas: " +celdasVisitadas;
+
+        String[][] planoAgente =  ubicacionAgente.getFirst().getPlanoHabitacion();  
+        str = str + "\n\nPlano=\"[ \n";
+        for (int fila = 0; fila < planoAgente.length; fila++) {
+            str = str + "[ ";
+            for (int col = 0; col < planoAgente.length; col++) {
+            	str = str + planoAgente[fila][col] + " ";
+            }
+            str = str + " ]\n";
+        }
+        str = str + " ]\"";
+        
         return str;
     }
 
@@ -144,6 +162,12 @@ public class EnvironmentSmartToyState extends EnvironmentState {
 		    }
 	    }
 		return orientacion;
+	}
+	
+	public void setCallStringInPlano(){
+		int filaLlamado = ubicacionSmartPhone.getSecond()[0];
+		int columnaLlmado = ubicacionSmartPhone.getSecond()[1] ;
+		plano.get(ubicacionSmartPhone.getFirst().getIdHabitacion()).getPlanoHabitacion()[filaLlamado][columnaLlmado] = AgentSmartToyPerception.META_PERCEPTION;
 	}
 }
 

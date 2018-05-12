@@ -2,6 +2,7 @@
 
 package frsf.cidisi.exercise.smarttoy.search;
 
+import domain.Habitacion;
 import frsf.cidisi.faia.agent.Perception;
 import frsf.cidisi.faia.agent.search.GoalTest;
 import frsf.cidisi.faia.state.AgentState;
@@ -12,14 +13,22 @@ public class GoalSmartToy extends GoalTest {
     public boolean isGoalState (AgentState agentState) {
     	
     	 AgentSmartToyState estadoAgente = (AgentSmartToyState) agentState;
-    	 int habitacionAgente= estadoAgente.getUbicacionAgente().getFirst().getIdHabitacion();
-    	 int habitacionSmartphone = estadoAgente.getUbicacionInicial().getFirst().getIdHabitacion();
-    	 int ubicacionAgente[] = estadoAgente.getUbicacionAgente().getSecond();
-    	 int ubicacionSmartphone[] = estadoAgente.getUbicacionInicial().getSecond(); 
+    	 //int habitacionAgente= estadoAgente.getUbicacionAgente().getFirst().getIdHabitacion();
+    	 //int habitacionSmartphone = estadoAgente.getUbicacionInicial().getFirst().getIdHabitacion();
+    	 //int ubicacionAgente[] = estadoAgente.getUbicacionAgente().getSecond();
+    	 //int ubicacionSmartphone[] = estadoAgente.getUbicacionInicial().getSecond(); 
     
-    	if(habitacionAgente == habitacionSmartphone & //habitacion smartphone misma que smartoy
-    			ubicacionAgente[0]==ubicacionSmartphone[0] & //ubicacion en la pieza es la misma
-    			ubicacionAgente[1]==ubicacionSmartphone[1]){
+    	 int xAgent = estadoAgente.getUbicacionAgente().getSecond()[0];
+    	 int yAgent = estadoAgente.getUbicacionAgente().getSecond()[1];
+    	 String[][] plano = estadoAgente.getUbicacionAgente().getFirst().getPlanoHabitacion();
+    	if(plano[xAgent+1][yAgent]  == "go" ||
+    			plano[xAgent-1][yAgent]  == "go" ||
+    			plano[xAgent][yAgent+1]  == "go" ||
+    			plano[xAgent][yAgent-1]  == "go" ||
+    			plano[xAgent+1][yAgent+1]  == "go" ||
+    			plano[xAgent+1][yAgent-1]  == "go" ||
+    			plano[xAgent-1][yAgent-1]  == "go" ||
+    			plano[xAgent-1][yAgent+1]  == "go"){
     		return true;
     	}
     	else{
