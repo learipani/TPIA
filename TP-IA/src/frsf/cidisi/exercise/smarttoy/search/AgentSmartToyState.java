@@ -18,18 +18,6 @@ public class AgentSmartToyState extends SearchBasedAgentState {
     private List<Habitacion> plano;
 	private boolean[] orientacion = new boolean[4];
 
-	public AgentSmartToyState(
-			Pair<Habitacion, int[]> ubicacionAgente,
-			Pair<Habitacion, int[]> ubicacionInicial, 
-			List<Habitacion> plano,
-			boolean[] orientacion) {
-		super();
-		this.ubicacionAgente = ubicacionAgente;
-		this.ubicacionInicial = ubicacionInicial;
-		this.plano = plano;
-		this.orientacion = orientacion;
-	}
-	
     public AgentSmartToyState() {
 		// TODO Auto-generated constructor stub
 	}

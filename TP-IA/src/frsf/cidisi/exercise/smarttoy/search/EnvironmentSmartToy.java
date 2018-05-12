@@ -12,53 +12,111 @@ import frsf.cidisi.faia.state.datastructure.Pair;
 
 public class EnvironmentSmartToy extends Environment {
 
-    public EnvironmentSmartToy() {
-        // Create the environment state
-        this.environmentState = new EnvironmentSmartToyState(new ArrayList<Habitacion>(), new Pair<Habitacion, int[]>(null,  new int[] {0,0}), new Pair<Habitacion, int[]>(null, new int[] {0,0}));
-    }
+	public EnvironmentSmartToy() {
+		// Create the environment state
+		this.environmentState = new EnvironmentSmartToyState();
+	}
 
-    public EnvironmentSmartToyState getEnvironmentState() {
-        return (EnvironmentSmartToyState) super.getEnvironmentState();
-    }
+	public EnvironmentSmartToyState getEnvironmentState() {
+		return (EnvironmentSmartToyState) super.getEnvironmentState();
+	}
 
-    /**
-     * This method is called by the simulator. Given the Agent, it creates
-     * a new perception reading, for example, the agent position.
-     * @param agent
-     * @return A perception that will be given to the agent by the simulator.
-     */
-    @Override
-    public  AgentSmartToyPerception getPercept() {
-        // Create a new perception to return
-         AgentSmartToyPerception perception = new AgentSmartToyPerception();
+	/**
+	 * This method is called by the simulator. Given the Agent, it creates a new
+	 * perception reading, for example, the agent position.
+	 * 
+	 * @param agent
+	 * @return A perception that will be given to the agent by the simulator.
+	 */
+	@Override
+	public AgentSmartToyPerception getPercept() {
+		// Create a new perception to return
+		AgentSmartToyPerception perception = new AgentSmartToyPerception();
+		// AgentSmartToy agent = (AgentSmartToy) agentIn;
+
+		// Obtiene el estado del ambiente y lo guarda en una variable
+		EnvironmentSmartToyState environmentState = this.getEnvironmentState();
+
+		// Las siguientes dos variables son creadas para facilitar la lectura
+		// del código
+		Pair<Habitacion, int[]> ubicacionAgente = environmentState
+				.getUbicacionAgente();
+		String[][] planoHabitacionDeAgente = environmentState
+				.getHabitacionDePlano(
+						ubicacionAgente.getFirst().getIdHabitacion())
+				.getPlanoHabitacion();
+
 		
-		//TODO : Set the perceptions sensors
-        
-        // Return the perception
-        return perception;
-    }
+		// Dependiendo la orientación, setea de distintas formas las 4 percepciones cardinales
+		switch (environmentState.getCharOrientacionAgente()) {
+		case 'N':
+			perception.setSensorfrontal(planoHabitacionDeAgente[ubicacionAgente
+					.getSecond()[0] - 1][ubicacionAgente.getSecond()[1]]);
+			perception
+					.setSensorlateralizquierdo(planoHabitacionDeAgente[ubicacionAgente
+							.getSecond()[0]][ubicacionAgente.getSecond()[1] - 1]);
+			perception
+					.setSensorlateralderecho(planoHabitacionDeAgente[ubicacionAgente
+							.getSecond()[0] + 1][ubicacionAgente.getSecond()[1]]);
+			perception.setSensortrasero(planoHabitacionDeAgente[ubicacionAgente
+					.getSecond()[0]][ubicacionAgente.getSecond()[1] + 1]);
+			break;
+		case 'O':
+			perception.setSensorfrontal(planoHabitacionDeAgente[ubicacionAgente
+					.getSecond()[0]][ubicacionAgente.getSecond()[1] - 1]);
+			perception
+					.setSensorlateralizquierdo(planoHabitacionDeAgente[ubicacionAgente
+							.getSecond()[0]][ubicacionAgente.getSecond()[1] + 1]);
+			perception
+					.setSensorlateralderecho(planoHabitacionDeAgente[ubicacionAgente
+							.getSecond()[0] - 1][ubicacionAgente.getSecond()[1]]);
+			perception.setSensortrasero(planoHabitacionDeAgente[ubicacionAgente
+					.getSecond()[0] + 1][ubicacionAgente.getSecond()[1]]);
+			break;
+		case 'S':
+			perception.setSensorfrontal(planoHabitacionDeAgente[ubicacionAgente
+					.getSecond()[0]][ubicacionAgente.getSecond()[1] + 1]);
+			perception
+					.setSensorlateralizquierdo(planoHabitacionDeAgente[ubicacionAgente
+							.getSecond()[0] + 1][ubicacionAgente.getSecond()[1]]);
+			perception
+					.setSensorlateralderecho(planoHabitacionDeAgente[ubicacionAgente
+							.getSecond()[0]][ubicacionAgente.getSecond()[1] - 1]);
+			perception.setSensortrasero(planoHabitacionDeAgente[ubicacionAgente
+					.getSecond()[0] - 1][ubicacionAgente.getSecond()[1]]);
+			break;
+		case 'E':
+			perception.setSensorfrontal(planoHabitacionDeAgente[ubicacionAgente
+					.getSecond()[0] + 1][ubicacionAgente.getSecond()[1]]);
+			perception
+					.setSensorlateralizquierdo(planoHabitacionDeAgente[ubicacionAgente
+							.getSecond()[0] - 1][ubicacionAgente.getSecond()[1]]);
+			perception
+					.setSensorlateralderecho(planoHabitacionDeAgente[ubicacionAgente
+							.getSecond()[0]][ubicacionAgente.getSecond()[1] + 1]);
+			perception.setSensortrasero(planoHabitacionDeAgente[ubicacionAgente
+					.getSecond()[0]][ubicacionAgente.getSecond()[1] - 1]);
+			break;
+		}
+		
+		//Setea la posición del llamado
+		perception.setSmartphone(environmentState.getUbicacionSmartPhone().getFirst());
 
-    
-    public String toString() {
-        return environmentState.toString();
-    }
+		// Return the perception
+		return perception;
+	}
 
-    
-    public boolean agentFailed(Action actionReturned) {
+	public String toString() {
+		return environmentState.toString();
+	}
 
-        EnvironmentSmartToyState envState =
-                this.getEnvironmentState();
-        if(envState.celdasVisitadas>2000){
-        	return true;
-        }
+	public boolean agentFailed(Action actionReturned) {
 
-        // TODO: Complete Method        
+		EnvironmentSmartToyState envState = this.getEnvironmentState();
+		if (envState.celdasVisitadas > 2000) {
+			return true;
+		}
 
-        return false;
-    }
-
-	//TODO: Complete this section with agent-specific methods
-    // The following methods are agent-specific:
-    
-    
+		return false;
+	}
 }
