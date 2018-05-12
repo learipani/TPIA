@@ -127,6 +127,14 @@ public class EnvironmentSmartToyState extends EnvironmentState {
 	public void setUbicacionSmartPhone(Pair<Habitacion, int[]> ubicacionSmartPhone) {
 		this.ubicacionSmartPhone = ubicacionSmartPhone;
 	}
+	
+	public boolean[] getOrientacion() {
+		return orientacionAgente;
+	}
+
+	public void setOrientacionAgente(boolean[] orientacion) {
+		this.orientacionAgente = orientacion;
+	}
 
 	public Habitacion getHabitacionDePlano(int idHabitacion) {
 		for (Iterator<Habitacion> i = plano.iterator(); i.hasNext();) {
