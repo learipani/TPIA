@@ -16,13 +16,15 @@ public class Contenedor extends JComponent
 {
      static JPanel panel;
     
-     static int columna = 60; //columna y fila se deberian iniciar en 0 
+     static int columna = 0; //columna y fila se deberian iniciar en 0 
      
-     static int fila =60; 
+     static int fila =0; 
      
-     static int numeroHabitacion =7; //1..15
+     static int numeroHabitacion =1; //1..15
      
      static int ampliacion;
+     
+     static EnvironmentSmartToy environment;
      
 
      
@@ -30,7 +32,7 @@ public class Contenedor extends JComponent
   public Contenedor(JPanel panel,  EnvironmentSmartToy environment)
   {
       this.panel = panel;
-      
+      this.environment = environment;
 
       
       setBounds(0, 0,panel.getWidth() , panel.getHeight());
@@ -39,7 +41,7 @@ public class Contenedor extends JComponent
  }
     
   public void paint(Graphics g){
-    //numeroHabitacion = environment.getEnvironmentState().getUbicacionAgente().getFirst().getIdHabitacion();
+    numeroHabitacion = environment.getEnvironmentState().getUbicacionAgente().getFirst().getIdHabitacion();
 
     ImageIcon imagen =new ImageIcon(new ImageIcon(getClass().getResource("imagenes/"+numeroHabitacion+".png")).getImage());
     g.drawImage(imagen.getImage(), 0, 0, imagen.getIconWidth(),imagen.getIconHeight(), this); 
@@ -51,8 +53,8 @@ public class Contenedor extends JComponent
     	  ampliacion =30;
      }
      
-  	 //fila = environment.getEnvironmentState().getUbicacionAgente().getSecond()[0]*ampliacion;
-     //columna = environment.getEnvironmentState().getUbicacionAgente().getSecond()[1]*ampliacion;
+  	 fila = environment.getEnvironmentState().getUbicacionAgente().getSecond()[0]*ampliacion;
+     columna = environment.getEnvironmentState().getUbicacionAgente().getSecond()[1]*ampliacion;
     
      ImageIcon imagen2 =new ImageIcon(new ImageIcon(getClass().getResource("imagenes/smartToy.png")).getImage());
      g.drawImage(imagen2.getImage(), columna, fila, ampliacion, ampliacion, null); 

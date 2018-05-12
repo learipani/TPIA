@@ -1,5 +1,6 @@
 package frsf.cidisi.exercise.smarttoy.search;
 
+import pantalla.Ventana;
 import frsf.cidisi.faia.exceptions.PrologConnectorException;
 import frsf.cidisi.faia.simulator.SearchBasedAgentSimulator;
 
@@ -13,6 +14,7 @@ public class AgentSmartToyMain {
         SearchBasedAgentSimulator simulator =
                 new SearchBasedAgentSimulator(environment, agent);
         
+        new Ventana(environment).setVisible(true);
         simulator.start();
     }
 
