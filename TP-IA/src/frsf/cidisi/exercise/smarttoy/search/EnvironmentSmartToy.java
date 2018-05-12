@@ -57,28 +57,28 @@ public class EnvironmentSmartToy extends Environment {
 							.getSecond()[0]][ubicacionAgente.getSecond()[1] - 1]);
 			perception
 					.setSensorlateralderecho(planoHabitacionDeAgente[ubicacionAgente
-							.getSecond()[0] + 1][ubicacionAgente.getSecond()[1]]);
+							.getSecond()[0]][ubicacionAgente.getSecond()[1] + 1]);
 			perception.setSensortrasero(planoHabitacionDeAgente[ubicacionAgente
-					.getSecond()[0]][ubicacionAgente.getSecond()[1] + 1]);
+					.getSecond()[0] + 1][ubicacionAgente.getSecond()[1]]);
 			break;
 		case 'O':
 			perception.setSensorfrontal(planoHabitacionDeAgente[ubicacionAgente
 					.getSecond()[0]][ubicacionAgente.getSecond()[1] - 1]);
 			perception
 					.setSensorlateralizquierdo(planoHabitacionDeAgente[ubicacionAgente
-							.getSecond()[0]][ubicacionAgente.getSecond()[1] + 1]);
+							.getSecond()[0] + 1][ubicacionAgente.getSecond()[1]]);
 			perception
 					.setSensorlateralderecho(planoHabitacionDeAgente[ubicacionAgente
 							.getSecond()[0] - 1][ubicacionAgente.getSecond()[1]]);
 			perception.setSensortrasero(planoHabitacionDeAgente[ubicacionAgente
-					.getSecond()[0] + 1][ubicacionAgente.getSecond()[1]]);
+					.getSecond()[0]][ubicacionAgente.getSecond()[1] + 1]);
 			break;
 		case 'S':
 			perception.setSensorfrontal(planoHabitacionDeAgente[ubicacionAgente
-					.getSecond()[0]][ubicacionAgente.getSecond()[1] + 1]);
+					.getSecond()[0] + 1][ubicacionAgente.getSecond()[1]]);
 			perception
 					.setSensorlateralizquierdo(planoHabitacionDeAgente[ubicacionAgente
-							.getSecond()[0] + 1][ubicacionAgente.getSecond()[1]]);
+							.getSecond()[0]][ubicacionAgente.getSecond()[1] + 1]);
 			perception
 					.setSensorlateralderecho(planoHabitacionDeAgente[ubicacionAgente
 							.getSecond()[0]][ubicacionAgente.getSecond()[1] - 1]);
@@ -87,13 +87,13 @@ public class EnvironmentSmartToy extends Environment {
 			break;
 		case 'E':
 			perception.setSensorfrontal(planoHabitacionDeAgente[ubicacionAgente
-					.getSecond()[0] + 1][ubicacionAgente.getSecond()[1]]);
+					.getSecond()[0]][ubicacionAgente.getSecond()[1] + 1]);
 			perception
 					.setSensorlateralizquierdo(planoHabitacionDeAgente[ubicacionAgente
 							.getSecond()[0] - 1][ubicacionAgente.getSecond()[1]]);
 			perception
 					.setSensorlateralderecho(planoHabitacionDeAgente[ubicacionAgente
-							.getSecond()[0]][ubicacionAgente.getSecond()[1] + 1]);
+							.getSecond()[0] + 1][ubicacionAgente.getSecond()[1]]);
 			perception.setSensortrasero(planoHabitacionDeAgente[ubicacionAgente
 					.getSecond()[0]][ubicacionAgente.getSecond()[1] - 1]);
 			break;
