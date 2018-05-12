@@ -58,7 +58,7 @@ public class EnvironmentSmartToyState extends EnvironmentState {
     	this.plano.add(CreacionHabitaciones.createHabitacion15());
     	
     	//Setea la posicion inicial del agente
-    	this.ubicacionAgente.setFirst(this.getPlano().get(0)); //Habitacion .get(HABITACION)
+    	this.ubicacionAgente.setFirst(this.getPlano().get(1)); //Habitacion .get(HABITACION)
     	this.ubicacionAgente.setSecond(new int[]{3,3}); //Posicion dentro de la habitación {FILA, COLUMNA})
     	
     	//Setea la orientación inicial del agente
@@ -84,14 +84,9 @@ public class EnvironmentSmartToyState extends EnvironmentState {
     public String toString() {
         String str = "";
         
-        str += "\nAgente ubicado en la posicion ["+ ubicacionAgente.getSecond()[0] +";"+ubicacionAgente.getSecond()[1] +"] de la habitación "+  ubicacionAgente.getFirst().getIdHabitacion();
-        
         str += "\nLlamado realizado desde posicion ["+ ubicacionSmartPhone.getSecond()[0] +";"+ubicacionSmartPhone.getSecond()[1] +"] de la habitación "+  ubicacionSmartPhone.getFirst().getIdHabitacion();
-
-        str+= "\n Celdas visitadas: " +celdasVisitadas;
-        
-        str += "\nHabitacón número: " + ubicacionAgente.getFirst().getIdHabitacion();
-        str += "\nPosicion: [" + ubicacionAgente.getSecond()[0]+";"+ubicacionAgente.getSecond()[1];
+        str += "\nAgente en habitacón número: " + ubicacionAgente.getFirst().getIdHabitacion();
+        str += "\nPosicion: [" + ubicacionAgente.getSecond()[0]+";"+ubicacionAgente.getSecond()[1]+"]";
         str += "\nOrientacion: "+ getCharOrientacionAgente();
         str += "\nCeldas visitadas: " +celdasVisitadas;
 
@@ -99,7 +94,7 @@ public class EnvironmentSmartToyState extends EnvironmentState {
         str = str + "\n\nPlano=\"[ \n";
         for (int fila = 0; fila < planoAgente.length; fila++) {
             str = str + "[ ";
-            for (int col = 0; col < planoAgente.length; col++) {
+            for (int col = 0; col < planoAgente[fila].length; col++) {
             	str = str + planoAgente[fila][col] + " ";
             }
             str = str + " ]\n";

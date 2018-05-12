@@ -136,7 +136,7 @@ public class Habitacion {
 
 		//Antes que nada, lleno todas las celdas con nada
 		for (int row = 0; row < planoHabitacion.length; row++) {
-            for (int col = 0; col < planoHabitacion.length; col++) {
+            for (int col = 0; col < planoHabitacion[0].length; col++) {
             	planoHabitacion[row][col] = AgentSmartToyPerception.EMPTY_PERCEPTION;
             }
         }
@@ -154,11 +154,12 @@ public class Habitacion {
 			Objeto item = it.next();
 			String claseObjeto;
 			//Me fijo que tipo de objeto es el que tengo y lo guardo en una variable
-			if(item.getClass().getName() == "Obstaculo"){
+			String className = item.getClass().getSimpleName();
+			if(className.equals("Obstaculo")){
 				claseObjeto = AgentSmartToyPerception.OBSTACULO_PERCEPTION;
 			}
 			else{
-				if(item.getClass().getName() == "TerrenoAdverso"){
+				if(className.equals("TerrenoAdverso")){
 					claseObjeto = AgentSmartToyPerception.TERRENO_PERCEPTION;
 				}
 				else{
@@ -169,6 +170,57 @@ public class Habitacion {
 			for (int i = 0; i < item.getTamano()[0]; i++) {
 				for (int j = 0; j < item.getTamano()[1]; j++) {
 					planoHabitacion[i][j] = claseObjeto;
+				}
+			}
+		}
+	}
+	
+	public void ActualizarPlanoHabitacion(int[] tamano){
+
+		int x;
+		int y;
+		//Antes que nada, lleno todas las celdas con nada
+		for (int row = 0; row < tamano[0]; row++) {
+            for (int col = 0; col < tamano[1]; col++) {
+            	planoHabitacion[row][col] = AgentSmartToyPerception.EMPTY_PERCEPTION;
+            }
+        }
+		
+		//Itero todas las puertas y las pongo en el plano
+		for (Iterator<Pair<Integer, List<Puerta>>> i = habitacionesContiguas.iterator(); i.hasNext();) {
+			Pair<Integer, List<Puerta>> item = i.next();
+			
+			for (Iterator<Puerta> j = item.getSecond().iterator(); j.hasNext();) {
+				Puerta itemPuerta = j.next();
+				x = itemPuerta.getPosicionIngreso()[0];
+				y = itemPuerta.getPosicionIngreso()[1];
+				planoHabitacion[x][y] = AgentSmartToyPerception.PUERTA_PERCEPTION;
+
+			}
+		}
+		//Itero todos los objetos y los pongo en el plano
+		for (Iterator<Objeto> it = objetos.iterator(); it.hasNext();) {
+			Objeto item = it.next();
+			String claseObjeto;
+			//Me fijo que tipo de objeto es el que tengo y lo guardo en una variable
+			String className = item.getClass().getSimpleName();
+			if(className.equals("Obstaculo")){
+				claseObjeto = AgentSmartToyPerception.OBSTACULO_PERCEPTION;
+			}
+			else{
+				if(className.equals("TerrenoAdverso")){
+					claseObjeto = AgentSmartToyPerception.TERRENO_PERCEPTION;
+				}
+				else{
+					claseObjeto = AgentSmartToyPerception.UNKNOWN_PERCEPTION;
+				}
+			}
+			//Recorro el objeto y voy actualizando el plano
+			for (int i = 0; i < item.getTamano()[0]; i++) {
+				for (int j = 0; j < item.getTamano()[1]; j++) {
+					x = item.getUbicacionEnHabitacion()[0] + i;
+					y = item.getUbicacionEnHabitacion()[1] + j;
+					planoHabitacion[x][y] = claseObjeto;
 				}
 			}
 		}

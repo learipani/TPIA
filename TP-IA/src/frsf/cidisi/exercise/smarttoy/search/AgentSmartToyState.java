@@ -88,14 +88,13 @@ public class AgentSmartToyState extends SearchBasedAgentState {
     	this.plano.add(CreacionHabitaciones.createHabitacion9());
     	this.plano.add(CreacionHabitaciones.createHabitacion10());
     	this.plano.add(CreacionHabitaciones.createHabitacion11());
-    	this.plano.add(CreacionHabitaciones.createHabitacion11());
     	this.plano.add(CreacionHabitaciones.createHabitacion12());
     	this.plano.add(CreacionHabitaciones.createHabitacion13());
     	this.plano.add(CreacionHabitaciones.createHabitacion14());
     	this.plano.add(CreacionHabitaciones.createHabitacion15());
     	
     	//Setea la posicion inicial del agente
-    	this.ubicacionAgente.setFirst(this.getPlano().get(0)); //Habitacion .get(HABITACION)
+    	this.ubicacionAgente.setFirst(this.getPlano().get(1)); //Habitacion .get(HABITACION)
     	this.ubicacionAgente.setSecond(new int[]{3,3}); //Posicion dentro de la habitación {FILA, COLUMNA})
     	
     	//Setea la orientación inicial del agente
@@ -113,15 +112,15 @@ public class AgentSmartToyState extends SearchBasedAgentState {
     public String toString() {
         String str = "";
 
-        str += "\nHabitacón número: " + ubicacionAgente.getFirst().getIdHabitacion();
-        str += "\nPosicion: [" + ubicacionAgente.getSecond()[0]+";"+ubicacionAgente.getSecond()[1];
+        str += "\nAgente en habitacón número: " + ubicacionAgente.getFirst().getIdHabitacion();
+        str += "\nPosicion: [" + ubicacionAgente.getSecond()[0]+";"+ubicacionAgente.getSecond()[1]+"]";
         str += "\nOrientacion: "+ getCharOrientacion();
         
         String[][] planoAgente =  ubicacionAgente.getFirst().getPlanoHabitacion();
         str = str + "\n\nPlano=\"[ \n";
         for (int fila = 0; fila < planoAgente.length; fila++) {
             str = str + "[ ";
-            for (int col = 0; col < planoAgente.length; col++) {
+            for (int col = 0; col < planoAgente[fila].length; col++) {
             	if (planoAgente[fila][col] == null ) {
                     str = str + AgentSmartToyPerception.UNKNOWN_PERCEPTION;
                 } else {

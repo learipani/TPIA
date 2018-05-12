@@ -34,15 +34,15 @@ public class CreacionHabitaciones {
 
 		//Puertas
 		//Puerta pu1 = new Puerta(NUMERO_PUERTA, new int[]{FILA_EN_HAB_ACTUAL, COLUMNA_EN_HAB_ACTUAL}, new int[]{FILA_EN_HAB_DESTINO, COLUMNA_EN_HAB_DESTINO})
-		Puerta pu1 = new Puerta(1, new int[]{6,1}, new int[]{1, 0});
-		Puerta pu2 = new Puerta(1, new int[]{6,2}, new int[]{2, 0});
-		Puerta pu3 = new Puerta(1, new int[]{6,3}, new int[]{3, 0});
-		Puerta pu4 = new Puerta(1, new int[]{6,4}, new int[]{4, 0});
-		Puerta pu5 = new Puerta(1, new int[]{6,5}, new int[]{5, 0});
+		Puerta pu1 = new Puerta(1, new int[]{1,6}, new int[]{1, 0});
+		Puerta pu2 = new Puerta(1, new int[]{2,6}, new int[]{2, 0});
+		Puerta pu3 = new Puerta(1, new int[]{3,6}, new int[]{3, 0});
+		Puerta pu4 = new Puerta(1, new int[]{4,6}, new int[]{4, 0});
+		Puerta pu5 = new Puerta(1, new int[]{5,6}, new int[]{5, 0});
 		h1.addHabitacionContigua(new Pair<Integer, List<Puerta>> (2, new ArrayList<Puerta>(Arrays.asList(pu1, pu2, pu3, pu4, pu5))));
 
 		//PlanoHabitacion
-		h1.ActualizarPlanoHabitacion();
+		h1.ActualizarPlanoHabitacion(new int[]{10,7});
 		
 		return h1;
 	}
