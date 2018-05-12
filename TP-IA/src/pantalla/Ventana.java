@@ -49,14 +49,14 @@ public class Ventana extends javax.swing.JFrame {
         pack();
     }// </editor-fold>                        
 
-    /*public static void main(String args[]) {
+    public static void main(String args[]) {
         
         //EnvironmentSmartToy environment = new EnvironmentSmartToy();
         EnvironmentSmartToy environment = null;
         new Ventana(environment).setVisible(true);
             
     }
-    */
+    
 
     // Variables declaration - do not modify                     
     private javax.swing.JPanel panel;

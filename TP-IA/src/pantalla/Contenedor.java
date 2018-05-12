@@ -20,7 +20,7 @@ public class Contenedor extends JComponent
      
      static int fila =60; 
      
-     static int numeroHabitacion =1; //1..15
+     static int numeroHabitacion =7; //1..15
      
      static int ampliacion;
      

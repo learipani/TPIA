@@ -66,33 +66,33 @@ public class AgentSmartToyPerception extends Perception {
 			sensorlateralizquierdo = planoHabitacionDeAgente[ubicacionAgente
 					.getSecond()[0]][ubicacionAgente.getSecond()[1] - 1];
 			sensorlateralderecho = planoHabitacionDeAgente[ubicacionAgente
-					.getSecond()[0] + 1][ubicacionAgente.getSecond()[1]];
-			sensortrasero = planoHabitacionDeAgente[ubicacionAgente.getSecond()[0]][ubicacionAgente
-					.getSecond()[1] + 1];
+					.getSecond()[0]][ubicacionAgente.getSecond()[1] + 1];
+			sensortrasero = planoHabitacionDeAgente[ubicacionAgente.getSecond()[0] + 1][ubicacionAgente
+					.getSecond()[1]];
 			break;
 		case 'O':
 			sensorfrontal = planoHabitacionDeAgente[ubicacionAgente.getSecond()[0]][ubicacionAgente
 					.getSecond()[1] - 1];
 			sensorlateralizquierdo = planoHabitacionDeAgente[ubicacionAgente
-					.getSecond()[0]][ubicacionAgente.getSecond()[1] + 1];
+					.getSecond()[0] + 1][ubicacionAgente.getSecond()[1]];
 			sensorlateralderecho = planoHabitacionDeAgente[ubicacionAgente
 					.getSecond()[0] - 1][ubicacionAgente.getSecond()[1]];
-			sensortrasero = planoHabitacionDeAgente[ubicacionAgente.getSecond()[0] + 1][ubicacionAgente
-					.getSecond()[1]];
+			sensortrasero = planoHabitacionDeAgente[ubicacionAgente.getSecond()[0]][ubicacionAgente
+					.getSecond()[1] + 1];
 			break;
 		case 'S':
-			sensorfrontal = planoHabitacionDeAgente[ubicacionAgente.getSecond()[0]][ubicacionAgente
-					.getSecond()[1] + 1];
+			sensorfrontal = planoHabitacionDeAgente[ubicacionAgente.getSecond()[0] + 1][ubicacionAgente
+					.getSecond()[1]];
 			sensorlateralizquierdo = planoHabitacionDeAgente[ubicacionAgente
-					.getSecond()[0] + 1][ubicacionAgente.getSecond()[1]];
+					.getSecond()[0]][ubicacionAgente.getSecond()[1] + 1];
 			sensorlateralderecho = planoHabitacionDeAgente[ubicacionAgente
 					.getSecond()[0]][ubicacionAgente.getSecond()[1] - 1];
 			sensortrasero = planoHabitacionDeAgente[ubicacionAgente.getSecond()[0] - 1][ubicacionAgente
 					.getSecond()[1]];
 			break;
 		case 'E':
-			sensorfrontal = planoHabitacionDeAgente[ubicacionAgente.getSecond()[0] + 1][ubicacionAgente
-					.getSecond()[1]];
+			sensorfrontal = planoHabitacionDeAgente[ubicacionAgente.getSecond()[0]][ubicacionAgente
+					.getSecond()[1] + 1];
 			sensorlateralizquierdo = planoHabitacionDeAgente[ubicacionAgente
 					.getSecond()[0] - 1][ubicacionAgente.getSecond()[1]];
 			sensorlateralderecho = planoHabitacionDeAgente[ubicacionAgente
