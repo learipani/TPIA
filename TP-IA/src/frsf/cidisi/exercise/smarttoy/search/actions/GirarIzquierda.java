@@ -7,7 +7,10 @@ import frsf.cidisi.faia.state.AgentState;
 import frsf.cidisi.faia.state.EnvironmentState;
 
 public class GirarIzquierda extends SearchAction {
-
+	
+	public static int cantidadGiros=0;
+	public static int cantidadGirosReales=0;
+	
     /**
      * This method updates a tree node state when the search process is running.
      * It does not updates the real world state.
@@ -16,34 +19,35 @@ public class GirarIzquierda extends SearchAction {
     public SearchBasedAgentState execute(SearchBasedAgentState s) {
         
     	AgentSmartToyState agState = (AgentSmartToyState) s;
-        boolean[] agentOrientation = agState.getOrientacion();
         
-        //[norte oeste sur este]   = [arriba izq abajo der]
-        if (agentOrientation[0]==true){//arriba
-        	agentOrientation[0]=false;
-        	agentOrientation[1]=true;
-        }
-        else if (agentOrientation[1]==true){//izq
-        	agentOrientation[1]=false;
-        	agentOrientation[2]=true;
-        }
-        else if (agentOrientation[2]==true){//abajo
-        	agentOrientation[2]=false;
-        	agentOrientation[3]=true;
-        }
-        else if (agentOrientation[3]==true){//der
-        	agentOrientation[3]=false;
-        	agentOrientation[0]=true;
-        }
-            
-        agState.setOrientacion(agentOrientation);
-
-        return agState;
+    	if(cantidadGiros <=3){
+    		boolean[] agentOrientation = agState.getOrientacion();
+	        //[norte oeste sur este]   = [arriba izq abajo der]
+	        if (agentOrientation[0]==true){//arriba
+	        	agentOrientation[0]=false;
+	        	agentOrientation[1]=true;
+	        }
+	        else if (agentOrientation[1]==true){//izq
+	        	agentOrientation[1]=false;
+	        	agentOrientation[2]=true;
+	        }
+	        else if (agentOrientation[2]==true){//abajo
+	        	agentOrientation[2]=false;
+	        	agentOrientation[3]=true;
+	        }
+	        else if (agentOrientation[3]==true){//der
+	        	agentOrientation[3]=false;
+	        	agentOrientation[0]=true;
+	        }
+	        cantidadGiros++;    
+	        agState.setOrientacion(agentOrientation);
+	        return agState;
+    	}
         // TODO: Use this conditions
         // PreConditions: null
         // PostConditions: null
         
-        //return null;
+        return null;
     }
 
     /**
@@ -54,31 +58,32 @@ public class GirarIzquierda extends SearchAction {
         
     	EnvironmentSmartToyState environmentState = (EnvironmentSmartToyState) est;
         AgentSmartToyState agState = ((AgentSmartToyState) ast);
-        boolean[] agentOrientation = agState.getOrientacion();
         
-        //[norte oeste sur este]   = [arriba izq abajo der]
-            if (agentOrientation[0]==true){//arriba
-            	agentOrientation[0]=false;
-            	agentOrientation[1]=true;
-            }
-            else if (agentOrientation[1]==true){//izq
-            	agentOrientation[1]=false;
-            	agentOrientation[2]=true;
-            }
-            else if (agentOrientation[2]==true){//abajo
-            	agentOrientation[2]=false;
-            	agentOrientation[3]=true;
-            }
-            else if (agentOrientation[3]==true){//der
-            	agentOrientation[3]=false;
-            	agentOrientation[0]=true;
-            }
-                
-            agState.setOrientacion(agentOrientation);
-            environmentState.setOrientacionAgente(agentOrientation);
-
-            return environmentState;
-        
+        if(cantidadGirosReales <=3){
+	        boolean[] agentOrientation = agState.getOrientacion();
+	        //[norte oeste sur este]   = [arriba izq abajo der]
+	        if (agentOrientation[0]==true){//arriba
+	        	agentOrientation[0]=false;
+	        	agentOrientation[1]=true;
+	        }
+	        else if (agentOrientation[1]==true){//izq
+	        	agentOrientation[1]=false;
+	        	agentOrientation[2]=true;
+	        }
+	        else if (agentOrientation[2]==true){//abajo
+	        	agentOrientation[2]=false;
+	        	agentOrientation[3]=true;
+	        }
+	        else if (agentOrientation[3]==true){//der
+	        	agentOrientation[3]=false;
+	        	agentOrientation[0]=true;
+	        }
+	        cantidadGirosReales++;    
+	        agState.setOrientacion(agentOrientation);
+	        environmentState.setOrientacionAgente(agentOrientation);
+	        return environmentState;    
+        }
+        return null;
        /* // TODO: Use this conditions
         // PreConditions: null
         // PostConditions: null
@@ -89,9 +94,7 @@ public class GirarIzquierda extends SearchAction {
             // Update the agent state
             
             return environmentState;
-        }
-
-        return null;*/
+        }*/
     }
 
     /**

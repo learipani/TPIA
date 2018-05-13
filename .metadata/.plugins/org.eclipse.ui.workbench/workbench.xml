@@ -45,7 +45,7 @@
 </editor>
 <editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GirarDerecha.java" partName="GirarDerecha.java" path="C:/Users/lea_r/Documents/GitHub/TPIA/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/actions/GirarDerecha.java" title="GirarDerecha.java" tooltip="TP-IA/src/frsf/cidisi/exercise/smarttoy/search/actions/GirarDerecha.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/actions/GirarDerecha.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="55" selectionTopPixel="1290"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2651" selectionTopPixel="0"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EnvironmentSmartToyState.java" partName="EnvironmentSmartToyState.java" path="C:/Users/lea_r/Documents/GitHub/TPIA/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/EnvironmentSmartToyState.java" title="EnvironmentSmartToyState.java" tooltip="TP-IA/src/frsf/cidisi/exercise/smarttoy/search/EnvironmentSmartToyState.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/EnvironmentSmartToyState.java"/>
@@ -53,11 +53,11 @@
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AgentSmartToyState.java" partName="AgentSmartToyState.java" path="C:/Users/lea_r/Documents/GitHub/TPIA/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/AgentSmartToyState.java" title="AgentSmartToyState.java" tooltip="TP-IA/src/frsf/cidisi/exercise/smarttoy/search/AgentSmartToyState.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/AgentSmartToyState.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="157" selectionOffset="6774" selectionTopPixel="2867"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="6838" selectionTopPixel="1200"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GirarIzquierda.java" partName="GirarIzquierda.java" path="C:/Users/lea_r/Documents/GitHub/TPIA/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/actions/GirarIzquierda.java" title="GirarIzquierda.java" tooltip="TP-IA/src/frsf/cidisi/exercise/smarttoy/search/actions/GirarIzquierda.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/actions/GirarIzquierda.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1928" selectionTopPixel="489"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="402" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
@@ -100,8 +100,7 @@
 </view>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
-<expanded>
-<category IMemento.internal.id="Warnings"/>
+<expanded>&#x0A;<category IMemento.internal.id="Warnings"/>
 <category IMemento.internal.id="Warnings (68 items)"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="0" org.eclipse.ui.ide.markerType="0" org.eclipse.ui.ide.pathField="0" org.eclipse.ui.ide.resourceField="0" org.eclipse.ui.ide.severityAndDescriptionField="0"/>
@@ -266,169 +265,164 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/AgentSmartToyMain.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/AgentSmartToyPerception.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/faia/src/frsf/cidisi/faia/simulator/GoalBasedAgentSimulator.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/faia/src/frsf/cidisi/faia/agent/Agent.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/faia/src/frsf/cidisi/faia/agent/search/SearchAction.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/actions/Avanzar.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/faia/src/frsf/cidisi/faia/solver/search/Search.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/CostFunction.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/actions/GirarDerecha.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/EnvironmentSmartToyState.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/AgentSmartToyState.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/actions/GirarIzquierda.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/actions/GirarDerecha.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/AgentSmartToy.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/AgentSmartToyState.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/actions/GirarIzquierda.java"/>
 </editors>
-<item historyLabel="Agent.java" index="3">
-<position info="not_deleted" x="1070" y="0"/>
-</item>
-<item historyLabel="SearchAction.java" index="4">
-<position info="not_deleted" x="4" y="0"/>
-</item>
-<item historyLabel="GoalBasedAgentSimulator.java" index="2">
-<position info="not_deleted" x="3023" y="0"/>
-</item>
-<item historyLabel="Avanzar.java" index="5">
+<item historyLabel="AgentSmartToyState.java" index="2">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="AgentSmartToyMain.java" index="0">
-<position info="not_deleted" x="640" y="0"/>
-</item>
-<item historyLabel="GoalBasedAgentSimulator.java" index="2">
-<position info="not_deleted" x="3023" y="0"/>
-</item>
-<item historyLabel="AgentSmartToyMain.java" index="0">
-<position info="not_deleted" x="640" y="0"/>
-</item>
-<item historyLabel="Search.java" index="6">
-<position info="not_deleted" x="4" y="0"/>
-</item>
-<item historyLabel="AgentSmartToyPerception.java" index="1">
+<item historyLabel="EnvironmentSmartToyState.java" index="1">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="Avanzar.java" index="5">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="CostFunction.java" index="7">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Avanzar.java" index="5">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="GirarDerecha.java" index="8">
+<item historyLabel="GirarDerecha.java" index="0">
 <position info="not_deleted" x="2091" y="0"/>
 </item>
-<item historyLabel="EnvironmentSmartToyState.java" index="9">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="AgentSmartToyState.java" index="10">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="EnvironmentSmartToyState.java" index="9">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="GirarDerecha.java" index="8">
-<position info="not_deleted" x="2091" y="0"/>
-</item>
-<item historyLabel="GirarDerecha.java" index="8">
+<item historyLabel="GirarDerecha.java" index="0">
 <position info="not_deleted" x="2849" y="0"/>
 </item>
-<item historyLabel="GirarDerecha.java" index="8">
+<item historyLabel="GirarDerecha.java" index="0">
 <position info="not_deleted" x="1880" y="0"/>
 </item>
-<item historyLabel="EnvironmentSmartToyState.java" index="9">
+<item historyLabel="EnvironmentSmartToyState.java" index="1">
 <position info="not_deleted" x="373" y="24"/>
 </item>
-<item historyLabel="AgentSmartToyState.java" index="10">
+<item historyLabel="AgentSmartToyState.java" index="2">
 <position info="not_deleted" x="6774" y="157"/>
 </item>
-<item historyLabel="EnvironmentSmartToyState.java" index="9">
+<item historyLabel="EnvironmentSmartToyState.java" index="1">
 <position info="not_deleted" x="5100" y="0"/>
 </item>
-<item historyLabel="GirarDerecha.java" index="8">
+<item historyLabel="GirarDerecha.java" index="0">
 <position info="not_deleted" x="1880" y="0"/>
 </item>
-<item historyLabel="GirarDerecha.java" index="8">
+<item historyLabel="GirarDerecha.java" index="0">
 <position info="not_deleted" x="2822" y="0"/>
 </item>
-<item historyLabel="EnvironmentSmartToyState.java" index="9">
+<item historyLabel="EnvironmentSmartToyState.java" index="1">
 <position info="not_deleted" x="5018" y="0"/>
 </item>
-<item historyLabel="GirarDerecha.java" index="8">
+<item historyLabel="GirarDerecha.java" index="0">
 <position info="not_deleted" x="817" y="0"/>
 </item>
-<item historyLabel="GirarIzquierda.java" index="11">
+<item historyLabel="GirarIzquierda.java" index="3">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="GirarDerecha.java" index="12">
+<item historyLabel="GirarDerecha.java" index="4">
 <position info="not_deleted" x="739" y="0"/>
 </item>
-<item historyLabel="GirarIzquierda.java" index="11">
+<item historyLabel="GirarIzquierda.java" index="3">
 <position info="not_deleted" x="2002" y="0"/>
 </item>
-<item historyLabel="GirarDerecha.java" index="12">
+<item historyLabel="GirarDerecha.java" index="4">
 <position info="not_deleted" x="2678" y="56"/>
 </item>
-<item historyLabel="GirarIzquierda.java" index="11">
+<item historyLabel="GirarIzquierda.java" index="3">
 <position info="not_deleted" x="1559" y="0"/>
 </item>
-<item historyLabel="GirarDerecha.java" index="12">
+<item historyLabel="GirarDerecha.java" index="4">
 <position info="not_deleted" x="2678" y="56"/>
 </item>
-<item historyLabel="GirarIzquierda.java" index="11">
+<item historyLabel="GirarIzquierda.java" index="3">
 <position info="not_deleted" x="1559" y="0"/>
 </item>
-<item historyLabel="GirarDerecha.java" index="12">
+<item historyLabel="GirarDerecha.java" index="4">
 <position info="not_deleted" x="2678" y="56"/>
 </item>
-<item historyLabel="GirarIzquierda.java" index="11">
+<item historyLabel="GirarIzquierda.java" index="3">
 <position info="not_deleted" x="1559" y="0"/>
 </item>
-<item historyLabel="GirarDerecha.java" index="12">
+<item historyLabel="GirarDerecha.java" index="4">
 <position info="not_deleted" x="2678" y="56"/>
 </item>
-<item historyLabel="GirarIzquierda.java" index="11">
+<item historyLabel="GirarIzquierda.java" index="3">
 <position info="not_deleted" x="1559" y="0"/>
 </item>
-<item historyLabel="GirarDerecha.java" index="12">
+<item historyLabel="GirarDerecha.java" index="4">
 <position info="not_deleted" x="2678" y="56"/>
 </item>
-<item historyLabel="GirarIzquierda.java" index="11">
+<item historyLabel="GirarIzquierda.java" index="3">
 <position info="not_deleted" x="1559" y="0"/>
 </item>
-<item historyLabel="GirarDerecha.java" index="12">
+<item historyLabel="GirarDerecha.java" index="4">
 <position info="not_deleted" x="55" y="0"/>
 </item>
-<item historyLabel="GirarIzquierda.java" index="11">
+<item historyLabel="GirarIzquierda.java" index="3">
 <position info="not_deleted" x="1559" y="0"/>
 </item>
-<item historyLabel="GirarDerecha.java" index="12">
+<item historyLabel="GirarDerecha.java" index="4">
 <position info="not_deleted" x="55" y="0"/>
 </item>
-<item historyLabel="GirarIzquierda.java" index="11">
+<item historyLabel="GirarIzquierda.java" index="3">
 <position info="not_deleted" x="1559" y="0"/>
 </item>
-<item historyLabel="GirarDerecha.java" index="12">
+<item historyLabel="GirarDerecha.java" index="4">
 <position info="not_deleted" x="55" y="0"/>
 </item>
-<item historyLabel="GirarIzquierda.java" index="11">
+<item historyLabel="GirarIzquierda.java" index="3">
 <position info="not_deleted" x="1434" y="0"/>
 </item>
-<item historyLabel="GirarDerecha.java" index="12">
+<item historyLabel="GirarDerecha.java" index="4">
 <position info="not_deleted" x="55" y="0"/>
 </item>
-<item historyLabel="GirarIzquierda.java" index="11">
+<item historyLabel="GirarIzquierda.java" index="3">
 <position info="not_deleted" x="1434" y="0"/>
 </item>
-<item historyLabel="GirarDerecha.java" index="12">
+<item historyLabel="GirarDerecha.java" index="4">
 <position info="not_deleted" x="55" y="0"/>
 </item>
-<item historyLabel="GirarIzquierda.java" index="11">
+<item historyLabel="GirarIzquierda.java" index="3">
 <position info="not_deleted" x="1928" y="0"/>
 </item>
-<item active="true" historyLabel="GirarDerecha.java" index="12">
+<item historyLabel="GirarDerecha.java" index="4">
 <position info="not_deleted" x="55" y="0"/>
+</item>
+<item historyLabel="AgentSmartToy.java" index="5">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="AgentSmartToyState.java" index="6">
+<position info="not_deleted" x="6774" y="157"/>
+</item>
+<item historyLabel="GirarIzquierda.java" index="7">
+<position info="not_deleted" x="2128" y="0"/>
+</item>
+<item historyLabel="GirarIzquierda.java" index="7">
+<position info="not_deleted" x="788" y="0"/>
+</item>
+<item historyLabel="GirarIzquierda.java" index="7">
+<position info="not_deleted" x="2115" y="0"/>
+</item>
+<item historyLabel="GirarDerecha.java" index="4">
+<position info="not_deleted" x="55" y="0"/>
+</item>
+<item historyLabel="GirarDerecha.java" index="4">
+<position info="not_deleted" x="786" y="0"/>
+</item>
+<item historyLabel="GirarDerecha.java" index="4">
+<position info="not_deleted" x="861" y="0"/>
+</item>
+<item historyLabel="GirarIzquierda.java" index="7">
+<position info="not_deleted" x="2115" y="0"/>
+</item>
+<item historyLabel="GirarDerecha.java" index="4">
+<position info="not_deleted" x="861" y="0"/>
+</item>
+<item historyLabel="GirarIzquierda.java" index="7">
+<position info="not_deleted" x="405" y="40"/>
+</item>
+<item historyLabel="GirarDerecha.java" index="4">
+<position info="not_deleted" x="2107" y="0"/>
+</item>
+<item historyLabel="GirarIzquierda.java" index="7">
+<position info="not_deleted" x="402" y="0"/>
+</item>
+<item active="true" historyLabel="GirarDerecha.java" index="4">
+<position info="not_deleted" x="2107" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -447,6 +441,9 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AgentSmartToy.java" tooltip="TP-IA/src/frsf/cidisi/exercise/smarttoy/search/AgentSmartToy.java">
+<persistable path="/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/AgentSmartToy.java"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GirarIzquierda.java" tooltip="TP-IA/src/frsf/cidisi/exercise/smarttoy/search/actions/GirarIzquierda.java">
 <persistable path="/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/actions/GirarIzquierda.java"/>
 </file>
@@ -488,9 +485,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Solve.java" tooltip="faia/src/frsf/cidisi/faia/solver/Solve.java">
 <persistable path="/faia/src/frsf/cidisi/faia/solver/Solve.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GoalBasedAgentSimulator.java" tooltip="faia/src/frsf/cidisi/faia/simulator/GoalBasedAgentSimulator.java">
-<persistable path="/faia/src/frsf/cidisi/faia/simulator/GoalBasedAgentSimulator.java"/>
 </file>
 </mruList>
 </workbench>
