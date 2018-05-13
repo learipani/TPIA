@@ -4,14 +4,15 @@ package pantalla;
 import javax.swing.JScrollPane;
 
 import frsf.cidisi.exercise.smarttoy.search.EnvironmentSmartToy;
+import frsf.cidisi.exercise.smarttoy.search.EnvironmentSmartToyState;
 
 public class Ventana extends javax.swing.JFrame {
 
     
-    public Ventana( EnvironmentSmartToy environment) 
+    public Ventana( EnvironmentSmartToyState environmentSmartToyState) 
     {
         initComponents();
-        panel.add(new Contenedor(panel, environment));
+        panel.add(new Contenedor(panel, environmentSmartToyState));
         
      }
   
@@ -52,7 +53,7 @@ public class Ventana extends javax.swing.JFrame {
     public static void main(String args[]) {
         
         //EnvironmentSmartToy environment = new EnvironmentSmartToy();
-        EnvironmentSmartToy environment = null;
+        EnvironmentSmartToyState environment = null;
         new Ventana(environment).setVisible(true);
             
     }

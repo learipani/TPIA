@@ -2,6 +2,8 @@ package frsf.cidisi.exercise.smarttoy.search.actions;
 
 import java.util.List;
 
+import pantalla.Contenedor;
+
 import domain.Habitacion;
 import domain.Puerta;
 import frsf.cidisi.exercise.smarttoy.search.*;
@@ -12,6 +14,7 @@ import frsf.cidisi.faia.state.datastructure.Pair;
 
 public class Avanzar extends SearchAction {
 
+	static Contenedor contenedor;
 	/**
 	 * This method updates a tree node state when the search process is running.
 	 * It does not updates the real world state.
@@ -159,6 +162,15 @@ public class Avanzar extends SearchAction {
 		GirarIzquierda.cantidadGirosReales = 0;
 		environmentState.celdasVisitadas = environmentState.celdasVisitadas + 1;
 
+		try {
+			Contenedor.mover();
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
 		return environmentState;
 	}
 
