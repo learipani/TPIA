@@ -51,7 +51,6 @@ public class EnvironmentSmartToyState extends EnvironmentState {
     	this.plano.add(CreacionHabitaciones.createHabitacion9());
     	this.plano.add(CreacionHabitaciones.createHabitacion10());
     	this.plano.add(CreacionHabitaciones.createHabitacion11());
-    	this.plano.add(CreacionHabitaciones.createHabitacion11());
     	this.plano.add(CreacionHabitaciones.createHabitacion12());
     	this.plano.add(CreacionHabitaciones.createHabitacion13());
     	this.plano.add(CreacionHabitaciones.createHabitacion14());
