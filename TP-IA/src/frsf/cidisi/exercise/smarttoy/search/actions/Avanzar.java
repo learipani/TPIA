@@ -1,5 +1,8 @@
 package frsf.cidisi.exercise.smarttoy.search.actions;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
 
 import pantalla.Contenedor;
@@ -15,6 +18,7 @@ import frsf.cidisi.faia.state.datastructure.Pair;
 public class Avanzar extends SearchAction {
 
 	static Contenedor contenedor;
+	static int cantidadHabitaciones = 15;
 	/**
 	 * This method updates a tree node state when the search process is running.
 	 * It does not updates the real world state.
@@ -31,6 +35,19 @@ public class Avanzar extends SearchAction {
 		Pair<Habitacion, int[]> ubicacionAgente = agState.getUbicacionAgente();
 		String[][] planoHabitacionAgente = agState.getUbicacionAgente()
 				.getFirst().getPlanoHabitacion();
+		
+		//
+		LinkedList<Integer>[] matrizAdyacencia = new LinkedList[cantidadHabitaciones];
+		for (int i=0; i<cantidadHabitaciones; i++)
+			matrizAdyacencia[i] = new LinkedList();
+
+		for (Habitacion itemHabitacion : agState.getPlano()) {
+			for (Pair<Integer, List<Puerta>> itemHabContigua : itemHabitacion
+					.getHabitacionesContiguas()) {
+				matrizAdyacencia[itemHabitacion.getIdHabitacion()-1].add(itemHabContigua.getFirst());
+			}
+		}
+		//
 
 		// [norte oeste sur este] = [arriba izq abajo der]
 		switch (agentOrientation) {
@@ -68,23 +85,28 @@ public class Avanzar extends SearchAction {
 				Pair<Habitacion, Puerta> habitacionDelante = ObtenerHabitacion(
 						fila, columna, ubicacionAgente.getFirst(), agState
 								.getPlano());
-				// Acá setea los nuevos valores
-				agState.getUbicacionAgente().setFirst(
-						habitacionDelante.getFirst());
+				/*Si la puerta que tiene delante lo lleva a una habitacion que lo lleva a destino y ademas
+				 * no ha visitado esa habitación, entonces, va*/
+				if(ExisteCamino(ubicacionAgente.getFirst().getIdHabitacion(), agState.getNumeroHabitacionSmartPhone(), cantidadHabitaciones, matrizAdyacencia) 
+						&& !HabitacionVisitada(habitacionDelante.getFirst(), agState.getHabitacionesVisitadas())){
+					// Acá setea los nuevos valores
+					agState.getUbicacionAgente().setFirst(
+							habitacionDelante.getFirst());
 
-				agState.getUbicacionAgente().setSecond(
-						new int[] {
-								// Aca suma la variable aux para que el Agente
-								// no quede en un borde
-								habitacionDelante.getSecond()
-										.getPosicionEngreso()[0]
-										+ addFilaosicionEgreso,
-								habitacionDelante.getSecond()
-										.getPosicionEngreso()[1]
-										+ addColumnaposicionEgreso });
-				GirarDerecha.cantidadGiros = 0;
-				GirarIzquierda.cantidadGiros = 0;
-				return agState;
+					agState.getUbicacionAgente().setSecond(
+							new int[] {
+									// Aca suma la variable aux para que el Agente
+									// no quede en un borde
+									habitacionDelante.getSecond()
+											.getPosicionEngreso()[0]
+											+ addFilaosicionEgreso,
+									habitacionDelante.getSecond()
+											.getPosicionEngreso()[1]
+											+ addColumnaposicionEgreso });
+					GirarDerecha.cantidadGiros = 0;
+					GirarIzquierda.cantidadGiros = 0;
+					return agState;
+				}
 			}
 		}
 		return null;
@@ -107,6 +129,19 @@ public class Avanzar extends SearchAction {
 		Pair<Habitacion, int[]> ubicacionAgente = agState.getUbicacionAgente();
 		String[][] planoHabitacionAgente = agState.getUbicacionAgente()
 				.getFirst().getPlanoHabitacion();
+		
+		//
+		LinkedList<Integer>[] matrizAdyacencia = new LinkedList[15];
+		for (int i=0; i<cantidadHabitaciones; i++)
+			matrizAdyacencia[i] = new LinkedList();
+
+		for (Habitacion itemHabitacion : agState.getPlano()) {
+			for (Pair<Integer, List<Puerta>> itemHabContigua : itemHabitacion
+					.getHabitacionesContiguas()) {
+				matrizAdyacencia[itemHabitacion.getIdHabitacion()-1].add(itemHabContigua.getFirst());
+			}
+		}
+		//
 
 		switch (agentOrientation) {
 		case 'N':
@@ -140,22 +175,27 @@ public class Avanzar extends SearchAction {
 				Pair<Habitacion, Puerta> habitacionDelante = ObtenerHabitacion(
 						fila, columna, ubicacionAgente.getFirst(), agState
 								.getPlano());
-				// Acá setea los nuevos valores
-				agState.getUbicacionAgente().setFirst(
-						habitacionDelante.getFirst());
-				environmentState.getUbicacionAgente().setFirst(habitacionDelante.getFirst());
+				/*Si la puerta que tiene delante lo lleva a una habitacion que lo lleva a destino y ademas
+				 * no ha visitado esa habitación, entonces, va*/
+				if(ExisteCamino(ubicacionAgente.getFirst().getIdHabitacion(), agState.getNumeroHabitacionSmartPhone(), cantidadHabitaciones, matrizAdyacencia) 
+						&& !HabitacionVisitada(habitacionDelante.getFirst(), agState.getHabitacionesVisitadas())){
+					// Acá setea los nuevos valores
+					agState.getUbicacionAgente().setFirst(
+							habitacionDelante.getFirst());
+					environmentState.getUbicacionAgente().setFirst(habitacionDelante.getFirst());
 
-				int[] nuevaPosicionEnHab = new int[] {
-						// Aca suma la variable aux para que el Agente
-						// no quede en un borde
-						habitacionDelante.getSecond()
-								.getPosicionEngreso()[0]
-								+ addFilaosicionEgreso,
-						habitacionDelante.getSecond()
-								.getPosicionEngreso()[1]
-								+ addColumnaposicionEgreso };
-				agState.getUbicacionAgente().setSecond(nuevaPosicionEnHab);
-				environmentState.getUbicacionAgente().setSecond(nuevaPosicionEnHab);
+					int[] nuevaPosicionEnHab = new int[] {
+							// Aca suma la variable aux para que el Agente
+							// no quede en un borde
+							habitacionDelante.getSecond()
+									.getPosicionEngreso()[0]
+									+ addFilaosicionEgreso,
+							habitacionDelante.getSecond()
+									.getPosicionEngreso()[1]
+									+ addColumnaposicionEgreso };
+					agState.getUbicacionAgente().setSecond(nuevaPosicionEnHab);
+					environmentState.getUbicacionAgente().setSecond(nuevaPosicionEnHab);
+				}
 			}
 		}
 		GirarDerecha.cantidadGirosReales = 0;
@@ -214,5 +254,86 @@ public class Avanzar extends SearchAction {
 		}
 		return null;
 	}
+	
+	private Boolean ExisteCamino(int s, int d, int cantidadHabitaciones, LinkedList<Integer> adj[])
+	{
+		//Guarda los nodos ya visitados
+		boolean visited[] = new boolean[cantidadHabitaciones];
 
+		// Create a queue for BFS
+		LinkedList<Integer> queue = new LinkedList<Integer>();
+
+		//Marca que el nodo actual fue visitado
+		visited[s]=true;
+		queue.add(s);
+
+		// i son los vertices adyacentes al vertice actual
+		Iterator<Integer> i;
+		while (queue.size()!=0)
+		{
+			// Dequeue a vertex from queue and print it
+			s = queue.poll();
+
+			int n;
+			i = adj[s].listIterator();
+
+			// Get all adjacent vertices of the dequeued vertex s
+			// If a adjacent has not been visited, then mark it
+			// visited and enqueue it
+			while (i.hasNext())
+			{
+				n = i.next();
+
+				// If this adjacent node is the destination node,
+				// then return true
+				if (n==d)
+					return true;
+
+				// Else, continue to do BFS
+				if (!visited[n])
+				{
+					visited[n] = true;
+					queue.add(n);
+				}
+			}
+		}
+		// If BFS is complete without visited d
+		return false;
+	}
+
+	private boolean HabitacionVisitada(Habitacion hab, List<Habitacion> list) {
+		for (Habitacion habitacionVisitada : list) {
+			if (habitacionVisitada.getIdHabitacion() == hab.getIdHabitacion()) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	//Este mtodo hace una lista de int de las habitaciones por las que tiene que ir el agente
+	private List<Integer> CalcularCamino(Habitacion habitacionActual, int idHabitacionDestino, List<Habitacion> plano) {
+		
+		int cantidadHabitaciones = 15; //Esto se debe modificar si se agregan mas habitaciones
+		List<Integer> habitacionesRecorrer = new ArrayList<Integer>(); //Esto es lo que se retorna
+		LinkedList<Integer> matrizAdyacencia[] = new LinkedList[15];
+		for (int i=0; i<cantidadHabitaciones; ++i)
+			matrizAdyacencia[i] = new LinkedList();
+
+		for (Habitacion itemHabitacion : plano) {
+			for (Pair<Integer, List<Puerta>> itemHabContigua : itemHabitacion
+					.getHabitacionesContiguas()) {
+				matrizAdyacencia[itemHabitacion.getIdHabitacion()].add(itemHabContigua.getFirst());
+			}
+		}
+		Habitacion incr = habitacionActual;
+		while(incr.getIdHabitacion() != idHabitacionDestino){
+			for (Pair<Integer, List<Puerta>> itemHabContigua : incr.getHabitacionesContiguas()) {
+				if(ExisteCamino(incr.getIdHabitacion(), idHabitacionDestino, 15, matrizAdyacencia)){
+					habitacionesRecorrer.add(itemHabContigua.getFirst());
+					incr = plano.get(itemHabContigua.getFirst()-1);
+				}
+			}
+		}
+		return habitacionesRecorrer;
+	}
 }

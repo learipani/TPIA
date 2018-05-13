@@ -18,6 +18,7 @@ public class AgentSmartToyState extends SearchBasedAgentState {
 	
     private Pair<Habitacion, int[]> ubicacionAgente;
     int numeroHabitacionSmartPhone;
+    private List<Habitacion> habitacionesVisitadas;
 	private List<Habitacion> plano;
 	private boolean[] orientacion;
 
@@ -25,6 +26,7 @@ public class AgentSmartToyState extends SearchBasedAgentState {
     	ubicacionAgente = new Pair<Habitacion, int[]>(new Habitacion(),  new int[2]);
         plano = new ArrayList<Habitacion>();
     	orientacion = new boolean[4];
+    	habitacionesVisitadas = new ArrayList<Habitacion>();
     	
     	this.initState();
 	}
@@ -137,6 +139,9 @@ public class AgentSmartToyState extends SearchBasedAgentState {
     	this.ubicacionAgente.setSecond(new int[]{1,1}); //Posicion dentro de la habitación {FILA, COLUMNA})
     	setAgentStringInPlano();
     	
+    	//Agrega la habitacion actual a las habitaciones visitadas
+    	habitacionesVisitadas.add(ubicacionAgente.getFirst());
+    	
     	//Setea la orientación inicial del agente
     	orientacion[0] = true;
     	orientacion[1] = false;
@@ -145,7 +150,7 @@ public class AgentSmartToyState extends SearchBasedAgentState {
     	
     	//Setea el número de habitacion donde está el smartphone
     	this.numeroHabitacionSmartPhone = 2;
-    	//plano.get(1).getPlanoHabitacion()[3][3] = AgentSmartToyPerception.META_PERCEPTION;
+    	plano.get(1).getPlanoHabitacion()[7][4] = AgentSmartToyPerception.META_PERCEPTION;
 
     }
 
@@ -231,6 +236,18 @@ public class AgentSmartToyState extends SearchBasedAgentState {
 		this.plano = plano;
 	}
 
+	public List<Habitacion> getHabitacionesVisitadas() {
+		return habitacionesVisitadas;
+	}
+
+	public void setHabitacionesVisitadas(List<Habitacion> habitacionesVisitadas) {
+		this.habitacionesVisitadas = habitacionesVisitadas;
+	}
+	
+	public void addHabitacionesVisitadas(Habitacion habitacionVisitada) {
+		this.habitacionesVisitadas.add(habitacionVisitada);
+	}
+
 	public boolean[] getOrientacion() {
 		return orientacion;
 	}
@@ -273,6 +290,5 @@ public class AgentSmartToyState extends SearchBasedAgentState {
 		int columnaLlmado = ubicacionAgente.getSecond()[1] ;
 		plano.get(ubicacionAgente.getFirst().getIdHabitacion()-1).getPlanoHabitacion()[filaLlamado][columnaLlmado] = "||";
 	}
-	
 }
 
