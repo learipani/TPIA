@@ -53,6 +53,8 @@ public class Avanzar extends SearchAction {
 		if (planoHabitacionAgente[fila][columna]
 				.equals(AgentSmartToyPerception.EMPTY_PERCEPTION)) {
 			agState.getUbicacionAgente().setSecond(new int[] { fila, columna });
+			GirarDerecha.cantidadGiros = 0;
+			GirarIzquierda.cantidadGiros = 0;
 			return agState;
 		} else {
 			// Si tiene una puerta, va a la otra habitación
@@ -77,6 +79,8 @@ public class Avanzar extends SearchAction {
 								habitacionDelante.getSecond()
 										.getPosicionEngreso()[1]
 										+ addColumnaposicionEgreso });
+				GirarDerecha.cantidadGiros = 0;
+				GirarIzquierda.cantidadGiros = 0;
 				return agState;
 			}
 		}
@@ -101,7 +105,6 @@ public class Avanzar extends SearchAction {
 		String[][] planoHabitacionAgente = agState.getUbicacionAgente()
 				.getFirst().getPlanoHabitacion();
 
-		// [norte oeste sur este] = [arriba izq abajo der]
 		switch (agentOrientation) {
 		case 'N':
 			fila -= 1;
@@ -152,7 +155,8 @@ public class Avanzar extends SearchAction {
 				environmentState.getUbicacionAgente().setSecond(nuevaPosicionEnHab);
 			}
 		}
-		
+		GirarDerecha.cantidadGirosReales = 0;
+		GirarIzquierda.cantidadGirosReales = 0;
 		environmentState.celdasVisitadas = environmentState.celdasVisitadas + 1;
 
 		return environmentState;

@@ -84,17 +84,6 @@ public class GirarIzquierda extends SearchAction {
 	        return environmentState;    
         }
         return null;
-       /* // TODO: Use this conditions
-        // PreConditions: null
-        // PostConditions: null
-        
-        if (true) {
-            // Update the real world
-            
-            // Update the agent state
-            
-            return environmentState;
-        }*/
     }
 
     /**

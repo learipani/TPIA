@@ -83,17 +83,7 @@ public class GirarDerecha extends SearchAction {
 	        environmentState.setOrientacionAgente(agentOrientation);
 	        return environmentState;
         }
-        
-        else if (agentOrientation[3]==true){//der
-        	agentOrientation[3]=false;
-        	agentOrientation[2]=true;
-        }
-            
-        agState.setOrientacion(agentOrientation);
-
         return environmentState;
-        
-
     }
 
     /**
