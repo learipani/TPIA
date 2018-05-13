@@ -17,7 +17,8 @@ import frsf.cidisi.faia.state.datastructure.Pair;
 public class AgentSmartToyState extends SearchBasedAgentState {
 	
     private Pair<Habitacion, int[]> ubicacionAgente;
-    private List<Habitacion> plano;
+    int numeroHabitacionSmartPhone;
+	private List<Habitacion> plano;
 	private boolean[] orientacion;
 
     public AgentSmartToyState() {
@@ -104,6 +105,7 @@ public class AgentSmartToyState extends SearchBasedAgentState {
 			habitacionAgente.getPlanoHabitacion()[celdaAbajo[0]][celdaAbajo[1]] = agentSmartToyPerception.getSensorlateralderecho();
 			break;
 		}
+        this.numeroHabitacionSmartPhone = agentSmartToyPerception.getSmartphone().getIdHabitacion();
     }
 
     /**
@@ -140,7 +142,9 @@ public class AgentSmartToyState extends SearchBasedAgentState {
     	orientacion[2] = false;
     	orientacion[3] = false;
     	
-    	plano.get(1).getPlanoHabitacion()[8][5] = AgentSmartToyPerception.META_PERCEPTION;
+    	//Setea el número de habitacion donde está el smartphone
+    	this.numeroHabitacionSmartPhone = 2;
+    	//plano.get(1).getPlanoHabitacion()[3][3] = AgentSmartToyPerception.META_PERCEPTION;
 
     }
 
@@ -226,6 +230,14 @@ public class AgentSmartToyState extends SearchBasedAgentState {
 
 	public void setOrientacion(boolean[] orientacion) {
 		this.orientacion = orientacion;
+	}
+	
+	public int getNumeroHabitacionSmartPhone() {
+		return numeroHabitacionSmartPhone;
+	}
+
+	public void setNumeroHabitacionSmartPhone(int numeroHabitacionSmartPhone) {
+		this.numeroHabitacionSmartPhone = numeroHabitacionSmartPhone;
 	}
 	
 	public char getCharOrientacion() {
