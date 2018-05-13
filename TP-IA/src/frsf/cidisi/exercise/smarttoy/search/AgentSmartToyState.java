@@ -65,8 +65,45 @@ public class AgentSmartToyState extends SearchBasedAgentState {
      */
     @Override
     public void updateState(Perception p) {
+
+    	AgentSmartToyPerception agentSmartToyPerception = (AgentSmartToyPerception) p;
+
+        Habitacion habitacionAgente = this.getUbicacionAgente().getFirst();
+    	int filaEnHabitacion = this.getUbicacionAgente().getSecond()[0];
+        int colEnHabitacion = this.getUbicacionAgente().getSecond()[1];
         
-        //TODO: Complete Method
+        //Estos vectores son relativos a la matriz, no a la orientacion del agente
+        int[] celdaArriba = new int[]{filaEnHabitacion-1, colEnHabitacion};
+        int[] celdaAbajo = new int[]{filaEnHabitacion+1, colEnHabitacion};
+        int[] celdaIzquierda = new int[]{filaEnHabitacion, colEnHabitacion-1};
+        int[] celdaDerecha = new int[]{filaEnHabitacion, colEnHabitacion+1};
+        
+        switch (this.getCharOrientacion()) {
+		case 'N':
+			habitacionAgente.getPlanoHabitacion()[celdaArriba[0]][celdaArriba[1]] = agentSmartToyPerception.getSensorfrontal();
+			habitacionAgente.getPlanoHabitacion()[celdaAbajo[0]][celdaAbajo[1]] = agentSmartToyPerception.getSensortrasero();
+			habitacionAgente.getPlanoHabitacion()[celdaIzquierda[0]][celdaIzquierda[1]] = agentSmartToyPerception.getSensorlateralizquierdo();
+			habitacionAgente.getPlanoHabitacion()[celdaDerecha[0]][celdaDerecha[1]] = agentSmartToyPerception.getSensorlateralderecho();
+			break;
+		case 'O':
+			habitacionAgente.getPlanoHabitacion()[celdaIzquierda[0]][celdaIzquierda[1]] = agentSmartToyPerception.getSensorfrontal();
+			habitacionAgente.getPlanoHabitacion()[celdaDerecha[0]][celdaDerecha[1]] = agentSmartToyPerception.getSensortrasero();
+			habitacionAgente.getPlanoHabitacion()[celdaAbajo[0]][celdaAbajo[1]] = agentSmartToyPerception.getSensorlateralizquierdo();
+			habitacionAgente.getPlanoHabitacion()[celdaArriba[0]][celdaArriba[1]] = agentSmartToyPerception.getSensorlateralderecho();
+			break;
+		case 'S':
+			habitacionAgente.getPlanoHabitacion()[celdaAbajo[0]][celdaAbajo[1]] = agentSmartToyPerception.getSensorfrontal();
+			habitacionAgente.getPlanoHabitacion()[celdaArriba[0]][celdaArriba[1]] = agentSmartToyPerception.getSensortrasero();
+			habitacionAgente.getPlanoHabitacion()[celdaDerecha[0]][celdaDerecha[1]] = agentSmartToyPerception.getSensorlateralizquierdo();
+			habitacionAgente.getPlanoHabitacion()[celdaIzquierda[0]][celdaIzquierda[1]] = agentSmartToyPerception.getSensorlateralderecho();
+			break;
+		case 'E':
+			habitacionAgente.getPlanoHabitacion()[celdaDerecha[0]][celdaDerecha[1]] = agentSmartToyPerception.getSensorfrontal();
+			habitacionAgente.getPlanoHabitacion()[celdaIzquierda[0]][celdaIzquierda[1]] = agentSmartToyPerception.getSensortrasero();
+			habitacionAgente.getPlanoHabitacion()[celdaArriba[0]][celdaArriba[1]] = agentSmartToyPerception.getSensorlateralizquierdo();
+			habitacionAgente.getPlanoHabitacion()[celdaAbajo[0]][celdaAbajo[1]] = agentSmartToyPerception.getSensorlateralderecho();
+			break;
+		}
     }
 
     /**
