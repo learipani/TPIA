@@ -43,10 +43,6 @@ public class GirarDerecha extends SearchAction {
 	        agState.setOrientacion(agentOrientation);
 	        return agState;
     	}
-        // TODO: Use this conditions
-        // PreConditions: null
-        // PostConditions: null
-        
         return null;
     }
 
