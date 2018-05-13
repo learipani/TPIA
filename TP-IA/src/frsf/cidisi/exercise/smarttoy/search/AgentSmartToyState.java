@@ -193,9 +193,11 @@ public class AgentSmartToyState extends SearchBasedAgentState {
     	
     	Habitacion habitacionActual= estadoComparado.getUbicacionAgente().getFirst();//obtiene la habitacion actual
     	int[] posicionActual = estadoComparado.getUbicacionAgente().getSecond();//obtiene la posicion en la habitacion actual
+    	boolean[] orientacionActual = estadoComparado.getOrientacion(); // obtiene la orientacion actual
     	
     	boolean mismaHabitacionActual = false;
     	boolean mismaPosicion = false;
+    	boolean mismaOrientacion = false;
     	
         //compara habitacion actual
     	if(habitacionActual.getIdHabitacion()==(this.getUbicacionAgente().getFirst().getIdHabitacion())){
@@ -205,8 +207,12 @@ public class AgentSmartToyState extends SearchBasedAgentState {
     	if(posicionActual.equals(this.getUbicacionAgente().getSecond())){
     		mismaPosicion=true;
     	}
+    	//compara la orientacion actual
+    	if(orientacionActual.equals(this.getOrientacion())){
+    		mismaOrientacion = true;
+    	}
    
-        return (mismaHabitacionActual && mismaPosicion);
+        return (mismaHabitacionActual && mismaPosicion && mismaOrientacion);
     }
 
 	public Pair<Habitacion, int[]> getUbicacionAgente() {
