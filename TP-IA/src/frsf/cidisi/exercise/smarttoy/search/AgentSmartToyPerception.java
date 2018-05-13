@@ -107,13 +107,12 @@ public class AgentSmartToyPerception extends Perception {
 	@Override
 	public String toString() {
 		String str = new String();
-
-		str += "El SmartToy percibe: ";
+		
 		str += "\nAl frente: " + sensorfrontal;
 		str += "\nDetrás: " + sensortrasero;
 		str += "\nIzquierda: " + sensorlateralizquierdo;
 		str += "\nDerecha: " + sensorlateralderecho;
-		str += "\n\nEl SmartPhone se encuentra en la habitación: "
+		str += "\nEl SmartPhone se encuentra en la habitación: "
 				+ smartphone.getIdHabitacion();
 
 		return str.toString();

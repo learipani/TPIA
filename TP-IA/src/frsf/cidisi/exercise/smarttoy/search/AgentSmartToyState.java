@@ -95,6 +95,7 @@ public class AgentSmartToyState extends SearchBasedAgentState {
     	//Setea la posicion inicial del agente
     	this.ubicacionAgente.setFirst(this.getPlano().get(1)); //Habitacion .get(HABITACION)
     	this.ubicacionAgente.setSecond(new int[]{3,3}); //Posicion dentro de la habitación {FILA, COLUMNA})
+    	setAgentStringInPlano();
     	
     	//Setea la orientación inicial del agente
     	orientacion[0] = true;
@@ -112,7 +113,6 @@ public class AgentSmartToyState extends SearchBasedAgentState {
     @Override
     public String toString() {
         String str = "";
-
         str += "\nAgente en habitacón número: " + ubicacionAgente.getFirst().getIdHabitacion();
         str += "\nPosicion: [" + ubicacionAgente.getSecond()[0]+";"+ubicacionAgente.getSecond()[1]+"]";
         str += "\nOrientacion: "+ getCharOrientacion();
@@ -212,6 +212,11 @@ public class AgentSmartToyState extends SearchBasedAgentState {
 		return orientacion;
 	}
 	
+	public void setAgentStringInPlano(){
+		int filaLlamado = ubicacionAgente.getSecond()[0];
+		int columnaLlmado = ubicacionAgente.getSecond()[1] ;
+		plano.get(ubicacionAgente.getFirst().getIdHabitacion()-1).getPlanoHabitacion()[filaLlamado][columnaLlmado] = "||";
+	}
 	
 }
 

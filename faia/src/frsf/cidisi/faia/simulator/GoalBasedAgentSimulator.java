@@ -69,22 +69,22 @@ public abstract class GoalBasedAgentSimulator extends Simulator {
 
             System.out.println("------------------------------------");
 
-            System.out.println("Sending perception to agent...");
+            System.out.println("\t\t >>>ENVIADO PERCEPCIONES AL AGENTE...<<<");
             perception = this.getPercept();
             agent.see(perception);
-            System.out.println("Perception: " + perception);
+            System.out.println("\t\t >>> PERCEPCIÓN DEL AGENTE<<<" + perception);
 
-            System.out.println("Agent State: " + agent.getAgentState());
-            System.out.println("Environment: " + environment);
+            System.out.println("\t\t >>> ESTADO DEL AGENTE<<< " + agent.getAgentState());
+            System.out.println("\t\t >>> ESTADO DEL AMBIENTE<<< " + environment);
 
-            System.out.println("Asking the agent for an action...");
+            System.out.println("\t\t >>> PENSANDO ACCIÓN A REALIZAR...<<<");
             action = agent.selectAction();
 
             if (action == null) {
                 break;
             }
 
-            System.out.println("Action returned: " + action);
+            System.out.println("\t\t >>> ACCIÓN A REALIZAR => \t " + action);
             System.out.println();
 
             this.actionReturned(agent, action);
@@ -93,9 +93,10 @@ public abstract class GoalBasedAgentSimulator extends Simulator {
 
         // Check what happened, if agent has reached the goal or not.
         if (this.agentSucceeded(action)) {
-            System.out.println("Agent has reached the goal!");
+            System.out.println("\t\t >>>EL AGENTE HA LLEGADO A LA META<<<");
         } else {
-            System.out.println("ERROR: The simulation has finished, but the agent has not reached his goal.");
+            System.out.println("\t\t >>>LA SIMULACION TERMINO Y EL AGENTE NO LLEGÓ A LA META<<<");
+            System.out.println("\t\t\t =[ =[ ");
         }
 
         // Leave a blank line

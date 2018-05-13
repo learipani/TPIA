@@ -60,6 +60,7 @@ public class EnvironmentSmartToyState extends EnvironmentState {
     	//Setea la posicion inicial del agente
     	this.ubicacionAgente.setFirst(this.getPlano().get(1)); //Habitacion .get(HABITACION)
     	this.ubicacionAgente.setSecond(new int[]{3,3}); //Posicion dentro de la habitación {FILA, COLUMNA})
+    	setAgentStringInPlano(); //Este método pone una cadena "/\" en plano de la habitacion donde esta el smartphone
     	
     	//Setea la orientación inicial del agente
     	orientacionAgente[0] = true;
@@ -69,7 +70,7 @@ public class EnvironmentSmartToyState extends EnvironmentState {
     	
     	//Setea la posicion del llamado
     	this.ubicacionSmartPhone.setFirst(this.getPlano().get(1)); //Habitacion .get(HABITACION)
-    	this.ubicacionSmartPhone.setSecond(new int[]{3,4}); //Posicion dentro de la habitación {FILA, COLUMNA})
+    	this.ubicacionSmartPhone.setSecond(new int[]{6,4}); //Posicion dentro de la habitación {FILA, COLUMNA})
     	setCallStringInPlano(); //Este método pone una cadena "go" en plano de la habitacion donde esta el smartphone
     	
     	//Setea la cantidad inicial de celdas visitadas
@@ -83,7 +84,6 @@ public class EnvironmentSmartToyState extends EnvironmentState {
     @Override
     public String toString() {
         String str = "";
-        
         str += "\nLlamado realizado desde posicion ["+ ubicacionSmartPhone.getSecond()[0] +";"+ubicacionSmartPhone.getSecond()[1] +"] de la habitación "+  ubicacionSmartPhone.getFirst().getIdHabitacion();
         str += "\nAgente en habitacón número: " + ubicacionAgente.getFirst().getIdHabitacion();
         str += "\nPosicion: [" + ubicacionAgente.getSecond()[0]+";"+ubicacionAgente.getSecond()[1]+"]";
@@ -171,7 +171,12 @@ public class EnvironmentSmartToyState extends EnvironmentState {
 		int filaLlamado = ubicacionSmartPhone.getSecond()[0];
 		int columnaLlmado = ubicacionSmartPhone.getSecond()[1] ;
 		plano.get(ubicacionSmartPhone.getFirst().getIdHabitacion()-1).getPlanoHabitacion()[filaLlamado][columnaLlmado] = AgentSmartToyPerception.META_PERCEPTION;
-
+	}
+	
+	public void setAgentStringInPlano(){
+		int filaLlamado = ubicacionAgente.getSecond()[0];
+		int columnaLlmado = ubicacionAgente.getSecond()[1] ;
+		plano.get(ubicacionAgente.getFirst().getIdHabitacion()-1).getPlanoHabitacion()[filaLlamado][columnaLlmado] = "||";
 	}
 }
 
