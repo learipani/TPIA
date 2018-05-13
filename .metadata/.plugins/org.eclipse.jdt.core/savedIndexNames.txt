@@ -1,13 +1,9 @@
-<<<<<<< HEAD
-INDEX VERSION 1.126+C:\Users\Matias Tibaldo\Desktop\TPIA\.metadata\.plugins\org.eclipse.jdt.core
-=======
 INDEX VERSION 1.126+C:\Users\lea_r\Documents\GitHub\TPIA\.metadata\.plugins\org.eclipse.jdt.core
 4146874359.index
 1657330681.index
-305854171.index
+3133528496.index
 4155206848.index
 1498219845.index
->>>>>>> 616e0e731cb07fae65c6c8424056ff9e0ee9e033
 4041092966.index
 3974580528.index
 898289412.index
@@ -16,17 +12,9 @@ INDEX VERSION 1.126+C:\Users\lea_r\Documents\GitHub\TPIA\.metadata\.plugins\org.
 3792919871.index
 3065916431.index
 163172794.index
-4108727661.index
 1995173708.index
+4108727661.index
 1299022128.index
 1697886153.index
 30765161.index
-3133528496.index
-<<<<<<< HEAD
-4146874359.index
 305854171.index
-1657330681.index
-4155206848.index
-1498219845.index
-=======
->>>>>>> 616e0e731cb07fae65c6c8424056ff9e0ee9e033
