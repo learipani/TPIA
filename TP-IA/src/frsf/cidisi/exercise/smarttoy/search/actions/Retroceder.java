@@ -1,5 +1,6 @@
 package frsf.cidisi.exercise.smarttoy.search.actions;
 
+import pantalla.Contenedor;
 import domain.Habitacion;
 import frsf.cidisi.exercise.smarttoy.search.*;
 import frsf.cidisi.faia.agent.search.SearchAction;
@@ -57,6 +58,14 @@ public class Retroceder extends SearchAction {
 
 	    environmentState.celdasVisitadas = environmentState.celdasVisitadas+1;
 
+	    try {
+			Contenedor.mover();
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
         return environmentState;
        /* // TODO: Use this conditions
         // PreConditions: null

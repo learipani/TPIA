@@ -14,7 +14,7 @@ public class AgentSmartToyMain {
         SearchBasedAgentSimulator simulator =
                 new SearchBasedAgentSimulator(environment, agent);
         
-        new Ventana(environment).setVisible(true);
+        new Ventana((EnvironmentSmartToyState)environment.getEnvironmentState()).setVisible(true);
         simulator.start();
     }
 

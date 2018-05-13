@@ -7,6 +7,7 @@ import javax.swing.JPanel;
 import javax.swing.ImageIcon;
 
 import frsf.cidisi.exercise.smarttoy.search.EnvironmentSmartToy;
+import frsf.cidisi.exercise.smarttoy.search.EnvironmentSmartToyState;
 
 import java.awt.Graphics;
 
@@ -24,15 +25,15 @@ public class Contenedor extends JComponent
      
      static int ampliacion;
      
-     static EnvironmentSmartToy environment;
+     static EnvironmentSmartToyState environment;
      
 
      
         
-  public Contenedor(JPanel panel,  EnvironmentSmartToy environment)
+  public Contenedor(JPanel panel,  EnvironmentSmartToyState environmentSmartToyState)
   {
-      this.panel = panel;
-      this.environment = environment;
+      Contenedor.panel = panel;
+      Contenedor.environment = environmentSmartToyState;
 
       
       setBounds(0, 0,panel.getWidth() , panel.getHeight());
@@ -41,7 +42,7 @@ public class Contenedor extends JComponent
  }
     
   public void paint(Graphics g){
-    numeroHabitacion = environment.getEnvironmentState().getUbicacionAgente().getFirst().getIdHabitacion();
+    numeroHabitacion = environment.getUbicacionAgente().getFirst().getIdHabitacion();
 
     ImageIcon imagen =new ImageIcon(new ImageIcon(getClass().getResource("imagenes/"+numeroHabitacion+".png")).getImage());
     g.drawImage(imagen.getImage(), 0, 0, imagen.getIconWidth(),imagen.getIconHeight(), this); 
@@ -53,12 +54,15 @@ public class Contenedor extends JComponent
     	  ampliacion =30;
      }
      
-  	 fila = environment.getEnvironmentState().getUbicacionAgente().getSecond()[0]*ampliacion;
-     columna = environment.getEnvironmentState().getUbicacionAgente().getSecond()[1]*ampliacion;
+  	 fila = environment.getUbicacionAgente().getSecond()[0]*ampliacion;
+     columna = environment.getUbicacionAgente().getSecond()[1]*ampliacion;
     
      ImageIcon imagen2 =new ImageIcon(new ImageIcon(getClass().getResource("imagenes/smartToy.png")).getImage());
      g.drawImage(imagen2.getImage(), columna, fila, ampliacion, ampliacion, null); 
     
+
+     ImageIcon imagen3 =new ImageIcon(new ImageIcon(getClass().getResource("imagenes/smartphone.jpg")).getImage());
+     g.drawImage(imagen3.getImage(), environment.getUbicacionSmartPhone().getSecond()[0]*ampliacion,  environment.getUbicacionSmartPhone().getSecond()[1]*ampliacion, ampliacion, ampliacion, null); 
      
 
      setOpaque(false);
@@ -73,7 +77,7 @@ public class Contenedor extends JComponent
             try
             {
                 while(true)
-                {                  
+                { 
                  panel.repaint();  
                  hilo.sleep(100);
                 }

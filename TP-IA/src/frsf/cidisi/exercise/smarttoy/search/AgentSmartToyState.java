@@ -103,7 +103,7 @@ public class AgentSmartToyState extends SearchBasedAgentState {
     	orientacion[2] = false;
     	orientacion[3] = false;
     	
-    	plano.get(1).getPlanoHabitacion()[6][4] = AgentSmartToyPerception.META_PERCEPTION;
+    	plano.get(1).getPlanoHabitacion()[5][5] = AgentSmartToyPerception.META_PERCEPTION;
 
     }
 
