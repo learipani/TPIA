@@ -59,7 +59,7 @@ public class EnvironmentSmartToyState extends EnvironmentState {
     	
     	//Setea la posicion inicial del agente
     	this.ubicacionAgente.setFirst(this.getPlano().get(1)); //Habitacion .get(HABITACION)
-    	this.ubicacionAgente.setSecond(new int[]{3,3}); //Posicion dentro de la habitación {FILA, COLUMNA})
+    	this.ubicacionAgente.setSecond(new int[]{1,1}); //Posicion dentro de la habitación {FILA, COLUMNA})
     	setAgentStringInPlano(); //Este método pone una cadena "/\" en plano de la habitacion donde esta el smartphone
     	
     	//Setea la orientación inicial del agente
@@ -70,7 +70,7 @@ public class EnvironmentSmartToyState extends EnvironmentState {
     	
     	//Setea la posicion del llamado
     	this.ubicacionSmartPhone.setFirst(this.getPlano().get(1)); //Habitacion .get(HABITACION)
-    	this.ubicacionSmartPhone.setSecond(new int[]{5,5}); //Posicion dentro de la habitación {FILA, COLUMNA})
+    	this.ubicacionSmartPhone.setSecond(new int[]{8,5}); //Posicion dentro de la habitación {FILA, COLUMNA})
     	setCallStringInPlano(); //Este método pone una cadena "go" en plano de la habitacion donde esta el smartphone
     	
     	//Setea la cantidad inicial de celdas visitadas

@@ -36,7 +36,7 @@ public class Avanzar extends SearchAction {
 		switch (agentOrientation) {
 		case 'N':
 			fila -= 1;
-			addFilaosicionEgreso = 1;
+			addFilaosicionEgreso = -1;
 			break;
 		case 'O':
 			columna -= 1;
@@ -44,7 +44,7 @@ public class Avanzar extends SearchAction {
 			break;
 		case 'S':
 			fila += 1;
-			addFilaosicionEgreso = -1;
+			addFilaosicionEgreso = 1;
 			break;
 		case 'E':
 			columna += 1;
@@ -111,7 +111,7 @@ public class Avanzar extends SearchAction {
 		switch (agentOrientation) {
 		case 'N':
 			fila -= 1;
-			addFilaosicionEgreso = 1;
+			addFilaosicionEgreso = -1;
 			break;
 		case 'O':
 			columna -= 1;
@@ -119,7 +119,7 @@ public class Avanzar extends SearchAction {
 			break;
 		case 'S':
 			fila += 1;
-			addFilaosicionEgreso = -1;
+			addFilaosicionEgreso = 1;
 			break;
 		case 'E':
 			columna += 1;

@@ -94,7 +94,7 @@ public class AgentSmartToyState extends SearchBasedAgentState {
     	
     	//Setea la posicion inicial del agente
     	this.ubicacionAgente.setFirst(this.getPlano().get(1)); //Habitacion .get(HABITACION)
-    	this.ubicacionAgente.setSecond(new int[]{3,3}); //Posicion dentro de la habitación {FILA, COLUMNA})
+    	this.ubicacionAgente.setSecond(new int[]{1,1}); //Posicion dentro de la habitación {FILA, COLUMNA})
     	setAgentStringInPlano();
     	
     	//Setea la orientación inicial del agente
@@ -103,7 +103,7 @@ public class AgentSmartToyState extends SearchBasedAgentState {
     	orientacion[2] = false;
     	orientacion[3] = false;
     	
-    	plano.get(1).getPlanoHabitacion()[5][5] = AgentSmartToyPerception.META_PERCEPTION;
+    	plano.get(1).getPlanoHabitacion()[8][5] = AgentSmartToyPerception.META_PERCEPTION;
 
     }
 
