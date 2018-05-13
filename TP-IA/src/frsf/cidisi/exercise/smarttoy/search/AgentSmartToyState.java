@@ -60,6 +60,11 @@ public class AgentSmartToyState extends SearchBasedAgentState {
     		newPlano.add(h.clone());
     	newAgentSmartToyState.setPlano(newPlano);
     	
+    	List<Habitacion> newHabitacionesVisitadas = new ArrayList<Habitacion>();
+    	for(Habitacion h : this.getHabitacionesVisitadas())
+    		newHabitacionesVisitadas.add(h.clone());
+    	newAgentSmartToyState.setHabitacionesVisitadas(newHabitacionesVisitadas);
+    	
         return newAgentSmartToyState;
     }
 
