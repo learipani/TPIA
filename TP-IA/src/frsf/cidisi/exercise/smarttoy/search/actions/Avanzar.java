@@ -170,7 +170,6 @@ public class Avanzar extends SearchAction {
 			e.printStackTrace();
 		}
 		
-		
 		return environmentState;
 	}
 
