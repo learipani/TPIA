@@ -68,8 +68,8 @@ public class EnvironmentSmartToyState extends EnvironmentState {
     	orientacionAgente[3] = false;
     	
     	//Setea la posicion del llamado
-    	this.ubicacionSmartPhone.setFirst(this.getPlano().get(13)); //Habitacion .get(HABITACION)
-    	this.ubicacionSmartPhone.setSecond(new int[]{2,2}); //Posicion dentro de la habitación {FILA, COLUMNA})
+    	this.ubicacionSmartPhone.setFirst(this.getPlano().get(1)); //Habitacion .get(HABITACION)
+    	this.ubicacionSmartPhone.setSecond(new int[]{3,4}); //Posicion dentro de la habitación {FILA, COLUMNA})
     	setCallStringInPlano(); //Este método pone una cadena "go" en plano de la habitacion donde esta el smartphone
     	
     	//Setea la cantidad inicial de celdas visitadas
@@ -170,7 +170,8 @@ public class EnvironmentSmartToyState extends EnvironmentState {
 	public void setCallStringInPlano(){
 		int filaLlamado = ubicacionSmartPhone.getSecond()[0];
 		int columnaLlmado = ubicacionSmartPhone.getSecond()[1] ;
-		plano.get(ubicacionSmartPhone.getFirst().getIdHabitacion()).getPlanoHabitacion()[filaLlamado][columnaLlmado] = AgentSmartToyPerception.META_PERCEPTION;
+		plano.get(ubicacionSmartPhone.getFirst().getIdHabitacion()-1).getPlanoHabitacion()[filaLlamado][columnaLlmado] = AgentSmartToyPerception.META_PERCEPTION;
+
 	}
 }
 
