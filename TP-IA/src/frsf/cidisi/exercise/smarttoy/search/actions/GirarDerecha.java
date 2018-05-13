@@ -58,19 +58,6 @@ public class GirarDerecha extends SearchAction {
 
         return environmentState;
         
-       /* // TODO: Use this conditions
-        // PreConditions: null
-        // PostConditions: null
-        
-        if (true) {
-            // Update the real world
-            
-            // Update the agent state
-            
-            return environmentState;
-        }
-
-        return null;*/
     }
 
     /**

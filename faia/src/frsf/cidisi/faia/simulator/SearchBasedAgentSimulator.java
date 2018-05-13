@@ -41,9 +41,6 @@ public class SearchBasedAgentSimulator extends GoalBasedAgentSimulator {
 
     @Override
     public boolean agentSucceeded(Action actionReturned) {
-        //TODO: 
-        // ACA HAY QUE HACER UN BUCLE PARA CUANDO HAY MAS DE UN AGENTE DEFINIDO
-        // POR AHORA EL FRAMEWORK ES MONOAGENTE :)
         SearchBasedAgent sa = (SearchBasedAgent) getAgents().firstElement();
         Problem p = sa.getProblem();
         GoalTest gt = p.getGoalState();

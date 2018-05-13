@@ -35,7 +35,6 @@ public class AgentSmartToyState extends SearchBasedAgentState {
     @Override
     public SearchBasedAgentState clone() {
         
-		//TODO: Complete Method
     	AgentSmartToyState newAgentSmartToyState = new AgentSmartToyState();
     	
     	//Los atributos de tipo primitvos se pasan por copia(no hay)
@@ -142,7 +141,6 @@ public class AgentSmartToyState extends SearchBasedAgentState {
     @Override
     public boolean equals(Object obj) {
        
-       //TODO: Complete Method
     	//Dos estados son iguales si se encuentran en la misma habitacion, y en la misma posicion
     	//se puede contemplar si la lista de habitaciones visitadas es la misma,
     	//pero en este momento no hay un metodo que diga las habitaciones visitadas    	
