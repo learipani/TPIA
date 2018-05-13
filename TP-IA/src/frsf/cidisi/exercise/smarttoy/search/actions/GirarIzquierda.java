@@ -14,13 +14,36 @@ public class GirarIzquierda extends SearchAction {
      */
     @Override
     public SearchBasedAgentState execute(SearchBasedAgentState s) {
-        AgentSmartToyState agState = (AgentSmartToyState) s;
         
+    	AgentSmartToyState agState = (AgentSmartToyState) s;
+        boolean[] agentOrientation = agState.getOrientacion();
+        
+        //[norte oeste sur este]   = [arriba izq abajo der]
+        if (agentOrientation[0]==true){//arriba
+        	agentOrientation[0]=false;
+        	agentOrientation[1]=true;
+        }
+        else if (agentOrientation[1]==true){//izq
+        	agentOrientation[1]=false;
+        	agentOrientation[2]=true;
+        }
+        else if (agentOrientation[2]==true){//abajo
+        	agentOrientation[2]=false;
+        	agentOrientation[3]=true;
+        }
+        else if (agentOrientation[3]==true){//der
+        	agentOrientation[3]=false;
+        	agentOrientation[0]=true;
+        }
+            
+        agState.setOrientacion(agentOrientation);
+
+        return agState;
         // TODO: Use this conditions
         // PreConditions: null
         // PostConditions: null
         
-        return null;
+        //return null;
     }
 
     /**
@@ -28,12 +51,11 @@ public class GirarIzquierda extends SearchAction {
      */
     @Override
     public EnvironmentState execute(AgentState ast, EnvironmentState est) {
-        EnvironmentSmartToyState environmentState = (EnvironmentSmartToyState) est;
+        
+    	EnvironmentSmartToyState environmentState = (EnvironmentSmartToyState) est;
         AgentSmartToyState agState = ((AgentSmartToyState) ast);
-
         boolean[] agentOrientation = agState.getOrientacion();
         
-
         //[norte oeste sur este]   = [arriba izq abajo der]
             if (agentOrientation[0]==true){//arriba
             	agentOrientation[0]=false;
@@ -53,6 +75,7 @@ public class GirarIzquierda extends SearchAction {
             }
                 
             agState.setOrientacion(agentOrientation);
+            environmentState.setOrientacionAgente(agentOrientation);
 
             return environmentState;
         

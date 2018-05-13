@@ -1,12 +1,10 @@
 package frsf.cidisi.exercise.smarttoy.search.actions;
 
-import domain.Habitacion;
 import frsf.cidisi.exercise.smarttoy.search.*;
 import frsf.cidisi.faia.agent.search.SearchAction;
 import frsf.cidisi.faia.agent.search.SearchBasedAgentState;
 import frsf.cidisi.faia.state.AgentState;
 import frsf.cidisi.faia.state.EnvironmentState;
-import frsf.cidisi.faia.state.datastructure.Pair;
 
 public class GirarDerecha extends SearchAction {
 
