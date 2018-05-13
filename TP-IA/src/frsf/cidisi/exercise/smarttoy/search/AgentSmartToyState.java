@@ -39,6 +39,7 @@ public class AgentSmartToyState extends SearchBasedAgentState {
     	AgentSmartToyState newAgentSmartToyState = new AgentSmartToyState();
     	
     	//Los atributos de tipo primitvos se pasan por copia(no hay)
+    	newAgentSmartToyState.setNumeroHabitacionSmartPhone(this.getNumeroHabitacionSmartPhone());
     	
     	//No se si hay que clonar cada arreglo del par por separado
     	newAgentSmartToyState.setOrientacion(this.getOrientacion().clone());
