@@ -89,10 +89,11 @@ public class Avanzar extends SearchAction {
 				 * no ha visitado esa habitación, entonces, va*/
 				if(ExisteCamino(habitacionDelante.getFirst().getIdHabitacion()-1, agState.getNumeroHabitacionSmartPhone()-1, cantidadHabitaciones, matrizAdyacencia) 
 						&& !HabitacionVisitada(habitacionDelante.getFirst(), agState.getHabitacionesVisitadas())){
+			    	//Acá agrega la habitacion actual a las habitaciones visitadas
+					agState.addHabitacionesVisitadas(ubicacionAgente.getFirst());
 					// Acá setea los nuevos valores
 					agState.getUbicacionAgente().setFirst(
 							habitacionDelante.getFirst());
-
 					agState.getUbicacionAgente().setSecond(
 							new int[] {
 									// Aca suma la variable aux para que el Agente
@@ -179,6 +180,8 @@ public class Avanzar extends SearchAction {
 				 * no ha visitado esa habitación, entonces, va*/
 				if(ExisteCamino(habitacionDelante.getFirst().getIdHabitacion()-1, agState.getNumeroHabitacionSmartPhone()-1, cantidadHabitaciones, matrizAdyacencia) 
 						&& !HabitacionVisitada(habitacionDelante.getFirst(), agState.getHabitacionesVisitadas())){
+			    	//Acá agrega la habitacion actual a las habitaciones visitadas
+					agState.addHabitacionesVisitadas(ubicacionAgente.getFirst());
 					// Acá setea los nuevos valores
 					agState.getUbicacionAgente().setFirst(
 							habitacionDelante.getFirst());
