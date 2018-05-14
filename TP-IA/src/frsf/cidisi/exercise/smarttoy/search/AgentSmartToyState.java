@@ -21,8 +21,6 @@ public class AgentSmartToyState extends SearchBasedAgentState {
     private Pair<Habitacion, int[]> ubicacionAgente;
     int numeroHabitacionSmartPhone;
     private List<Habitacion> habitacionesVisitadas;
-    //private List<Pair<int[], boolean[]>> estadosProbados;
-    //HashMap<char[], Integer> estadosProbados;
 	private List<String> estadosProbados;
 	private List<Habitacion> plano;
 	private boolean[] orientacion;
@@ -32,7 +30,6 @@ public class AgentSmartToyState extends SearchBasedAgentState {
     public AgentSmartToyState() {
     	ubicacionAgente = new Pair<Habitacion, int[]>(new Habitacion(),  new int[2]);
     	habitacionesVisitadas = new ArrayList<Habitacion>();
-    	//estadosProbados = new HashMap<char[], Integer>();
     	estadosProbados = new ArrayList<String>();
         plano = new ArrayList<Habitacion>();
     	orientacion = new boolean[4];
@@ -76,15 +73,9 @@ public class AgentSmartToyState extends SearchBasedAgentState {
     		newHabitacionesVisitadas.add(h.clone());
     	newAgentSmartToyState.setHabitacionesVisitadas(newHabitacionesVisitadas);
     	
-    	/*HashMap<char[], Integer> newEstadosProbados = new HashMap<char[], Integer>();
-        
-        for(Map.Entry<char[], Integer> entry : this.getEstadosProbados().entrySet()) {
-        	char[] nuevoChar = entry.getKey().clone();
-        	int nuevoInt = entry.getValue();
-            newEstadosProbados.put(nuevoChar, nuevoInt);
-        }
-        newAgentSmartToyState.setEstadosProbados(newEstadosProbados);
-    	*/
+    	for(String s : this.getEstadosProbados())
+    		newAgentSmartToyState.setEstadosProbados(s);
+    	
         return newAgentSmartToyState;
     }
 
@@ -179,7 +170,7 @@ public class AgentSmartToyState extends SearchBasedAgentState {
     	
     	//Setea el número de habitacion donde está el smartphone
     	this.numeroHabitacionSmartPhone = 1;
-    	plano.get(1).getPlanoHabitacion()[3][2] = AgentSmartToyPerception.META_PERCEPTION;
+    	plano.get(1).getPlanoHabitacion()[1][4] = AgentSmartToyPerception.META_PERCEPTION;
 
     }
 
