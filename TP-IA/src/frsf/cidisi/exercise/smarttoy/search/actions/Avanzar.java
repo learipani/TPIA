@@ -44,7 +44,7 @@ public class Avanzar extends SearchAction {
 		for (Habitacion itemHabitacion : agState.getPlano()) {
 			for (Pair<Integer, List<Puerta>> itemHabContigua : itemHabitacion
 					.getHabitacionesContiguas()) {
-				matrizAdyacencia[itemHabitacion.getIdHabitacion()-1].add(itemHabContigua.getFirst());
+				matrizAdyacencia[itemHabitacion.getIdHabitacion()-1].add(itemHabContigua.getFirst()-1);
 			}
 		}
 		//
@@ -87,7 +87,7 @@ public class Avanzar extends SearchAction {
 								.getPlano());
 				/*Si la puerta que tiene delante lo lleva a una habitacion que lo lleva a destino y ademas
 				 * no ha visitado esa habitación, entonces, va*/
-				if(ExisteCamino(ubicacionAgente.getFirst().getIdHabitacion(), agState.getNumeroHabitacionSmartPhone(), cantidadHabitaciones, matrizAdyacencia) 
+				if(ExisteCamino(habitacionDelante.getFirst().getIdHabitacion()-1, agState.getNumeroHabitacionSmartPhone()-1, cantidadHabitaciones, matrizAdyacencia) 
 						&& !HabitacionVisitada(habitacionDelante.getFirst(), agState.getHabitacionesVisitadas())){
 					// Acá setea los nuevos valores
 					agState.getUbicacionAgente().setFirst(
@@ -138,7 +138,7 @@ public class Avanzar extends SearchAction {
 		for (Habitacion itemHabitacion : agState.getPlano()) {
 			for (Pair<Integer, List<Puerta>> itemHabContigua : itemHabitacion
 					.getHabitacionesContiguas()) {
-				matrizAdyacencia[itemHabitacion.getIdHabitacion()-1].add(itemHabContigua.getFirst());
+				matrizAdyacencia[itemHabitacion.getIdHabitacion()-1].add(itemHabContigua.getFirst()-1);
 			}
 		}
 		//
@@ -177,7 +177,7 @@ public class Avanzar extends SearchAction {
 								.getPlano());
 				/*Si la puerta que tiene delante lo lleva a una habitacion que lo lleva a destino y ademas
 				 * no ha visitado esa habitación, entonces, va*/
-				if(ExisteCamino(ubicacionAgente.getFirst().getIdHabitacion(), agState.getNumeroHabitacionSmartPhone(), cantidadHabitaciones, matrizAdyacencia) 
+				if(ExisteCamino(habitacionDelante.getFirst().getIdHabitacion()-1, agState.getNumeroHabitacionSmartPhone()-1, cantidadHabitaciones, matrizAdyacencia) 
 						&& !HabitacionVisitada(habitacionDelante.getFirst(), agState.getHabitacionesVisitadas())){
 					// Acá setea los nuevos valores
 					agState.getUbicacionAgente().setFirst(
