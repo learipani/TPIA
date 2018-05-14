@@ -1,8 +1,10 @@
 package frsf.cidisi.exercise.smarttoy.search;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 
 import auxiliar.CreacionHabitaciones;
 
@@ -19,17 +21,24 @@ public class AgentSmartToyState extends SearchBasedAgentState {
     private Pair<Habitacion, int[]> ubicacionAgente;
     int numeroHabitacionSmartPhone;
     private List<Habitacion> habitacionesVisitadas;
+    //private List<Pair<int[], boolean[]>> estadosProbados;
+    HashMap<char[], Integer> estadosProbados;
 	private List<Habitacion> plano;
 	private boolean[] orientacion;
 
+	
+	
     public AgentSmartToyState() {
     	ubicacionAgente = new Pair<Habitacion, int[]>(new Habitacion(),  new int[2]);
+    	habitacionesVisitadas = new ArrayList<Habitacion>();
+    	estadosProbados = new HashMap<char[], Integer>();
         plano = new ArrayList<Habitacion>();
     	orientacion = new boolean[4];
-    	habitacionesVisitadas = new ArrayList<Habitacion>();
     	
     	this.initState();
 	}
+
+
 
 	/**
      * This method clones the state of the agent. It's used in the search
@@ -64,6 +73,15 @@ public class AgentSmartToyState extends SearchBasedAgentState {
     	for(Habitacion h : this.getHabitacionesVisitadas())
     		newHabitacionesVisitadas.add(h.clone());
     	newAgentSmartToyState.setHabitacionesVisitadas(newHabitacionesVisitadas);
+    	
+    	HashMap<char[], Integer> nuevosEstadosProbados = new HashMap<char[], Integer>();
+        
+        for(Map.Entry<char[], Integer> entry : this.getEstadosProbados().entrySet()) {
+        	char[] nuevoChar = entry.getKey().clone();
+        	int nuevoInt = 1;
+            nuevosEstadosProbados.put(nuevoChar, nuevoInt);
+        }
+        newAgentSmartToyState.setEstadosProbados(nuevosEstadosProbados);
     	
         return newAgentSmartToyState;
     }
@@ -141,21 +159,24 @@ public class AgentSmartToyState extends SearchBasedAgentState {
     	
     	//Setea la posicion inicial del agente
     	this.ubicacionAgente.setFirst(this.getPlano().get(0)); //Habitacion .get(HABITACION)
-    	this.ubicacionAgente.setSecond(new int[]{5,5}); //Posicion dentro de la habitación {FILA, COLUMNA})
+    	this.ubicacionAgente.setSecond(new int[]{2,2}); //Posicion dentro de la habitación {FILA, COLUMNA})
     	setAgentStringInPlano();
+    	
+    	//Agrega el estadoProbado actual
+    	estadosProbados.put(new char[]{(char) this.ubicacionAgente.getSecond()[0],(char) this.ubicacionAgente.getSecond()[1], this.getCharOrientacion()}, 1);
     	
     	//Agrega la habitacion actual a las habitaciones visitadas
     	habitacionesVisitadas.add(ubicacionAgente.getFirst());
     	
     	//Setea la orientación inicial del agente
     	orientacion[0] = false;
-    	orientacion[1] = false;
+    	orientacion[1] = true;
     	orientacion[2] = false;
-    	orientacion[3] = true;
+    	orientacion[3] = false;
     	
     	//Setea el número de habitacion donde está el smartphone
-    	this.numeroHabitacionSmartPhone = 3;
-    	plano.get(2).getPlanoHabitacion()[2][2] = AgentSmartToyPerception.META_PERCEPTION;
+    	this.numeroHabitacionSmartPhone = 2;
+    	plano.get(1).getPlanoHabitacion()[6][3] = AgentSmartToyPerception.META_PERCEPTION;
 
     }
 
@@ -210,7 +231,7 @@ public class AgentSmartToyState extends SearchBasedAgentState {
     	boolean mismaOrientacion = false;
     	
         //compara habitacion actual
-    	if(habitacionActual.getIdHabitacion()==(this.getUbicacionAgente().getFirst().getIdHabitacion())){
+    	if(habitacionActual.getIdHabitacion() == this.getUbicacionAgente().getFirst().getIdHabitacion()){
     		mismaHabitacionActual = true;
     	};
     	//compara posicion actual
@@ -267,6 +288,14 @@ public class AgentSmartToyState extends SearchBasedAgentState {
 
 	public void setNumeroHabitacionSmartPhone(int numeroHabitacionSmartPhone) {
 		this.numeroHabitacionSmartPhone = numeroHabitacionSmartPhone;
+	}
+	
+	public HashMap<char[], Integer> getEstadosProbados() {
+		return estadosProbados;
+	}
+
+	public void setEstadosProbados(HashMap<char[], Integer> estadosProbados) {
+		this.estadosProbados = estadosProbados;
 	}
 	
 	public char getCharOrientacion() {

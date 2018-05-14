@@ -15,7 +15,6 @@ import frsf.cidisi.faia.state.datastructure.Pair;
  */
 public class EnvironmentSmartToyState extends EnvironmentState {
 	
-	//TODO: Setup Variables
     private List<Habitacion> plano;
     private Pair<Habitacion, int[]> ubicacionAgente;
 	private boolean[] orientacionAgente;
@@ -58,18 +57,18 @@ public class EnvironmentSmartToyState extends EnvironmentState {
     	
     	//Setea la posicion inicial del agente
     	this.ubicacionAgente.setFirst(this.getPlano().get(0)); //Habitacion .get(HABITACION)
-    	this.ubicacionAgente.setSecond(new int[]{5,5}); //Posicion dentro de la habitación {FILA, COLUMNA})
+    	this.ubicacionAgente.setSecond(new int[]{2,2}); //Posicion dentro de la habitación {FILA, COLUMNA})
     	setAgentStringInPlano(); //Este método pone una cadena "/\" en plano de la habitacion donde esta el smartphone
     	
     	//Setea la orientación inicial del agente
     	orientacionAgente[0] = false;
-    	orientacionAgente[1] = false;
+    	orientacionAgente[1] = true;
     	orientacionAgente[2] = false;
-    	orientacionAgente[3] = true;
+    	orientacionAgente[3] = false;
     	
     	//Setea la posicion del llamado
-    	this.ubicacionSmartPhone.setFirst(this.getPlano().get(2)); //Habitacion .get(HABITACION)
-    	this.ubicacionSmartPhone.setSecond(new int[]{2,2}); //Posicion dentro de la habitación {FILA, COLUMNA})
+    	this.ubicacionSmartPhone.setFirst(this.getPlano().get(1)); //Habitacion .get(HABITACION)
+    	this.ubicacionSmartPhone.setSecond(new int[]{6,3}); //Posicion dentro de la habitación {FILA, COLUMNA})
     	setCallStringInPlano(); //Este método pone una cadena "go" en plano de la habitacion donde esta el smartphone
     	
     	//Setea la cantidad inicial de celdas visitadas

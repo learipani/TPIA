@@ -1,6 +1,7 @@
 package frsf.cidisi.exercise.smarttoy.search.actions;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
@@ -48,7 +49,6 @@ public class Avanzar extends SearchAction {
 			}
 		}
 		//
-
 		// [norte oeste sur este] = [arriba izq abajo der]
 		switch (agentOrientation) {
 		case 'N':
@@ -71,8 +71,9 @@ public class Avanzar extends SearchAction {
 
 		// Si la celda de en frente, avanza
 		if (planoHabitacionAgente[fila][columna]
-				.equals(AgentSmartToyPerception.EMPTY_PERCEPTION)) {
+				.equals(AgentSmartToyPerception.EMPTY_PERCEPTION) && EstadoNoProbado(fila, columna, agState.getCharOrientacion(), agState.getEstadosProbados())) {
 			agState.getUbicacionAgente().setSecond(new int[] { fila, columna });
+			agState.getEstadosProbados().put(new char[]{(char) fila, (char) columna, agState.getCharOrientacion()}, 1);
 			GirarDerecha.cantidadGiros = 0;
 			GirarIzquierda.cantidadGiros = 0;
 			return agState;
@@ -104,6 +105,7 @@ public class Avanzar extends SearchAction {
 									habitacionDelante.getSecond()
 											.getPosicionEngreso()[1]
 											+ addColumnaposicionEgreso });
+					agState.getEstadosProbados().clear();
 					GirarDerecha.cantidadGiros = 0;
 					GirarIzquierda.cantidadGiros = 0;
 					return agState;
@@ -164,8 +166,9 @@ public class Avanzar extends SearchAction {
 		}
 
 		if (planoHabitacionAgente[fila][columna]
-				.equals(AgentSmartToyPerception.EMPTY_PERCEPTION)) {
+				.equals(AgentSmartToyPerception.EMPTY_PERCEPTION)  && EstadoNoProbado(fila, columna, agState.getCharOrientacion(), agState.getEstadosProbados())) {
 			agState.getUbicacionAgente().setSecond(new int[] { fila, columna });
+			agState.getEstadosProbados().put(new char[]{(char) fila, (char) columna, agState.getCharOrientacion()}, 1);
 			environmentState.getUbicacionAgente().setSecond(new int[] { fila, columna });
 		} else {
 			// Si tiene una puerta, va a la otra habitación
@@ -197,6 +200,7 @@ public class Avanzar extends SearchAction {
 									.getPosicionEngreso()[1]
 									+ addColumnaposicionEgreso };
 					agState.getUbicacionAgente().setSecond(nuevaPosicionEnHab);
+					agState.getEstadosProbados().clear();
 					environmentState.getUbicacionAgente().setSecond(nuevaPosicionEnHab);
 				}
 			}
@@ -313,6 +317,14 @@ public class Avanzar extends SearchAction {
 		return false;
 	}
 	
+	private boolean EstadoNoProbado(int fila, int columna, char orientacion, HashMap<char[], Integer> hashMap) {
+		
+		Integer value = hashMap.get(new char[]{(char) fila, (char) columna, orientacion});
+		if(value == null){
+			return true;
+		}
+		return false;
+	}
 	//Este mtodo hace una lista de int de las habitaciones por las que tiene que ir el agente
 	private List<Integer> CalcularCamino(Habitacion habitacionActual, int idHabitacionDestino, List<Habitacion> plano) {
 		
