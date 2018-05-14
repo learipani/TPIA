@@ -73,14 +73,14 @@ public class Avanzar extends SearchAction {
 		if (planoHabitacionAgente[fila][columna]
 				.equals(AgentSmartToyPerception.EMPTY_PERCEPTION) && EstadoNoProbado(fila, columna, agState.getCharOrientacion(), agState.getEstadosProbados())) {
 			agState.getUbicacionAgente().setSecond(new int[] { fila, columna });
-			agState.getEstadosProbados().put(new char[]{(char) fila, (char) columna, agState.getCharOrientacion()}, 1);
+			agState.getEstadosProbados().add(Integer.toString(fila)+Integer.toString(columna)+agState.getCharOrientacion());
 			GirarDerecha.cantidadGiros = 0;
 			GirarIzquierda.cantidadGiros = 0;
 			return agState;
 		} else {
 			// Si tiene una puerta, va a la otra habitación
 			if (planoHabitacionAgente[fila][columna]
-					.equals(AgentSmartToyPerception.PUERTA_PERCEPTION)) {
+					.equals(AgentSmartToyPerception.PUERTA_PERCEPTION)&& agState.getNumeroHabitacionSmartPhone()!=agState.getUbicacionAgente().getFirst().getIdHabitacion()) {
 				// Acá obtiene una par de la puerta que tiene adelante y la
 				// habitacion al cual lleva al agente.
 				Pair<Habitacion, Puerta> habitacionDelante = ObtenerHabitacion(
@@ -168,7 +168,7 @@ public class Avanzar extends SearchAction {
 		if (planoHabitacionAgente[fila][columna]
 				.equals(AgentSmartToyPerception.EMPTY_PERCEPTION)  && EstadoNoProbado(fila, columna, agState.getCharOrientacion(), agState.getEstadosProbados())) {
 			agState.getUbicacionAgente().setSecond(new int[] { fila, columna });
-			agState.getEstadosProbados().put(new char[]{(char) fila, (char) columna, agState.getCharOrientacion()}, 1);
+			agState.getEstadosProbados().add(Integer.toString(fila)+Integer.toString(columna)+agState.getCharOrientacion());
 			environmentState.getUbicacionAgente().setSecond(new int[] { fila, columna });
 		} else {
 			// Si tiene una puerta, va a la otra habitación
@@ -317,14 +317,23 @@ public class Avanzar extends SearchAction {
 		return false;
 	}
 	
-	private boolean EstadoNoProbado(int fila, int columna, char orientacion, HashMap<char[], Integer> hashMap) {
+	private boolean EstadoNoProbado(int fila, int columna, char orientacion,List<String> estadosProbados) {
+		String ep = Integer.toString(fila)+Integer.toString(columna)+orientacion;
+		if(estadosProbados.contains(ep)){
+			return false;
+		}
+		return true;
+	}
+	
+	/*private boolean EstadoNoProbado(int fila, int columna, char orientacion, HashMap<char[], Integer> hashMap) {
 		
 		Integer value = hashMap.get(new char[]{(char) fila, (char) columna, orientacion});
 		if(value == null){
 			return true;
 		}
 		return false;
-	}
+	}*/
+	
 	//Este mtodo hace una lista de int de las habitaciones por las que tiene que ir el agente
 	private List<Integer> CalcularCamino(Habitacion habitacionActual, int idHabitacionDestino, List<Habitacion> plano) {
 		

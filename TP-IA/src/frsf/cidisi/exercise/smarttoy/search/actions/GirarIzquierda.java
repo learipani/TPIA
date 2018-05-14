@@ -1,6 +1,7 @@
 package frsf.cidisi.exercise.smarttoy.search.actions;
 
 import java.util.HashMap;
+import java.util.List;
 
 import frsf.cidisi.exercise.smarttoy.search.*;
 import frsf.cidisi.faia.agent.search.SearchAction;
@@ -23,39 +24,90 @@ public class GirarIzquierda extends SearchAction {
     	AgentSmartToyState agState = (AgentSmartToyState) s;
 		int fila = agState.getUbicacionAgente().getSecond()[0];
 		int columna = agState.getUbicacionAgente().getSecond()[1];
+		boolean flag=false;
+
+		//if (EstadoNoProbado(fila, columna, agState.getCharOrientacion(),agState.getEstadosProbados())) {
+			boolean[] agentOrientation = agState.getOrientacion();
+			// [norte oeste sur este] = [arriba izq abajo der]
+
+			switch (agState.getCharOrientacion()) {
+			case 'N':
+				agentOrientation[0] = false;
+				agentOrientation[3] = true;
+				String ep = Integer.toString(fila)+Integer.toString(columna)+"O";
+				if(!agState.getEstadosProbados().contains(ep)){
+					flag=true;
+					agState.setEstadosProbados(ep);
+				}
+				break;
+			case 'O':
+				agentOrientation[0] = true;
+				agentOrientation[1] = true;
+				String ep1 = Integer.toString(fila)+Integer.toString(columna)+"S";
+				if(!agState.getEstadosProbados().contains(ep1)){
+					flag=true;
+					agState.setEstadosProbados(ep1);
+				}
+				break;
+			case 'S':
+				agentOrientation[2] = false;
+				agentOrientation[1] = true;
+				String ep2 = Integer.toString(fila)+Integer.toString(columna)+"E";
+				if(!agState.getEstadosProbados().contains(ep2)){
+					flag=true;
+					agState.setEstadosProbados(ep2);
+				}
+				break;
+			case 'E':
+				agentOrientation[3] = false;
+				agentOrientation[2] = true;
+				String ep3 = Integer.toString(fila)+Integer.toString(columna)+"N";
+				if(!agState.getEstadosProbados().contains(ep3)){
+					flag=true;
+					agState.setEstadosProbados(ep3);
+				}
+				break;
+			}
+			if (flag){
+				cantidadGiros++;
+				agState.setOrientacion(agentOrientation);
+				return agState;
+			}
+		//}
+		return null;
+    	
+    	/*AgentSmartToyState agState = (AgentSmartToyState) s;
+		int fila = agState.getUbicacionAgente().getSecond()[0];
+		int columna = agState.getUbicacionAgente().getSecond()[1];
         
-    	if(EstadoNoProbado(fila, columna, agState.getCharOrientacion(), agState.getEstadosProbados())){
+    	//if(EstadoNoProbado(fila, columna, agState.getCharOrientacion(), agState.getEstadosProbados())){
     		boolean[] agentOrientation = agState.getOrientacion();
 	        //[norte oeste sur este]   = [arriba izq abajo der]
 	        if (agentOrientation[0]==true){//arriba
 	        	agentOrientation[0]=false;
 	        	agentOrientation[1]=true;
-	        	agState.getEstadosProbados().put(
-						new char[] { (char) fila, (char) columna, 'O' }, 1);
+	        	agState.getEstadosProbados().add(Integer.toString(fila)+Integer.toString(columna)+"O");
 	        }
 	        else if (agentOrientation[1]==true){//izq
 	        	agentOrientation[1]=false;
 	        	agentOrientation[2]=true;
-	        	agState.getEstadosProbados().put(
-						new char[] { (char) fila, (char) columna, 'S' }, 1);
+	        	agState.getEstadosProbados().add(Integer.toString(fila)+Integer.toString(columna)+"S");
 	        }
 	        else if (agentOrientation[2]==true){//abajo
 	        	agentOrientation[2]=false;
 	        	agentOrientation[3]=true;
-	        	agState.getEstadosProbados().put(
-						new char[] { (char) fila, (char) columna, 'E' }, 1);
+	        	agState.getEstadosProbados().add(Integer.toString(fila)+Integer.toString(columna)+"E");
 	        }
 	        else if (agentOrientation[3]==true){//der
 	        	agentOrientation[3]=false;
 	        	agentOrientation[0]=true;
-	        	agState.getEstadosProbados().put(
-						new char[] { (char) fila, (char) columna, 'N' }, 1);
+	        	agState.getEstadosProbados().add(Integer.toString(fila)+Integer.toString(columna)+"N");
 	        }
 	        cantidadGiros++;    
 	        agState.setOrientacion(agentOrientation);
 	        return agState;
-    	}
-    	return null;
+    	//}
+    	return null;*/
     }
 
     /**
@@ -66,6 +118,59 @@ public class GirarIzquierda extends SearchAction {
         
     	EnvironmentSmartToyState environmentState = (EnvironmentSmartToyState) est;
         AgentSmartToyState agState = ((AgentSmartToyState) ast);
+    	int fila = agState.getUbicacionAgente().getSecond()[0];
+		int columna = agState.getUbicacionAgente().getSecond()[1];
+		boolean flag=false;
+
+		boolean[] agentOrientation = agState.getOrientacion();
+		// [norte oeste sur este] = [arriba izq abajo der]
+		switch (agState.getCharOrientacion()) {
+		case 'N':
+			agentOrientation[0] = false;
+			agentOrientation[3] = true;
+			String ep = Integer.toString(fila)+Integer.toString(columna)+"O";
+			if(!agState.getEstadosProbados().contains(ep)){
+				flag=true;
+				agState.setEstadosProbados(ep);
+			}
+			break;
+		case 'O':
+			agentOrientation[0] = true;
+			agentOrientation[1] = true;
+			String ep1 = Integer.toString(fila)+Integer.toString(columna)+"S";
+			if(!agState.getEstadosProbados().contains(ep1)){
+				flag=true;
+				agState.setEstadosProbados(ep1);
+			}
+			break;
+		case 'S':
+			agentOrientation[2] = false;
+			agentOrientation[1] = true;
+			String ep2 = Integer.toString(fila)+Integer.toString(columna)+"E";
+			if(!agState.getEstadosProbados().contains(ep2)){
+				flag=true;
+				agState.setEstadosProbados(ep2);
+			}
+			break;
+		case 'E':
+			agentOrientation[3] = false;
+			agentOrientation[2] = true;
+			String ep3 = Integer.toString(fila)+Integer.toString(columna)+"N";
+			if(!agState.getEstadosProbados().contains(ep3)){
+				flag=true;
+				agState.setEstadosProbados(ep3);
+			}
+			break;
+		}
+		if (flag){
+			cantidadGiros++;
+			agState.setOrientacion(agentOrientation);
+			environmentState.setOrientacionAgente(agentOrientation);
+		}
+		return environmentState;
+    	
+    	/*EnvironmentSmartToyState environmentState = (EnvironmentSmartToyState) est;
+        AgentSmartToyState agState = ((AgentSmartToyState) ast);
 		int fila = agState.getUbicacionAgente().getSecond()[0];
 		int columna = agState.getUbicacionAgente().getSecond()[1];
         
@@ -75,32 +180,28 @@ public class GirarIzquierda extends SearchAction {
 	        if (agentOrientation[0]==true){//arriba
 	        	agentOrientation[0]=false;
 	        	agentOrientation[1]=true;
-	        	agState.getEstadosProbados().put(
-						new char[] { (char) fila, (char) columna, 'O' }, 1);
+	        	agState.getEstadosProbados().add(Integer.toString(fila)+Integer.toString(columna)+"O");
 	        }
 	        else if (agentOrientation[1]==true){//izq
 	        	agentOrientation[1]=false;
 	        	agentOrientation[2]=true;
-	        	agState.getEstadosProbados().put(
-						new char[] { (char) fila, (char) columna, 'S' }, 1);
+	        	agState.getEstadosProbados().add(Integer.toString(fila)+Integer.toString(columna)+"S");
 	        }
 	        else if (agentOrientation[2]==true){//abajo
 	        	agentOrientation[2]=false;
 	        	agentOrientation[3]=true;
-	        	agState.getEstadosProbados().put(
-						new char[] { (char) fila, (char) columna, 'E' }, 1);
+	        	agState.getEstadosProbados().add(Integer.toString(fila)+Integer.toString(columna)+"E");
 	        }
 	        else if (agentOrientation[3]==true){//der
 	        	agentOrientation[3]=false;
 	        	agentOrientation[0]=true;
-	        	agState.getEstadosProbados().put(
-						new char[] { (char) fila, (char) columna, 'N' }, 1);
+	        	agState.getEstadosProbados().add(Integer.toString(fila)+Integer.toString(columna)+"N");
 	        }
 	        cantidadGirosReales++;    
 	        agState.setOrientacion(agentOrientation);
 	        environmentState.setOrientacionAgente(agentOrientation);
         }
-        return environmentState; 
+        return environmentState; */
     }
 
     /**
@@ -120,12 +221,20 @@ public class GirarIzquierda extends SearchAction {
         return "GirarIzquierda";
     }
     
-private boolean EstadoNoProbado(int fila, int columna, char orientacion, HashMap<char[], Integer> hashMap) {
+    private boolean EstadoNoProbado(int fila, int columna, char orientacion,List<String> estadosProbados) {
+		String ep = Integer.toString(fila)+Integer.toString(columna)+orientacion;
+		if(estadosProbados.contains(ep)){
+			return false;
+		}
+		return true;
+	}
+    
+    /*private boolean EstadoNoProbado(int fila, int columna, char orientacion, HashMap<char[], Integer> hashMap) {
 		
 		Integer value = hashMap.get(new char[]{(char) fila, (char) columna, orientacion});
 		if(value == null){
 			return true;
 		}
 		return false;
-	}
+	}*/
 }

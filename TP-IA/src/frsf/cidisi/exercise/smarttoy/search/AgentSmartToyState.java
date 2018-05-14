@@ -22,7 +22,8 @@ public class AgentSmartToyState extends SearchBasedAgentState {
     int numeroHabitacionSmartPhone;
     private List<Habitacion> habitacionesVisitadas;
     //private List<Pair<int[], boolean[]>> estadosProbados;
-    HashMap<char[], Integer> estadosProbados;
+    //HashMap<char[], Integer> estadosProbados;
+	private List<String> estadosProbados;
 	private List<Habitacion> plano;
 	private boolean[] orientacion;
 
@@ -31,7 +32,8 @@ public class AgentSmartToyState extends SearchBasedAgentState {
     public AgentSmartToyState() {
     	ubicacionAgente = new Pair<Habitacion, int[]>(new Habitacion(),  new int[2]);
     	habitacionesVisitadas = new ArrayList<Habitacion>();
-    	estadosProbados = new HashMap<char[], Integer>();
+    	//estadosProbados = new HashMap<char[], Integer>();
+    	estadosProbados = new ArrayList<String>();
         plano = new ArrayList<Habitacion>();
     	orientacion = new boolean[4];
     	
@@ -74,15 +76,15 @@ public class AgentSmartToyState extends SearchBasedAgentState {
     		newHabitacionesVisitadas.add(h.clone());
     	newAgentSmartToyState.setHabitacionesVisitadas(newHabitacionesVisitadas);
     	
-    	HashMap<char[], Integer> nuevosEstadosProbados = new HashMap<char[], Integer>();
+    	/*HashMap<char[], Integer> newEstadosProbados = new HashMap<char[], Integer>();
         
         for(Map.Entry<char[], Integer> entry : this.getEstadosProbados().entrySet()) {
         	char[] nuevoChar = entry.getKey().clone();
-        	int nuevoInt = 1;
-            nuevosEstadosProbados.put(nuevoChar, nuevoInt);
+        	int nuevoInt = entry.getValue();
+            newEstadosProbados.put(nuevoChar, nuevoInt);
         }
-        newAgentSmartToyState.setEstadosProbados(nuevosEstadosProbados);
-    	
+        newAgentSmartToyState.setEstadosProbados(newEstadosProbados);
+    	*/
         return newAgentSmartToyState;
     }
 
@@ -159,28 +161,29 @@ public class AgentSmartToyState extends SearchBasedAgentState {
     	
     	//Setea la posicion inicial del agente
     	this.ubicacionAgente.setFirst(this.getPlano().get(0)); //Habitacion .get(HABITACION)
-    	this.ubicacionAgente.setSecond(new int[]{2,2}); //Posicion dentro de la habitación {FILA, COLUMNA})
+    	this.ubicacionAgente.setSecond(new int[]{1,1}); //Posicion dentro de la habitación {FILA, COLUMNA})
     	setAgentStringInPlano();
-    	
-    	//Agrega el estadoProbado actual
-    	estadosProbados.put(new char[]{(char) this.ubicacionAgente.getSecond()[0],(char) this.ubicacionAgente.getSecond()[1], this.getCharOrientacion()}, 1);
     	
     	//Agrega la habitacion actual a las habitaciones visitadas
     	habitacionesVisitadas.add(ubicacionAgente.getFirst());
     	
     	//Setea la orientación inicial del agente
-    	orientacion[0] = false;
-    	orientacion[1] = true;
+    	orientacion[0] = true;
+    	orientacion[1] = false;
     	orientacion[2] = false;
     	orientacion[3] = false;
     	
+    	//Agrega el estadoProbado actual
+    	//estadosProbados.put(new char[]{(char) this.ubicacionAgente.getSecond()[0],(char) this.ubicacionAgente.getSecond()[1], this.getCharOrientacion()}, 1);
+    	estadosProbados.add(Integer.toString(this.ubicacionAgente.getSecond()[0])+Integer.toString(this.ubicacionAgente.getSecond()[1])+this.getCharOrientacion());
+    	
     	//Setea el número de habitacion donde está el smartphone
-    	this.numeroHabitacionSmartPhone = 2;
-    	plano.get(1).getPlanoHabitacion()[6][3] = AgentSmartToyPerception.META_PERCEPTION;
+    	this.numeroHabitacionSmartPhone = 1;
+    	plano.get(1).getPlanoHabitacion()[3][2] = AgentSmartToyPerception.META_PERCEPTION;
 
     }
 
-    /**
+	/**
      * This method returns the String representation of the agent state.
      */
     @Override
@@ -290,13 +293,13 @@ public class AgentSmartToyState extends SearchBasedAgentState {
 		this.numeroHabitacionSmartPhone = numeroHabitacionSmartPhone;
 	}
 	
-	public HashMap<char[], Integer> getEstadosProbados() {
+/*	public HashMap<char[], Integer> getEstadosProbados() {
 		return estadosProbados;
 	}
 
 	public void setEstadosProbados(HashMap<char[], Integer> estadosProbados) {
 		this.estadosProbados = estadosProbados;
-	}
+	}*/
 	
 	public char getCharOrientacion() {
 		char orientacion;
@@ -324,5 +327,15 @@ public class AgentSmartToyState extends SearchBasedAgentState {
 		int columnaLlmado = ubicacionAgente.getSecond()[1] ;
 		plano.get(ubicacionAgente.getFirst().getIdHabitacion()-1).getPlanoHabitacion()[filaLlamado][columnaLlmado] = "||";
 	}
+	
+	 public List<String> getEstadosProbados() {
+			return estadosProbados;
+		}
+
+
+
+		public void setEstadosProbados(String estadodProbado) {
+			this.estadosProbados.add(estadodProbado);
+		}
 }
 
