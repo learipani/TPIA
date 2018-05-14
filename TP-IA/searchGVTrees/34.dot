@@ -1,0 +1,390 @@
+digraph g {
+node [shape = Mrecord];
+nodo0[label="{EO: 0|cost: 0.0|A: null}"]
+nodo1[label="{EO: 1|cost: -1.0|A: Avanzar}"]
+nodo4[label="{EO: 4|cost: -2.0|A: Avanzar|
+Agente\nen\nhabitacón\nnúmero:\n2
+Posicion:\n9;1
+Orientacion:\nN
+
+Plano="\n
+\nob\nob\nob\npu\npu\npu\nob\n\n
+\npu\n##\n##\n##\n##\n##\nob\n\n
+\npu\n##\n##\n##\n##\n##\nob\n\n
+\npu\ngo\n##\n##\n##\n##\nob\n\n
+\npu\n##\n##\n##\n##\n##\nob\n\n
+\npu\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\npu\n\n
+\nob\n##\n##\n##\n##\n##\npu\n\n
+\nob\n##\n##\n##\n##\n##\npu\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\nob\nob\nob\nob\nob\nob\n\n
+\n"}"]
+nodo7[label="{EO: 7|cost: -3.0|A: Avanzar|
+Agente\nen\nhabitacón\nnúmero:\n2
+Posicion:\n8;1
+Orientacion:\nN
+
+Plano="\n
+\nob\nob\nob\npu\npu\npu\nob\n\n
+\npu\n##\n##\n##\n##\n##\nob\n\n
+\npu\n##\n##\n##\n##\n##\nob\n\n
+\npu\ngo\n##\n##\n##\n##\nob\n\n
+\npu\n##\n##\n##\n##\n##\nob\n\n
+\npu\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\npu\n\n
+\nob\n##\n##\n##\n##\n##\npu\n\n
+\nob\n##\n##\n##\n##\n##\npu\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\nob\nob\nob\nob\nob\nob\n\n
+\n"}"]
+nodo10[label="{EO: 10|cost: -4.0|A: Avanzar|
+Agente\nen\nhabitacón\nnúmero:\n2
+Posicion:\n7;1
+Orientacion:\nN
+
+Plano="\n
+\nob\nob\nob\npu\npu\npu\nob\n\n
+\npu\n##\n##\n##\n##\n##\nob\n\n
+\npu\n##\n##\n##\n##\n##\nob\n\n
+\npu\ngo\n##\n##\n##\n##\nob\n\n
+\npu\n##\n##\n##\n##\n##\nob\n\n
+\npu\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\npu\n\n
+\nob\n##\n##\n##\n##\n##\npu\n\n
+\nob\n##\n##\n##\n##\n##\npu\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\nob\nob\nob\nob\nob\nob\n\n
+\n"}"]
+nodo13[label="{EO: 13|cost: -5.0|A: Avanzar|
+Agente\nen\nhabitacón\nnúmero:\n2
+Posicion:\n6;1
+Orientacion:\nN
+
+Plano="\n
+\nob\nob\nob\npu\npu\npu\nob\n\n
+\npu\n##\n##\n##\n##\n##\nob\n\n
+\npu\n##\n##\n##\n##\n##\nob\n\n
+\npu\ngo\n##\n##\n##\n##\nob\n\n
+\npu\n##\n##\n##\n##\n##\nob\n\n
+\npu\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\npu\n\n
+\nob\n##\n##\n##\n##\n##\npu\n\n
+\nob\n##\n##\n##\n##\n##\npu\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\nob\nob\nob\nob\nob\nob\n\n
+\n"}"]
+nodo16[label="{EO: 16|cost: -6.0|A: Avanzar|
+Agente\nen\nhabitacón\nnúmero:\n2
+Posicion:\n5;1
+Orientacion:\nN
+
+Plano="\n
+\nob\nob\nob\npu\npu\npu\nob\n\n
+\npu\n##\n##\n##\n##\n##\nob\n\n
+\npu\n##\n##\n##\n##\n##\nob\n\n
+\npu\ngo\n##\n##\n##\n##\nob\n\n
+\npu\n##\n##\n##\n##\n##\nob\n\n
+\npu\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\npu\n\n
+\nob\n##\n##\n##\n##\n##\npu\n\n
+\nob\n##\n##\n##\n##\n##\npu\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\nob\nob\nob\nob\nob\nob\n\n
+\n"}"]
+
+nodo13 -> nodo16;
+nodo17[label="{EO: 17|cost: -6.0|A: GirarDerecha|
+Agente\nen\nhabitacón\nnúmero:\n2
+Posicion:\n5;1
+Orientacion:\nN
+
+Plano="\n
+\nob\nob\nob\npu\npu\npu\nob\n\n
+\npu\n##\n##\n##\n##\n##\nob\n\n
+\npu\n##\n##\n##\n##\n##\nob\n\n
+\npu\ngo\n##\n##\n##\n##\nob\n\n
+\npu\n##\n##\n##\n##\n##\nob\n\n
+\npu\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\npu\n\n
+\nob\n##\n##\n##\n##\n##\npu\n\n
+\nob\n##\n##\n##\n##\n##\npu\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\nob\nob\nob\nob\nob\nob\n\n
+\n"}"]
+
+nodo13 -> nodo17;
+nodo18[label="{EO: 18|cost: -6.0|A: GirarIzquierda|
+Agente\nen\nhabitacón\nnúmero:\n2
+Posicion:\n5;1
+Orientacion:\nN
+
+Plano="\n
+\nob\nob\nob\npu\npu\npu\nob\n\n
+\npu\n##\n##\n##\n##\n##\nob\n\n
+\npu\n##\n##\n##\n##\n##\nob\n\n
+\npu\ngo\n##\n##\n##\n##\nob\n\n
+\npu\n##\n##\n##\n##\n##\nob\n\n
+\npu\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\npu\n\n
+\nob\n##\n##\n##\n##\n##\npu\n\n
+\nob\n##\n##\n##\n##\n##\npu\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\nob\nob\nob\nob\nob\nob\n\n
+\n"}"]
+
+nodo13 -> nodo18;
+
+nodo10 -> nodo13;
+nodo14[label="{EO: 14|cost: -5.0|A: GirarDerecha|
+Agente\nen\nhabitacón\nnúmero:\n2
+Posicion:\n6;1
+Orientacion:\nN
+
+Plano="\n
+\nob\nob\nob\npu\npu\npu\nob\n\n
+\npu\n##\n##\n##\n##\n##\nob\n\n
+\npu\n##\n##\n##\n##\n##\nob\n\n
+\npu\ngo\n##\n##\n##\n##\nob\n\n
+\npu\n##\n##\n##\n##\n##\nob\n\n
+\npu\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\npu\n\n
+\nob\n##\n##\n##\n##\n##\npu\n\n
+\nob\n##\n##\n##\n##\n##\npu\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\nob\nob\nob\nob\nob\nob\n\n
+\n"}"]
+
+nodo10 -> nodo14;
+nodo15[label="{EO: 15|cost: -5.0|A: GirarIzquierda|
+Agente\nen\nhabitacón\nnúmero:\n2
+Posicion:\n6;1
+Orientacion:\nN
+
+Plano="\n
+\nob\nob\nob\npu\npu\npu\nob\n\n
+\npu\n##\n##\n##\n##\n##\nob\n\n
+\npu\n##\n##\n##\n##\n##\nob\n\n
+\npu\ngo\n##\n##\n##\n##\nob\n\n
+\npu\n##\n##\n##\n##\n##\nob\n\n
+\npu\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\npu\n\n
+\nob\n##\n##\n##\n##\n##\npu\n\n
+\nob\n##\n##\n##\n##\n##\npu\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\nob\nob\nob\nob\nob\nob\n\n
+\n"}"]
+
+nodo10 -> nodo15;
+
+nodo7 -> nodo10;
+nodo11[label="{EO: 11|cost: -4.0|A: GirarDerecha|
+Agente\nen\nhabitacón\nnúmero:\n2
+Posicion:\n7;1
+Orientacion:\nN
+
+Plano="\n
+\nob\nob\nob\npu\npu\npu\nob\n\n
+\npu\n##\n##\n##\n##\n##\nob\n\n
+\npu\n##\n##\n##\n##\n##\nob\n\n
+\npu\ngo\n##\n##\n##\n##\nob\n\n
+\npu\n##\n##\n##\n##\n##\nob\n\n
+\npu\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\npu\n\n
+\nob\n##\n##\n##\n##\n##\npu\n\n
+\nob\n##\n##\n##\n##\n##\npu\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\nob\nob\nob\nob\nob\nob\n\n
+\n"}"]
+
+nodo7 -> nodo11;
+nodo12[label="{EO: 12|cost: -4.0|A: GirarIzquierda|
+Agente\nen\nhabitacón\nnúmero:\n2
+Posicion:\n7;1
+Orientacion:\nN
+
+Plano="\n
+\nob\nob\nob\npu\npu\npu\nob\n\n
+\npu\n##\n##\n##\n##\n##\nob\n\n
+\npu\n##\n##\n##\n##\n##\nob\n\n
+\npu\ngo\n##\n##\n##\n##\nob\n\n
+\npu\n##\n##\n##\n##\n##\nob\n\n
+\npu\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\npu\n\n
+\nob\n##\n##\n##\n##\n##\npu\n\n
+\nob\n##\n##\n##\n##\n##\npu\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\nob\nob\nob\nob\nob\nob\n\n
+\n"}"]
+
+nodo7 -> nodo12;
+
+nodo4 -> nodo7;
+nodo8[label="{EO: 8|cost: -3.0|A: GirarDerecha|
+Agente\nen\nhabitacón\nnúmero:\n2
+Posicion:\n8;1
+Orientacion:\nN
+
+Plano="\n
+\nob\nob\nob\npu\npu\npu\nob\n\n
+\npu\n##\n##\n##\n##\n##\nob\n\n
+\npu\n##\n##\n##\n##\n##\nob\n\n
+\npu\ngo\n##\n##\n##\n##\nob\n\n
+\npu\n##\n##\n##\n##\n##\nob\n\n
+\npu\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\npu\n\n
+\nob\n##\n##\n##\n##\n##\npu\n\n
+\nob\n##\n##\n##\n##\n##\npu\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\nob\nob\nob\nob\nob\nob\n\n
+\n"}"]
+
+nodo4 -> nodo8;
+nodo9[label="{EO: 9|cost: -3.0|A: GirarIzquierda|
+Agente\nen\nhabitacón\nnúmero:\n2
+Posicion:\n8;1
+Orientacion:\nN
+
+Plano="\n
+\nob\nob\nob\npu\npu\npu\nob\n\n
+\npu\n##\n##\n##\n##\n##\nob\n\n
+\npu\n##\n##\n##\n##\n##\nob\n\n
+\npu\ngo\n##\n##\n##\n##\nob\n\n
+\npu\n##\n##\n##\n##\n##\nob\n\n
+\npu\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\npu\n\n
+\nob\n##\n##\n##\n##\n##\npu\n\n
+\nob\n##\n##\n##\n##\n##\npu\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\nob\nob\nob\nob\nob\nob\n\n
+\n"}"]
+
+nodo4 -> nodo9;
+
+nodo1 -> nodo4;
+nodo5[label="{EO: 5|cost: -2.0|A: GirarDerecha|
+Agente\nen\nhabitacón\nnúmero:\n2
+Posicion:\n9;1
+Orientacion:\nN
+
+Plano="\n
+\nob\nob\nob\npu\npu\npu\nob\n\n
+\npu\n##\n##\n##\n##\n##\nob\n\n
+\npu\n##\n##\n##\n##\n##\nob\n\n
+\npu\ngo\n##\n##\n##\n##\nob\n\n
+\npu\n##\n##\n##\n##\n##\nob\n\n
+\npu\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\npu\n\n
+\nob\n##\n##\n##\n##\n##\npu\n\n
+\nob\n##\n##\n##\n##\n##\npu\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\nob\nob\nob\nob\nob\nob\n\n
+\n"}"]
+
+nodo1 -> nodo5;
+nodo6[label="{EO: 6|cost: -2.0|A: GirarIzquierda|
+Agente\nen\nhabitacón\nnúmero:\n2
+Posicion:\n9;1
+Orientacion:\nN
+
+Plano="\n
+\nob\nob\nob\npu\npu\npu\nob\n\n
+\npu\n##\n##\n##\n##\n##\nob\n\n
+\npu\n##\n##\n##\n##\n##\nob\n\n
+\npu\ngo\n##\n##\n##\n##\nob\n\n
+\npu\n##\n##\n##\n##\n##\nob\n\n
+\npu\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\npu\n\n
+\nob\n##\n##\n##\n##\n##\npu\n\n
+\nob\n##\n##\n##\n##\n##\npu\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\n##\n##\n##\n##\n##\nob\n\n
+\nob\nob\nob\nob\nob\nob\nob\n\n
+\n"}"]
+
+nodo1 -> nodo6;
+
+nodo0 -> nodo1;
+nodo2[label="{EO: 2|cost: -1.0|A: GirarDerecha}"]
+
+nodo0 -> nodo2;
+nodo3[label="{EO: 3|cost: -1.0|A: GirarIzquierda}"]
+
+nodo0 -> nodo3;
+
+
+}

@@ -154,8 +154,8 @@ public class AgentSmartToyState extends SearchBasedAgentState {
     	orientacion[3] = false;
     	
     	//Setea el número de habitacion donde está el smartphone
-    	this.numeroHabitacionSmartPhone = 2;
-    	plano.get(1).getPlanoHabitacion()[5][3] = AgentSmartToyPerception.META_PERCEPTION;
+    	this.numeroHabitacionSmartPhone = 1;
+    	plano.get(1).getPlanoHabitacion()[3][1] = AgentSmartToyPerception.META_PERCEPTION;
 
     }
 

@@ -60,11 +60,11 @@ public class Contenedor extends JComponent
      ImageIcon imagen2 =new ImageIcon(new ImageIcon(getClass().getResource("imagenes/smartToy.png")).getImage());
      g.drawImage(imagen2.getImage(), columna, fila, ampliacion, ampliacion, null); 
     
-if(environment.getUbicacionSmartPhone().getFirst().getIdHabitacion()==numeroHabitacion){}
+if(environment.getUbicacionSmartPhone().getFirst().getIdHabitacion()==numeroHabitacion){
      ImageIcon imagen3 =new ImageIcon(new ImageIcon(getClass().getResource("imagenes/smartphone.jpg")).getImage());
      g.drawImage(imagen3.getImage(), environment.getUbicacionSmartPhone().getSecond()[1]*ampliacion,  environment.getUbicacionSmartPhone().
     		 getSecond()[0]*ampliacion, ampliacion, ampliacion, null); 
-     
+}     
 
      setOpaque(false);
      super.paintComponent(g);
