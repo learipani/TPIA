@@ -207,7 +207,7 @@ public class Avanzar extends SearchAction {
 
 		try {
 			Contenedor.mover();
-			Thread.sleep(1000);
+			Thread.sleep(250); //tiempo para que se vea
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
