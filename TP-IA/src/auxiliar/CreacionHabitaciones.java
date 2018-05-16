@@ -623,7 +623,7 @@ public class CreacionHabitaciones {
 	
 	public static Habitacion createHabitacion15(){
 		//Habitacion h14 = new Habitacion(NUMERO_HABITACION,  new ArrayList<Pair<Integer, List<Puerta>>>(), new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new ArrayList<Objeto>());
-		Habitacion h15 = new Habitacion(14,new String[16][17], new ArrayList<Pair<Integer, List<Puerta>>>(), new ArrayList<Objeto>());
+		Habitacion h15 = new Habitacion(15,new String[16][17], new ArrayList<Pair<Integer, List<Puerta>>>(), new ArrayList<Objeto>());
 		
 		//Paredes
 		//h14.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
