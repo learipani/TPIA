@@ -33,7 +33,7 @@ public class GirarDerecha extends SearchAction {
 				String ep = Integer.toString(fila)+Integer.toString(columna)+"E";
 				if(!agState.getEstadosProbados().contains(ep)){
 					flag=true;
-					agState.setEstadosProbados(ep);
+					agState.getEstadosProbados().add(ep);
 				}
 				break;
 			case 'O':
@@ -42,7 +42,7 @@ public class GirarDerecha extends SearchAction {
 				String ep1 = Integer.toString(fila)+Integer.toString(columna)+"N";
 				if(!agState.getEstadosProbados().contains(ep1)){
 					flag=true;
-					agState.setEstadosProbados(ep1);
+					agState.getEstadosProbados().add(ep1);
 				}
 				break;
 			case 'S':
@@ -51,7 +51,7 @@ public class GirarDerecha extends SearchAction {
 				String ep2 = Integer.toString(fila)+Integer.toString(columna)+"O";
 				if(!agState.getEstadosProbados().contains(ep2)){
 					flag=true;
-					agState.setEstadosProbados(ep2);
+					agState.getEstadosProbados().add(ep2);
 				}
 				break;
 			case 'E':
@@ -60,7 +60,7 @@ public class GirarDerecha extends SearchAction {
 				String ep3 = Integer.toString(fila)+Integer.toString(columna)+"S";
 				if(!agState.getEstadosProbados().contains(ep3)){
 					flag=true;
-					agState.setEstadosProbados(ep3);
+					agState.getEstadosProbados().add(ep3);
 				}
 				break;
 			}
@@ -95,7 +95,7 @@ public class GirarDerecha extends SearchAction {
 				String ep = Integer.toString(fila)+Integer.toString(columna)+"E";
 				if(!agState.getEstadosProbados().contains(ep)){
 					flag=true;
-					agState.setEstadosProbados(ep);
+					agState.getEstadosProbados().add(ep);
 				}
 				break;
 			case 'O':
@@ -104,7 +104,7 @@ public class GirarDerecha extends SearchAction {
 				String ep1 = Integer.toString(fila)+Integer.toString(columna)+"N";
 				if(!agState.getEstadosProbados().contains(ep1)){
 					flag=true;
-					agState.setEstadosProbados(ep1);
+					agState.getEstadosProbados().add(ep1);
 				}
 				break;
 			case 'S':
@@ -113,7 +113,7 @@ public class GirarDerecha extends SearchAction {
 				String ep2 = Integer.toString(fila)+Integer.toString(columna)+"O";
 				if(!agState.getEstadosProbados().contains(ep2)){
 					flag=true;
-					agState.setEstadosProbados(ep2);
+					agState.getEstadosProbados().add(ep2);
 				}
 				break;
 			case 'E':
@@ -122,7 +122,7 @@ public class GirarDerecha extends SearchAction {
 				String ep3 = Integer.toString(fila)+Integer.toString(columna)+"S";
 				if(!agState.getEstadosProbados().contains(ep3)){
 					flag=true;
-					agState.setEstadosProbados(ep3);
+					agState.getEstadosProbados().add(ep3);
 				}
 				break;
 			}

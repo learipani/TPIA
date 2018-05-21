@@ -6,6 +6,8 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
+//import Dominio.Orientacion;
+
 import pantalla.Contenedor;
 
 import domain.Habitacion;
@@ -20,6 +22,8 @@ public class Avanzar extends SearchAction {
 
 	static Contenedor contenedor;
 	static int cantidadHabitaciones = 15;
+	public static int casilla;
+	public static char agentOrientation;
 	/**
 	 * This method updates a tree node state when the search process is running.
 	 * It does not updates the real world state.
@@ -28,7 +32,7 @@ public class Avanzar extends SearchAction {
 	public SearchBasedAgentState execute(SearchBasedAgentState s) {
 		AgentSmartToyState agState = (AgentSmartToyState) s;
 
-		char agentOrientation = agState.getCharOrientacion();
+		this.agentOrientation = agState.getCharOrientacion();
 		int fila = agState.getUbicacionAgente().getSecond()[0];
 		int columna = agState.getUbicacionAgente().getSecond()[1];
 		String[][] planoHabitacionAgente = agState.getUbicacionAgente()
@@ -67,6 +71,8 @@ public class Avanzar extends SearchAction {
 				&& EstadoNoProbado(fila, columna, agState.getCharOrientacion(), agState.getEstadosProbados())) {
 			agState.getUbicacionAgente().setSecond(new int[] { fila, columna });
 			agState.getEstadosProbados().add(Integer.toString(fila)+Integer.toString(columna)+agState.getCharOrientacion());
+			//casilla = planoHabitacionAgente[fila][columna];
+			//agState.setTiempo(agState.getTiempo() + this.getCost());
 			return agState;
 		} 
 		return null;
@@ -121,6 +127,8 @@ public class Avanzar extends SearchAction {
 			agState.getEstadosProbados().add(Integer.toString(fila)+Integer.toString(columna)+agState.getCharOrientacion());
 			environmentState.getUbicacionAgente().setSecond(new int[] { fila, columna });
 			environmentState.celdasVisitadas = environmentState.celdasVisitadas + 1;
+			//casilla = planoHabitacionAgente[fila][columna];
+			//agState.setTiempo(agState.getTiempo() + this.getCost());
 		}
 
 		try {
@@ -139,7 +147,29 @@ public class Avanzar extends SearchAction {
 	 */
 	@Override
 	public Double getCost() {
-		return new Double(0);
+		// 1: piso mojado
+		// 2: basura
+		// 3: arena
+		// 4: escalera
+		switch(this.casilla){
+		case 1:
+			return 1.0;
+		case 2:
+			return 0.5;
+		case 3:
+			return 2.0;
+		case 4:
+			/* Ver como esta definida la escalera
+			if (this.orientacionAg == Orientacion.S) {
+				return 0.5;// bajaEscalera
+			} else {
+				if (this.orientacionAg == Orientacion.N) {
+					return 2.0;
+				}
+			}*/
+		}
+		
+		return 1.0;
 	}
 
 	/**

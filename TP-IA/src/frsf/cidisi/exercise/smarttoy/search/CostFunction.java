@@ -17,6 +17,6 @@ public class CostFunction implements IStepCostFunction {
         
         //TODO: Complete Method
         
-        return 0;
+        return ((AgentSmartToyState) node.getAgentState()).getTiempo();
     }
 }

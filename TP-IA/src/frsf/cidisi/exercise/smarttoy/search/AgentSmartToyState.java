@@ -24,10 +24,10 @@ public class AgentSmartToyState extends SearchBasedAgentState {
 	private List<String> estadosProbados;
 	private List<Habitacion> plano;
 	private boolean[] orientacion;
+	private double tiempo;
 
-	
-	
-    public AgentSmartToyState() {
+
+	public AgentSmartToyState() {
     	ubicacionAgente = new Pair<Habitacion, int[]>(new Habitacion(),  new int[2]);
     	habitacionesVisitadas = new ArrayList<Habitacion>();
     	estadosProbados = new ArrayList<String>();
@@ -50,35 +50,40 @@ public class AgentSmartToyState extends SearchBasedAgentState {
     	
     	//Los atributos de tipo primitvos se pasan por copia(no hay)
     	newAgentSmartToyState.setNumeroHabitacionSmartPhone(this.getNumeroHabitacionSmartPhone());
+    	newAgentSmartToyState.setTiempo(this.getTiempo());
     	
     	//No se si hay que clonar cada arreglo del par por separado
     	newAgentSmartToyState.setOrientacion(this.getOrientacion().clone());
     	
     	Pair<Habitacion, int[]> newUbicacionAgente = new Pair<Habitacion, int[]>(null, null);
-    	newUbicacionAgente.setFirst(this.getUbicacionAgente().getFirst().clone());
-    	newUbicacionAgente.setSecond(this.getUbicacionAgente().getSecond().clone());
-    	//newUbicacionAgente.setFirst(this.getUbicacionAgente().getFirst());
-    	//newUbicacionAgente.setSecond(this.getUbicacionAgente().getSecond());
+    	//newUbicacionAgente.setFirst(this.getUbicacionAgente().getFirst().clone());
+    	//newUbicacionAgente.setSecond(this.getUbicacionAgente().getSecond().clone());
+    	//de aca
+    	Habitacion newHabitacion = this.getUbicacionAgente().getFirst().clone();
+    	int[] newUbicacionEnHab = new int[2];
+    	newUbicacionEnHab[0]=this.getUbicacionAgente().getSecond()[0];
+    	newUbicacionEnHab[1]=this.getUbicacionAgente().getSecond()[1];
+    	newUbicacionAgente.setFirst(newHabitacion);
+    	newUbicacionAgente.setSecond(newUbicacionEnHab);
+    	//hasta aca
     	newAgentSmartToyState.setUbicacionAgente(newUbicacionAgente);
-    	
-    	//Pair<Habitacion, int[]> newUbicacionInicial = new Pair<Habitacion, int[]>(null, null);
     	
     	//Los atributos que son objetos (los arrays también son de tipo objeto) se pasan por
     	//referencia; luego, es necesario clonarlos
     	List<Habitacion> newPlano = new ArrayList<Habitacion>();
     	for(Habitacion h : this.getPlano())
     		newPlano.add(h.clone());
-    		//newPlano.add(h);
     	newAgentSmartToyState.setPlano(newPlano);
     	
     	List<Habitacion> newHabitacionesVisitadas = new ArrayList<Habitacion>();
     	for(Habitacion h : this.getHabitacionesVisitadas())
     		newHabitacionesVisitadas.add(h.clone());
-    		//newHabitacionesVisitadas.add(h);
     	newAgentSmartToyState.setHabitacionesVisitadas(newHabitacionesVisitadas);
     	
+    	List<String> newEstadosProbados = new ArrayList<String>();
     	for(String s : this.getEstadosProbados())
-    		newAgentSmartToyState.setEstadosProbados(s);
+    		newEstadosProbados.add(s);
+    	newAgentSmartToyState.setEstadosProbados(newEstadosProbados);
     	
         return newAgentSmartToyState;
     }
@@ -191,7 +196,7 @@ public class AgentSmartToyState extends SearchBasedAgentState {
     	this.plano.add(CreacionHabitaciones.createHabitacion15());
     	
     	//Setea la posicion inicial del agente
-    	this.ubicacionAgente.setFirst(this.getPlano().get(2)); //Habitacion .get(HABITACION)
+    	this.ubicacionAgente.setFirst(this.getPlano().get(0)); //Habitacion .get(HABITACION)
     	this.ubicacionAgente.setSecond(new int[]{1,1}); //Posicion dentro de la habitación {FILA, COLUMNA})
     	setAgentStringInPlano();
     	
@@ -209,8 +214,8 @@ public class AgentSmartToyState extends SearchBasedAgentState {
     	estadosProbados.add(Integer.toString(this.ubicacionAgente.getSecond()[0])+Integer.toString(this.ubicacionAgente.getSecond()[1])+this.getCharOrientacion());
     	
     	//Setea el número de habitacion donde está el smartphone
-    	this.numeroHabitacionSmartPhone = 3;
-    	plano.get(2).getPlanoHabitacion()[7][7] = AgentSmartToyPerception.META_PERCEPTION;
+    	this.numeroHabitacionSmartPhone = 2;
+    	plano.get(1).getPlanoHabitacion()[1][5] = AgentSmartToyPerception.META_PERCEPTION;
 
     }
 
@@ -352,11 +357,18 @@ public class AgentSmartToyState extends SearchBasedAgentState {
 	}
 	
 	public List<String> getEstadosProbados() {
-			return estadosProbados;
+		return estadosProbados;
 	}
-	 
-	public void setEstadosProbados(String estadodProbado) {
-			this.estadosProbados.add(estadodProbado);
+	public void setEstadosProbados(List<String> estadosProbados) {
+		this.estadosProbados = estadosProbados;
+	}
+	
+	public double getTiempo() {
+			return tiempo;
+	}
+
+	public void setTiempo(double tiempo) {
+			this.tiempo = tiempo;
 	}
 }
 
