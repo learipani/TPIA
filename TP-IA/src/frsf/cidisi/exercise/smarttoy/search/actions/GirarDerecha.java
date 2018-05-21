@@ -1,6 +1,5 @@
 package frsf.cidisi.exercise.smarttoy.search.actions;
 
-import java.util.HashMap;
 import java.util.List;
 
 import frsf.cidisi.exercise.smarttoy.search.*;
@@ -10,9 +9,6 @@ import frsf.cidisi.faia.state.AgentState;
 import frsf.cidisi.faia.state.EnvironmentState;
 
 public class GirarDerecha extends SearchAction {
-
-	public static int cantidadGiros = 0;
-	public static int cantidadGirosReales = 0;
 
 	/**
 	 * This method updates a tree node state when the search process is running.
@@ -42,7 +38,7 @@ public class GirarDerecha extends SearchAction {
 				break;
 			case 'O':
 				agentOrientation[0] = true;
-				agentOrientation[1] = true;
+				agentOrientation[1] = false;
 				String ep1 = Integer.toString(fila)+Integer.toString(columna)+"N";
 				if(!agState.getEstadosProbados().contains(ep1)){
 					flag=true;
@@ -69,7 +65,6 @@ public class GirarDerecha extends SearchAction {
 				break;
 			}
 			if (flag){
-				cantidadGiros++;
 				agState.setOrientacion(agentOrientation);
 				return agState;
 			}
@@ -105,7 +100,7 @@ public class GirarDerecha extends SearchAction {
 				break;
 			case 'O':
 				agentOrientation[0] = true;
-				agentOrientation[1] = true;
+				agentOrientation[1] = false;
 				String ep1 = Integer.toString(fila)+Integer.toString(columna)+"N";
 				if(!agState.getEstadosProbados().contains(ep1)){
 					flag=true;
@@ -132,7 +127,6 @@ public class GirarDerecha extends SearchAction {
 				break;
 			}
 			if (flag){
-				cantidadGiros++;
 				agState.setOrientacion(agentOrientation);
 				environmentState.setOrientacionAgente(agentOrientation);
 			}
@@ -195,14 +189,4 @@ public class GirarDerecha extends SearchAction {
 		}
 		return true;
 	}
-	/*private boolean EstadoNoProbado(int fila, int columna, char orientacion,
-			HashMap<char[], Integer> hashMap) {
-
-		Integer value = hashMap.get(new char[] { (char) fila, (char) columna,
-				orientacion });
-		if (value == null) {
-			return true;
-		}
-		return false;
-	}*/
 }

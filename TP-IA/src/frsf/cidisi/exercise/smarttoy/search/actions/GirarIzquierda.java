@@ -1,6 +1,5 @@
 package frsf.cidisi.exercise.smarttoy.search.actions;
 
-import java.util.HashMap;
 import java.util.List;
 
 import frsf.cidisi.exercise.smarttoy.search.*;
@@ -11,10 +10,7 @@ import frsf.cidisi.faia.state.EnvironmentState;
 
 public class GirarIzquierda extends SearchAction {
 	
-	public static int cantidadGiros=0;
-	public static int cantidadGirosReales=0;
-	
-    /**
+	/**
      * This method updates a tree node state when the search process is running.
      * It does not updates the real world state.
      */
@@ -33,7 +29,7 @@ public class GirarIzquierda extends SearchAction {
 			switch (agState.getCharOrientacion()) {
 			case 'N':
 				agentOrientation[0] = false;
-				agentOrientation[3] = true;
+				agentOrientation[1] = true;
 				String ep = Integer.toString(fila)+Integer.toString(columna)+"O";
 				if(!agState.getEstadosProbados().contains(ep)){
 					flag=true;
@@ -41,8 +37,8 @@ public class GirarIzquierda extends SearchAction {
 				}
 				break;
 			case 'O':
-				agentOrientation[0] = true;
-				agentOrientation[1] = true;
+				agentOrientation[1] = false;
+				agentOrientation[2] = true;
 				String ep1 = Integer.toString(fila)+Integer.toString(columna)+"S";
 				if(!agState.getEstadosProbados().contains(ep1)){
 					flag=true;
@@ -51,7 +47,7 @@ public class GirarIzquierda extends SearchAction {
 				break;
 			case 'S':
 				agentOrientation[2] = false;
-				agentOrientation[1] = true;
+				agentOrientation[3] = true;
 				String ep2 = Integer.toString(fila)+Integer.toString(columna)+"E";
 				if(!agState.getEstadosProbados().contains(ep2)){
 					flag=true;
@@ -60,7 +56,7 @@ public class GirarIzquierda extends SearchAction {
 				break;
 			case 'E':
 				agentOrientation[3] = false;
-				agentOrientation[2] = true;
+				agentOrientation[0] = true;
 				String ep3 = Integer.toString(fila)+Integer.toString(columna)+"N";
 				if(!agState.getEstadosProbados().contains(ep3)){
 					flag=true;
@@ -69,7 +65,6 @@ public class GirarIzquierda extends SearchAction {
 				break;
 			}
 			if (flag){
-				cantidadGiros++;
 				agState.setOrientacion(agentOrientation);
 				return agState;
 			}
@@ -127,7 +122,7 @@ public class GirarIzquierda extends SearchAction {
 		switch (agState.getCharOrientacion()) {
 		case 'N':
 			agentOrientation[0] = false;
-			agentOrientation[3] = true;
+			agentOrientation[1] = true;
 			String ep = Integer.toString(fila)+Integer.toString(columna)+"O";
 			if(!agState.getEstadosProbados().contains(ep)){
 				flag=true;
@@ -135,8 +130,8 @@ public class GirarIzquierda extends SearchAction {
 			}
 			break;
 		case 'O':
-			agentOrientation[0] = true;
-			agentOrientation[1] = true;
+			agentOrientation[1] = false;
+			agentOrientation[2] = true;
 			String ep1 = Integer.toString(fila)+Integer.toString(columna)+"S";
 			if(!agState.getEstadosProbados().contains(ep1)){
 				flag=true;
@@ -145,7 +140,7 @@ public class GirarIzquierda extends SearchAction {
 			break;
 		case 'S':
 			agentOrientation[2] = false;
-			agentOrientation[1] = true;
+			agentOrientation[3] = true;
 			String ep2 = Integer.toString(fila)+Integer.toString(columna)+"E";
 			if(!agState.getEstadosProbados().contains(ep2)){
 				flag=true;
@@ -154,7 +149,7 @@ public class GirarIzquierda extends SearchAction {
 			break;
 		case 'E':
 			agentOrientation[3] = false;
-			agentOrientation[2] = true;
+			agentOrientation[0] = true;
 			String ep3 = Integer.toString(fila)+Integer.toString(columna)+"N";
 			if(!agState.getEstadosProbados().contains(ep3)){
 				flag=true;
@@ -163,7 +158,6 @@ public class GirarIzquierda extends SearchAction {
 			break;
 		}
 		if (flag){
-			cantidadGiros++;
 			agState.setOrientacion(agentOrientation);
 			environmentState.setOrientacionAgente(agentOrientation);
 		}

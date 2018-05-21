@@ -21,6 +21,7 @@
   <Actions execute_by="//@Agent" executed_on="//@Environment" name="GirarIzquierda"/>
   <Actions execute_by="//@Agent" executed_on="//@Environment" name="Avanzar"/>
   <Actions execute_by="//@Agent" executed_on="//@Environment" name="Retroceder"/>
+  <Actions execute_by="//@Agent" executed_on="//@Environment" name="IrHabitacionContigua"/>
   <Perceptions perceived_on="//@Environment" perceived_by="//@Agent" name="smartphone" type="Other"/>
   <Perceptions perceived_on="//@Environment" perceived_by="//@Agent" name="sensorfrontal" type="Other"/>
   <Perceptions perceived_on="//@Environment" perceived_by="//@Agent" name="sensorlateralizquierdo"/>

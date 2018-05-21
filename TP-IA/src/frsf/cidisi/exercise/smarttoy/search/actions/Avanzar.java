@@ -28,12 +28,9 @@ public class Avanzar extends SearchAction {
 	public SearchBasedAgentState execute(SearchBasedAgentState s) {
 		AgentSmartToyState agState = (AgentSmartToyState) s;
 
-		int addFilaosicionEgreso = 0;
-		int addColumnaposicionEgreso = 0;
 		char agentOrientation = agState.getCharOrientacion();
 		int fila = agState.getUbicacionAgente().getSecond()[0];
 		int columna = agState.getUbicacionAgente().getSecond()[1];
-		Pair<Habitacion, int[]> ubicacionAgente = agState.getUbicacionAgente();
 		String[][] planoHabitacionAgente = agState.getUbicacionAgente()
 				.getFirst().getPlanoHabitacion();
 		
@@ -48,70 +45,30 @@ public class Avanzar extends SearchAction {
 				matrizAdyacencia[itemHabitacion.getIdHabitacion()-1].add(itemHabContigua.getFirst()-1);
 			}
 		}
-		//
+		
 		// [norte oeste sur este] = [arriba izq abajo der]
 		switch (agentOrientation) {
 		case 'N':
 			fila -= 1;
-			addFilaosicionEgreso = -1;
 			break;
 		case 'O':
 			columna -= 1;
-			addColumnaposicionEgreso = -1;
 			break;
 		case 'S':
 			fila += 1;
-			addFilaosicionEgreso = 1;
 			break;
 		case 'E':
 			columna += 1;
-			addColumnaposicionEgreso = 1;
 			break;
 		}
-
-		// Si la celda de en frente, avanza
-		if (planoHabitacionAgente[fila][columna]
-				.equals(AgentSmartToyPerception.EMPTY_PERCEPTION) && EstadoNoProbado(fila, columna, agState.getCharOrientacion(), agState.getEstadosProbados())) {
+		
+		// Si la celda de en frente esta vacia, avanza
+		if (planoHabitacionAgente[fila][columna].equals(AgentSmartToyPerception.EMPTY_PERCEPTION)
+				&& EstadoNoProbado(fila, columna, agState.getCharOrientacion(), agState.getEstadosProbados())) {
 			agState.getUbicacionAgente().setSecond(new int[] { fila, columna });
 			agState.getEstadosProbados().add(Integer.toString(fila)+Integer.toString(columna)+agState.getCharOrientacion());
-			GirarDerecha.cantidadGiros = 0;
-			GirarIzquierda.cantidadGiros = 0;
 			return agState;
-		} else {
-			// Si tiene una puerta, va a la otra habitación
-			if (planoHabitacionAgente[fila][columna]
-					.equals(AgentSmartToyPerception.PUERTA_PERCEPTION)&& agState.getNumeroHabitacionSmartPhone()!=agState.getUbicacionAgente().getFirst().getIdHabitacion()) {
-				// Acá obtiene una par de la puerta que tiene adelante y la
-				// habitacion al cual lleva al agente.
-				Pair<Habitacion, Puerta> habitacionDelante = ObtenerHabitacion(
-						fila, columna, ubicacionAgente.getFirst(), agState
-								.getPlano());
-				/*Si la puerta que tiene delante lo lleva a una habitacion que lo lleva a destino y ademas
-				 * no ha visitado esa habitación, entonces, va*/
-				if(ExisteCamino(habitacionDelante.getFirst().getIdHabitacion()-1, agState.getNumeroHabitacionSmartPhone()-1, cantidadHabitaciones, matrizAdyacencia) 
-						&& !HabitacionVisitada(habitacionDelante.getFirst(), agState.getHabitacionesVisitadas())){
-			    	//Acá agrega la habitacion actual a las habitaciones visitadas
-					agState.addHabitacionesVisitadas(ubicacionAgente.getFirst());
-					// Acá setea los nuevos valores
-					agState.getUbicacionAgente().setFirst(
-							habitacionDelante.getFirst());
-					agState.getUbicacionAgente().setSecond(
-							new int[] {
-									// Aca suma la variable aux para que el Agente
-									// no quede en un borde
-									habitacionDelante.getSecond()
-											.getPosicionEngreso()[0]
-											+ addFilaosicionEgreso,
-									habitacionDelante.getSecond()
-											.getPosicionEngreso()[1]
-											+ addColumnaposicionEgreso });
-					agState.getEstadosProbados().clear();
-					GirarDerecha.cantidadGiros = 0;
-					GirarIzquierda.cantidadGiros = 0;
-					return agState;
-				}
-			}
-		}
+		} 
 		return null;
 	}
 
@@ -124,12 +81,9 @@ public class Avanzar extends SearchAction {
 		EnvironmentSmartToyState environmentState = (EnvironmentSmartToyState) est;
 		AgentSmartToyState agState = ((AgentSmartToyState) ast);
 
-		int addFilaosicionEgreso = 0;
-		int addColumnaposicionEgreso = 0;
 		char agentOrientation = agState.getCharOrientacion();
 		int fila = agState.getUbicacionAgente().getSecond()[0];
 		int columna = agState.getUbicacionAgente().getSecond()[1];
-		Pair<Habitacion, int[]> ubicacionAgente = agState.getUbicacionAgente();
 		String[][] planoHabitacionAgente = agState.getUbicacionAgente()
 				.getFirst().getPlanoHabitacion();
 		
@@ -149,65 +103,25 @@ public class Avanzar extends SearchAction {
 		switch (agentOrientation) {
 		case 'N':
 			fila -= 1;
-			addFilaosicionEgreso = -1;
 			break;
 		case 'O':
 			columna -= 1;
-			addColumnaposicionEgreso = -1;
 			break;
 		case 'S':
 			fila += 1;
-			addFilaosicionEgreso = 1;
 			break;
 		case 'E':
 			columna += 1;
-			addColumnaposicionEgreso = 1;
 			break;
 		}
 
-		if (planoHabitacionAgente[fila][columna]
-				.equals(AgentSmartToyPerception.EMPTY_PERCEPTION)  && EstadoNoProbado(fila, columna, agState.getCharOrientacion(), agState.getEstadosProbados())) {
+		if (planoHabitacionAgente[fila][columna].equals(AgentSmartToyPerception.EMPTY_PERCEPTION)
+				&& EstadoNoProbado(fila, columna, agState.getCharOrientacion(), agState.getEstadosProbados())) {
 			agState.getUbicacionAgente().setSecond(new int[] { fila, columna });
 			agState.getEstadosProbados().add(Integer.toString(fila)+Integer.toString(columna)+agState.getCharOrientacion());
 			environmentState.getUbicacionAgente().setSecond(new int[] { fila, columna });
-		} else {
-			// Si tiene una puerta, va a la otra habitación
-			if (planoHabitacionAgente[fila][columna]
-					.equals(AgentSmartToyPerception.PUERTA_PERCEPTION)) {
-				// Acá obtiene una par de la puerta que tiene adelante y la
-				// habitacion al cual lleva al agente.
-				Pair<Habitacion, Puerta> habitacionDelante = ObtenerHabitacion(
-						fila, columna, ubicacionAgente.getFirst(), agState
-								.getPlano());
-				/*Si la puerta que tiene delante lo lleva a una habitacion que lo lleva a destino y ademas
-				 * no ha visitado esa habitación, entonces, va*/
-				if(ExisteCamino(habitacionDelante.getFirst().getIdHabitacion()-1, agState.getNumeroHabitacionSmartPhone()-1, cantidadHabitaciones, matrizAdyacencia) 
-						&& !HabitacionVisitada(habitacionDelante.getFirst(), agState.getHabitacionesVisitadas())){
-			    	//Acá agrega la habitacion actual a las habitaciones visitadas
-					agState.addHabitacionesVisitadas(ubicacionAgente.getFirst());
-					// Acá setea los nuevos valores
-					agState.getUbicacionAgente().setFirst(
-							habitacionDelante.getFirst());
-					environmentState.getUbicacionAgente().setFirst(habitacionDelante.getFirst());
-
-					int[] nuevaPosicionEnHab = new int[] {
-							// Aca suma la variable aux para que el Agente
-							// no quede en un borde
-							habitacionDelante.getSecond()
-									.getPosicionEngreso()[0]
-									+ addFilaosicionEgreso,
-							habitacionDelante.getSecond()
-									.getPosicionEngreso()[1]
-									+ addColumnaposicionEgreso };
-					agState.getUbicacionAgente().setSecond(nuevaPosicionEnHab);
-					agState.getEstadosProbados().clear();
-					environmentState.getUbicacionAgente().setSecond(nuevaPosicionEnHab);
-				}
-			}
+			environmentState.celdasVisitadas = environmentState.celdasVisitadas + 1;
 		}
-		GirarDerecha.cantidadGirosReales = 0;
-		GirarIzquierda.cantidadGirosReales = 0;
-		environmentState.celdasVisitadas = environmentState.celdasVisitadas + 1;
 
 		try {
 			Contenedor.mover();
@@ -237,127 +151,11 @@ public class Avanzar extends SearchAction {
 		return "Avanzar";
 	}
 
-	private Pair<Habitacion, Puerta> ObtenerHabitacion(int fila, int columna,
-			Habitacion hab, List<Habitacion> listHab) {
-		Pair<Habitacion, Puerta> habPuert = new Pair<Habitacion, Puerta>(
-				new Habitacion(), new Puerta());
-		int idHab = 0;
-		for (Pair<Integer, List<Puerta>> itemHabitacionContigua : hab
-				.getHabitacionesContiguas()) {
-			for (Puerta itemPuertaDeHC : itemHabitacionContigua.getSecond()) {
-				if (itemPuertaDeHC.getPosicionIngreso()[0] == fila
-						&& itemPuertaDeHC.getPosicionIngreso()[1] == columna) {
-					habPuert.setSecond(itemPuertaDeHC);
-					idHab = itemHabitacionContigua.getFirst();
-					break;
-				}
-			}
-		}
-		for (Habitacion itemHabitacion : listHab) {
-			if (itemHabitacion.getIdHabitacion() == idHab) {
-				habPuert.setFirst(itemHabitacion);
-				return habPuert;
-			}
-		}
-		return null;
-	}
-	
-	private Boolean ExisteCamino(int s, int d, int cantidadHabitaciones, LinkedList<Integer> adj[])
-	{
-		//Guarda los nodos ya visitados
-		boolean visited[] = new boolean[cantidadHabitaciones];
-
-		// Create a queue for BFS
-		LinkedList<Integer> queue = new LinkedList<Integer>();
-
-		//Marca que el nodo actual fue visitado
-		visited[s]=true;
-		queue.add(s);
-
-		// i son los vertices adyacentes al vertice actual
-		Iterator<Integer> i;
-		while (queue.size()!=0)
-		{
-			// Dequeue a vertex from queue and print it
-			s = queue.poll();
-
-			int n;
-			i = adj[s].listIterator();
-
-			// Get all adjacent vertices of the dequeued vertex s
-			// If a adjacent has not been visited, then mark it
-			// visited and enqueue it
-			while (i.hasNext())
-			{
-				n = i.next();
-
-				// If this adjacent node is the destination node,
-				// then return true
-				if (n==d)
-					return true;
-
-				// Else, continue to do BFS
-				if (!visited[n])
-				{
-					visited[n] = true;
-					queue.add(n);
-				}
-			}
-		}
-		// If BFS is complete without visited d
-		return false;
-	}
-
-	private boolean HabitacionVisitada(Habitacion hab, List<Habitacion> list) {
-		for (Habitacion habitacionVisitada : list) {
-			if (habitacionVisitada.getIdHabitacion() == hab.getIdHabitacion()) {
-				return true;
-			}
-		}
-		return false;
-	}
-	
 	private boolean EstadoNoProbado(int fila, int columna, char orientacion,List<String> estadosProbados) {
 		String ep = Integer.toString(fila)+Integer.toString(columna)+orientacion;
 		if(estadosProbados.contains(ep)){
 			return false;
 		}
 		return true;
-	}
-	
-	/*private boolean EstadoNoProbado(int fila, int columna, char orientacion, HashMap<char[], Integer> hashMap) {
-		
-		Integer value = hashMap.get(new char[]{(char) fila, (char) columna, orientacion});
-		if(value == null){
-			return true;
-		}
-		return false;
-	}*/
-	
-	//Este mtodo hace una lista de int de las habitaciones por las que tiene que ir el agente
-	private List<Integer> CalcularCamino(Habitacion habitacionActual, int idHabitacionDestino, List<Habitacion> plano) {
-		
-		int cantidadHabitaciones = 15; //Esto se debe modificar si se agregan mas habitaciones
-		List<Integer> habitacionesRecorrer = new ArrayList<Integer>(); //Esto es lo que se retorna
-		LinkedList<Integer> matrizAdyacencia[] = new LinkedList[15];
-		for (int i=0; i<cantidadHabitaciones; ++i)
-			matrizAdyacencia[i] = new LinkedList();
-
-		for (Habitacion itemHabitacion : plano) {
-			for (Pair<Integer, List<Puerta>> itemHabContigua : itemHabitacion
-					.getHabitacionesContiguas()) {
-				matrizAdyacencia[itemHabitacion.getIdHabitacion()].add(itemHabContigua.getFirst());
-			}
-		}
-		Habitacion incr = habitacionActual;
-		while(incr.getIdHabitacion() != idHabitacionDestino){
-			for (Pair<Integer, List<Puerta>> itemHabContigua : incr.getHabitacionesContiguas()) {
-				if(ExisteCamino(incr.getIdHabitacion(), idHabitacionDestino, 15, matrizAdyacencia)){
-					habitacionesRecorrer.add(itemHabContigua.getFirst());
-					incr = plano.get(itemHabContigua.getFirst()-1);
-				}
-			}
-		}
-		return habitacionesRecorrer;
 	}
 }

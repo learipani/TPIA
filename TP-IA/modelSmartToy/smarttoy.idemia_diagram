@@ -208,4 +208,15 @@
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_MkLHkEcWEeiU3PDxA-T1eQ" id="(0.07395498392282958,0.10382513661202186)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_MkLHkUcWEeiU3PDxA-T1eQ" id="(0.740506329113924,0.06557377049180328)"/>
   </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_4z97UVuAEeiDd9rZxpvnig" type="4001" source="_kGhr4UTXEeirB5hCAXV9bw" target="_mNh0oETXEeirB5hCAXV9bw">
+    <children xmi:type="notation:DecorationNode" xmi:id="_4z97VVuAEeiDd9rZxpvnig" type="6001">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_4z97VluAEeiDd9rZxpvnig" x="9" y="-13"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_4z97UluAEeiDd9rZxpvnig" routing="Rectilinear"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_4z97U1uAEeiDd9rZxpvnig" fontName="Segoe UI"/>
+    <element xmi:type="idemia:Action" href="default.idemia#//@Actions.4"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_4z97VFuAEeiDd9rZxpvnig" points="[0, 85, -446, 84]$[444, 85, -2, 84]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_40HsUFuAEeiDd9rZxpvnig" id="(1.0,0.31420765027322406)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_40HsUVuAEeiDd9rZxpvnig" id="(0.006430868167202572,0.35792349726775957)"/>
+  </edges>
 </notation:Diagram>

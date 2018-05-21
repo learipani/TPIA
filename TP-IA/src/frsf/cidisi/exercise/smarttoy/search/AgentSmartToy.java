@@ -3,6 +3,7 @@ package frsf.cidisi.exercise.smarttoy.search;
 import frsf.cidisi.exercise.smarttoy.search.actions.GirarDerecha;
 import frsf.cidisi.exercise.smarttoy.search.actions.GirarIzquierda;
 import frsf.cidisi.exercise.smarttoy.search.actions.Avanzar;
+import frsf.cidisi.exercise.smarttoy.search.actions.IrHabitacionContigua;
 import frsf.cidisi.exercise.smarttoy.search.actions.Retroceder;
 
 import frsf.cidisi.faia.agent.Perception;
@@ -28,7 +29,8 @@ public class AgentSmartToy extends SearchBasedAgent {
 
         // Create the operators
         Vector<SearchAction> operators = new Vector<SearchAction>();
-        operators.addElement(new Avanzar());	
+        operators.addElement(new Avanzar());
+        operators.addElement(new IrHabitacionContigua());
         operators.addElement(new GirarDerecha());	
         operators.addElement(new GirarIzquierda());
         //operators.addElement(new Retroceder());	
@@ -53,7 +55,7 @@ public class AgentSmartToy extends SearchBasedAgent {
 
         /* Generate an XML file with the search tree. It can also be generated
          * in other formats like PDF with PDF_TREE */
-        searchSolver.setVisibleTree(Search.EFAIA_TREE);
+        searchSolver.setVisibleTree(Search.GRAPHVIZ_TREE);
 
         // Set the Search searchSolver.
         this.setSolver(searchSolver);

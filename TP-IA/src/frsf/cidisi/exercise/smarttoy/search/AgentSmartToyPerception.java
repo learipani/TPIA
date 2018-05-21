@@ -61,47 +61,47 @@ public class AgentSmartToyPerception extends Perception {
 		switch (((AgentSmartToyState) agent.getAgentState())
 				.getCharOrientacion()) {
 		case 'N':
-			sensorfrontal = planoHabitacionDeAgente[ubicacionAgente.getSecond()[0] - 1][ubicacionAgente
+			this.sensorfrontal = planoHabitacionDeAgente[ubicacionAgente.getSecond()[0] - 1][ubicacionAgente
 					.getSecond()[1]];
-			sensorlateralizquierdo = planoHabitacionDeAgente[ubicacionAgente
+			this.sensorlateralizquierdo = planoHabitacionDeAgente[ubicacionAgente
 					.getSecond()[0]][ubicacionAgente.getSecond()[1] - 1];
-			sensorlateralderecho = planoHabitacionDeAgente[ubicacionAgente
+			this.sensorlateralderecho = planoHabitacionDeAgente[ubicacionAgente
 					.getSecond()[0]][ubicacionAgente.getSecond()[1] + 1];
-			sensortrasero = planoHabitacionDeAgente[ubicacionAgente.getSecond()[0] + 1][ubicacionAgente
+			this.sensortrasero = planoHabitacionDeAgente[ubicacionAgente.getSecond()[0] + 1][ubicacionAgente
 					.getSecond()[1]];
 			break;
 		case 'O':
-			sensorfrontal = planoHabitacionDeAgente[ubicacionAgente.getSecond()[0]][ubicacionAgente
+			this.sensorfrontal = planoHabitacionDeAgente[ubicacionAgente.getSecond()[0]][ubicacionAgente
 					.getSecond()[1] - 1];
-			sensorlateralizquierdo = planoHabitacionDeAgente[ubicacionAgente
+			this.sensorlateralizquierdo = planoHabitacionDeAgente[ubicacionAgente
 					.getSecond()[0] + 1][ubicacionAgente.getSecond()[1]];
-			sensorlateralderecho = planoHabitacionDeAgente[ubicacionAgente
+			this.sensorlateralderecho = planoHabitacionDeAgente[ubicacionAgente
 					.getSecond()[0] - 1][ubicacionAgente.getSecond()[1]];
-			sensortrasero = planoHabitacionDeAgente[ubicacionAgente.getSecond()[0]][ubicacionAgente
+			this.sensortrasero = planoHabitacionDeAgente[ubicacionAgente.getSecond()[0]][ubicacionAgente
 					.getSecond()[1] + 1];
 			break;
 		case 'S':
-			sensorfrontal = planoHabitacionDeAgente[ubicacionAgente.getSecond()[0] + 1][ubicacionAgente
+			this.sensorfrontal = planoHabitacionDeAgente[ubicacionAgente.getSecond()[0] + 1][ubicacionAgente
 					.getSecond()[1]];
-			sensorlateralizquierdo = planoHabitacionDeAgente[ubicacionAgente
+			this.sensorlateralizquierdo = planoHabitacionDeAgente[ubicacionAgente
 					.getSecond()[0]][ubicacionAgente.getSecond()[1] + 1];
-			sensorlateralderecho = planoHabitacionDeAgente[ubicacionAgente
+			this.sensorlateralderecho = planoHabitacionDeAgente[ubicacionAgente
 					.getSecond()[0]][ubicacionAgente.getSecond()[1] - 1];
-			sensortrasero = planoHabitacionDeAgente[ubicacionAgente.getSecond()[0] - 1][ubicacionAgente
+			this.sensortrasero = planoHabitacionDeAgente[ubicacionAgente.getSecond()[0] - 1][ubicacionAgente
 					.getSecond()[1]];
 			break;
 		case 'E':
-			sensorfrontal = planoHabitacionDeAgente[ubicacionAgente.getSecond()[0]][ubicacionAgente
+			this.sensorfrontal = planoHabitacionDeAgente[ubicacionAgente.getSecond()[0]][ubicacionAgente
 					.getSecond()[1] + 1];
-			sensorlateralizquierdo = planoHabitacionDeAgente[ubicacionAgente
+			this.sensorlateralizquierdo = planoHabitacionDeAgente[ubicacionAgente
 					.getSecond()[0] - 1][ubicacionAgente.getSecond()[1]];
-			sensorlateralderecho = planoHabitacionDeAgente[ubicacionAgente
+			this.sensorlateralderecho = planoHabitacionDeAgente[ubicacionAgente
 					.getSecond()[0]][ubicacionAgente.getSecond()[1] + 1];
-			sensortrasero = planoHabitacionDeAgente[ubicacionAgente.getSecond()[0]][ubicacionAgente
+			this.sensortrasero = planoHabitacionDeAgente[ubicacionAgente.getSecond()[0]][ubicacionAgente
 					.getSecond()[1] - 1];
 			break;
 		}
-		smartphone = environmentState.getUbicacionSmartPhone().getFirst();
+		this.smartphone = environmentState.getUbicacionSmartPhone().getFirst();
 	}
 
 	@Override

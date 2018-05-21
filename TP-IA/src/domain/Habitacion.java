@@ -121,8 +121,6 @@ public class Habitacion {
 			}
 		}
 		newHabitacion.setPlanoHabitacion(newPlanoHabitacion);
-		//newHabitacion.ActualizarPlanoHabitacion(new int[]{fila, col});
-		
 		
 		//clonacion lista objetos
 		List<Objeto> newObjetos = new ArrayList<Objeto>();
@@ -182,7 +180,6 @@ public class Habitacion {
 		int x;
 		int y;
 		//Antes que nada, lleno todas las celdas con nada
-		//System.out.println( this.idHabitacion +"  "+ tamano[0] +"  "+ tamano[1]);
 		for (int row = 0; row < tamano[0]; row++) {
             for (int col = 0; col < tamano[1]; col++) {
             	planoHabitacion[row][col] = AgentSmartToyPerception.EMPTY_PERCEPTION;
@@ -213,28 +210,17 @@ public class Habitacion {
 			else{
 				if(className.equals("TerrenoAdverso")){
 					claseObjeto = AgentSmartToyPerception.TERRENO_PERCEPTION;
-				}else{
-					if(className.equals("||")){
-						claseObjeto = "||";
-					}else{
-						if(className.equals("go")){
-							claseObjeto = AgentSmartToyPerception.META_PERCEPTION;
-						}
-						else{
-							claseObjeto = AgentSmartToyPerception.UNKNOWN_PERCEPTION;
-						}
-					}
-					
 				}
-			
-				
+				else{
+					claseObjeto = AgentSmartToyPerception.UNKNOWN_PERCEPTION;
+				}
 			}
 			//Recorro el objeto y voy actualizando el plano
 			for (int i = 0; i < item.getTamano()[0]; i++) {
 				for (int j = 0; j < item.getTamano()[1]; j++) {
 					x = item.getUbicacionEnHabitacion()[0] + i;
 					y = item.getUbicacionEnHabitacion()[1] + j;
-					planoHabitacion[x][y] =claseObjeto;
+					planoHabitacion[x][y] = claseObjeto;
 				}
 			}
 		}
