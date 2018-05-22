@@ -13,8 +13,12 @@ public class AgentSmartToyPerception extends Perception {
 	public static String EMPTY_PERCEPTION = "##";
 	public static String PUERTA_PERCEPTION = "pu";
 	public static String OBSTACULO_PERCEPTION = "ob";
-	public static String TERRENO_PERCEPTION = "ta";
 	public static String META_PERCEPTION = "go";
+	public static String PISO_ARENA = "PA";
+	public static String PISO_BASURA = "PB";
+	public static String PISO_ALFOMBRA = "AL";
+	public static String PISO_MOJADO = "PM";
+	public static String ESCALERA = "ES";
 
 	// TODO: Setup Sensors
 	// Envía la habitacíon en la cual se encuentra el agente

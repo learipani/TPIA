@@ -68,8 +68,8 @@ public class Avanzar extends SearchAction {
 				&& EstadoNoProbado(fila, columna, agState.getCharOrientacion(), agState.getEstadosProbados())) {
 			agState.getUbicacionAgente().setSecond(new int[] { fila, columna });
 			agState.getEstadosProbados().add(Integer.toString(fila)+Integer.toString(columna)+agState.getCharOrientacion());
-			//casilla = this.obtenerReferenciaDeTerreno(planoHabitacionAgente[fila][columna]); implementar este metodo 
-			//agState.setTiempo(agState.getTiempo() + this.getCost());
+			casilla = obtenerReferenciaDeTerreno(planoHabitacionAgente[fila][columna]); 
+			agState.setTiempo(agState.getTiempo() + this.getCost());
 			agState.setCeldasVisitadas(agState.getCeldasVisitadas()+1);
 			return agState;
 		} 
@@ -125,8 +125,8 @@ public class Avanzar extends SearchAction {
 			agState.getEstadosProbados().add(Integer.toString(fila)+Integer.toString(columna)+agState.getCharOrientacion());
 			environmentState.getUbicacionAgente().setSecond(new int[] { fila, columna });
 			environmentState.celdasVisitadas = environmentState.celdasVisitadas + 1;
-			//casilla = this.obtenerReferenciaDeTerreno(planoHabitacionAgente[fila][columna]); implementar este metodo 
-			//agState.setTiempo(agState.getTiempo() + this.getCost());
+			casilla = obtenerReferenciaDeTerreno(planoHabitacionAgente[fila][columna]);
+			agState.setTiempo(agState.getTiempo() + this.getCost());
 		}
 
 		try {
@@ -145,40 +145,48 @@ public class Avanzar extends SearchAction {
 	 */
 	@Override
 	public Double getCost() {
-		// 1: piso mojado
-		// 2: basura
-		// 3: arena
-		// 4: escalera
+		// 1: PISO_ARENA
+		// 1: PISO_BASURA
+		// 1: PISO_ALFOMBRA 
+		// 2: PISO_MOJADO
+		// 3: ESCALERA
+		// DEFAULT: PISO NORMAL (CELDA VACIA)
 		switch(casilla){
 		case 1:
-			return 0.5;
-		case 2:
 			return 2.0;
-		case 3:
-			return 1.5;
-		case 4:
-			/* Ver como esta definida la escalera
-			if (condicion de bajada de escalera segun orientacion) {
-				return 0.5;// bajaEscalera
+		case 2:
+			return 0.5;
+		case 5: // Las dos escaleras de la casa van de norte a sur en subida y sur a norte en bajada.
+			if(agentOrientation == 'N'){
+				// escalera subida
+				return 2.0;
 			} else {
-				if (condicion de subida de escalera segun orientacion) {
-					return 2.0;
+				if(agentOrientation == 'S'){
+					//escalera bajada
+					return 0.5;
 				}
-			}*/
+				else return 1.0;
+			}
 		}
-		
 		return 1.0;
 	}
 	
 	private int obtenerReferenciaDeTerreno(String s){
-		if(s == AgentSmartToyPerception.EMPTY_PERCEPTION){
-			return 0;
+		if(s == AgentSmartToyPerception.PISO_MOJADO){
+			return 2;
 		}
 		else {
-			if(s == AgentSmartToyPerception.TERRENO_PERCEPTION){
-				//terminar
+			if(s == AgentSmartToyPerception.PISO_BASURA || s == AgentSmartToyPerception.PISO_ARENA
+					|| s == AgentSmartToyPerception.PISO_ALFOMBRA){
+				return 1;
+			}
+			else{
+				if(s == AgentSmartToyPerception.ESCALERA){
+					return 3;
+				}
 			}
 		}
+		// piso normal
 		return 0;
 	}
 	
