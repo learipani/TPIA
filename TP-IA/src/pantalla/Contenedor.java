@@ -62,7 +62,7 @@ public class Contenedor extends JComponent
          for (int col = 0; col < h.getPlanoHabitacion()[fila].length; col++) {
         nombre=h.getPlanoHabitacion()[fila][col];	
         if (nombre=="||"){
-        	  ImageIcon imagen2 =new ImageIcon(new ImageIcon(getClass().getResource("imagenes/go.png")).getImage());
+        	  ImageIcon imagen2 =new ImageIcon(new ImageIcon(getClass().getResource("imagenes/smartToy.png")).getImage());
               g.drawImage(imagen2.getImage(), columnaSmartToy, filaSmartToy, ampliacion, ampliacion, null); 
         }
         else{
