@@ -1,8 +1,5 @@
 package frsf.cidisi.exercise.smarttoy.search.actions;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -32,7 +29,7 @@ public class Avanzar extends SearchAction {
 	public SearchBasedAgentState execute(SearchBasedAgentState s) {
 		AgentSmartToyState agState = (AgentSmartToyState) s;
 
-		this.agentOrientation = agState.getCharOrientacion();
+		agentOrientation = agState.getCharOrientacion();
 		int fila = agState.getUbicacionAgente().getSecond()[0];
 		int columna = agState.getUbicacionAgente().getSecond()[1];
 		String[][] planoHabitacionAgente = agState.getUbicacionAgente()
@@ -71,8 +68,9 @@ public class Avanzar extends SearchAction {
 				&& EstadoNoProbado(fila, columna, agState.getCharOrientacion(), agState.getEstadosProbados())) {
 			agState.getUbicacionAgente().setSecond(new int[] { fila, columna });
 			agState.getEstadosProbados().add(Integer.toString(fila)+Integer.toString(columna)+agState.getCharOrientacion());
-			//casilla = planoHabitacionAgente[fila][columna];
+			//casilla = this.obtenerReferenciaDeTerreno(planoHabitacionAgente[fila][columna]); implementar este metodo 
 			//agState.setTiempo(agState.getTiempo() + this.getCost());
+			agState.setCeldasVisitadas(agState.getCeldasVisitadas()+1);
 			return agState;
 		} 
 		return null;
@@ -127,7 +125,7 @@ public class Avanzar extends SearchAction {
 			agState.getEstadosProbados().add(Integer.toString(fila)+Integer.toString(columna)+agState.getCharOrientacion());
 			environmentState.getUbicacionAgente().setSecond(new int[] { fila, columna });
 			environmentState.celdasVisitadas = environmentState.celdasVisitadas + 1;
-			//casilla = planoHabitacionAgente[fila][columna];
+			//casilla = this.obtenerReferenciaDeTerreno(planoHabitacionAgente[fila][columna]); implementar este metodo 
 			//agState.setTiempo(agState.getTiempo() + this.getCost());
 		}
 
@@ -151,19 +149,19 @@ public class Avanzar extends SearchAction {
 		// 2: basura
 		// 3: arena
 		// 4: escalera
-		switch(this.casilla){
+		switch(casilla){
 		case 1:
-			return 1.0;
-		case 2:
 			return 0.5;
-		case 3:
+		case 2:
 			return 2.0;
+		case 3:
+			return 1.5;
 		case 4:
 			/* Ver como esta definida la escalera
-			if (this.orientacionAg == Orientacion.S) {
+			if (condicion de bajada de escalera segun orientacion) {
 				return 0.5;// bajaEscalera
 			} else {
-				if (this.orientacionAg == Orientacion.N) {
+				if (condicion de subida de escalera segun orientacion) {
 					return 2.0;
 				}
 			}*/
@@ -171,7 +169,19 @@ public class Avanzar extends SearchAction {
 		
 		return 1.0;
 	}
-
+	
+	private int obtenerReferenciaDeTerreno(String s){
+		if(s == AgentSmartToyPerception.EMPTY_PERCEPTION){
+			return 0;
+		}
+		else {
+			if(s == AgentSmartToyPerception.TERRENO_PERCEPTION){
+				//terminar
+			}
+		}
+		return 0;
+	}
+	
 	/**
 	 * This method is not important for a search based agent, but is essensial
 	 * when creating a calculus based one.

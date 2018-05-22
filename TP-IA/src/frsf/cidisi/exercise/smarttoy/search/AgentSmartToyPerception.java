@@ -52,10 +52,6 @@ public class AgentSmartToyPerception extends Perception {
 				.getHabitacionDePlano(
 						ubicacionAgente.getFirst().getIdHabitacion())
 				.getPlanoHabitacion();
-		// Pair<Habitacion, int[]> ubicacionSmartPhone =
-		// environmentState.getUbicacionSmartPhone();
-		// Pair<Habitacion, int[]> ubicacionInicial;
-		// List<Habitacion> plano = environmentState.getPlano();
 
 		// Dependiendo la orientación, hace distintas cosas
 		switch (((AgentSmartToyState) agent.getAgentState())

@@ -1,10 +1,7 @@
 package frsf.cidisi.exercise.smarttoy.search;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
 
 import auxiliar.CreacionHabitaciones;
 
@@ -25,6 +22,7 @@ public class AgentSmartToyState extends SearchBasedAgentState {
 	private List<Habitacion> plano;
 	private boolean[] orientacion;
 	private double tiempo;
+	private int celdasVisitadas ;
 
 
 	public AgentSmartToyState() {
@@ -33,11 +31,10 @@ public class AgentSmartToyState extends SearchBasedAgentState {
     	estadosProbados = new ArrayList<String>();
         plano = new ArrayList<Habitacion>();
     	orientacion = new boolean[4];
+    	celdasVisitadas=0;
     	
     	this.initState();
 	}
-
-
 
 	/**
      * This method clones the state of the agent. It's used in the search
@@ -51,21 +48,18 @@ public class AgentSmartToyState extends SearchBasedAgentState {
     	//Los atributos de tipo primitvos se pasan por copia(no hay)
     	newAgentSmartToyState.setNumeroHabitacionSmartPhone(this.getNumeroHabitacionSmartPhone());
     	newAgentSmartToyState.setTiempo(this.getTiempo());
+    	newAgentSmartToyState.setCeldasVisitadas(this.getCeldasVisitadas());
     	
     	//No se si hay que clonar cada arreglo del par por separado
     	newAgentSmartToyState.setOrientacion(this.getOrientacion().clone());
     	
     	Pair<Habitacion, int[]> newUbicacionAgente = new Pair<Habitacion, int[]>(null, null);
-    	//newUbicacionAgente.setFirst(this.getUbicacionAgente().getFirst().clone());
-    	//newUbicacionAgente.setSecond(this.getUbicacionAgente().getSecond().clone());
-    	//de aca
     	Habitacion newHabitacion = this.getUbicacionAgente().getFirst().clone();
     	int[] newUbicacionEnHab = new int[2];
     	newUbicacionEnHab[0]=this.getUbicacionAgente().getSecond()[0];
     	newUbicacionEnHab[1]=this.getUbicacionAgente().getSecond()[1];
     	newUbicacionAgente.setFirst(newHabitacion);
     	newUbicacionAgente.setSecond(newUbicacionEnHab);
-    	//hasta aca
     	newAgentSmartToyState.setUbicacionAgente(newUbicacionAgente);
     	
     	//Los atributos que son objetos (los arrays también son de tipo objeto) se pasan por
@@ -117,11 +111,6 @@ public class AgentSmartToyState extends SearchBasedAgentState {
 					h.getPlanoHabitacion()[celdaDerecha[0]][celdaDerecha[1]] = agentSmartToyPerception.getSensorlateralderecho();
 				}
 			}
-			/*habitacionAgente.getPlanoHabitacion()[celdaArriba[0]][celdaArriba[1]] = agentSmartToyPerception.getSensorfrontal();
-			habitacionAgente.getPlanoHabitacion()[celdaAbajo[0]][celdaAbajo[1]] = agentSmartToyPerception.getSensortrasero();
-			habitacionAgente.getPlanoHabitacion()[celdaIzquierda[0]][celdaIzquierda[1]] = agentSmartToyPerception.getSensorlateralizquierdo();
-			habitacionAgente.getPlanoHabitacion()[celdaDerecha[0]][celdaDerecha[1]] = agentSmartToyPerception.getSensorlateralderecho();
-			*/
 			break;
 		case 'O':
 			for(Habitacion h : plano){
@@ -132,11 +121,6 @@ public class AgentSmartToyState extends SearchBasedAgentState {
 					h.getPlanoHabitacion()[celdaArriba[0]][celdaArriba[1]] = agentSmartToyPerception.getSensorlateralderecho();
 				}
 			}
-			/*habitacionAgente.getPlanoHabitacion()[celdaIzquierda[0]][celdaIzquierda[1]] = agentSmartToyPerception.getSensorfrontal();
-			habitacionAgente.getPlanoHabitacion()[celdaDerecha[0]][celdaDerecha[1]] = agentSmartToyPerception.getSensortrasero();
-			habitacionAgente.getPlanoHabitacion()[celdaAbajo[0]][celdaAbajo[1]] = agentSmartToyPerception.getSensorlateralizquierdo();
-			habitacionAgente.getPlanoHabitacion()[celdaArriba[0]][celdaArriba[1]] = agentSmartToyPerception.getSensorlateralderecho();
-			*/
 			break;
 		case 'S':
 			for(Habitacion h : plano){
@@ -147,11 +131,6 @@ public class AgentSmartToyState extends SearchBasedAgentState {
 					h.getPlanoHabitacion()[celdaIzquierda[0]][celdaIzquierda[1]] = agentSmartToyPerception.getSensorlateralderecho();
 				}
 			}
-			/*habitacionAgente.getPlanoHabitacion()[celdaAbajo[0]][celdaAbajo[1]] = agentSmartToyPerception.getSensorfrontal();
-			habitacionAgente.getPlanoHabitacion()[celdaArriba[0]][celdaArriba[1]] = agentSmartToyPerception.getSensortrasero();
-			habitacionAgente.getPlanoHabitacion()[celdaDerecha[0]][celdaDerecha[1]] = agentSmartToyPerception.getSensorlateralizquierdo();
-			habitacionAgente.getPlanoHabitacion()[celdaIzquierda[0]][celdaIzquierda[1]] = agentSmartToyPerception.getSensorlateralderecho();
-			*/
 			break;
 		case 'E':
 			for(Habitacion h : plano){
@@ -162,11 +141,6 @@ public class AgentSmartToyState extends SearchBasedAgentState {
 					h.getPlanoHabitacion()[celdaAbajo[0]][celdaAbajo[1]] = agentSmartToyPerception.getSensorlateralderecho();
 				}
 			}
-			/*habitacionAgente.getPlanoHabitacion()[celdaDerecha[0]][celdaDerecha[1]] = agentSmartToyPerception.getSensorfrontal();
-			habitacionAgente.getPlanoHabitacion()[celdaIzquierda[0]][celdaIzquierda[1]] = agentSmartToyPerception.getSensortrasero();
-			habitacionAgente.getPlanoHabitacion()[celdaArriba[0]][celdaArriba[1]] = agentSmartToyPerception.getSensorlateralizquierdo();
-			habitacionAgente.getPlanoHabitacion()[celdaAbajo[0]][celdaAbajo[1]] = agentSmartToyPerception.getSensorlateralderecho();
-			*/
 			break;
 		}
         this.numeroHabitacionSmartPhone = agentSmartToyPerception.getSmartphone().getIdHabitacion();
@@ -210,12 +184,11 @@ public class AgentSmartToyState extends SearchBasedAgentState {
     	orientacion[3] = true;
     	
     	//Agrega el estadoProbado actual
-    	//estadosProbados.put(new char[]{(char) this.ubicacionAgente.getSecond()[0],(char) this.ubicacionAgente.getSecond()[1], this.getCharOrientacion()}, 1);
     	estadosProbados.add(Integer.toString(this.ubicacionAgente.getSecond()[0])+Integer.toString(this.ubicacionAgente.getSecond()[1])+this.getCharOrientacion());
     	
     	//Setea el número de habitacion donde está el smartphone
-    	this.numeroHabitacionSmartPhone = 2;
-    	plano.get(1).getPlanoHabitacion()[1][5] = AgentSmartToyPerception.META_PERCEPTION;
+    	this.numeroHabitacionSmartPhone = 7;
+    	//plano.get(1).getPlanoHabitacion()[1][5] = AgentSmartToyPerception.META_PERCEPTION; (NO VA MAS ESTA LINEA :D)
 
     }
 
@@ -369,6 +342,14 @@ public class AgentSmartToyState extends SearchBasedAgentState {
 
 	public void setTiempo(double tiempo) {
 			this.tiempo = tiempo;
+	}
+	
+	public int getCeldasVisitadas() {
+		return celdasVisitadas;
+	}
+
+	public void setCeldasVisitadas(int celdasVisitadas) {
+		this.celdasVisitadas = celdasVisitadas;
 	}
 }
 

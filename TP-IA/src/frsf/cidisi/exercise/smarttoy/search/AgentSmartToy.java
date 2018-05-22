@@ -4,7 +4,6 @@ import frsf.cidisi.exercise.smarttoy.search.actions.GirarDerecha;
 import frsf.cidisi.exercise.smarttoy.search.actions.GirarIzquierda;
 import frsf.cidisi.exercise.smarttoy.search.actions.Avanzar;
 import frsf.cidisi.exercise.smarttoy.search.actions.IrHabitacionContigua;
-import frsf.cidisi.exercise.smarttoy.search.actions.Retroceder;
 
 import frsf.cidisi.faia.agent.Perception;
 import frsf.cidisi.faia.agent.search.Problem;
@@ -12,6 +11,7 @@ import frsf.cidisi.faia.agent.search.SearchAction;
 import frsf.cidisi.faia.agent.search.SearchBasedAgent;
 import frsf.cidisi.faia.agent.Action;
 import frsf.cidisi.faia.solver.search.*;
+
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.Vector;
@@ -31,7 +31,7 @@ public class AgentSmartToy extends SearchBasedAgent {
         Vector<SearchAction> operators = new Vector<SearchAction>();
         operators.addElement(new Avanzar());
         operators.addElement(new IrHabitacionContigua());
-        operators.addElement(new GirarDerecha());	
+        operators.addElement(new GirarDerecha());
         operators.addElement(new GirarIzquierda());
         //operators.addElement(new Retroceder());	
 
@@ -49,6 +49,8 @@ public class AgentSmartToy extends SearchBasedAgent {
         // Create the search strategy
         //DepthFirstSearch strategy = new DepthFirstSearch();          
     	BreathFirstSearch strategy =  new BreathFirstSearch();
+    	//IStepCostFunction cost = new CostFunction();
+    	//UniformCostSearch strategy = new UniformCostSearch(cost);
     	
         // Create a Search object with the strategy
         Search searchSolver = new Search(strategy);

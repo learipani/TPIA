@@ -1,12 +1,7 @@
 package frsf.cidisi.exercise.smarttoy.search;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import domain.Habitacion;
-import domain.Objeto;
 import frsf.cidisi.faia.agent.Action;
-import frsf.cidisi.faia.agent.Perception;
 import frsf.cidisi.faia.environment.Environment;
 import frsf.cidisi.faia.state.datastructure.Pair;
 
@@ -113,7 +108,7 @@ public class EnvironmentSmartToy extends Environment {
 	public boolean agentFailed(Action actionReturned) {
 
 		EnvironmentSmartToyState envState = this.getEnvironmentState();
-		if (envState.celdasVisitadas > 2000) {
+		if (envState.celdasVisitadas > 200) {
 			return true;
 		}
 

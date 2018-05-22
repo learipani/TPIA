@@ -1,7 +1,5 @@
 package frsf.cidisi.exercise.smarttoy.search.actions;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
@@ -216,61 +214,6 @@ public class IrHabitacionContigua extends SearchAction {
 			}
 		}
 		return null;
-	}
-	
-	private Boolean ExisteCamino(int s, int d, int cantidadHabitaciones, LinkedList<Integer> adj[])
-	{
-		//Guarda los nodos ya visitados
-		boolean visited[] = new boolean[cantidadHabitaciones];
-
-		// Create a queue for BFS
-		LinkedList<Integer> queue = new LinkedList<Integer>();
-
-		//Marca que el nodo actual fue visitado
-		visited[s]=true;
-		queue.add(s);
-
-		// i son los vertices adyacentes al vertice actual
-		Iterator<Integer> i;
-		while (queue.size()!=0)
-		{
-			// Dequeue a vertex from queue and print it
-			s = queue.poll();
-
-			int n;
-			i = adj[s].listIterator();
-
-			// Get all adjacent vertices of the dequeued vertex s
-			// If a adjacent has not been visited, then mark it
-			// visited and enqueue it
-			while (i.hasNext())
-			{
-				n = i.next();
-
-				// If this adjacent node is the destination node,
-				// then return true
-				if (n==d)
-					return true;
-
-				// Else, continue to do BFS
-				if (!visited[n])
-				{
-					visited[n] = true;
-					queue.add(n);
-				}
-			}
-		}
-		// If BFS is complete without visited d
-		return false;
-	}
-
-	private boolean HabitacionVisitada(Habitacion hab, List<Habitacion> list) {
-		for (Habitacion habitacionVisitada : list) {
-			if (habitacionVisitada.getIdHabitacion() == hab.getIdHabitacion()) {
-				return true;
-			}
-		}
-		return false;
 	}
 	
 	private boolean EstadoNoProbado(int fila, int columna, char orientacion,List<String> estadosProbados) {

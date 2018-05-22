@@ -10,11 +10,6 @@ import frsf.cidisi.faia.state.datastructure.Pair;
 
 public class Habitacion {
 
-	/*Aca preguntar para que son los DataStructure 
-	 * del paquete datastructure del proyecto faia y si tenemos
-	 * que usar esos o podemos usar la libreria util.List
-	 * */
-
 	/*Manejo de listas en Java:
 	 * http://panamahitek.com/el-uso-de-listas-en-java/
 	 * */
