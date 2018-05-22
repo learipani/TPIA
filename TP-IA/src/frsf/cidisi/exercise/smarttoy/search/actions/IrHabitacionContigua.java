@@ -85,6 +85,9 @@ public class IrHabitacionContigua extends SearchAction {
 			agState.getEstadosProbados().clear();
 			nuevaUbicacion.setSecond(nuevaPosicionEnHab);
 			agState.setUbicacionAgente(nuevaUbicacion);
+			//ver
+			agState.setCeldasVisitadas(agState.getCeldasVisitadas()+1);
+			agState.setTiempo(agState.getTiempo() + this.getCost());
 			return agState;
 		}
 		return null;
@@ -160,6 +163,8 @@ public class IrHabitacionContigua extends SearchAction {
 			nuevaUbicacion.setSecond(nuevaPosicionEnHab);
 			agState.setUbicacionAgente(nuevaUbicacion);
 			environmentState.setUbicacionAgente(nuevaUbicacion);
+			//ver
+			agState.setTiempo(agState.getTiempo() + this.getCost());
 		}
 		environmentState.celdasVisitadas = environmentState.celdasVisitadas + 1;
 

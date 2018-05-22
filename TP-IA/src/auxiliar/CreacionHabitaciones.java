@@ -30,10 +30,10 @@ public class CreacionHabitaciones {
 		//h1.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
 
 		//Terrenos
-		h1.addObjeto(new PisoAlfombra(1, new int[]{1,1}, new int[]{2,3}));
-		h1.addObjeto(new PisoArena(1, new int[]{1,1}, new int[]{2,4}));
-		h1.addObjeto(new PisoBasura(1, new int[]{1,1}, new int[]{2,5}));
-		h1.addObjeto(new PisoMojado(1, new int[]{1,1}, new int[]{2,2},2));
+		h1.addObjeto(new PisoMojado(1, new int[]{1,1}, new int[]{2,3}));
+		h1.addObjeto(new PisoMojado(1, new int[]{1,1}, new int[]{2,4}));
+		h1.addObjeto(new PisoMojado(1, new int[]{1,1}, new int[]{2,5}));
+		h1.addObjeto(new PisoMojado(1, new int[]{1,1}, new int[]{2,2}));
 		//h1.addObjeto( new TerrenoAdverso(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}, COSTO_TERRENO) );
 
 		//Puertas

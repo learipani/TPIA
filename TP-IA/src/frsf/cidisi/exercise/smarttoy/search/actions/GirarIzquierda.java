@@ -30,6 +30,7 @@ public class GirarIzquierda extends SearchAction {
 			if(!agState.getEstadosProbados().contains(ep)){
 				flag=true;
 				agState.getEstadosProbados().add(ep);
+				agState.setTiempo(agState.getTiempo() + this.getCost());
 			}
 			break;
 		case 'O':
@@ -39,6 +40,7 @@ public class GirarIzquierda extends SearchAction {
 			if(!agState.getEstadosProbados().contains(ep1)){
 				flag=true;
 				agState.getEstadosProbados().add(ep1);
+				agState.setTiempo(agState.getTiempo() + this.getCost());
 			}
 			break;
 		case 'S':
@@ -48,6 +50,7 @@ public class GirarIzquierda extends SearchAction {
 			if(!agState.getEstadosProbados().contains(ep2)){
 				flag=true;
 				agState.getEstadosProbados().add(ep2);
+				agState.setTiempo(agState.getTiempo() + this.getCost());
 			}
 			break;
 		case 'E':
@@ -57,6 +60,7 @@ public class GirarIzquierda extends SearchAction {
 			if(!agState.getEstadosProbados().contains(ep3)){
 				flag=true;
 				agState.getEstadosProbados().add(ep3);
+				agState.setTiempo(agState.getTiempo() + this.getCost());
 			}
 			break;
 		}
@@ -89,6 +93,7 @@ public class GirarIzquierda extends SearchAction {
 			if(!agState.getEstadosProbados().contains(ep)){
 				flag=true;
 				agState.getEstadosProbados().add(ep);
+				agState.setTiempo(agState.getTiempo() + this.getCost());
 			}
 			break;
 		case 'O':
@@ -98,6 +103,7 @@ public class GirarIzquierda extends SearchAction {
 			if(!agState.getEstadosProbados().contains(ep1)){
 				flag=true;
 				agState.getEstadosProbados().add(ep1);
+				agState.setTiempo(agState.getTiempo() + this.getCost());
 			}
 			break;
 		case 'S':
@@ -107,6 +113,7 @@ public class GirarIzquierda extends SearchAction {
 			if(!agState.getEstadosProbados().contains(ep2)){
 				flag=true;
 				agState.getEstadosProbados().add(ep2);
+				agState.setTiempo(agState.getTiempo() + this.getCost());
 			}
 			break;
 		case 'E':
@@ -116,6 +123,7 @@ public class GirarIzquierda extends SearchAction {
 			if(!agState.getEstadosProbados().contains(ep3)){
 				flag=true;
 				agState.getEstadosProbados().add(ep3);
+				agState.setTiempo(agState.getTiempo() + this.getCost());
 			}
 			break;
 		}

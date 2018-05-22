@@ -5,7 +5,7 @@ public class PisoMojado extends Objeto {
 	public static int tipoObjeto = 5;
 	
 	public PisoMojado(int idHabitacion, int[] tamano,
-			int[] ubicacionEnHabitacion, float costo) {
+			int[] ubicacionEnHabitacion) {
 		super(idHabitacion, tamano, ubicacionEnHabitacion);
 	}
 	

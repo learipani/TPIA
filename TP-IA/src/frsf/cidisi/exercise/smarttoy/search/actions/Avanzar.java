@@ -64,7 +64,12 @@ public class Avanzar extends SearchAction {
 		}
 		
 		// Si la celda de en frente esta vacia, avanza
-		if (planoHabitacionAgente[fila][columna].equals(AgentSmartToyPerception.EMPTY_PERCEPTION)
+		if ((planoHabitacionAgente[fila][columna].equals(AgentSmartToyPerception.EMPTY_PERCEPTION)
+				|| planoHabitacionAgente[fila][columna].equals(AgentSmartToyPerception.PISO_ARENA)
+				|| planoHabitacionAgente[fila][columna].equals(AgentSmartToyPerception.PISO_BASURA)
+				|| planoHabitacionAgente[fila][columna].equals(AgentSmartToyPerception.PISO_MOJADO)
+				|| planoHabitacionAgente[fila][columna].equals(AgentSmartToyPerception.PISO_ALFOMBRA)
+				|| planoHabitacionAgente[fila][columna].equals(AgentSmartToyPerception.ESCALERA))
 				&& EstadoNoProbado(fila, columna, agState.getCharOrientacion(), agState.getEstadosProbados())) {
 			agState.getUbicacionAgente().setSecond(new int[] { fila, columna });
 			agState.getEstadosProbados().add(Integer.toString(fila)+Integer.toString(columna)+agState.getCharOrientacion());
@@ -119,7 +124,12 @@ public class Avanzar extends SearchAction {
 			break;
 		}
 
-		if (planoHabitacionAgente[fila][columna].equals(AgentSmartToyPerception.EMPTY_PERCEPTION)
+		if ((planoHabitacionAgente[fila][columna].equals(AgentSmartToyPerception.EMPTY_PERCEPTION)
+				|| planoHabitacionAgente[fila][columna].equals(AgentSmartToyPerception.PISO_ARENA)
+				|| planoHabitacionAgente[fila][columna].equals(AgentSmartToyPerception.PISO_BASURA)
+				|| planoHabitacionAgente[fila][columna].equals(AgentSmartToyPerception.PISO_MOJADO)
+				|| planoHabitacionAgente[fila][columna].equals(AgentSmartToyPerception.PISO_ALFOMBRA)
+				|| planoHabitacionAgente[fila][columna].equals(AgentSmartToyPerception.ESCALERA))
 				&& EstadoNoProbado(fila, columna, agState.getCharOrientacion(), agState.getEstadosProbados())) {
 			agState.getUbicacionAgente().setSecond(new int[] { fila, columna });
 			agState.getEstadosProbados().add(Integer.toString(fila)+Integer.toString(columna)+agState.getCharOrientacion());
