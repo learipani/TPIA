@@ -6,6 +6,8 @@ import javax.swing.JPanel;
 
 import javax.swing.ImageIcon;
 
+import domain.Habitacion;
+
 import frsf.cidisi.exercise.smarttoy.search.EnvironmentSmartToy;
 import frsf.cidisi.exercise.smarttoy.search.EnvironmentSmartToyState;
 
@@ -17,9 +19,9 @@ public class Contenedor extends JComponent
 {
      static JPanel panel;
     
-     static int columna = 0; //columna y fila se deberian iniciar en 0 
+     static int columnaSmartToy = 0; //columna y fila se deberian iniciar en 0 
      
-     static int fila =0; 
+     static int filaSmartToy =0; 
      
      static int numeroHabitacion =1; //1..15
      
@@ -43,31 +45,44 @@ public class Contenedor extends JComponent
     
   public void paint(Graphics g){
     numeroHabitacion = environment.getUbicacionAgente().getFirst().getIdHabitacion();
-
-    ImageIcon imagen =new ImageIcon(new ImageIcon(getClass().getResource("imagenes/"+numeroHabitacion+".png")).getImage());
-    g.drawImage(imagen.getImage(), 0, 0, imagen.getIconWidth(),imagen.getIconHeight(), this); 
-     
-     if(numeroHabitacion ==9 || numeroHabitacion == 7){ //porque las imagenes son mas chicas y tienen que entrar en el jpanel
-    	  ampliacion =15;
-     }
-     else{
-    	  ampliacion =30;
-     }
-     
-  	 fila = environment.getUbicacionAgente().getSecond()[0]*ampliacion;
-     columna = environment.getUbicacionAgente().getSecond()[1]*ampliacion;
+    if(numeroHabitacion ==9 || numeroHabitacion == 7){ //porque las imagenes son mas chicas y tienen que entrar en el jpanel
+  	  ampliacion =15;
+   }else{
+  	  ampliacion =30;
+   }
     
-     ImageIcon imagen2 =new ImageIcon(new ImageIcon(getClass().getResource("imagenes/smartToy.png")).getImage());
-     g.drawImage(imagen2.getImage(), columna, fila, ampliacion, ampliacion, null); 
+    Habitacion h = environment.getPlano().get(numeroHabitacion-1);
     
-if(environment.getUbicacionSmartPhone().getFirst().getIdHabitacion()==numeroHabitacion){
-     ImageIcon imagen3 =new ImageIcon(new ImageIcon(getClass().getResource("imagenes/smartphone.jpg")).getImage());
-     g.drawImage(imagen3.getImage(), environment.getUbicacionSmartPhone().getSecond()[1]*ampliacion,  environment.getUbicacionSmartPhone().
-    		 getSecond()[0]*ampliacion, ampliacion, ampliacion, null); 
+    String nombre= null;
+    
+    filaSmartToy = environment.getUbicacionAgente().getSecond()[0]*ampliacion;
+    columnaSmartToy = environment.getUbicacionAgente().getSecond()[1]*ampliacion;
+    
+    for (int fila = 0; fila < h.getPlanoHabitacion().length; fila++) {
+         for (int col = 0; col < h.getPlanoHabitacion()[fila].length; col++) {
+        nombre=h.getPlanoHabitacion()[fila][col];	
+        if (nombre=="||"){
+        	  ImageIcon imagen2 =new ImageIcon(new ImageIcon(getClass().getResource("imagenes/go.png")).getImage());
+              g.drawImage(imagen2.getImage(), columnaSmartToy, filaSmartToy, ampliacion, ampliacion, null); 
+        }
+        else{
+        ImageIcon imagen =new ImageIcon(new ImageIcon(getClass().getResource("imagenes/"+nombre+".png")).getImage());
+        g.drawImage(imagen.getImage(), col*ampliacion, fila*ampliacion, ampliacion, ampliacion, this); 
+        }
+        }
+   }
+    ImageIcon imagen2 =new ImageIcon(new ImageIcon(getClass().getResource("imagenes/smartToy.png")).getImage());
+    g.drawImage(imagen2.getImage(), columnaSmartToy, filaSmartToy, ampliacion, ampliacion, null); 
+   
+    if(environment.getUbicacionSmartPhone().getFirst().getIdHabitacion()==numeroHabitacion){
+    	ImageIcon imagen3 =new ImageIcon(new ImageIcon(getClass().getResource("imagenes/smartphone.jpg")).getImage());
+    	g.drawImage(imagen3.getImage(), environment.getUbicacionSmartPhone().getSecond()[1]*ampliacion,  environment.getUbicacionSmartPhone().
+   		getSecond()[0]*ampliacion, ampliacion, ampliacion, null); 
 }     
 
-     setOpaque(false);
-     super.paintComponent(g);
+    
+    setOpaque(false);
+    super.paintComponent(g);
   
   }       
   
@@ -97,13 +112,3 @@ if(environment.getUbicacionSmartPhone().getFirst().getIdHabitacion()==numeroHabi
     }
    }
 }
-
-
-
-
-
-
-
-
-
-
