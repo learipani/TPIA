@@ -154,18 +154,29 @@ public class Habitacion {
 		for (Iterator<Objeto> it = objetos.iterator(); it.hasNext();) {
 			Objeto item = it.next();
 			String claseObjeto;
-			//Me fijo que tipo de objeto es el que tengo y lo guardo en una variable
-			String className = item.getClass().getSimpleName();
-			if(className.equals("Obstaculo")){
+			//Segun el tipo de objeto se carga el string correspondiente
+			switch(item.getTipoObjeto()){
+			case 1:
 				claseObjeto = AgentSmartToyPerception.OBSTACULO_PERCEPTION;
-			}
-			else{
-				if(className.equals("TerrenoAdverso")){
-					claseObjeto = AgentSmartToyPerception.PISO_ARENA;
-				}
-				else{
-					claseObjeto = AgentSmartToyPerception.UNKNOWN_PERCEPTION;
-				}
+				break;
+			case 2:
+				claseObjeto = AgentSmartToyPerception.PISO_ARENA;
+				break;
+			case 3:
+				claseObjeto = AgentSmartToyPerception.PISO_BASURA;
+				break;
+			case 4:
+				claseObjeto = AgentSmartToyPerception.PISO_ALFOMBRA;
+				break;
+			case 5:
+				claseObjeto = AgentSmartToyPerception.PISO_MOJADO;
+				break;
+			case 6:
+				claseObjeto = AgentSmartToyPerception.ESCALERA;
+				break;
+			default: 
+				claseObjeto = AgentSmartToyPerception.UNKNOWN_PERCEPTION;
+				break;
 			}
 			//Recorro el objeto y voy actualizando el plano
 			for (int i = 0; i < item.getTamano()[0]; i++) {

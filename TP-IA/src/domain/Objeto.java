@@ -5,9 +5,17 @@ public class Objeto {
 	protected int idHabitacion;
 	protected int[] tamano = new int[2];
 	protected int[] ubicacionEnHabitacion = new int[2];
+	protected int tipoObjeto;
 	
-	
-	
+
+	protected int getTipoObjeto() {
+		return tipoObjeto;
+	}
+
+	protected void setTipoObjeto(int tipoobjeto) {
+		tipoObjeto = tipoobjeto;
+	}
+
 	public Objeto(int idHabitacion, int[] tamano, int[] ubicacionEnHabitacion) {
 		super();
 		this.idHabitacion = idHabitacion;
@@ -16,9 +24,6 @@ public class Objeto {
 	}
     
 	public Objeto() {
-		this.idHabitacion = idHabitacion;
-		this.tamano = tamano;
-		this.ubicacionEnHabitacion = ubicacionEnHabitacion;
 	}
 
 	public int getIdHabitacion() {
@@ -44,6 +49,7 @@ public class Objeto {
 	public void setUbicacionEnHabitacion(int[] ubicacionEnHabitacion) {
 		this.ubicacionEnHabitacion = ubicacionEnHabitacion;
 	}
+	
 	
 	// metodo clone
 	
