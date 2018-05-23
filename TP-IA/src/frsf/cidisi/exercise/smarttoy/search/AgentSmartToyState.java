@@ -1,11 +1,14 @@
 package frsf.cidisi.exercise.smarttoy.search;
 
 import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
 
 import auxiliar.CreacionHabitaciones;
 
 import domain.Habitacion;
+import domain.Puerta;
 import frsf.cidisi.faia.agent.Perception;
 import frsf.cidisi.faia.agent.search.SearchBasedAgentState;
 import frsf.cidisi.faia.state.datastructure.Pair;
@@ -13,8 +16,10 @@ import frsf.cidisi.faia.state.datastructure.Pair;
 /**
  * Represent the internal state of the Agent.
  */
+
 public class AgentSmartToyState extends SearchBasedAgentState {
-	
+	//Variables global
+	//Variables privadas
     private Pair<Habitacion, int[]> ubicacionAgente;
     int numeroHabitacionSmartPhone;
     private List<Integer> habitacionesVisitadas;
@@ -171,8 +176,8 @@ public class AgentSmartToyState extends SearchBasedAgentState {
     	this.plano.add(CreacionHabitaciones.createHabitacion15());
     	
     	//Setea la posicion inicial del agente
-    	this.ubicacionAgente.setFirst(this.getPlano().get(6)); //Habitacion .get(HABITACION)
-    	this.ubicacionAgente.setSecond(new int[]{15,15}); //Posicion dentro de la habitación {FILA, COLUMNA})
+    	this.ubicacionAgente.setFirst(this.getPlano().get(0)); //Habitacion .get(HABITACION)
+    	this.ubicacionAgente.setSecond(new int[]{3,3}); //Posicion dentro de la habitación {FILA, COLUMNA})
     	setAgentStringInPlano();
     	
     	//Agrega la habitacion actual a las habitaciones visitadas
@@ -352,5 +357,105 @@ public class AgentSmartToyState extends SearchBasedAgentState {
 	public void setCeldasVisitadas(int celdasVisitadas) {
 		this.celdasVisitadas = celdasVisitadas;
 	}
+	
+	public int getDistanciaAproximada(){
+		int distanciaAproximada;
+		int[] posicionAgente = this.getUbicacionAgente().getSecond();
+		int[] posicionObjetivo;
+		
+		// Esto que está ahora se puede refactorizar
+		LinkedList<Integer>[] matrizAdyacencia = new LinkedList[15];
+		for (int i=0; i<15; i++)
+			matrizAdyacencia[i] = new LinkedList();
+
+		for (Habitacion itemHabitacion : this.getPlano()) {
+			for (Pair<Integer, List<Puerta>> itemHabContigua : itemHabitacion
+					.getHabitacionesContiguas()) {
+				matrizAdyacencia[itemHabitacion.getIdHabitacion()-1].add(itemHabContigua.getFirst()-1);
+			}
+		}
+		//
+		
+		if(this.getUbicacionAgente().getFirst().getIdHabitacion() != this.getNumeroHabitacionSmartPhone()){
+			/*Si no está en la misma habitación que el nene, calcula una distancia
+			 *  a la primer puerta que encuentre que lo lleva a una habitación mas
+			 *  cercana al agente*/
+			List<Puerta> posiblesPuertas = new ArrayList<Puerta>();
+			for (Pair<Integer, List<Puerta>> itemHabitacionContigua : this.getUbicacionAgente().getFirst().getHabitacionesContiguas()) {
+				if(this.ExisteCamino(itemHabitacionContigua.getFirst(),this.numeroHabitacionSmartPhone, 15, matrizAdyacencia)){
+					//Esto agrega a las posibles puertas, la puerta del medio de la lista de puertas
+					posiblesPuertas.add(itemHabitacionContigua.getSecond().get(Math.round(itemHabitacionContigua.getSecond().size()/2)));
+				}
+			}
+			//Esto después hay que cambiarlo, que no siempre tome la primer puerta de la lista
+			posicionObjetivo = posiblesPuertas.get(0).getPosicionIngreso();
+			distanciaAproximada = this.CalcularDistanciaEntrePuntos(posicionAgente, posicionObjetivo)-1;
+		}
+		else{
+			/*Si está en la misma habitación que el nene, calcula la distancia a un punto dado
+			 * Ahora para probar, la distancia objetivo es 3,3*/
+			posicionObjetivo = new int[]{3,3};
+			distanciaAproximada = this.CalcularDistanciaEntrePuntos(posicionAgente, posicionObjetivo);
+			
+		}
+		System.out.println(">>>>>DISTANCIA APROX:   " + distanciaAproximada);
+		return distanciaAproximada;
+	}
+	
+	private int CalcularDistanciaEntrePuntos(int[] p1, int[] p2){
+		int distanciaHorizontal, distanciaVertical;
+		distanciaHorizontal = Math.abs(p1[0] - p2[0]);
+		distanciaVertical = Math.abs(p1[1] - p2[1]);
+		
+		return distanciaHorizontal + distanciaVertical ;
+	}
+	
+	private Boolean ExisteCamino(int s, int d, int cantidadHabitaciones, LinkedList<Integer>[] matrizAdyacencia)
+	{
+
+		//Guarda los nodos ya visitados
+		boolean visited[] = new boolean[cantidadHabitaciones];
+
+		// Create a queue for BFS
+		LinkedList<Integer> queue = new LinkedList<Integer>();
+
+		//Marca que el nodo actual fue visitado
+		visited[s]=true;
+		queue.add(s);
+
+		// i son los vertices adyacentes al vertice actual
+		Iterator<Integer> i;
+		while (queue.size()!=0)
+		{
+			// Dequeue a vertex from queue and print it
+			s = queue.poll();
+
+			int n;
+			i = matrizAdyacencia[s].listIterator();
+
+			// Get all adjacent vertices of the dequeued vertex s
+			// If a adjacent has not been visited, then mark it
+			// visited and enqueue it
+			while (i.hasNext())
+			{
+				n = i.next();
+
+				// If this adjacent node is the destination node,
+				// then return true
+				if (n==d)
+					return true;
+
+				// Else, continue to do BFS
+				if (!visited[n])
+				{
+					visited[n] = true;
+					queue.add(n);
+				}
+			}
+		}
+		// If BFS is complete without visited d
+		return false;
+	}
+	
 }
 
