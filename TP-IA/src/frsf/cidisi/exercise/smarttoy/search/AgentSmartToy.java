@@ -47,7 +47,7 @@ public class AgentSmartToy extends SearchBasedAgent {
     public Action selectAction() {
 
         // Create the search strategy
-        DepthFirstSearch strategy = new DepthFirstSearch();
+    	DepthFirstSearch strategy = new DepthFirstSearch();
         
         /**
          * Another search strategy examples:

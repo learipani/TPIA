@@ -166,7 +166,7 @@ public class Avanzar extends SearchAction {
 			return 2.0;
 		case 2:
 			return 0.5;
-		case 5: // Las dos escaleras de la casa van de norte a sur en subida y sur a norte en bajada.
+		case 3: // Las dos escaleras de la casa van de norte a sur en subida y sur a norte en bajada.
 			if(agentOrientation == 'N'){
 				// escalera subida
 				return 2.0;

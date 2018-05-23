@@ -139,7 +139,7 @@ public class GirarDerecha extends SearchAction {
 	 */
 	@Override
 	public Double getCost() {
-		return new Double(0);
+		return 0.5;
 	}
 
 	/**

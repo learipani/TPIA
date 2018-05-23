@@ -17,7 +17,7 @@ public class GoalSmartToy extends GoalTest {
 		if ((plano[xAgent + 1][yAgent] == "go"
 				|| plano[xAgent - 1][yAgent] == "go"
 				|| plano[xAgent][yAgent + 1] == "go" || plano[xAgent][yAgent - 1] == "go"
-				|| estadoAgente.getCeldasVisitadas()>= 20)
+				|| estadoAgente.getCeldasVisitadas()>= 10)
 				&& estadoAgente.getUbicacionAgente().getFirst().getIdHabitacion() == estadoAgente.getNumeroHabitacionSmartPhone()) {
 			return true;
 		} else {

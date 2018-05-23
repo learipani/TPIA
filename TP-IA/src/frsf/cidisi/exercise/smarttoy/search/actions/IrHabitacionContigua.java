@@ -1,6 +1,5 @@
 package frsf.cidisi.exercise.smarttoy.search.actions;
 
-import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -168,9 +167,9 @@ public class IrHabitacionContigua extends SearchAction {
 				environmentState.setUbicacionAgente(nuevaUbicacion);
 				//ver
 				agState.setTiempo(agState.getTiempo() + this.getCost());
+				environmentState.celdasVisitadas = environmentState.celdasVisitadas + 1;
 			}
 		}
-		environmentState.celdasVisitadas = environmentState.celdasVisitadas + 1;
 
 		try {
 			Contenedor.mover();

@@ -35,10 +35,15 @@ public class CreacionHabitaciones {
 		h1.addObjeto(new Obstaculo(1, new int[]{1,1}, new int[]{2,2}));
 		
 		//Terrenos
-		/*h1.addObjeto(new PisoMojado(1, new int[]{1,1}, new int[]{2,3}));
-		h1.addObjeto(new PisoMojado(1, new int[]{1,1}, new int[]{2,4}));
-		h1.addObjeto(new PisoMojado(1, new int[]{1,1}, new int[]{2,5}));
-		h1.addObjeto(new PisoMojado(1, new int[]{1,1}, new int[]{2,2}));*/
+		h1.addObjeto(new PisoAlfombra(1, new int[]{1,4}, new int[]{1,2}));
+		h1.addObjeto(new PisoMojado(1, new int[]{1,3}, new int[]{2,3}));
+		h1.addObjeto(new PisoMojado(1, new int[]{1,4}, new int[]{3,2}));
+		h1.addObjeto(new PisoAlfombra(1, new int[]{1,4}, new int[]{4,2}));
+		h1.addObjeto(new PisoAlfombra(1, new int[]{1,4}, new int[]{5,2}));
+		h1.addObjeto(new PisoAlfombra(1, new int[]{1,4}, new int[]{6,2}));
+		h1.addObjeto(new PisoAlfombra(1, new int[]{1,1}, new int[]{7,2}));
+		h1.addObjeto(new PisoAlfombra(1, new int[]{1,2}, new int[]{7,4}));
+		
 		//h1.addObjeto( new TerrenoAdverso(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}, COSTO_TERRENO) );
 
 		//Puertas
@@ -73,7 +78,16 @@ public class CreacionHabitaciones {
 		
 		//Obstaculos
 		//h1.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
-
+		h2.addObjeto(new PisoMojado(2, new int[]{1,5}, new int[]{1,1}));
+		h2.addObjeto(new PisoMojado(2, new int[]{1,5}, new int[]{3,1}));
+		h2.addObjeto(new PisoMojado(2, new int[]{1,5}, new int[]{5,1}));
+		h2.addObjeto(new PisoMojado(2, new int[]{1,5}, new int[]{7,1}));
+		h2.addObjeto(new PisoAlfombra(2, new int[]{1,5}, new int[]{2,1}));
+		h2.addObjeto(new PisoAlfombra(2, new int[]{1,5}, new int[]{4,1}));
+		h2.addObjeto(new PisoAlfombra(2, new int[]{1,5}, new int[]{6,1}));
+		h2.addObjeto(new PisoAlfombra(2, new int[]{1,5}, new int[]{8,1}));
+		
+		
 		//Terrenos
 		//h1.addObjeto( new TerrenoAdverso(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}, COSTO_TERRENO) );
 
