@@ -47,8 +47,8 @@ public class AgentSmartToy extends SearchBasedAgent {
     public Action selectAction() {
 
         // Create the search strategy
-        //DepthFirstSearch strategy = new DepthFirstSearch();          
-    	BreathFirstSearch strategy =  new BreathFirstSearch();
+        DepthFirstSearch strategy = new DepthFirstSearch();          
+    	//BreathFirstSearch strategy =  new BreathFirstSearch();
     	//IStepCostFunction cost = new CostFunction();
     	//UniformCostSearch strategy = new UniformCostSearch(cost);
     	

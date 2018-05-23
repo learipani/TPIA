@@ -12,6 +12,7 @@ public class AgentSmartToyPerception extends Perception {
 	public static String UNKNOWN_PERCEPTION = "uk";
 	public static String EMPTY_PERCEPTION = "##";
 	public static String PUERTA_PERCEPTION = "pu";
+	public static String PARED = "PD";
 	public static String OBSTACULO_PERCEPTION = "ob";
 	public static String META_PERCEPTION = "go";
 	public static String PISO_ARENA = "PA";

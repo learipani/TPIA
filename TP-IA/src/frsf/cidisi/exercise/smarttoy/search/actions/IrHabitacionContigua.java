@@ -74,21 +74,23 @@ public class IrHabitacionContigua extends SearchAction {
 			Pair<Habitacion, Puerta> habitacionDelante = ObtenerHabitacion(
 						fila, columna, ubicacionAgente.getFirst(), agState
 								.getPlano());
-			agState.addHabitacionesVisitadas(ubicacionAgente.getFirst());
-			Pair<Habitacion, int[]> nuevaUbicacion = new Pair<Habitacion, int[]>(null, null);
-			nuevaUbicacion.setFirst(habitacionDelante.getFirst());
-			int[] nuevaPosicionEnHab = new int[] {
-				// Aca suma la variable aux para que el Agente
-				// no quede en un borde
-				habitacionDelante.getSecond().getPosicionEngreso()[0] + addFilaosicionEgreso,
-				habitacionDelante.getSecond().getPosicionEngreso()[1] + addColumnaposicionEgreso};
-			agState.getEstadosProbados().clear();
-			nuevaUbicacion.setSecond(nuevaPosicionEnHab);
-			agState.setUbicacionAgente(nuevaUbicacion);
-			//ver
-			agState.setCeldasVisitadas(agState.getCeldasVisitadas()+1);
-			agState.setTiempo(agState.getTiempo() + this.getCost());
-			return agState;
+			if(!agState.getHabitacionesVisitadas().contains(habitacionDelante.getFirst().getIdHabitacion())){
+				agState.addHabitacionesVisitadas(ubicacionAgente.getFirst().getIdHabitacion());
+				Pair<Habitacion, int[]> nuevaUbicacion = new Pair<Habitacion, int[]>(null, null);
+				nuevaUbicacion.setFirst(habitacionDelante.getFirst());
+				int[] nuevaPosicionEnHab = new int[] {
+					// Aca suma la variable aux para que el Agente
+					// no quede en un borde
+					habitacionDelante.getSecond().getPosicionEngreso()[0] + addFilaosicionEgreso,
+					habitacionDelante.getSecond().getPosicionEngreso()[1] + addColumnaposicionEgreso};
+				agState.getEstadosProbados().clear();
+				nuevaUbicacion.setSecond(nuevaPosicionEnHab);
+				agState.setUbicacionAgente(nuevaUbicacion);
+				//ver
+				agState.setCeldasVisitadas(agState.getCeldasVisitadas()+1);
+				agState.setTiempo(agState.getTiempo() + this.getCost());
+				return agState;
+			}
 		}
 		return null;
 	}
@@ -151,20 +153,22 @@ public class IrHabitacionContigua extends SearchAction {
 			Pair<Habitacion, Puerta> habitacionDelante = ObtenerHabitacion(
 					fila, columna, ubicacionAgente.getFirst(), agState
 							.getPlano());
-			agState.addHabitacionesVisitadas(ubicacionAgente.getFirst());
-			Pair<Habitacion, int[]> nuevaUbicacion = new Pair<Habitacion, int[]>(null, null);
-			nuevaUbicacion.setFirst(habitacionDelante.getFirst());
-			int[] nuevaPosicionEnHab = new int[] {
-					// Aca suma la variable aux para que el Agente
-					// no quede en un borde
-					habitacionDelante.getSecond().getPosicionEngreso()[0] + addFilaosicionEgreso,
-					habitacionDelante.getSecond().getPosicionEngreso()[1] + addColumnaposicionEgreso};
-			agState.getEstadosProbados().clear();
-			nuevaUbicacion.setSecond(nuevaPosicionEnHab);
-			agState.setUbicacionAgente(nuevaUbicacion);
-			environmentState.setUbicacionAgente(nuevaUbicacion);
-			//ver
-			agState.setTiempo(agState.getTiempo() + this.getCost());
+			if(!agState.getHabitacionesVisitadas().contains(habitacionDelante.getFirst().getIdHabitacion())){
+				agState.addHabitacionesVisitadas(ubicacionAgente.getFirst().getIdHabitacion());
+				Pair<Habitacion, int[]> nuevaUbicacion = new Pair<Habitacion, int[]>(null, null);
+				nuevaUbicacion.setFirst(habitacionDelante.getFirst());
+				int[] nuevaPosicionEnHab = new int[] {
+						// Aca suma la variable aux para que el Agente
+						// no quede en un borde
+						habitacionDelante.getSecond().getPosicionEngreso()[0] + addFilaosicionEgreso,
+						habitacionDelante.getSecond().getPosicionEngreso()[1] + addColumnaposicionEgreso};
+				agState.getEstadosProbados().clear();
+				nuevaUbicacion.setSecond(nuevaPosicionEnHab);
+				agState.setUbicacionAgente(nuevaUbicacion);
+				environmentState.setUbicacionAgente(nuevaUbicacion);
+				//ver
+				agState.setTiempo(agState.getTiempo() + this.getCost());
+			}
 		}
 		environmentState.celdasVisitadas = environmentState.celdasVisitadas + 1;
 

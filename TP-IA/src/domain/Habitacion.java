@@ -174,6 +174,9 @@ public class Habitacion {
 			case 6:
 				claseObjeto = AgentSmartToyPerception.ESCALERA;
 				break;
+			case 7:
+				claseObjeto = AgentSmartToyPerception.PARED;
+				break;
 			default: 
 				claseObjeto = AgentSmartToyPerception.UNKNOWN_PERCEPTION;
 				break;

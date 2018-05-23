@@ -20,20 +20,25 @@ public class CreacionHabitaciones {
 		Habitacion h1 = new Habitacion(1, new String[10][7], new ArrayList<Pair<Integer, List<Puerta>>>(), new ArrayList<Objeto>());
 		
 		//Paredes
-		//h14.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
-		h1.addObjeto(new Obstaculo(1, new int[]{1,7}, new int[]{0,0}));
-		h1.addObjeto(new Obstaculo(1, new int[]{1,7}, new int[]{9,0}));
-		h1.addObjeto(new Obstaculo(1, new int[]{8,1}, new int[]{1,0}));
-		h1.addObjeto(new Obstaculo(1, new int[]{3,1}, new int[]{6,6}));
+		//h1.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
+		h1.addObjeto(new Pared(1, new int[]{1,7}, new int[]{0,0}));
+		h1.addObjeto(new Pared(1, new int[]{1,7}, new int[]{9,0}));
+		h1.addObjeto(new Pared(1, new int[]{8,1}, new int[]{1,0}));
+		h1.addObjeto(new Pared(1, new int[]{3,1}, new int[]{6,6}));
 		
 		//Obstaculos
 		//h1.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
-
+		h1.addObjeto(new Obstaculo(1, new int[]{8,1}, new int[]{1,1}));
+		h1.addObjeto(new Obstaculo(1, new int[]{1,4}, new int[]{8,2}));
+		h1.addObjeto(new Obstaculo(1, new int[]{1,1}, new int[]{7,3}));
+		h1.addObjeto(new Obstaculo(1, new int[]{1,4}, new int[]{8,2}));
+		h1.addObjeto(new Obstaculo(1, new int[]{1,1}, new int[]{2,2}));
+		
 		//Terrenos
-		h1.addObjeto(new PisoMojado(1, new int[]{1,1}, new int[]{2,3}));
+		/*h1.addObjeto(new PisoMojado(1, new int[]{1,1}, new int[]{2,3}));
 		h1.addObjeto(new PisoMojado(1, new int[]{1,1}, new int[]{2,4}));
 		h1.addObjeto(new PisoMojado(1, new int[]{1,1}, new int[]{2,5}));
-		h1.addObjeto(new PisoMojado(1, new int[]{1,1}, new int[]{2,2}));
+		h1.addObjeto(new PisoMojado(1, new int[]{1,1}, new int[]{2,2}));*/
 		//h1.addObjeto( new TerrenoAdverso(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}, COSTO_TERRENO) );
 
 		//Puertas
@@ -60,11 +65,11 @@ public class CreacionHabitaciones {
 		
 		//Paredes
 		//h2.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
-		h2.addObjeto(new Obstaculo(2, new int[]{1,3}, new int[]{0,0}));
-		h2.addObjeto(new Obstaculo(2, new int[]{1,6}, new int[]{15,0}));
-		h2.addObjeto(new Obstaculo(2, new int[]{3,1}, new int[]{13,6}));
-		h2.addObjeto(new Obstaculo(2, new int[]{9,1}, new int[]{6,0}));
-		h2.addObjeto(new Obstaculo(2, new int[]{10,1}, new int[]{0,6}));
+		h2.addObjeto(new Pared(2, new int[]{1,3}, new int[]{0,0}));
+		h2.addObjeto(new Pared(2, new int[]{1,6}, new int[]{15,0}));
+		h2.addObjeto(new Pared(2, new int[]{3,1}, new int[]{13,6}));
+		h2.addObjeto(new Pared(2, new int[]{9,1}, new int[]{6,0}));
+		h2.addObjeto(new Pared(2, new int[]{10,1}, new int[]{0,6}));
 		
 		//Obstaculos
 		//h1.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
@@ -107,11 +112,11 @@ public class CreacionHabitaciones {
 		
 		//Paredes
 		//h2.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
-		h3.addObjeto(new Obstaculo(3, new int[]{1,4}, new int[]{0,0}));
-		h3.addObjeto(new Obstaculo(3, new int[]{1,4}, new int[]{0,7}));
-		h3.addObjeto(new Obstaculo(3, new int[]{10,1}, new int[]{4,0}));
-		h3.addObjeto(new Obstaculo(3, new int[]{13,1}, new int[]{1,10}));
-		h3.addObjeto(new Obstaculo(3, new int[]{1,11}, new int[]{14,0}));
+		h3.addObjeto(new Pared(3, new int[]{1,4}, new int[]{0,0}));
+		h3.addObjeto(new Pared(3, new int[]{1,4}, new int[]{0,7}));
+		h3.addObjeto(new Pared(3, new int[]{10,1}, new int[]{4,0}));
+		h3.addObjeto(new Pared(3, new int[]{13,1}, new int[]{1,10}));
+		h3.addObjeto(new Pared(3, new int[]{1,11}, new int[]{14,0}));
 		
 		//Obstaculos
 		//h1.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
@@ -145,11 +150,11 @@ public class CreacionHabitaciones {
 		
 		//Paredes
 		//h2.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
-		h4.addObjeto(new Obstaculo(4, new int[]{1,11}, new int[]{0,0}));
-		h4.addObjeto(new Obstaculo(4, new int[]{5,1}, new int[]{1,0}));
-		h4.addObjeto(new Obstaculo(4, new int[]{5,1}, new int[]{1,10}));
-		h4.addObjeto(new Obstaculo(4, new int[]{1,4}, new int[]{6,0}));
-		h4.addObjeto(new Obstaculo(4, new int[]{1,4}, new int[]{6,7}));
+		h4.addObjeto(new Pared(4, new int[]{1,11}, new int[]{0,0}));
+		h4.addObjeto(new Pared(4, new int[]{5,1}, new int[]{1,0}));
+		h4.addObjeto(new Pared(4, new int[]{5,1}, new int[]{1,10}));
+		h4.addObjeto(new Pared(4, new int[]{1,4}, new int[]{6,0}));
+		h4.addObjeto(new Pared(4, new int[]{1,4}, new int[]{6,7}));
 		
 		//Obstaculos
 		//h1.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
@@ -178,15 +183,15 @@ public class CreacionHabitaciones {
 		
 		//Paredes
 		//h2.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
-		h5.addObjeto(new Obstaculo(5, new int[]{1,10}, new int[]{0,0}));
-		h5.addObjeto(new Obstaculo(5, new int[]{1,7}, new int[]{0,13}));
-		h5.addObjeto(new Obstaculo(5, new int[]{1,9}, new int[]{3,20}));
-		h5.addObjeto(new Obstaculo(5, new int[]{1,20}, new int[]{19,0}));
-		h5.addObjeto(new Obstaculo(5, new int[]{1,9}, new int[]{16,20}));
-		h5.addObjeto(new Obstaculo(5, new int[]{18,1}, new int[]{1,0}));
-		h5.addObjeto(new Obstaculo(5, new int[]{3,1}, new int[]{1,19}));
-		h5.addObjeto(new Obstaculo(5, new int[]{3,1}, new int[]{16,19}));
-		h5.addObjeto(new Obstaculo(5, new int[]{12,1}, new int[]{4,28}));
+		h5.addObjeto(new Pared(5, new int[]{1,10}, new int[]{0,0}));
+		h5.addObjeto(new Pared(5, new int[]{1,7}, new int[]{0,13}));
+		h5.addObjeto(new Pared(5, new int[]{1,9}, new int[]{3,20}));
+		h5.addObjeto(new Pared(5, new int[]{1,20}, new int[]{19,0}));
+		h5.addObjeto(new Pared(5, new int[]{1,9}, new int[]{16,20}));
+		h5.addObjeto(new Pared(5, new int[]{18,1}, new int[]{1,0}));
+		h5.addObjeto(new Pared(5, new int[]{3,1}, new int[]{1,19}));
+		h5.addObjeto(new Pared(5, new int[]{3,1}, new int[]{16,19}));
+		h5.addObjeto(new Pared(5, new int[]{12,1}, new int[]{4,28}));
 		
 		//Obstaculos
 		//h1.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
@@ -215,12 +220,12 @@ public class CreacionHabitaciones {
 		
 		//Paredes
 		//h2.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
-		h6.addObjeto(new Obstaculo(6, new int[]{1,14}, new int[]{0,0}));
-		h6.addObjeto(new Obstaculo(6, new int[]{1,9}, new int[]{27,0}));
-		h6.addObjeto(new Obstaculo(6, new int[]{1,6}, new int[]{12,8}));
-		h6.addObjeto(new Obstaculo(6, new int[]{26,1}, new int[]{1,0}));
-		h6.addObjeto(new Obstaculo(6, new int[]{7,1}, new int[]{20,8}));
-		h6.addObjeto(new Obstaculo(6, new int[]{11,1}, new int[]{1,13}));
+		h6.addObjeto(new Pared(6, new int[]{1,14}, new int[]{0,0}));
+		h6.addObjeto(new Pared(6, new int[]{1,9}, new int[]{27,0}));
+		h6.addObjeto(new Pared(6, new int[]{1,6}, new int[]{12,8}));
+		h6.addObjeto(new Pared(6, new int[]{26,1}, new int[]{1,0}));
+		h6.addObjeto(new Pared(6, new int[]{7,1}, new int[]{20,8}));
+		h6.addObjeto(new Pared(6, new int[]{11,1}, new int[]{1,13}));
 		
 		//Obstaculos
 		//h1.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
@@ -255,29 +260,62 @@ public class CreacionHabitaciones {
 		//Paredes
 		//h7.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
 		//verticales
-		h7.addObjeto(new Obstaculo(7, new int[]{18,1}, new int[]{0,5}));
-		h7.addObjeto(new Obstaculo(7, new int[]{8,1}, new int[]{25,0}));   
-		h7.addObjeto(new Obstaculo(7, new int[]{4,1}, new int[]{32,4}));
-		h7.addObjeto(new Obstaculo(7, new int[]{4,1}, new int[]{31,22}));   
-		h7.addObjeto(new Obstaculo(7, new int[]{19,1}, new int[]{12,19}));   
-		h7.addObjeto(new Obstaculo(7, new int[]{5,1}, new int[]{0,21}));   
-		h7.addObjeto(new Obstaculo(7, new int[]{5,1}, new int[]{0,11}));   
+		h7.addObjeto(new Pared(7, new int[]{18,1}, new int[]{0,5}));
+		h7.addObjeto(new Pared(7, new int[]{8,1}, new int[]{25,0}));   
+		h7.addObjeto(new Pared(7, new int[]{4,1}, new int[]{32,4}));
+		h7.addObjeto(new Pared(7, new int[]{4,1}, new int[]{31,22}));   
+		h7.addObjeto(new Pared(7, new int[]{19,1}, new int[]{12,19}));   
+		h7.addObjeto(new Pared(7, new int[]{5,1}, new int[]{0,21}));   
+		h7.addObjeto(new Pared(7, new int[]{5,1}, new int[]{0,11}));   
 
 		
 		//horizontales
-		h7.addObjeto(new Obstaculo(7, new int[]{1,5}, new int[]{17,0}));
-		h7.addObjeto(new Obstaculo(7, new int[]{1,18}, new int[]{35,5}));  
-		h7.addObjeto(new Obstaculo(7, new int[]{1,3}, new int[]{31,19}));  
-		h7.addObjeto(new Obstaculo(7, new int[]{1,2}, new int[]{12,20}));		
-		h7.addObjeto(new Obstaculo(7, new int[]{1,9}, new int[]{0,12}));
+		h7.addObjeto(new Pared(7, new int[]{1,5}, new int[]{17,0}));
+		h7.addObjeto(new Pared(7, new int[]{1,18}, new int[]{35,5}));  
+		h7.addObjeto(new Pared(7, new int[]{1,3}, new int[]{31,19}));  
+		h7.addObjeto(new Pared(7, new int[]{1,2}, new int[]{12,20}));		
+		h7.addObjeto(new Pared(7, new int[]{1,9}, new int[]{0,12}));
 		
 		
 		//Obstaculos
 		//h7.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
-
-		//Terrenos
+		//heladera
+		h7.addObjeto( new Obstaculo(7, new int[]{3, 1}, new int[]{32, 6}));
+		h7.addObjeto( new Obstaculo(7, new int[]{3, 1}, new int[]{32, 7}));
+		h7.addObjeto( new Obstaculo(7, new int[]{3, 1}, new int[]{32, 8}));
+		//mesada
+		h7.addObjeto( new Obstaculo(7, new int[]{1, 9}, new int[]{32, 10}));
+		h7.addObjeto( new Obstaculo(7, new int[]{1, 9}, new int[]{33, 10}));
+		h7.addObjeto( new Obstaculo(7, new int[]{1, 9}, new int[]{34, 10}));
+		//mesa
+		h7.addObjeto( new Obstaculo(7, new int[]{1, 7}, new int[]{25, 9}));
+		h7.addObjeto( new Obstaculo(7, new int[]{1, 7}, new int[]{26, 9}));
+		h7.addObjeto( new Obstaculo(7, new int[]{1, 7}, new int[]{27, 9}));
+		//sillas
+		h7.addObjeto( new Obstaculo(7, new int[]{1, 1}, new int[]{26, 8}));
+		h7.addObjeto( new Obstaculo(7, new int[]{1, 1}, new int[]{26, 16}));
+		h7.addObjeto( new Obstaculo(7, new int[]{1, 1}, new int[]{24, 10}));
+		h7.addObjeto( new Obstaculo(7, new int[]{1, 1}, new int[]{24, 12}));
+		h7.addObjeto( new Obstaculo(7, new int[]{1, 1}, new int[]{24, 14}));
+		h7.addObjeto( new Obstaculo(7, new int[]{1, 1}, new int[]{28, 10}));
+		h7.addObjeto( new Obstaculo(7, new int[]{1, 1}, new int[]{28, 12}));
+		h7.addObjeto( new Obstaculo(7, new int[]{1, 1}, new int[]{28, 14}));
+		//alfombra
+		h7.addObjeto( new PisoAlfombra(7, new int[]{3, 1}, new int[]{20, 2}));
+		h7.addObjeto( new PisoAlfombra(7, new int[]{3, 1}, new int[]{20, 3}));
+		//
+		h7.addObjeto( new Obstaculo(7, new int[]{5, 1}, new int[]{4, 15}));
+		h7.addObjeto( new Obstaculo(7, new int[]{5, 1}, new int[]{4, 16}));
+		h7.addObjeto( new Obstaculo(7, new int[]{5, 1}, new int[]{4, 17}));
+		h7.addObjeto( new Obstaculo(7, new int[]{5, 1}, new int[]{4, 18}));
+		
+		//Escalera
 		//h7.addObjeto( new TerrenoAdverso(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}, COSTO_TERRENO) );
-
+		h7.addObjeto( new Escalera(7, new int[]{1, 5}, new int[]{1, 6}));
+		h7.addObjeto( new Escalera(7, new int[]{1, 5}, new int[]{2, 6}));
+		h7.addObjeto( new Escalera(7, new int[]{1, 5}, new int[]{3, 6}));
+		h7.addObjeto( new Escalera(7, new int[]{1, 5}, new int[]{4, 6}));
+		
 		//Puertas
 		//Puerta pu1 = new Puerta(NUMERO_PUERTA, new int[]{FILA_EN_HAB_ACTUAL, COLUMNA_EN_HAB_ACTUAL}, new int[]{FILA_EN_HAB_DESTINO, COLUMNA_EN_HAB_DESTINO})
 		
@@ -325,12 +363,12 @@ public class CreacionHabitaciones {
 		
 		//Paredes
 		//h2.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
-		h8.addObjeto(new Obstaculo(8, new int[]{1,13}, new int[]{0,0}));
-		h8.addObjeto(new Obstaculo(8, new int[]{1,4}, new int[]{7,0}));
-		h8.addObjeto(new Obstaculo(8, new int[]{1,10}, new int[]{10,3}));
-		h8.addObjeto(new Obstaculo(8, new int[]{2,1}, new int[]{5,0}));
-		h8.addObjeto(new Obstaculo(8, new int[]{2,1}, new int[]{8,3}));
-		h8.addObjeto(new Obstaculo(8, new int[]{9,1}, new int[]{1,12}));
+		h8.addObjeto(new Pared(8, new int[]{1,13}, new int[]{0,0}));
+		h8.addObjeto(new Pared(8, new int[]{1,4}, new int[]{7,0}));
+		h8.addObjeto(new Pared(8, new int[]{1,10}, new int[]{10,3}));
+		h8.addObjeto(new Pared(8, new int[]{2,1}, new int[]{5,0}));
+		h8.addObjeto(new Pared(8, new int[]{2,1}, new int[]{8,3}));
+		h8.addObjeto(new Pared(8, new int[]{9,1}, new int[]{1,12}));
 		
 		//Obstaculos
 		//h1.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
@@ -361,21 +399,21 @@ public class CreacionHabitaciones {
 		//Paredes
 		//h9.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
 		//verticales
-		h9.addObjeto(new Obstaculo(9, new int[]{18,1}, new int[]{0,0}));
-		h9.addObjeto(new Obstaculo(9, new int[]{23,1}, new int[]{26,1}));   
-		h9.addObjeto(new Obstaculo(9, new int[]{16,1}, new int[]{0,6}));
-		h9.addObjeto(new Obstaculo(9, new int[]{6,1}, new int[]{23,6}));   
-		h9.addObjeto(new Obstaculo(9, new int[]{10,1}, new int[]{32,6}));   
-		h9.addObjeto(new Obstaculo(9, new int[]{2,1}, new int[]{46,9}));   
+		h9.addObjeto(new Pared(9, new int[]{18,1}, new int[]{0,0}));
+		h9.addObjeto(new Pared(9, new int[]{23,1}, new int[]{26,1}));   
+		h9.addObjeto(new Pared(9, new int[]{16,1}, new int[]{0,6}));
+		h9.addObjeto(new Pared(9, new int[]{6,1}, new int[]{23,6}));   
+		h9.addObjeto(new Pared(9, new int[]{10,1}, new int[]{32,6}));   
+		h9.addObjeto(new Pared(9, new int[]{2,1}, new int[]{46,9}));   
 
 		
 		//horizontales
-		h9.addObjeto(new Obstaculo(9, new int[]{1,2}, new int[]{25,0}));
-		h9.addObjeto(new Obstaculo(9, new int[]{1,1}, new int[]{48,2}));  
-		h9.addObjeto(new Obstaculo(9, new int[]{1,4}, new int[]{48,6}));  
-		h9.addObjeto(new Obstaculo(9, new int[]{1,4}, new int[]{41,7}));		
-		h9.addObjeto(new Obstaculo(9, new int[]{1,4}, new int[]{23,7}));
-		h9.addObjeto(new Obstaculo(9, new int[]{1,5}, new int[]{19,6}));  
+		h9.addObjeto(new Pared(9, new int[]{1,2}, new int[]{25,0}));
+		h9.addObjeto(new Pared(9, new int[]{1,1}, new int[]{48,2}));  
+		h9.addObjeto(new Pared(9, new int[]{1,4}, new int[]{48,6}));  
+		h9.addObjeto(new Pared(9, new int[]{1,4}, new int[]{41,7}));		
+		h9.addObjeto(new Pared(9, new int[]{1,4}, new int[]{23,7}));
+		h9.addObjeto(new Pared(9, new int[]{1,5}, new int[]{19,6}));  
 		
 		
 		//Obstaculos
@@ -439,13 +477,13 @@ public class CreacionHabitaciones {
 		//Paredes
 		//h10.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
 		//verticales
-		h10.addObjeto(new Obstaculo(10, new int[]{9,1}, new int[]{4,0}));
-		h10.addObjeto(new Obstaculo(10, new int[]{12,1}, new int[]{1,17}));   
+		h10.addObjeto(new Pared(10, new int[]{9,1}, new int[]{4,0}));
+		h10.addObjeto(new Pared(10, new int[]{12,1}, new int[]{1,17}));   
 		
 		//horizontales
-		h10.addObjeto(new Obstaculo(10, new int[]{1,18}, new int[]{0,0}));
-		h10.addObjeto(new Obstaculo(10, new int[]{1,18}, new int[]{13,0}));  
-		h10.addObjeto(new Obstaculo(10, new int[]{1,1}, new int[]{4,1}));  
+		h10.addObjeto(new Pared(10, new int[]{1,18}, new int[]{0,0}));
+		h10.addObjeto(new Pared(10, new int[]{1,18}, new int[]{13,0}));  
+		h10.addObjeto(new Pared(10, new int[]{1,1}, new int[]{4,1}));  
 		
 		
 		//Obstaculos
@@ -476,12 +514,12 @@ public class CreacionHabitaciones {
 		//Paredes
 		//h11.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
 		//verticales
-		h11.addObjeto(new Obstaculo(11, new int[]{5,1}, new int[]{4,0}));
-		h11.addObjeto(new Obstaculo(11, new int[]{8,1}, new int[]{1,11}));   
+		h11.addObjeto(new Pared(11, new int[]{5,1}, new int[]{4,0}));
+		h11.addObjeto(new Pared(11, new int[]{8,1}, new int[]{1,11}));   
 		
 		//horizontales
-		h11.addObjeto(new Obstaculo(11, new int[]{1,12}, new int[]{0,0}));
-		h11.addObjeto(new Obstaculo(11, new int[]{1,12}, new int[]{9,0}));  
+		h11.addObjeto(new Pared(11, new int[]{1,12}, new int[]{0,0}));
+		h11.addObjeto(new Pared(11, new int[]{1,12}, new int[]{9,0}));  
 		
 		//Obstaculos
 		//h11.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
@@ -511,13 +549,13 @@ public class CreacionHabitaciones {
 		//Paredes
 		//h12.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
 		//verticales
-		h12.addObjeto(new Obstaculo(12, new int[]{8,1}, new int[]{0,0}));
-		h12.addObjeto(new Obstaculo(12, new int[]{12,1}, new int[]{0,17}));   
+		h12.addObjeto(new Pared(12, new int[]{8,1}, new int[]{0,0}));
+		h12.addObjeto(new Pared(12, new int[]{12,1}, new int[]{0,17}));   
 		
 		//horizontales
-		h12.addObjeto(new Obstaculo(12, new int[]{1,1}, new int[]{6,1}));
-		h12.addObjeto(new Obstaculo(12, new int[]{1,16}, new int[]{0,1}));
-		h12.addObjeto(new Obstaculo(12, new int[]{1,17}, new int[]{11,0}));  
+		h12.addObjeto(new Pared(12, new int[]{1,1}, new int[]{6,1}));
+		h12.addObjeto(new Pared(12, new int[]{1,16}, new int[]{0,1}));
+		h12.addObjeto(new Pared(12, new int[]{1,17}, new int[]{11,0}));  
 		
 		
 		//Obstaculos
@@ -549,13 +587,13 @@ public class CreacionHabitaciones {
 		//Paredes
 		//h13.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
 		//verticales
-		h13.addObjeto(new Obstaculo(13, new int[]{11,1}, new int[]{0,0}));
-		h13.addObjeto(new Obstaculo(13, new int[]{11,1}, new int[]{0,15}));   
-		h13.addObjeto(new Obstaculo(13, new int[]{5,1}, new int[]{5,4}));  
+		h13.addObjeto(new Pared(13, new int[]{11,1}, new int[]{0,0}));
+		h13.addObjeto(new Pared(13, new int[]{11,1}, new int[]{0,15}));   
+		h13.addObjeto(new Pared(13, new int[]{5,1}, new int[]{5,4}));  
 		
 		//horizontales
-		h13.addObjeto(new Obstaculo(13, new int[]{1,14}, new int[]{10,1}));
-		h13.addObjeto(new Obstaculo(13, new int[]{1,11}, new int[]{0,4}));
+		h13.addObjeto(new Pared(13, new int[]{1,14}, new int[]{10,1}));
+		h13.addObjeto(new Pared(13, new int[]{1,11}, new int[]{0,4}));
 		
 		
 		//Obstaculos
@@ -586,19 +624,19 @@ public class CreacionHabitaciones {
 		
 		//Paredes
 		//h14.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
-		h14.addObjeto(new Obstaculo(14, new int[]{20,1}, new int[]{0,0}));
-		h14.addObjeto(new Obstaculo(14, new int[]{1,9}, new int[]{19,1}));
-		h14.addObjeto(new Obstaculo(14, new int[]{3,1}, new int[]{19,10}));
-		h14.addObjeto(new Obstaculo(14, new int[]{3,1}, new int[]{19,16}));
-		h14.addObjeto(new Obstaculo(14, new int[]{7,1}, new int[]{13,20}));
-		h14.addObjeto(new Obstaculo(14, new int[]{1,2}, new int[]{13,21}));
-		h14.addObjeto(new Obstaculo(14, new int[]{9,1}, new int[]{5,23}));
-		h14.addObjeto(new Obstaculo(14, new int[]{1,2}, new int[]{5,21}));
-		h14.addObjeto(new Obstaculo(14, new int[]{6,1}, new int[]{0,20}));
-		h14.addObjeto(new Obstaculo(14, new int[]{1,19}, new int[]{0,1}));
-		h14.addObjeto(new Obstaculo(14, new int[]{10,1}, new int[]{4,14}));
-		h14.addObjeto(new Obstaculo(14, new int[]{1,2}, new int[]{4,15}));
-		h14.addObjeto(new Obstaculo(14, new int[]{1,2}, new int[]{13,15}));
+		h14.addObjeto(new Pared(14, new int[]{20,1}, new int[]{0,0}));
+		h14.addObjeto(new Pared(14, new int[]{1,9}, new int[]{19,1}));
+		h14.addObjeto(new Pared(14, new int[]{3,1}, new int[]{19,10}));
+		h14.addObjeto(new Pared(14, new int[]{3,1}, new int[]{19,16}));
+		h14.addObjeto(new Pared(14, new int[]{7,1}, new int[]{13,20}));
+		h14.addObjeto(new Pared(14, new int[]{1,2}, new int[]{13,21}));
+		h14.addObjeto(new Pared(14, new int[]{9,1}, new int[]{5,23}));
+		h14.addObjeto(new Pared(14, new int[]{1,2}, new int[]{5,21}));
+		h14.addObjeto(new Pared(14, new int[]{6,1}, new int[]{0,20}));
+		h14.addObjeto(new Pared(14, new int[]{1,19}, new int[]{0,1}));
+		h14.addObjeto(new Pared(14, new int[]{10,1}, new int[]{4,14}));
+		h14.addObjeto(new Pared(14, new int[]{1,2}, new int[]{4,15}));
+		h14.addObjeto(new Pared(14, new int[]{1,2}, new int[]{13,15}));
 		
 		//Obstaculos
 		//h14.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
@@ -631,10 +669,10 @@ public class CreacionHabitaciones {
 		
 		//Paredes
 		//h14.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
-		h15.addObjeto(new Obstaculo(15, new int[]{16,1}, new int[]{0,0}));
-		h15.addObjeto(new Obstaculo(15, new int[]{1,11}, new int[]{15,6}));
-		h15.addObjeto(new Obstaculo(15, new int[]{15,1}, new int[]{0,16}));
-		h15.addObjeto(new Obstaculo(15, new int[]{1,15}, new int[]{0,1}));
+		h15.addObjeto(new Pared(15, new int[]{16,1}, new int[]{0,0}));
+		h15.addObjeto(new Pared(15, new int[]{1,11}, new int[]{15,6}));
+		h15.addObjeto(new Pared(15, new int[]{15,1}, new int[]{0,16}));
+		h15.addObjeto(new Pared(15, new int[]{1,15}, new int[]{0,1}));
 		
 		//Obstaculos
 		//h14.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
