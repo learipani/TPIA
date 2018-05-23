@@ -46,7 +46,7 @@ public class Contenedor extends JComponent
   public void paint(Graphics g){
     numeroHabitacion = environment.getUbicacionAgente().getFirst().getIdHabitacion();
     if(numeroHabitacion ==9 || numeroHabitacion == 7){ //porque las imagenes son mas chicas y tienen que entrar en el jpanel
-  	  ampliacion =15;
+  	  ampliacion =20;
    }else{
   	  ampliacion =30;
    }
