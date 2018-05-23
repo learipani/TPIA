@@ -78,14 +78,21 @@ public class CreacionHabitaciones {
 		
 		//Obstaculos
 		//h1.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
-		h2.addObjeto(new PisoMojado(2, new int[]{1,5}, new int[]{1,1}));
-		h2.addObjeto(new PisoMojado(2, new int[]{1,5}, new int[]{3,1}));
-		h2.addObjeto(new PisoMojado(2, new int[]{1,5}, new int[]{5,1}));
+		h2.addObjeto(new PisoMojado(2, new int[]{1,4}, new int[]{1,2}));
+		h2.addObjeto(new PisoMojado(2, new int[]{1,4}, new int[]{2,2}));
+		h2.addObjeto(new PisoMojado(2, new int[]{1,4}, new int[]{3,2}));
 		h2.addObjeto(new PisoMojado(2, new int[]{1,5}, new int[]{7,1}));
-		h2.addObjeto(new PisoAlfombra(2, new int[]{1,5}, new int[]{2,1}));
+		h2.addObjeto(new PisoAlfombra(2, new int[]{1,5}, new int[]{5,1}));
 		h2.addObjeto(new PisoAlfombra(2, new int[]{1,5}, new int[]{4,1}));
 		h2.addObjeto(new PisoAlfombra(2, new int[]{1,5}, new int[]{6,1}));
-		h2.addObjeto(new PisoAlfombra(2, new int[]{1,5}, new int[]{8,1}));
+		h2.addObjeto(new PisoAlfombra(2, new int[]{3,1}, new int[]{1,1}));
+		
+		/*prueba agente hab 2 en 8,3 y smartphone en hab e en 1,1
+		h2.addObjeto(new PisoMojado(2, new int[]{1,3}, new int[]{9,3}));
+		h2.addObjeto(new PisoMojado(2, new int[]{1,1}, new int[]{10,3}));
+		h2.addObjeto(new PisoAlfombra(2, new int[]{1,1}, new int[]{10,4}));
+		h2.addObjeto(new PisoAlfombra(2, new int[]{1,1}, new int[]{10,5}));
+		h2.addObjeto(new PisoMojado(2, new int[]{1,3}, new int[]{11,3}));*/
 		
 		
 		//Terrenos
@@ -105,13 +112,17 @@ public class CreacionHabitaciones {
 		Puerta pu7 = new Puerta(2, new int[]{11,6}, new int[]{2, 0});
 		Puerta pu8 = new Puerta(2, new int[]{12,6}, new int[]{3, 0});
 		h2.addHabitacionContigua(new Pair<Integer, List<Puerta>> (3, new ArrayList<Puerta>(Arrays.asList(pu6, pu7, pu8))));
-
-		Puerta pu9 = new Puerta(3, new int[]{0,3}, new int[]{32, 1});
+		
+		/*Puerta pu9 = new Puerta(3, new int[]{0,3}, new int[]{32, 1});
 		Puerta pu10 = new Puerta(3, new int[]{0,4}, new int[]{32, 2});
 		Puerta pu11 = new Puerta(3, new int[]{0,5}, new int[]{32, 3});
 		h2.addHabitacionContigua(new Pair<Integer, List<Puerta>> (7, new ArrayList<Puerta>(Arrays.asList(pu9, pu10, pu11))));
-		// faltaria agregar puerta que no lleva a ninguna lado
-
+		*//*Para que vaya a la hab 3 y no se vaya por la 7 cargamos la pared de la linea de abajo tapando
+		 * la puerta que lleva a hab 7
+			h2.addObjeto(new Pared(2, new int[]{1,3}, new int[]{0,3}));
+		*/
+		h2.addObjeto(new Pared(2, new int[]{1,3}, new int[]{0,3}));
+		
 		//PlanoHabitacion
 		h2.ActualizarPlanoHabitacion(new int[]{16,7});
 		
@@ -134,7 +145,19 @@ public class CreacionHabitaciones {
 		
 		//Obstaculos
 		//h1.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
-
+		//CAMA Y MESAS DE LUZ
+		h3.addObjeto(new Obstaculo(3, new int[]{1,7}, new int[]{5,3}));
+		h3.addObjeto(new Obstaculo(3, new int[]{1,7}, new int[]{6,3}));
+		h3.addObjeto(new Obstaculo(3, new int[]{1,7}, new int[]{7,3}));
+		h3.addObjeto(new Obstaculo(3, new int[]{1,7}, new int[]{8,3}));
+		h3.addObjeto(new Obstaculo(3, new int[]{1,7}, new int[]{9,3}));
+		
+		h3.addObjeto(new Pared(3, new int[]{1,2}, new int[]{3,8}));
+		h3.addObjeto(new Pared(3, new int[]{1,2}, new int[]{4,8}));
+		
+		h3.addObjeto(new Pared(3, new int[]{1,2}, new int[]{10,8}));
+		h3.addObjeto(new Pared(3, new int[]{1,2}, new int[]{11,8}));
+		
 		//Terrenos
 		//h1.addObjeto( new TerrenoAdverso(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}, COSTO_TERRENO) );
 
@@ -172,7 +195,14 @@ public class CreacionHabitaciones {
 		
 		//Obstaculos
 		//h1.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
-
+		
+		h4.addObjeto(new Obstaculo(4, new int[]{5,1}, new int[]{1,1}));
+		h4.addObjeto(new Obstaculo(4, new int[]{5,1}, new int[]{1,2}));
+		h4.addObjeto(new Obstaculo(4, new int[]{1,3}, new int[]{1,4}));
+		h4.addObjeto(new Obstaculo(4, new int[]{1,3}, new int[]{2,4}));
+		h4.addObjeto(new Obstaculo(4, new int[]{1,2}, new int[]{3,8}));
+		h4.addObjeto(new Obstaculo(4, new int[]{1,2}, new int[]{4,8}));
+		
 		//Terrenos
 		//h1.addObjeto( new TerrenoAdverso(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}, COSTO_TERRENO) );
 
@@ -209,7 +239,32 @@ public class CreacionHabitaciones {
 		
 		//Obstaculos
 		//h1.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
+		//AUTO 1
+		h5.addObjeto(new Obstaculo(5, new int[]{8,1}, new int[]{6,3}));
+		h5.addObjeto(new Obstaculo(5, new int[]{8,1}, new int[]{6,4}));
+		h5.addObjeto(new Obstaculo(5, new int[]{8,1}, new int[]{6,5}));
+		h5.addObjeto(new Obstaculo(5, new int[]{8,1}, new int[]{6,6}));
+		h5.addObjeto(new Obstaculo(5, new int[]{8,1}, new int[]{6,7}));
+		h5.addObjeto(new Pared(5, new int[]{1,1}, new int[]{7,2}));
+		h5.addObjeto(new Pared(5, new int[]{1,1}, new int[]{12,2}));
+		h5.addObjeto(new Pared(5, new int[]{1,1}, new int[]{7,8}));
+		h5.addObjeto(new Pared(5, new int[]{1,1}, new int[]{12,8}));
+		h5.addObjeto(new Obstaculo(5, new int[]{1,3}, new int[]{5,4}));
+		h5.addObjeto(new Obstaculo(5, new int[]{1,3}, new int[]{14,4}));
+		//AUTO 2
+		h5.addObjeto(new Obstaculo(5, new int[]{8,1}, new int[]{6,12}));
+		h5.addObjeto(new Obstaculo(5, new int[]{8,1}, new int[]{6,13}));
+		h5.addObjeto(new Obstaculo(5, new int[]{8,1}, new int[]{6,14}));
+		h5.addObjeto(new Obstaculo(5, new int[]{8,1}, new int[]{6,15}));
+		h5.addObjeto(new Obstaculo(5, new int[]{8,1}, new int[]{6,16}));
+		h5.addObjeto(new Pared(5, new int[]{1,1}, new int[]{7,11}));
+		h5.addObjeto(new Pared(5, new int[]{1,1}, new int[]{12,11}));
+		h5.addObjeto(new Pared(5, new int[]{1,1}, new int[]{7,17}));
+		h5.addObjeto(new Pared(5, new int[]{1,1}, new int[]{12,17}));
+		h5.addObjeto(new Obstaculo(5, new int[]{1,3}, new int[]{5,13}));
+		h5.addObjeto(new Obstaculo(5, new int[]{1,3}, new int[]{14,13}));
 
+		
 		//Terrenos
 		//h1.addObjeto( new TerrenoAdverso(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}, COSTO_TERRENO) );
 
@@ -322,6 +377,8 @@ public class CreacionHabitaciones {
 		h7.addObjeto( new Obstaculo(7, new int[]{5, 1}, new int[]{4, 16}));
 		h7.addObjeto( new Obstaculo(7, new int[]{5, 1}, new int[]{4, 17}));
 		h7.addObjeto( new Obstaculo(7, new int[]{5, 1}, new int[]{4, 18}));
+		
+		h7.addObjeto( new Obstaculo(7, new int[]{1, 1}, new int[]{5, 10}));
 		
 		//Escalera
 		//h7.addObjeto( new TerrenoAdverso(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}, COSTO_TERRENO) );
@@ -690,7 +747,37 @@ public class CreacionHabitaciones {
 		
 		//Obstaculos
 		//h14.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
-
+		//sillones y mesas
+		h15.addObjeto(new Obstaculo(15, new int[]{1,6}, new int[]{14,9}));
+		h15.addObjeto(new Pared(15, new int[]{1,4}, new int[]{12,10}));
+		h15.addObjeto(new Pared(15, new int[]{1,4}, new int[]{13,10}));
+		h15.addObjeto(new Obstaculo(15, new int[]{2,1}, new int[]{12,9}));
+		h15.addObjeto(new Obstaculo(15, new int[]{2,1}, new int[]{12,14}));
+		
+		
+		h15.addObjeto(new Obstaculo(15, new int[]{1,2}, new int[]{12,6}));
+		h15.addObjeto(new Obstaculo(15, new int[]{1,2}, new int[]{13,6}));
+		
+		h15.addObjeto(new Obstaculo(15, new int[]{6,1}, new int[]{5,5}));
+		h15.addObjeto(new Pared(15, new int[]{4,1}, new int[]{6,6}));
+		h15.addObjeto(new Pared(15, new int[]{4,1}, new int[]{6,7}));
+		h15.addObjeto(new Obstaculo(15, new int[]{1,2}, new int[]{5,6}));
+		h15.addObjeto(new Obstaculo(15, new int[]{1,2}, new int[]{10,6}));
+		
+		h15.addObjeto(new PisoAlfombra(15, new int[]{6,1}, new int[]{5,9}));
+		h15.addObjeto(new PisoAlfombra(15, new int[]{6,1}, new int[]{5,14}));
+		h15.addObjeto(new PisoAlfombra(15, new int[]{1,4}, new int[]{5,10}));
+		h15.addObjeto(new PisoAlfombra(15, new int[]{1,4}, new int[]{10,10}));
+		
+		h15.addObjeto(new Pared(15, new int[]{1,4}, new int[]{6,10}));
+		h15.addObjeto(new Pared(15, new int[]{1,4}, new int[]{7,10}));
+		h15.addObjeto(new Pared(15, new int[]{1,4}, new int[]{8,10}));
+		h15.addObjeto(new Pared(15, new int[]{1,4}, new int[]{9,10}));
+		
+		//MUEBLE
+		h15.addObjeto(new Obstaculo(15, new int[]{1,9}, new int[]{1,4}));
+		h15.addObjeto(new Obstaculo(15, new int[]{1,9}, new int[]{2,4}));
+		
 		//Terrenos
 		//h14.addObjeto( new TerrenoAdverso(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}, COSTO_TERRENO) );
 

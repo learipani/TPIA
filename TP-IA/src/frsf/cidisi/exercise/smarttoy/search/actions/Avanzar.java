@@ -20,7 +20,7 @@ public class Avanzar extends SearchAction {
 	static Contenedor contenedor;
 	static int cantidadHabitaciones = 15;
 	public static int casilla;
-	public static char agentOrientation;
+	private char agentOrientation;
 	/**
 	 * This method updates a tree node state when the search process is running.
 	 * It does not updates the real world state.
@@ -29,7 +29,7 @@ public class Avanzar extends SearchAction {
 	public SearchBasedAgentState execute(SearchBasedAgentState s) {
 		AgentSmartToyState agState = (AgentSmartToyState) s;
 
-		agentOrientation = agState.getCharOrientacion();
+		this.agentOrientation = agState.getCharOrientacion();
 		int fila = agState.getUbicacionAgente().getSecond()[0];
 		int columna = agState.getUbicacionAgente().getSecond()[1];
 		String[][] planoHabitacionAgente = agState.getUbicacionAgente()
@@ -48,7 +48,7 @@ public class Avanzar extends SearchAction {
 		}
 		
 		// [norte oeste sur este] = [arriba izq abajo der]
-		switch (agentOrientation) {
+		switch (this.agentOrientation) {
 		case 'N':
 			fila -= 1;
 			break;
@@ -90,7 +90,7 @@ public class Avanzar extends SearchAction {
 		EnvironmentSmartToyState environmentState = (EnvironmentSmartToyState) est;
 		AgentSmartToyState agState = ((AgentSmartToyState) ast);
 
-		char agentOrientation = agState.getCharOrientacion();
+		this.agentOrientation = agState.getCharOrientacion();
 		int fila = agState.getUbicacionAgente().getSecond()[0];
 		int columna = agState.getUbicacionAgente().getSecond()[1];
 		String[][] planoHabitacionAgente = agState.getUbicacionAgente()
@@ -167,11 +167,11 @@ public class Avanzar extends SearchAction {
 		case 2:
 			return 0.5;
 		case 3: // Las dos escaleras de la casa van de norte a sur en subida y sur a norte en bajada.
-			if(agentOrientation == 'N'){
+			if(this.agentOrientation == 'N'){
 				// escalera subida
 				return 2.0;
 			} else {
-				if(agentOrientation == 'S'){
+				if(this.agentOrientation == 'S'){
 					//escalera bajada
 					return 0.5;
 				}

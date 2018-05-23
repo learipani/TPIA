@@ -108,7 +108,7 @@ public class EnvironmentSmartToy extends Environment {
 	public boolean agentFailed(Action actionReturned) {
 
 		EnvironmentSmartToyState envState = this.getEnvironmentState();
-		if (envState.celdasVisitadas > 200) {
+		if (envState.celdasVisitadas > 210) {
 			return true;
 		}
 
