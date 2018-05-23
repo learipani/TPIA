@@ -176,8 +176,8 @@ public class AgentSmartToyState extends SearchBasedAgentState {
     	this.plano.add(CreacionHabitaciones.createHabitacion15());
     	
     	//Setea la posicion inicial del agente
-    	this.ubicacionAgente.setFirst(this.getPlano().get(6)); //Habitacion .get(HABITACION)
-    	this.ubicacionAgente.setSecond(new int[]{5,9}); //Posicion dentro de la habitación {FILA, COLUMNA})
+    	this.ubicacionAgente.setFirst(this.getPlano().get(14)); //Habitacion .get(HABITACION)
+    	this.ubicacionAgente.setSecond(new int[]{9,1}); //Posicion dentro de la habitación {FILA, COLUMNA})
     	setAgentStringInPlano();
     	
     	//Agrega la habitacion actual a las habitaciones visitadas

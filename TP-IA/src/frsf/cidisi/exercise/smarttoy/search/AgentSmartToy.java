@@ -29,10 +29,12 @@ public class AgentSmartToy extends SearchBasedAgent {
 
         // Create the operators
         Vector<SearchAction> operators = new Vector<SearchAction>();
+        operators.addElement(new GirarIzquierda());
+        operators.addElement(new GirarDerecha());
         operators.addElement(new Avanzar());
         operators.addElement(new IrHabitacionContigua());
-        operators.addElement(new GirarDerecha());
-        operators.addElement(new GirarIzquierda());
+        //operators.addElement(new GirarDerecha());
+        //operators.addElement(new GirarIzquierda());
         //operators.addElement(new Retroceder());	
 
         // Create the Problem which the agent will resolve
@@ -47,8 +49,9 @@ public class AgentSmartToy extends SearchBasedAgent {
     public Action selectAction() {
 
         // Create the search strategy
-    	BreathFirstSearch strategy = new BreathFirstSearch();
-        
+    	IStepCostFunction costFunction = new CostFunction();
+        UniformCostSearch strategy = new UniformCostSearch(costFunction);
+        //BreathFirstSearch strategy = new BreathFirstSearch();
         /**
          * Another search strategy examples:
          * 

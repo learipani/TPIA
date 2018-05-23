@@ -378,7 +378,9 @@ public class CreacionHabitaciones {
 		h7.addObjeto( new Obstaculo(7, new int[]{5, 1}, new int[]{4, 17}));
 		h7.addObjeto( new Obstaculo(7, new int[]{5, 1}, new int[]{4, 18}));
 		
-		h7.addObjeto( new Obstaculo(7, new int[]{1, 1}, new int[]{5, 10}));
+		//h7.addObjeto( new PisoAlfombra(7, new int[]{1, 1}, new int[]{5, 10}));
+		//h7.addObjeto( new PisoAlfombra(7, new int[]{1, 1}, new int[]{5, 8}));
+		//h7.addObjeto( new PisoAlfombra(7, new int[]{1, 1}, new int[]{5, 8}));
 		
 		//Escalera
 		//h7.addObjeto( new TerrenoAdverso(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}, COSTO_TERRENO) );
@@ -768,6 +770,10 @@ public class CreacionHabitaciones {
 		h15.addObjeto(new PisoAlfombra(15, new int[]{6,1}, new int[]{5,14}));
 		h15.addObjeto(new PisoAlfombra(15, new int[]{1,4}, new int[]{5,10}));
 		h15.addObjeto(new PisoAlfombra(15, new int[]{1,4}, new int[]{10,10}));
+		
+		h15.addObjeto(new PisoMojado(15, new int[]{8,1}, new int[]{4,3}));
+		h15.addObjeto(new PisoAlfombra(15, new int[]{7,1}, new int[]{4,2}));
+		h15.addObjeto(new PisoMojado(15, new int[]{7,1}, new int[]{4,4}));
 		
 		h15.addObjeto(new Pared(15, new int[]{1,4}, new int[]{6,10}));
 		h15.addObjeto(new Pared(15, new int[]{1,4}, new int[]{7,10}));
