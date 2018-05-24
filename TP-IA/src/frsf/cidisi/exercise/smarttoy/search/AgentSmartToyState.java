@@ -28,6 +28,7 @@ public class AgentSmartToyState extends SearchBasedAgentState {
 	private boolean[] orientacion;
 	private double tiempo;
 	private int celdasVisitadas ;
+	private int[] ubicacionObjetivoParaHeuristica ; 
 
 
 	public AgentSmartToyState() {
@@ -55,6 +56,11 @@ public class AgentSmartToyState extends SearchBasedAgentState {
     	newAgentSmartToyState.setNumeroHabitacionSmartPhone(this.getNumeroHabitacionSmartPhone());
     	newAgentSmartToyState.setTiempo(this.getTiempo());
     	newAgentSmartToyState.setCeldasVisitadas(this.getCeldasVisitadas());
+    	
+    	int[] newUbicacionObjetivoParaHeuristica = new int[2];
+    	newUbicacionObjetivoParaHeuristica[0] = this.getUbicacionObjetivoParaHeuristica()[0];
+    	newUbicacionObjetivoParaHeuristica[1] = this.getUbicacionObjetivoParaHeuristica()[1];
+    	newAgentSmartToyState.setUbicacionObjetivoParaHeuristica(newUbicacionObjetivoParaHeuristica);
     	
     	//No se si hay que clonar cada arreglo del par por separado
     	newAgentSmartToyState.setOrientacion(this.getOrientacion().clone());
@@ -176,8 +182,8 @@ public class AgentSmartToyState extends SearchBasedAgentState {
     	this.plano.add(CreacionHabitaciones.createHabitacion15());
     	
     	//Setea la posicion inicial del agente
-    	this.ubicacionAgente.setFirst(this.getPlano().get(14)); //Habitacion .get(HABITACION)
-    	this.ubicacionAgente.setSecond(new int[]{9,1}); //Posicion dentro de la habitación {FILA, COLUMNA})
+    	this.ubicacionAgente.setFirst(this.getPlano().get(6)); //Habitacion .get(HABITACION)
+    	this.ubicacionAgente.setSecond(new int[]{4,7}); //Posicion dentro de la habitación {FILA, COLUMNA})
     	setAgentStringInPlano();
     	
     	//Agrega la habitacion actual a las habitaciones visitadas
@@ -191,6 +197,9 @@ public class AgentSmartToyState extends SearchBasedAgentState {
     	
     	//Agrega el estadoProbado actual
     	estadosProbados.add(Integer.toString(this.ubicacionAgente.getSecond()[0])+Integer.toString(this.ubicacionAgente.getSecond()[1])+this.getCharOrientacion());
+    	
+    	//setea posicion para calcular heuristica
+    	this.setUbicacionObjetivoParaHeuristica(this.getUbicacionAgente().getFirst().getUbicacionCentralParaHeuristica());
     	
     	//Setea el número de habitacion donde está el smartphone
     	this.numeroHabitacionSmartPhone = 15;
@@ -357,6 +366,15 @@ public class AgentSmartToyState extends SearchBasedAgentState {
 
 	public void setCeldasVisitadas(int celdasVisitadas) {
 		this.celdasVisitadas = celdasVisitadas;
+	}
+	
+	public int[] getUbicacionObjetivoParaHeuristica() {
+		return ubicacionObjetivoParaHeuristica;
+	}
+
+	public void setUbicacionObjetivoParaHeuristica(
+			int[] ubicacionObjetivoParaHeuristica) {
+		this.ubicacionObjetivoParaHeuristica = ubicacionObjetivoParaHeuristica;
 	}
 	
 	public int getDistanciaAproximada(){

@@ -19,6 +19,10 @@ public class CreacionHabitaciones {
 		//Habitacion h1 = new Habitacion(NUMERO_HABITACION,  new ArrayList<Pair<Integer, List<Puerta>>>(), new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new ArrayList<Objeto>());
 		Habitacion h1 = new Habitacion(1, new String[10][7], new ArrayList<Pair<Integer, List<Puerta>>>(), new ArrayList<Objeto>());
 		
+		//posicion centro de la habitacion para la heeristica
+		int[] ubicacion = new int[]{71,5};
+		h1.setUbicacionCentralParaHeuristica(ubicacion);
+		
 		//Paredes
 		//h1.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
 		h1.addObjeto(new Pared(1, new int[]{1,7}, new int[]{0,0}));
@@ -67,6 +71,10 @@ public class CreacionHabitaciones {
 		
 		//Habitacion h2 = new Habitacion(NUMERO_HABITACION,  new ArrayList<Pair<Integer, List<Puerta>>>(), new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new ArrayList<Objeto>());
 		Habitacion h2 = new Habitacion(2, new String[16][7],  new ArrayList<Pair<Integer, List<Puerta>>>(), new ArrayList<Objeto>());
+		
+		//posicion centro de la habitacion para la heeristica
+		int[] ubicacion = new int[]{73,9};
+		h2.setUbicacionCentralParaHeuristica(ubicacion);
 		
 		//Paredes
 		//h2.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
@@ -135,6 +143,10 @@ public class CreacionHabitaciones {
 		//Habitacion h3 = new Habitacion(NUMERO_HABITACION,  new ArrayList<Pair<Integer, List<Puerta>>>(), new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new ArrayList<Objeto>());
 		Habitacion h3 = new Habitacion(3, new String[15][11],  new ArrayList<Pair<Integer, List<Puerta>>>(), new ArrayList<Objeto>());
 		
+		//posicion centro de la habitacion para la heeristica
+		int[] ubicacion = new int[]{82,17};
+		h3.setUbicacionCentralParaHeuristica(ubicacion);
+		
 		//Paredes
 		//h2.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
 		h3.addObjeto(new Pared(3, new int[]{1,4}, new int[]{0,0}));
@@ -185,6 +197,10 @@ public class CreacionHabitaciones {
 		//Habitacion h4 = new Habitacion(NUMERO_HABITACION,  new ArrayList<Pair<Integer, List<Puerta>>>(), new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new ArrayList<Objeto>());
 		Habitacion h4 = new Habitacion(4, new String[7][11],  new ArrayList<Pair<Integer, List<Puerta>>>(), new ArrayList<Objeto>());
 		
+		//posicion centro de la habitacion para la heeristica
+		int[] ubicacion = new int[]{72,17};
+		h4.setUbicacionCentralParaHeuristica(ubicacion);
+		
 		//Paredes
 		//h2.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
 		h4.addObjeto(new Pared(4, new int[]{1,11}, new int[]{0,0}));
@@ -224,6 +240,10 @@ public class CreacionHabitaciones {
 		
 		//Habitacion h5 = new Habitacion(NUMERO_HABITACION,  new ArrayList<Pair<Integer, List<Puerta>>>(), new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new ArrayList<Objeto>());
 		Habitacion h5 = new Habitacion(5, new String[20][29], new ArrayList<Pair<Integer, List<Puerta>>>(), new ArrayList<Objeto>());
+		
+		//posicion centro de la habitacion para la heeristica
+		int[] ubicacion = new int[]{79,31};
+		h5.setUbicacionCentralParaHeuristica(ubicacion);
 		
 		//Paredes
 		//h2.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
@@ -287,6 +307,10 @@ public class CreacionHabitaciones {
 		//Habitacion h6 = new Habitacion(NUMERO_HABITACION,  new ArrayList<Pair<Integer, List<Puerta>>>(), new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new ArrayList<Objeto>());
 		Habitacion h6 = new Habitacion(6,new String[28][14],  new ArrayList<Pair<Integer, List<Puerta>>>(), new ArrayList<Objeto>());
 		
+		//posicion centro de la habitacion para la heeristica
+		int[] ubicacion = new int[]{52,5};
+		h6.setUbicacionCentralParaHeuristica(ubicacion);
+		
 		//Paredes
 		//h2.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
 		h6.addObjeto(new Pared(6, new int[]{1,14}, new int[]{0,0}));
@@ -325,6 +349,10 @@ public class CreacionHabitaciones {
 		
 		//Habitacion h7 = new Habitacion(NUMERO_HABITACION,  new ArrayList<Pair<Integer, List<Puerta>>>(), new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new ArrayList<Objeto>());
 		Habitacion h7 = new Habitacion(7,new String[36][23],  new ArrayList<Pair<Integer, List<Puerta>>>(), new ArrayList<Objeto>());
+		
+		//posicion centro de la habitacion para la heeristica
+		int[] ubicacion = new int[]{52,18};
+		h7.setUbicacionCentralParaHeuristica(ubicacion);
 		
 		//Paredes
 		//h7.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
@@ -434,6 +462,10 @@ public class CreacionHabitaciones {
 		//Habitacion h8 = new Habitacion(NUMERO_HABITACION,  new ArrayList<Pair<Integer, List<Puerta>>>(), new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new ArrayList<Objeto>());
 		Habitacion h8 = new Habitacion(8,new String[11][13],  new ArrayList<Pair<Integer, List<Puerta>>>(), new ArrayList<Objeto>());
 		
+		//posicion centro de la habitacion para la heeristica
+		int[] ubicacion = new int[]{0,0};
+		h8.setUbicacionCentralParaHeuristica(ubicacion);
+		
 		//Paredes
 		//h2.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
 		h8.addObjeto(new Pared(8, new int[]{1,13}, new int[]{0,0}));
@@ -468,6 +500,10 @@ public class CreacionHabitaciones {
 		
 		//Habitacion h9 = new Habitacion(NUMERO_HABITACION,  new ArrayList<Pair<Integer, List<Puerta>>>(), new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new ArrayList<Objeto>());
 		Habitacion h9 = new Habitacion(9,new String[49][11],  new ArrayList<Pair<Integer, List<Puerta>>>(), new ArrayList<Objeto>());
+		
+		//posicion centro de la habitacion para la heeristica
+		int[] ubicacion = new int[]{0,0};
+		h9.setUbicacionCentralParaHeuristica(ubicacion);
 		
 		//Paredes
 		//h9.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
@@ -547,6 +583,10 @@ public class CreacionHabitaciones {
 		//Habitacion h10 = new Habitacion(NUMERO_HABITACION,  new ArrayList<Pair<Integer, List<Puerta>>>(), new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new ArrayList<Objeto>());
 		Habitacion h10 = new Habitacion(10,new String[14][18],  new ArrayList<Pair<Integer, List<Puerta>>>(), new ArrayList<Objeto>());
 		
+		//posicion centro de la habitacion para la heeristica
+		int[] ubicacion = new int[]{0,0};
+		h10.setUbicacionCentralParaHeuristica(ubicacion);
+		
 		//Paredes
 		//h10.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
 		//verticales
@@ -584,6 +624,10 @@ public class CreacionHabitaciones {
 		//Habitacion h11 = new Habitacion(NUMERO_HABITACION,  new ArrayList<Pair<Integer, List<Puerta>>>(), new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new ArrayList<Objeto>());
 		Habitacion h11 = new Habitacion(11,new String[10][12],  new ArrayList<Pair<Integer, List<Puerta>>>(), new ArrayList<Objeto>());
 		
+		//posicion centro de la habitacion para la heeristica
+		int[] ubicacion = new int[]{0,0};
+		h11.setUbicacionCentralParaHeuristica(ubicacion);
+		
 		//Paredes
 		//h11.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
 		//verticales
@@ -618,6 +662,10 @@ public class CreacionHabitaciones {
 		
 		//Habitacion h12 = new Habitacion(NUMERO_HABITACION,  new ArrayList<Pair<Integer, List<Puerta>>>(), new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new ArrayList<Objeto>());
 		Habitacion h12 = new Habitacion(12, new String[12][18], new ArrayList<Pair<Integer, List<Puerta>>>(), new ArrayList<Objeto>());
+		
+		//posicion centro de la habitacion para la heeristica
+		int[] ubicacion = new int[]{0,0};
+		h12.setUbicacionCentralParaHeuristica(ubicacion);
 		
 		//Paredes
 		//h12.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
@@ -657,6 +705,10 @@ public class CreacionHabitaciones {
 		//Habitacion h13 = new Habitacion(NUMERO_HABITACION,  new ArrayList<Pair<Integer, List<Puerta>>>(), new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new ArrayList<Objeto>());
 		Habitacion h13 = new Habitacion(13,new String[11][16],  new ArrayList<Pair<Integer, List<Puerta>>>(), new ArrayList<Objeto>());
 		
+		//posicion centro de la habitacion para la heeristica
+		int[] ubicacion = new int[]{0,0};
+		h13.setUbicacionCentralParaHeuristica(ubicacion);
+		
 		//Paredes
 		//h13.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
 		//verticales
@@ -694,6 +746,10 @@ public class CreacionHabitaciones {
 		
 		//Habitacion h14 = new Habitacion(NUMERO_HABITACION,  new ArrayList<Pair<Integer, List<Puerta>>>(), new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new ArrayList<Objeto>());
 		Habitacion h14 = new Habitacion(14,new String[22][24], new ArrayList<Pair<Integer, List<Puerta>>>(), new ArrayList<Objeto>());
+		
+		//posicion centro de la habitacion para la heeristica
+		int[] ubicacion = new int[]{0,0};
+		h14.setUbicacionCentralParaHeuristica(ubicacion);
 		
 		//Paredes
 		//h14.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );
@@ -739,6 +795,10 @@ public class CreacionHabitaciones {
 	public static Habitacion createHabitacion15(){
 		//Habitacion h14 = new Habitacion(NUMERO_HABITACION,  new ArrayList<Pair<Integer, List<Puerta>>>(), new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new ArrayList<Objeto>());
 		Habitacion h15 = new Habitacion(15,new String[16][17], new ArrayList<Pair<Integer, List<Puerta>>>(), new ArrayList<Objeto>());
+		
+		//posicion centro de la habitacion para la heeristica
+		int[] ubicacion = new int[]{11,6};
+		h15.setUbicacionCentralParaHeuristica(ubicacion);
 		
 		//Paredes
 		//h14.addObjeto( new Obstaculo(NUMERO_HABITACION, new int[]{TAMAÑO_FILAS, TAMAÑO_COLUMNAS}, new int[]{FILA_INICIAL, COLUMNA_INICIAL}) );

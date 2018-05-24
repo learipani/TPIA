@@ -18,6 +18,8 @@ public class Habitacion {
 	private String[][] planoHabitacion; 
 	private List<Pair<Integer, List<Puerta>>> habitacionesContiguas;
 	private List<Objeto> objetos;
+	private int[] ubicacionCentralParaHeuristica; 
+
 
 	public Habitacion(int idHabitacion, String[][] planoHabitacion,
 			List<Pair<Integer, List<Puerta>>> habitacionesContiguas,
@@ -83,12 +85,27 @@ public class Habitacion {
 		this.planoHabitacion[fila][columna] = null;
 	}
 	
+	public int[] getUbicacionCentralParaHeuristica() {
+		return ubicacionCentralParaHeuristica;
+	}
+
+	public void setUbicacionCentralParaHeuristica(
+			int[] ubicacionCentralParaHeuristica) {
+		this.ubicacionCentralParaHeuristica = ubicacionCentralParaHeuristica;
+	}
+	
 	//Metodo clone para poder clonar AgentSmartToyState
 	public Habitacion clone(){
 		Habitacion newHabitacion = new Habitacion();
 		
 		//clonacion id
 		newHabitacion.setIdHabitacion(this.getIdHabitacion());
+		
+		//ubicacion Central Para Heuristica
+		int[] newUbicacionCentralParaHeuristica = new int[2];
+		newUbicacionCentralParaHeuristica[0]=this.getUbicacionCentralParaHeuristica()[0];
+		newUbicacionCentralParaHeuristica[1]=this.getUbicacionCentralParaHeuristica()[1];
+		newHabitacion.setUbicacionCentralParaHeuristica(newUbicacionCentralParaHeuristica);
 		
 		//clonacion habitacionescontiguas
 		List<Pair<Integer, List<Puerta>>> newHabitacionesContiguas = new ArrayList<Pair<Integer, List<Puerta>>>();

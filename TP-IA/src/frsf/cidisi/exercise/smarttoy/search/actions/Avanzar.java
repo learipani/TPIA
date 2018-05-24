@@ -175,10 +175,10 @@ public class Avanzar extends SearchAction {
 					//escalera bajada
 					return 0.5;
 				}
-				else return 1.0;
+				else return 1.0; //si se mueve en la escalera sin subir ni bajar
 			}
 		}
-		return 1.0;
+		return 1.0; // piso normal
 	}
 	
 	private int obtenerReferenciaDeTerreno(String s){
