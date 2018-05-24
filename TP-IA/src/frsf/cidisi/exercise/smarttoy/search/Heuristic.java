@@ -21,7 +21,7 @@ public class Heuristic implements IEstimatedCostFunction {
 		double distancia, cuadrado1, cuadrado2;
         
 		if(agState.getUbicacionAgente().getFirst().getIdHabitacion()==agState.getNumeroHabitacionSmartPhone()){
-			ubicacionObjetivo = agState.getUbicacionAgente().getFirst().getUbicacionCentralParaHeuristica();
+			ubicacionObjetivo = agState.getUbicacionAgente().getFirst().getUbicacionCentralLocal();
 			ubicacionActual = agState.getUbicacionAgente().getSecond();
         	cuadrado1 = Math.pow(ubicacionObjetivo[0]-ubicacionActual[0], 2);
         	cuadrado2 = Math.pow(ubicacionObjetivo[1]-ubicacionActual[1], 2);
@@ -29,7 +29,7 @@ public class Heuristic implements IEstimatedCostFunction {
         }
         else{
         	ubicacionObjetivo = agState.getUbicacionObjetivoParaHeuristica();
-        	ubicacionActual = agState.getUbicacionAgente().getFirst().getUbicacionCentralParaHeuristica();
+        	ubicacionActual = agState.getUbicacionAgente().getFirst().getUbicacionCentralGlobal();
         	cuadrado1 = Math.pow(ubicacionObjetivo[0]-ubicacionActual[0], 2);
         	cuadrado2 = Math.pow(ubicacionObjetivo[1]-ubicacionActual[1], 2);
         	distancia = Math.sqrt(cuadrado1+cuadrado2);

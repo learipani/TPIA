@@ -18,8 +18,8 @@ public class Habitacion {
 	private String[][] planoHabitacion; 
 	private List<Pair<Integer, List<Puerta>>> habitacionesContiguas;
 	private List<Objeto> objetos;
-	private int[] ubicacionCentralParaHeuristica; 
-
+	private int[] ubicacionCentralGlobal;
+	private int[] ubicacionCentralLocal;
 
 	public Habitacion(int idHabitacion, String[][] planoHabitacion,
 			List<Pair<Integer, List<Puerta>>> habitacionesContiguas,
@@ -85,13 +85,20 @@ public class Habitacion {
 		this.planoHabitacion[fila][columna] = null;
 	}
 	
-	public int[] getUbicacionCentralParaHeuristica() {
-		return ubicacionCentralParaHeuristica;
+	public int[] getUbicacionCentralGlobal() {
+		return ubicacionCentralGlobal;
 	}
 
-	public void setUbicacionCentralParaHeuristica(
-			int[] ubicacionCentralParaHeuristica) {
-		this.ubicacionCentralParaHeuristica = ubicacionCentralParaHeuristica;
+	public void setUbicacionCentralGlobal(int[] ubicacionCentralGlobal) {
+		this.ubicacionCentralGlobal = ubicacionCentralGlobal;
+	}
+	
+	public int[] getUbicacionCentralLocal() {
+		return ubicacionCentralLocal;
+	}
+
+	public void setUbicacionCentralLocal(int[] ubicacionCentralLocal) {
+		this.ubicacionCentralLocal = ubicacionCentralLocal;
 	}
 	
 	//Metodo clone para poder clonar AgentSmartToyState
@@ -101,11 +108,17 @@ public class Habitacion {
 		//clonacion id
 		newHabitacion.setIdHabitacion(this.getIdHabitacion());
 		
-		//ubicacion Central Para Heuristica
-		int[] newUbicacionCentralParaHeuristica = new int[2];
-		newUbicacionCentralParaHeuristica[0]=this.getUbicacionCentralParaHeuristica()[0];
-		newUbicacionCentralParaHeuristica[1]=this.getUbicacionCentralParaHeuristica()[1];
-		newHabitacion.setUbicacionCentralParaHeuristica(newUbicacionCentralParaHeuristica);
+		//ubicacion Central global Para Heuristica
+		int[] newUbicacionCentralGlobal = new int[2];
+		newUbicacionCentralGlobal[0]=this.getUbicacionCentralGlobal()[0];
+		newUbicacionCentralGlobal[1]=this.getUbicacionCentralGlobal()[1];
+		newHabitacion.setUbicacionCentralGlobal(newUbicacionCentralGlobal);
+		
+		//ubicacion Central local Para Heuristica
+		int[] newUbicacionCentralLocal = new int[2];
+		newUbicacionCentralLocal[0]=this.getUbicacionCentralLocal()[0];
+		newUbicacionCentralLocal[1]=this.getUbicacionCentralLocal()[1];
+		newHabitacion.setUbicacionCentralLocal(newUbicacionCentralLocal);
 		
 		//clonacion habitacionescontiguas
 		List<Pair<Integer, List<Puerta>>> newHabitacionesContiguas = new ArrayList<Pair<Integer, List<Puerta>>>();
