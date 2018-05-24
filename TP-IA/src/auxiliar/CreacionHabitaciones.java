@@ -20,11 +20,11 @@ public class CreacionHabitaciones {
 		Habitacion h1 = new Habitacion(1, new String[10][7], new ArrayList<Pair<Integer, List<Puerta>>>(), new ArrayList<Objeto>());
 		
 		//posicion centro global de la habitacion para la heeristica
-		int[] ubicacion = new int[]{71,5};
+		int[] ubicacion = new int[]{71,3};
 		h1.setUbicacionCentralGlobal(ubicacion);
 		
 		//posicion centro local de la habitacion para la heuristica
-		int[] ubicacionLocal = new int[]{0,0};
+		int[] ubicacionLocal = new int[]{5,3};
 		h1.setUbicacionCentralLocal(ubicacionLocal);
 		
 		//Paredes
@@ -81,7 +81,7 @@ public class CreacionHabitaciones {
 		h2.setUbicacionCentralGlobal(ubicacion);
 		
 		//posicion centro local de la habitacion para la heuristica
-		int[] ubicacionLocal = new int[]{0,0};
+		int[] ubicacionLocal = new int[]{7,3};
 		h2.setUbicacionCentralLocal(ubicacionLocal);
 		
 		//Paredes
@@ -156,7 +156,7 @@ public class CreacionHabitaciones {
 		h3.setUbicacionCentralGlobal(ubicacion);
 		
 		//posicion centro local de la habitacion para la heuristica
-		int[] ubicacionLocal = new int[]{0,0};
+		int[] ubicacionLocal = new int[]{7,2};
 		h3.setUbicacionCentralLocal(ubicacionLocal);
 		
 		//Paredes
@@ -214,7 +214,7 @@ public class CreacionHabitaciones {
 		h4.setUbicacionCentralGlobal(ubicacion);
 		
 		//posicion centro local de la habitacion para la heuristica
-		int[] ubicacionLocal = new int[]{0,0};
+		int[] ubicacionLocal = new int[]{4,5};
 		h4.setUbicacionCentralLocal(ubicacionLocal);
 		
 		//Paredes
@@ -262,7 +262,7 @@ public class CreacionHabitaciones {
 		h5.setUbicacionCentralGlobal(ubicacion);
 		
 		//posicion centro local de la habitacion para la heuristica
-		int[] ubicacionLocal = new int[]{0,0};
+		int[] ubicacionLocal = new int[]{9,9};
 		h5.setUbicacionCentralLocal(ubicacionLocal);
 		
 		//Paredes
@@ -328,11 +328,11 @@ public class CreacionHabitaciones {
 		Habitacion h6 = new Habitacion(6,new String[28][14],  new ArrayList<Pair<Integer, List<Puerta>>>(), new ArrayList<Objeto>());
 		
 		//posicion centro global de la habitacion para la heeristica
-		int[] ubicacion = new int[]{52,5};
+		int[] ubicacion = new int[]{51,4};
 		h6.setUbicacionCentralGlobal(ubicacion);
 		
 		//posicion centro local de la habitacion para la heuristica
-		int[] ubicacionLocal = new int[]{0,0};
+		int[] ubicacionLocal = new int[]{12,4};
 		h6.setUbicacionCentralLocal(ubicacionLocal);
 		
 		//Paredes
@@ -412,11 +412,11 @@ public class CreacionHabitaciones {
 		Habitacion h7 = new Habitacion(7,new String[36][23],  new ArrayList<Pair<Integer, List<Puerta>>>(), new ArrayList<Objeto>());
 		
 		//posicion centro global de la habitacion para la heuristica
-		int[] ubicacion = new int[]{52,18};
+		int[] ubicacion = new int[]{52,19};
 		h7.setUbicacionCentralGlobal(ubicacion);
 		
 		//posicion centro local de la habitacion para la heuristica
-		int[] ubicacionLocal = new int[]{18,13};
+		int[] ubicacionLocal = new int[]{18,11};
 		h7.setUbicacionCentralLocal(ubicacionLocal);
 		
 		//Paredes
@@ -528,11 +528,11 @@ public class CreacionHabitaciones {
 		Habitacion h8 = new Habitacion(8,new String[11][13],  new ArrayList<Pair<Integer, List<Puerta>>>(), new ArrayList<Objeto>());
 		
 		//posicion centro global de la habitacion para la heeristica
-		int[] ubicacion = new int[]{0,0};
+		int[] ubicacion = new int[]{44,67};
 		h8.setUbicacionCentralGlobal(ubicacion);
 		
 		//posicion centro local de la habitacion para la heuristica
-		int[] ubicacionLocal = new int[]{0,0};
+		int[] ubicacionLocal = new int[]{5,6};
 		h8.setUbicacionCentralLocal(ubicacionLocal);
 		
 		//Paredes
@@ -580,11 +580,11 @@ public class CreacionHabitaciones {
 		Habitacion h9 = new Habitacion(9,new String[49][11],  new ArrayList<Pair<Integer, List<Puerta>>>(), new ArrayList<Objeto>());
 		
 		//posicion centro global de la habitacion para la heeristica
-		int[] ubicacion = new int[]{0,0};
+		int[] ubicacion = new int[]{43,32};
 		h9.setUbicacionCentralGlobal(ubicacion);
 		
 		//posicion centro local de la habitacion para la heuristica
-		int[] ubicacionLocal = new int[]{0,0};
+		int[] ubicacionLocal = new int[]{22,3};
 		h9.setUbicacionCentralLocal(ubicacionLocal);
 		
 		//Paredes
@@ -671,11 +671,11 @@ public class CreacionHabitaciones {
 		Habitacion h10 = new Habitacion(10,new String[14][18],  new ArrayList<Pair<Integer, List<Puerta>>>(), new ArrayList<Objeto>());
 		
 		//posicion centro global de la habitacion para la heeristica
-		int[] ubicacion = new int[]{0,0};
+		int[] ubicacion = new int[]{56,42};
 		h10.setUbicacionCentralGlobal(ubicacion);
 		
 		//posicion centro local de la habitacion para la heuristica
-		int[] ubicacionLocal = new int[]{0,0};
+		int[] ubicacionLocal = new int[]{6,8};
 		h10.setUbicacionCentralLocal(ubicacionLocal);
 		
 		//Paredes
@@ -736,11 +736,11 @@ public class CreacionHabitaciones {
 		Habitacion h11 = new Habitacion(11,new String[10][12],  new ArrayList<Pair<Integer, List<Puerta>>>(), new ArrayList<Objeto>());
 		
 		//posicion centro global de la habitacion para la heeristica
-		int[] ubicacion = new int[]{0,0};
+		int[] ubicacion = new int[]{44,45};
 		h11.setUbicacionCentralGlobal(ubicacion);
 		
 		//posicion centro local de la habitacion para la heuristica
-		int[] ubicacionLocal = new int[]{0,0};
+		int[] ubicacionLocal = new int[]{4,5};
 		h11.setUbicacionCentralLocal(ubicacionLocal);
 		
 		//Paredes
@@ -793,11 +793,11 @@ public class CreacionHabitaciones {
 		Habitacion h12 = new Habitacion(12, new String[12][18], new ArrayList<Pair<Integer, List<Puerta>>>(), new ArrayList<Objeto>());
 		
 		//posicion centro global de la habitacion para la heeristica
-		int[] ubicacion = new int[]{0,0};
+		int[] ubicacion = new int[]{35,43};
 		h12.setUbicacionCentralGlobal(ubicacion);
 		
 		//posicion centro local de la habitacion para la heuristica
-		int[] ubicacionLocal = new int[]{0,0};
+		int[] ubicacionLocal = new int[]{6,8};
 		h12.setUbicacionCentralLocal(ubicacionLocal);
 		
 		//Paredes
@@ -854,11 +854,11 @@ public class CreacionHabitaciones {
 		Habitacion h13 = new Habitacion(13,new String[11][16],  new ArrayList<Pair<Integer, List<Puerta>>>(), new ArrayList<Objeto>());
 		
 		//posicion centro de la habitacion para la heeristica
-		int[] ubicacion = new int[]{0,0};
+		int[] ubicacion = new int[]{23,43};
 		h13.setUbicacionCentralGlobal(ubicacion);
 		
 		//posicion centro global local de la habitacion para la heuristica
-		int[] ubicacionLocal = new int[]{0,0};
+		int[] ubicacionLocal = new int[]{4,8};
 		h13.setUbicacionCentralLocal(ubicacionLocal);
 		
 		//Paredes
@@ -921,11 +921,11 @@ public class CreacionHabitaciones {
 		Habitacion h14 = new Habitacion(14,new String[22][24], new ArrayList<Pair<Integer, List<Puerta>>>(), new ArrayList<Objeto>());
 		
 		//posicion centro global de la habitacion para la heeristica
-		int[] ubicacion = new int[]{0,0};
+		int[] ubicacion = new int[]{12,29};
 		h14.setUbicacionCentralGlobal(ubicacion);
 		
 		//posicion centro local de la habitacion para la heuristica
-		int[] ubicacionLocal = new int[]{0,0};
+		int[] ubicacionLocal = new int[]{13,10};
 		h14.setUbicacionCentralLocal(ubicacionLocal);
 		
 		//Paredes
@@ -995,11 +995,11 @@ public class CreacionHabitaciones {
 		Habitacion h15 = new Habitacion(15,new String[16][17], new ArrayList<Pair<Integer, List<Puerta>>>(), new ArrayList<Objeto>());
 		
 		//posicion centro global de la habitacion para la heeristica
-		int[] ubicacion = new int[]{11,6};
+		int[] ubicacion = new int[]{26,17};
 		h15.setUbicacionCentralGlobal(ubicacion);
 		
 		//posicion centro local de la habitacion para la heuristica
-		int[] ubicacionLocal = new int[]{0,0};
+		int[] ubicacionLocal = new int[]{7,4};
 		h15.setUbicacionCentralLocal(ubicacionLocal);
 		
 		//Paredes

@@ -182,8 +182,8 @@ public class AgentSmartToyState extends SearchBasedAgentState {
     	this.plano.add(CreacionHabitaciones.createHabitacion15());
     	
     	//Setea la posicion inicial del agente
-    	this.ubicacionAgente.setFirst(this.getPlano().get(6)); //Habitacion .get(HABITACION)
-    	this.ubicacionAgente.setSecond(new int[]{10,15}); //Posicion dentro de la habitación {FILA, COLUMNA})
+    	this.ubicacionAgente.setFirst(this.getPlano().get(14)); //Habitacion .get(HABITACION)
+    	this.ubicacionAgente.setSecond(new int[]{1,1}); //Posicion dentro de la habitación {FILA, COLUMNA})
     	setAgentStringInPlano();
     	
     	//Agrega la habitacion actual a las habitaciones visitadas
@@ -202,7 +202,7 @@ public class AgentSmartToyState extends SearchBasedAgentState {
     	this.setUbicacionObjetivoParaHeuristica(this.getUbicacionAgente().getFirst().getUbicacionCentralGlobal());
     	
     	//Setea el número de habitacion donde está el smartphone
-    	this.numeroHabitacionSmartPhone = 7;
+    	this.numeroHabitacionSmartPhone = 15;
     	//plano.get(1).getPlanoHabitacion()[1][5] = AgentSmartToyPerception.META_PERCEPTION; (NO VA MAS ESTA LINEA :D)
 
     }
