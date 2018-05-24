@@ -33,7 +33,6 @@ public class AgentSmartToy extends SearchBasedAgent {
         operators.addElement(new IrHabitacionContigua());
         operators.addElement(new GirarDerecha());
         operators.addElement(new GirarIzquierda());
-        //operators.addElement(new Retroceder());	
 
         // Create the Problem which the agent will resolve
         Problem problem = new Problem(agGoal, agState, operators);

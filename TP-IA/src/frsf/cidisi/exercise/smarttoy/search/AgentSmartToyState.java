@@ -52,7 +52,6 @@ public class AgentSmartToyState extends SearchBasedAgentState {
         
     	AgentSmartToyState newAgentSmartToyState = new AgentSmartToyState();
     	
-    	//Los atributos de tipo primitvos se pasan por copia(no hay)
     	newAgentSmartToyState.setNumeroHabitacionSmartPhone(this.getNumeroHabitacionSmartPhone());
     	newAgentSmartToyState.setTiempo(this.getTiempo());
     	newAgentSmartToyState.setCeldasVisitadas(this.getCeldasVisitadas());
@@ -62,7 +61,6 @@ public class AgentSmartToyState extends SearchBasedAgentState {
     	newUbicacionObjetivoParaHeuristica[1] = this.getUbicacionObjetivoParaHeuristica()[1];
     	newAgentSmartToyState.setUbicacionObjetivoParaHeuristica(newUbicacionObjetivoParaHeuristica);
     	
-    	//No se si hay que clonar cada arreglo del par por separado
     	newAgentSmartToyState.setOrientacion(this.getOrientacion().clone());
     	
     	Pair<Habitacion, int[]> newUbicacionAgente = new Pair<Habitacion, int[]>(null, null);
@@ -182,8 +180,8 @@ public class AgentSmartToyState extends SearchBasedAgentState {
     	this.plano.add(CreacionHabitaciones.createHabitacion15());
     	
     	//Setea la posicion inicial del agente
-    	this.ubicacionAgente.setFirst(this.getPlano().get(14)); //Habitacion .get(HABITACION)
-    	this.ubicacionAgente.setSecond(new int[]{1,1}); //Posicion dentro de la habitación {FILA, COLUMNA})
+    	this.ubicacionAgente.setFirst(this.getPlano().get(8)); //Habitacion .get(HABITACION)
+    	this.ubicacionAgente.setSecond(new int[]{45,5}); //Posicion dentro de la habitación {FILA, COLUMNA})
     	setAgentStringInPlano();
     	
     	//Agrega la habitacion actual a las habitaciones visitadas
@@ -202,8 +200,7 @@ public class AgentSmartToyState extends SearchBasedAgentState {
     	this.setUbicacionObjetivoParaHeuristica(this.getUbicacionAgente().getFirst().getUbicacionCentralGlobal());
     	
     	//Setea el número de habitacion donde está el smartphone
-    	this.numeroHabitacionSmartPhone = 15;
-    	//plano.get(1).getPlanoHabitacion()[1][5] = AgentSmartToyPerception.META_PERCEPTION; (NO VA MAS ESTA LINEA :D)
+    	this.numeroHabitacionSmartPhone = 5;
 
     }
 
@@ -244,9 +241,7 @@ public class AgentSmartToyState extends SearchBasedAgentState {
     @Override
     public boolean equals(Object obj) {
        
-    	//Dos estados son iguales si se encuentran en la misma habitacion, y en la misma posicion
-    	//se puede contemplar si la lista de habitaciones visitadas es la misma,
-    	//pero en este momento no hay un metodo que diga las habitaciones visitadas    	
+    	//Dos estados son iguales si se encuentran en la misma habitacion, y en la misma posicion y con la misma orientacion
 
     	AgentSmartToyState estadoComparado = (AgentSmartToyState)obj;
     	
@@ -375,105 +370,6 @@ public class AgentSmartToyState extends SearchBasedAgentState {
 	public void setUbicacionObjetivoParaHeuristica(
 			int[] ubicacionObjetivoParaHeuristica) {
 		this.ubicacionObjetivoParaHeuristica = ubicacionObjetivoParaHeuristica;
-	}
-	
-	public int getDistanciaAproximada(){
-		int distanciaAproximada;
-		int[] posicionAgente = this.getUbicacionAgente().getSecond();
-		int[] posicionObjetivo;
-		
-		// Esto que está ahora se puede refactorizar
-		LinkedList<Integer>[] matrizAdyacencia = new LinkedList[15];
-		for (int i=0; i<15; i++)
-			matrizAdyacencia[i] = new LinkedList();
-
-		for (Habitacion itemHabitacion : this.getPlano()) {
-			for (Pair<Integer, List<Puerta>> itemHabContigua : itemHabitacion
-					.getHabitacionesContiguas()) {
-				matrizAdyacencia[itemHabitacion.getIdHabitacion()-1].add(itemHabContigua.getFirst()-1);
-			}
-		}
-		//
-		
-		if(this.getUbicacionAgente().getFirst().getIdHabitacion() != this.getNumeroHabitacionSmartPhone()){
-			/*Si no está en la misma habitación que el nene, calcula una distancia
-			 *  a la primer puerta que encuentre que lo lleva a una habitación mas
-			 *  cercana al agente*/
-			List<Puerta> posiblesPuertas = new ArrayList<Puerta>();
-			for (Pair<Integer, List<Puerta>> itemHabitacionContigua : this.getUbicacionAgente().getFirst().getHabitacionesContiguas()) {
-				if(this.ExisteCamino(itemHabitacionContigua.getFirst(),this.numeroHabitacionSmartPhone, 15, matrizAdyacencia)){
-					//Esto agrega a las posibles puertas, la puerta del medio de la lista de puertas
-					posiblesPuertas.add(itemHabitacionContigua.getSecond().get(Math.round(itemHabitacionContigua.getSecond().size()/2)));
-				}
-			}
-			//Esto después hay que cambiarlo, que no siempre tome la primer puerta de la lista
-			posicionObjetivo = posiblesPuertas.get(0).getPosicionIngreso();
-			distanciaAproximada = this.CalcularDistanciaEntrePuntos(posicionAgente, posicionObjetivo)-1;
-		}
-		else{
-			/*Si está en la misma habitación que el nene, calcula la distancia a un punto dado
-			 * Ahora para probar, la distancia objetivo es 3,3*/
-			posicionObjetivo = new int[]{3,3};
-			distanciaAproximada = this.CalcularDistanciaEntrePuntos(posicionAgente, posicionObjetivo);
-			
-		}
-		System.out.println(">>>>>DISTANCIA APROX:   " + distanciaAproximada);
-		return distanciaAproximada;
-	}
-	
-	private int CalcularDistanciaEntrePuntos(int[] p1, int[] p2){
-		int distanciaHorizontal, distanciaVertical;
-		distanciaHorizontal = Math.abs(p1[0] - p2[0]);
-		distanciaVertical = Math.abs(p1[1] - p2[1]);
-		
-		return distanciaHorizontal + distanciaVertical ;
-	}
-	
-	private Boolean ExisteCamino(int s, int d, int cantidadHabitaciones, LinkedList<Integer>[] matrizAdyacencia)
-	{
-
-		//Guarda los nodos ya visitados
-		boolean visited[] = new boolean[cantidadHabitaciones];
-
-		// Create a queue for BFS
-		LinkedList<Integer> queue = new LinkedList<Integer>();
-
-		//Marca que el nodo actual fue visitado
-		visited[s]=true;
-		queue.add(s);
-
-		// i son los vertices adyacentes al vertice actual
-		Iterator<Integer> i;
-		while (queue.size()!=0)
-		{
-			// Dequeue a vertex from queue and print it
-			s = queue.poll();
-
-			int n;
-			i = matrizAdyacencia[s].listIterator();
-
-			// Get all adjacent vertices of the dequeued vertex s
-			// If a adjacent has not been visited, then mark it
-			// visited and enqueue it
-			while (i.hasNext())
-			{
-				n = i.next();
-
-				// If this adjacent node is the destination node,
-				// then return true
-				if (n==d)
-					return true;
-
-				// Else, continue to do BFS
-				if (!visited[n])
-				{
-					visited[n] = true;
-					queue.add(n);
-				}
-			}
-		}
-		// If BFS is complete without visited d
-		return false;
 	}
 	
 }

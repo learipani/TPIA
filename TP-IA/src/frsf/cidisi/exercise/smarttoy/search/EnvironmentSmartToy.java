@@ -27,7 +27,6 @@ public class EnvironmentSmartToy extends Environment {
 	public AgentSmartToyPerception getPercept() {
 		// Create a new perception to return
 		AgentSmartToyPerception perception = new AgentSmartToyPerception();
-		// AgentSmartToy agent = (AgentSmartToy) agentIn;
 
 		// Obtiene el estado del ambiente y lo guarda en una variable
 		EnvironmentSmartToyState environmentState = this.getEnvironmentState();

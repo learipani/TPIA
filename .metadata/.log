@@ -4632,3 +4632,250 @@ HandlerActivation(commandId=org.eclipse.ui.file.refresh,
 HandlerActivation(commandId=org.eclipse.ui.file.refresh,
 	handler=ActionHandler(org.eclipse.ui.internal.editors.text.RefreshEditorAction@10f522b),
 	expression=AndExpression(LegacyEditorActionBarExpression(org.eclipse.jdt.ui.CompilationUnitEditor),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@5ed836)),sourcePriority=4210689)
+!SESSION 2018-05-24 17:51:34.547 -----------------------------------------------
+eclipse.buildId=I20090611-1540
+java.version=1.6.0_45
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=es_AR
+Framework arguments:  -product org.eclipse.epp.package.modeling.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.modeling.product
+
+!ENTRY org.eclipse.ui 4 0 2018-05-24 17:51:46.221
+!MESSAGE Unable to create editor ID org.eclipse.jdt.ui.CompilationUnitEditor: The file does not exist.
+!STACK 1
+org.eclipse.core.runtime.CoreException: The file does not exist.
+	at org.eclipse.core.internal.filebuffers.ResourceFileBuffer.create(ResourceFileBuffer.java:237)
+	at org.eclipse.core.internal.filebuffers.TextFileBufferManager.connect(TextFileBufferManager.java:113)
+	at org.eclipse.ui.editors.text.TextFileDocumentProvider.createFileInfo(TextFileDocumentProvider.java:559)
+	at org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitDocumentProvider.createFileInfo(CompilationUnitDocumentProvider.java:962)
+	at org.eclipse.ui.editors.text.TextFileDocumentProvider.connect(TextFileDocumentProvider.java:478)
+	at org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitDocumentProvider.connect(CompilationUnitDocumentProvider.java:1198)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.doSetInput(AbstractTextEditor.java:4134)
+	at org.eclipse.ui.texteditor.StatusTextEditor.doSetInput(StatusTextEditor.java:203)
+	at org.eclipse.ui.texteditor.AbstractDecoratedTextEditor.doSetInput(AbstractDecoratedTextEditor.java:1413)
+	at org.eclipse.jdt.internal.ui.javaeditor.JavaEditor.internalDoSetInput(JavaEditor.java:2552)
+	at org.eclipse.jdt.internal.ui.javaeditor.JavaEditor.doSetInput(JavaEditor.java:2525)
+	at org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitEditor.doSetInput(CompilationUnitEditor.java:1371)
+	at org.eclipse.ui.texteditor.AbstractTextEditor$19.run(AbstractTextEditor.java:3115)
+	at org.eclipse.jface.operation.ModalContext.runInCurrentThread(ModalContext.java:464)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:372)
+	at org.eclipse.jface.window.ApplicationWindow$1.run(ApplicationWindow.java:759)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.jface.window.ApplicationWindow.run(ApplicationWindow.java:756)
+	at org.eclipse.ui.internal.WorkbenchWindow.run(WorkbenchWindow.java:2578)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.internalInit(AbstractTextEditor.java:3133)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.init(AbstractTextEditor.java:3160)
+	at org.eclipse.ui.internal.EditorManager.createSite(EditorManager.java:798)
+	at org.eclipse.ui.internal.EditorReference.createPartHelper(EditorReference.java:644)
+	at org.eclipse.ui.internal.EditorReference.createPart(EditorReference.java:462)
+	at org.eclipse.ui.internal.WorkbenchPartReference.getPart(WorkbenchPartReference.java:595)
+	at org.eclipse.ui.internal.EditorAreaHelper.setVisibleEditor(EditorAreaHelper.java:271)
+	at org.eclipse.ui.internal.EditorManager.setVisibleEditor(EditorManager.java:1417)
+	at org.eclipse.ui.internal.EditorManager$5.runWithException(EditorManager.java:942)
+	at org.eclipse.ui.internal.StartupThreading$StartupRunnable.run(StartupThreading.java:31)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:134)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3855)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3476)
+	at org.eclipse.ui.application.WorkbenchAdvisor.openWindows(WorkbenchAdvisor.java:803)
+	at org.eclipse.ui.internal.Workbench$28.runWithException(Workbench.java:1384)
+	at org.eclipse.ui.internal.StartupThreading$StartupRunnable.run(StartupThreading.java:31)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:134)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3855)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3476)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2316)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2221)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:500)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:493)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:113)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:194)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:368)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:559)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:514)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1311)
+!SUBENTRY 1 org.eclipse.core.filebuffers 4 0 2018-05-24 17:51:46.222
+!MESSAGE The file does not exist.
+
+!ENTRY org.eclipse.ui 2 2 2018-05-24 17:51:46.237
+!MESSAGE Ignored attempt to add saveable that was already registered
+!STACK 0
+org.eclipse.core.runtime.AssertionFailedException: unknown saveable: org.eclipse.ui.internal.DefaultSaveable@c0f91d from part: org.eclipse.ui.internal.ErrorEditorPart@c0f91d
+	at org.eclipse.ui.internal.SaveablesList.logWarning(SaveablesList.java:187)
+	at org.eclipse.ui.internal.SaveablesList.addModel(SaveablesList.java:117)
+	at org.eclipse.ui.internal.SaveablesList.addModels(SaveablesList.java:289)
+	at org.eclipse.ui.internal.SaveablesList.postOpen(SaveablesList.java:684)
+	at org.eclipse.ui.internal.PartList.partOpened(PartList.java:234)
+	at org.eclipse.ui.internal.PartList.access$0(PartList.java:210)
+	at org.eclipse.ui.internal.PartList$1.propertyChanged(PartList.java:40)
+	at org.eclipse.ui.internal.WorkbenchPartReference.fireInternalPropertyChange(WorkbenchPartReference.java:375)
+	at org.eclipse.ui.internal.WorkbenchPartReference.getPart(WorkbenchPartReference.java:610)
+	at org.eclipse.ui.internal.EditorAreaHelper.setVisibleEditor(EditorAreaHelper.java:271)
+	at org.eclipse.ui.internal.EditorManager.setVisibleEditor(EditorManager.java:1417)
+	at org.eclipse.ui.internal.EditorManager$5.runWithException(EditorManager.java:942)
+	at org.eclipse.ui.internal.StartupThreading$StartupRunnable.run(StartupThreading.java:31)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:134)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3855)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3476)
+	at org.eclipse.ui.application.WorkbenchAdvisor.openWindows(WorkbenchAdvisor.java:803)
+	at org.eclipse.ui.internal.Workbench$28.runWithException(Workbench.java:1384)
+	at org.eclipse.ui.internal.StartupThreading$StartupRunnable.run(StartupThreading.java:31)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:134)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3855)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3476)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2316)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2221)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:500)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:493)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:113)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:194)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:368)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:559)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:514)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1311)
+
+!ENTRY org.eclipse.emf.ecore 2 0 2018-05-24 17:51:48.059
+!MESSAGE Both 'org.pnml.tools.epnk' and 'org.pnml.tools.epnk.diagram' register an extension parser for 'pnx'
+
+!ENTRY org.eclipse.ui.workbench 2 0 2018-05-24 17:52:15.388
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2018-05-24 17:52:15.389
+!MESSAGE Conflict for 'org.eclipse.jdt.ui.edit.text.java.toggleBreadcrumb':
+HandlerActivation(commandId=org.eclipse.jdt.ui.edit.text.java.toggleBreadcrumb,
+	handler=ActionHandler(org.eclipse.jdt.internal.ui.javaeditor.ToggleBreadcrumbAction@1f6c65c),
+	expression=AndExpression(LegacyEditorActionBarExpression(org.eclipse.jdt.ui.CompilationUnitEditor),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@77baf4)),sourcePriority=4210689)
+HandlerActivation(commandId=org.eclipse.jdt.ui.edit.text.java.toggleBreadcrumb,
+	handler=ActionHandler(org.eclipse.jdt.internal.ui.javaeditor.ToggleBreadcrumbAction@58e1cc),
+	expression=AndExpression(LegacyEditorActionBarExpression(org.eclipse.jdt.ui.CompilationUnitEditor),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@77baf4)),sourcePriority=4210689)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2018-05-24 17:52:15.389
+!MESSAGE Conflict for 'org.eclipse.ui.edit.text.toggleShowSelectedElementOnly':
+HandlerActivation(commandId=org.eclipse.ui.edit.text.toggleShowSelectedElementOnly,
+	handler=ActionHandler(org.eclipse.jdt.internal.ui.javaeditor.TogglePresentationAction@1502283),
+	expression=AndExpression(LegacyEditorActionBarExpression(org.eclipse.jdt.ui.CompilationUnitEditor),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@77baf4)),sourcePriority=4210689)
+HandlerActivation(commandId=org.eclipse.ui.edit.text.toggleShowSelectedElementOnly,
+	handler=ActionHandler(org.eclipse.jdt.internal.ui.javaeditor.TogglePresentationAction@9f33d),
+	expression=AndExpression(LegacyEditorActionBarExpression(org.eclipse.jdt.ui.CompilationUnitEditor),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@77baf4)),sourcePriority=4210689)
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2018-05-24 17:52:15.389
+!MESSAGE Conflict for 'org.eclipse.jdt.ui.edit.text.java.toggleMarkOccurrences':
+HandlerActivation(commandId=org.eclipse.jdt.ui.edit.text.java.toggleMarkOccurrences,
+	handler=ActionHandler(org.eclipse.jdt.internal.ui.javaeditor.ToggleMarkOccurrencesAction@14051d1),
+	expression=AndExpression(LegacyEditorActionBarExpression(org.eclipse.jdt.ui.CompilationUnitEditor),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@77baf4)),sourcePriority=4210689)
+HandlerActivation(commandId=org.eclipse.jdt.ui.edit.text.java.toggleMarkOccurrences,
+	handler=ActionHandler(org.eclipse.jdt.internal.ui.javaeditor.ToggleMarkOccurrencesAction@1bba966),
+	expression=AndExpression(LegacyEditorActionBarExpression(org.eclipse.jdt.ui.CompilationUnitEditor),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@77baf4)),sourcePriority=4210689)
+
+!ENTRY org.eclipse.ui.workbench 2 0 2018-05-24 17:53:37.881
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2018-05-24 17:53:37.881
+!MESSAGE Conflict for 'org.eclipse.jdt.ui.edit.text.java.search.read.access.in.workspace':
+HandlerActivation(commandId=org.eclipse.jdt.ui.edit.text.java.search.read.access.in.workspace,
+	handler=ActionHandler(org.eclipse.jdt.ui.actions.FindReadReferencesAction@bc1ac2),
+	expression=AndExpression(LegacyEditorActionBarExpression(org.eclipse.jdt.ui.CompilationUnitEditor),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@77baf4)),sourcePriority=4210689)
+HandlerActivation(commandId=org.eclipse.jdt.ui.edit.text.java.search.read.access.in.workspace,
+	handler=ActionHandler(org.eclipse.jdt.ui.actions.FindReadReferencesAction@180ec46),
+	expression=AndExpression(LegacyEditorActionBarExpression(org.eclipse.jdt.ui.CompilationUnitEditor),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@77baf4)),sourcePriority=4210689)
+
+!ENTRY org.eclipse.ui.workbench 2 0 2018-05-24 17:53:37.882
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2018-05-24 17:53:37.882
+!MESSAGE Conflict for 'org.eclipse.jdt.ui.edit.text.java.search.read.access.in.hierarchy':
+HandlerActivation(commandId=org.eclipse.jdt.ui.edit.text.java.search.read.access.in.hierarchy,
+	handler=ActionHandler(org.eclipse.jdt.ui.actions.FindReadReferencesInHierarchyAction@37292b),
+	expression=AndExpression(LegacyEditorActionBarExpression(org.eclipse.jdt.ui.CompilationUnitEditor),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@77baf4)),sourcePriority=4210689)
+HandlerActivation(commandId=org.eclipse.jdt.ui.edit.text.java.search.read.access.in.hierarchy,
+	handler=ActionHandler(org.eclipse.jdt.ui.actions.FindReadReferencesInHierarchyAction@16ffc87),
+	expression=AndExpression(LegacyEditorActionBarExpression(org.eclipse.jdt.ui.CompilationUnitEditor),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@77baf4)),sourcePriority=4210689)
+
+!ENTRY org.eclipse.ui.workbench 2 0 2018-05-24 17:53:37.883
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2018-05-24 17:53:37.883
+!MESSAGE Conflict for 'org.eclipse.jdt.ui.edit.text.java.search.read.access.in.working.set':
+HandlerActivation(commandId=org.eclipse.jdt.ui.edit.text.java.search.read.access.in.working.set,
+	handler=ActionHandler(org.eclipse.jdt.ui.actions.FindReadReferencesInWorkingSetAction@423419),
+	expression=AndExpression(LegacyEditorActionBarExpression(org.eclipse.jdt.ui.CompilationUnitEditor),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@77baf4)),sourcePriority=4210689)
+HandlerActivation(commandId=org.eclipse.jdt.ui.edit.text.java.search.read.access.in.working.set,
+	handler=ActionHandler(org.eclipse.jdt.ui.actions.FindReadReferencesInWorkingSetAction@6a88bb),
+	expression=AndExpression(LegacyEditorActionBarExpression(org.eclipse.jdt.ui.CompilationUnitEditor),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@77baf4)),sourcePriority=4210689)
+
+!ENTRY org.eclipse.ui.workbench 2 0 2018-05-24 17:53:37.885
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2018-05-24 17:53:37.885
+!MESSAGE Conflict for 'org.eclipse.ui.navigate.next':
+HandlerActivation(commandId=org.eclipse.ui.navigate.next,
+	handler=ActionHandler(org.eclipse.ui.texteditor.GotoAnnotationAction@13e3b95),
+	expression=AndExpression(LegacyEditorActionBarExpression(org.eclipse.jdt.ui.CompilationUnitEditor),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@77baf4)),sourcePriority=4210689)
+HandlerActivation(commandId=org.eclipse.ui.navigate.next,
+	handler=ActionHandler(org.eclipse.ui.texteditor.GotoAnnotationAction@b9f370),
+	expression=AndExpression(LegacyEditorActionBarExpression(org.eclipse.jdt.ui.CompilationUnitEditor),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@77baf4)),sourcePriority=4210689)
+
+!ENTRY org.eclipse.ui.workbench 2 0 2018-05-24 17:53:37.886
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2018-05-24 17:53:37.886
+!MESSAGE Conflict for 'org.eclipse.ui.navigate.previous':
+HandlerActivation(commandId=org.eclipse.ui.navigate.previous,
+	handler=ActionHandler(org.eclipse.ui.texteditor.GotoAnnotationAction@7079b2),
+	expression=AndExpression(LegacyEditorActionBarExpression(org.eclipse.jdt.ui.CompilationUnitEditor),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@77baf4)),sourcePriority=4210689)
+HandlerActivation(commandId=org.eclipse.ui.navigate.previous,
+	handler=ActionHandler(org.eclipse.ui.texteditor.GotoAnnotationAction@45c06d),
+	expression=AndExpression(LegacyEditorActionBarExpression(org.eclipse.jdt.ui.CompilationUnitEditor),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@77baf4)),sourcePriority=4210689)
+
+!ENTRY org.eclipse.ui.workbench 2 0 2018-05-24 17:53:37.888
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2018-05-24 17:53:37.888
+!MESSAGE Conflict for 'org.eclipse.ui.file.refresh':
+HandlerActivation(commandId=org.eclipse.ui.file.refresh,
+	handler=ActionHandler(org.eclipse.ui.internal.editors.text.RefreshEditorAction@13704e9),
+	expression=AndExpression(LegacyEditorActionBarExpression(org.eclipse.jdt.ui.CompilationUnitEditor),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@77baf4)),sourcePriority=4210689)
+HandlerActivation(commandId=org.eclipse.ui.file.refresh,
+	handler=ActionHandler(org.eclipse.ui.internal.editors.text.RefreshEditorAction@1238cce),
+	expression=AndExpression(LegacyEditorActionBarExpression(org.eclipse.jdt.ui.CompilationUnitEditor),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@77baf4)),sourcePriority=4210689)
+
+!ENTRY org.eclipse.osgi 2 1 2018-05-24 18:01:29.283
+!MESSAGE NLS unused message: Reflective3CreationTool_title in: messages
+
+!ENTRY org.eclipse.osgi 2 1 2018-05-24 18:01:29.283
+!MESSAGE NLS unused message: Reflective3CreationTool_desc in: messages
+
+!ENTRY org.eclipse.emf.mint 4 0 2018-05-24 18:09:55.419
+!MESSAGE Could not decorate element.
+!STACK 1
+Java Model Exception: Java Model Status [Retroceder.java [in frsf.cidisi.exercise.smarttoy.search.actions [in src [in TP-IA]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:502)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:246)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:515)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:252)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:238)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:193)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildrenOfType(JavaElement.java:207)
+	at org.eclipse.jdt.internal.core.CompilationUnit.getTypes(CompilationUnit.java:918)
+	at org.eclipse.emf.mint.internal.ui.source.GeneratedElementDecorator.decorate(GeneratedElementDecorator.java:69)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:269)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:81)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:365)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:347)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:371)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:331)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2018-05-24 18:09:55.420
+!MESSAGE Retroceder.java [in frsf.cidisi.exercise.smarttoy.search.actions [in src [in TP-IA]]] does not exist

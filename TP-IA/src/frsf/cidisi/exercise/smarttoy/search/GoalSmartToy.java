@@ -23,7 +23,7 @@ public class GoalSmartToy extends GoalTest {
 				|| plano[xAgent][yAgent + 1] == "go"
 				|| plano[xAgent][yAgent - 1] == "go"
 				|| plano[xAgent][yAgent] == "go" 
-				|| estadoAgente.getCeldasVisitadas() >= 7)) {
+				|| estadoAgente.getCeldasVisitadas() >= 5)) {
 			return true;
 		} 
 		else {

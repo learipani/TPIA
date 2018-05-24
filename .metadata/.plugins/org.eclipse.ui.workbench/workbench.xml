@@ -8,18 +8,19 @@
 </perspectiveBar>
 <coolbarLayout locked="0">
 <coolItem id="group.file" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="130" y="22"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="103" y="22"/>
 <coolItem id="additions" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="129" y="22"/>
-<coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="99" y="22"/>
+<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="141" y="22"/>
+<coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="103" y="22"/>
 <coolItem id="org.eclipse.net4j.examples.actionSet" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="99" y="22"/>
+<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="103" y="22"/>
 <coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="130" y="22"/>
 <coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="190" y="22"/>
+<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="206" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="utn.frsf.cidisi.idemia.diagram.part.IdemiaDiagramEditorID" itemType="typePlaceholder" x="1025" y="22"/>
 <coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
@@ -35,108 +36,36 @@
 <part id="1"/>
 <part id="2"/>
 <part id="3"/>
-<part id="4"/>
-<part id="5"/>
-<part id="6"/>
-<part id="7"/>
-<part id="8"/>
-<part id="9"/>
-<part id="10"/>
-<part id="11"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EnvironmentSmartToyState.java" partName="EnvironmentSmartToyState.java" path="C:/Users/lea_r/Documents/GitHub/TPIA/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/EnvironmentSmartToyState.java" title="EnvironmentSmartToyState.java" tooltip="TP-IA/src/frsf/cidisi/exercise/smarttoy/search/EnvironmentSmartToyState.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/EnvironmentSmartToyState.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2341" selectionTopPixel="716"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AgentSmartToyState.java" partName="AgentSmartToyState.java" path="C:/Users/lea_r/Documents/GitHub/TPIA/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/AgentSmartToyState.java" title="AgentSmartToyState.java" tooltip="TP-IA/src/frsf/cidisi/exercise/smarttoy/search/AgentSmartToyState.java" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AgentSmartToyState.java" partName="AgentSmartToyState.java" path="C:/Users/Matias Tibaldo/Desktop/TPIA/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/AgentSmartToyState.java" title="AgentSmartToyState.java" tooltip="TP-IA/src/frsf/cidisi/exercise/smarttoy/search/AgentSmartToyState.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/AgentSmartToyState.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="13720" selectionTopPixel="2696"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="9327" selectionTopPixel="3386"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AgentSmartToyMain.java" partName="AgentSmartToyMain.java" path="C:/Users/lea_r/Documents/GitHub/TPIA/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/AgentSmartToyMain.java" title="AgentSmartToyMain.java" tooltip="TP-IA/src/frsf/cidisi/exercise/smarttoy/search/AgentSmartToyMain.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/AgentSmartToyMain.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
-</editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AgentSmartToy.java" partName="AgentSmartToy.java" path="C:/Users/lea_r/Documents/GitHub/TPIA/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/AgentSmartToy.java" title="AgentSmartToy.java" tooltip="TP-IA/src/frsf/cidisi/exercise/smarttoy/search/AgentSmartToy.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/AgentSmartToy.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1808" selectionTopPixel="499"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GirarDerecha.java" partName="GirarDerecha.java" path="C:/Users/Matias Tibaldo/Desktop/TPIA/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/actions/GirarDerecha.java" title="GirarDerecha.java" tooltip="TP-IA/src/frsf/cidisi/exercise/smarttoy/search/actions/GirarDerecha.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/actions/GirarDerecha.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4365" selectionTopPixel="849"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GirarIzquierda.java" partName="GirarIzquierda.java" path="C:/Users/lea_r/Documents/GitHub/TPIA/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/actions/GirarIzquierda.java" title="GirarIzquierda.java" tooltip="TP-IA/src/frsf/cidisi/exercise/smarttoy/search/actions/GirarIzquierda.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/actions/GirarIzquierda.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4428" selectionTopPixel="1824"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="IrHabitacionContigua.java" partName="IrHabitacionContigua.java" path="C:/Users/lea_r/Documents/GitHub/TPIA/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/actions/IrHabitacionContigua.java" title="IrHabitacionContigua.java" tooltip="TP-IA/src/frsf/cidisi/exercise/smarttoy/search/actions/IrHabitacionContigua.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/actions/IrHabitacionContigua.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3312" selectionTopPixel="1093"/>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EnvironmentSmartToyState.java" partName="EnvironmentSmartToyState.java" path="C:/Users/Matias Tibaldo/Desktop/TPIA/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/EnvironmentSmartToyState.java" title="EnvironmentSmartToyState.java" tooltip="TP-IA/src/frsf/cidisi/exercise/smarttoy/search/EnvironmentSmartToyState.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/EnvironmentSmartToyState.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2907" selectionTopPixel="918"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CreacionHabitaciones.java" partName="CreacionHabitaciones.java" path="C:/Users/Matias Tibaldo/Desktop/TPIA/TP-IA/src/auxiliar/CreacionHabitaciones.java" title="CreacionHabitaciones.java" tooltip="TP-IA/src/auxiliar/CreacionHabitaciones.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TP-IA/src/auxiliar/CreacionHabitaciones.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1590" selectionTopPixel="199"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="13576" selectionTopPixel="5060"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PisoMojado.java" partName="PisoMojado.java" path="C:/Users/lea_r/Documents/GitHub/TPIA/TP-IA/src/domain/PisoMojado.java" title="PisoMojado.java" tooltip="TP-IA/src/domain/PisoMojado.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TP-IA/src/domain/PisoMojado.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="185" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Search.java" partName="Search.java" path="C:/Users/lea_r/Documents/GitHub/TPIA/faia/src/frsf/cidisi/faia/solver/search/Search.java" title="Search.java" tooltip="faia/src/frsf/cidisi/faia/solver/search/Search.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/faia/src/frsf/cidisi/faia/solver/search/Search.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4004" selectionTopPixel="1343"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Heuristic.java" partName="Heuristic.java" path="C:/Users/Matias Tibaldo/Desktop/TPIA/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/Heuristic.java" title="Heuristic.java" tooltip="TP-IA/src/frsf/cidisi/exercise/smarttoy/search/Heuristic.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/Heuristic.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Avanzar.java" partName="Avanzar.java" path="C:/Users/Matias Tibaldo/Desktop/TPIA/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/actions/Avanzar.java" title="Avanzar.java" tooltip="TP-IA/src/frsf/cidisi/exercise/smarttoy/search/actions/Avanzar.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/actions/Avanzar.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="3001"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GoalSmartToy.java" partName="GoalSmartToy.java" path="C:/Users/Matias Tibaldo/Desktop/TPIA/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/GoalSmartToy.java" title="GoalSmartToy.java" tooltip="TP-IA/src/frsf/cidisi/exercise/smarttoy/search/GoalSmartToy.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/GoalSmartToy.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1117" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
-<view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc"/>
 <view id="org.eclipse.jdt.ui.TypeHierarchy" partName="Hierarchy"/>
-<view id="org.eclipse.jdt.ui.PackageExplorer" partName="Package Explorer">
-<viewState group_libraries="1" layout="2" linkWithEditor="0" rootMode="1" workingSetName="">
-<customFilters userDefinedPatternsEnabled="false">
-<xmlDefinedFilters>
-<child filterId="org.eclipse.jdt.ui.PackageExplorer.StaticsFilter" isEnabled="false"/>
-<child filterId="org.eclipse.mylyn.java.ui.MembersFilter" isEnabled="false"/>
-<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonSharedProjectsFilter" isEnabled="false"/>
-<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.EmptyInnerPackageFilter" isEnabled="true"/>
-<child filterId="org.eclipse.jdt.ui.PackageExplorer.ClosedProjectsFilter" isEnabled="false"/>
-<child filterId="org.eclipse.jdt.ui.PackageExplorer.EmptyLibraryContainerFilter" isEnabled="true"/>
-<child filterId="org.eclipse.jdt.ui.PackageExplorer.PackageDeclarationFilter" isEnabled="true"/>
-<child filterId="org.eclipse.emf.mint.ui.filters.GeneratedFilter" isEnabled="false"/>
-<child filterId="org.eclipse.pde.ui.BinaryProjectFilter1" isEnabled="false"/>
-<child filterId="org.eclipse.jet.javafilter" isEnabled="true"/>
-<child filterId="org.eclipse.emf.mint.ui.filters.GeneratedNoneFilter" isEnabled="false"/>
-<child filterId="org.eclipse.jdt.ui.PackageExplorer.LocalTypesFilter" isEnabled="false"/>
-<child filterId="org.eclipse.pde.ui.ExternalPluginLibrariesFilter1" isEnabled="true"/>
-<child filterId="org.eclipse.jdt.ui.PackageExplorer.FieldsFilter" isEnabled="false"/>
-<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonJavaProjectsFilter" isEnabled="false"/>
-<child filterId="org.eclipse.jdt.ui.PackageExplorer_patternFilterId_.*" isEnabled="true"/>
-<child filterId="org.eclipse.jdt.ui.PackageExplorer.SyntheticMembersFilter" isEnabled="true"/>
-<child filterId="org.eclipse.jdt.ui.PackageExplorer.ContainedLibraryFilter" isEnabled="false"/>
-<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.HideInnerClassFilesFilter" isEnabled="true"/>
-<child filterId="org.eclipse.emf.mint.ui.filters.GeneratedNotFilter" isEnabled="false"/>
-<child filterId="org.eclipse.gmf.codegen.ui.hide_generated" isEnabled="false"/>
-<child filterId="org.eclipse.jdt.ui.PackageExplorer.ImportDeclarationFilter" isEnabled="true"/>
-<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonJavaElementFilter" isEnabled="false"/>
-<child filterId="org.eclipse.jdt.ui.PackageExplorer.LibraryFilter" isEnabled="false"/>
-<child filterId="org.eclipse.jdt.ui.PackageExplorer.CuAndClassFileFilter" isEnabled="false"/>
-<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.EmptyPackageFilter" isEnabled="false"/>
-<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonPublicFilter" isEnabled="false"/>
-</xmlDefinedFilters>
-</customFilters>
-</viewState>
+<view id="org.eclipse.debug.ui.DebugView" partName="Debug">
+<viewState/>
 </view>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
-<expanded>&#x0A;<category IMemento.internal.id="Warnings"/>
+<expanded>
+<category IMemento.internal.id="Warnings"/>
 <category IMemento.internal.id="Errors"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="0" org.eclipse.ui.ide.markerType="0" org.eclipse.ui.ide.pathField="0" org.eclipse.ui.ide.resourceField="0" org.eclipse.ui.ide.severityAndDescriptionField="0"/>
@@ -150,6 +79,41 @@
 <view id="org.eclipse.ui.console.ConsoleView" partName="Console">
 <viewState/>
 </view>
+<view id="org.eclipse.jdt.ui.PackageExplorer" partName="Package Explorer">
+<viewState group_libraries="1" layout="2" linkWithEditor="0" rootMode="1" workingSetName="">
+<customFilters userDefinedPatternsEnabled="false">
+<xmlDefinedFilters>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.LibraryFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.CuAndClassFileFilter" isEnabled="false"/>
+<child filterId="org.eclipse.pde.ui.ExternalPluginLibrariesFilter1" isEnabled="true"/>
+<child filterId="org.eclipse.gmf.codegen.ui.hide_generated" isEnabled="false"/>
+<child filterId="org.eclipse.emf.mint.ui.filters.GeneratedFilter" isEnabled="false"/>
+<child filterId="org.eclipse.emf.mint.ui.filters.GeneratedNotFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.FieldsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.HideInnerClassFilesFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonPublicFilter" isEnabled="false"/>
+<child filterId="org.eclipse.pde.ui.BinaryProjectFilter1" isEnabled="false"/>
+<child filterId="org.eclipse.mylyn.java.ui.MembersFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.LocalTypesFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.StaticsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.ContainedLibraryFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonJavaElementFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonSharedProjectsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.ClosedProjectsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonJavaProjectsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.PackageDeclarationFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.EmptyInnerPackageFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jet.javafilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.EmptyPackageFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.ImportDeclarationFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer_patternFilterId_.*" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.EmptyLibraryContainerFilter" isEnabled="true"/>
+<child filterId="org.eclipse.emf.mint.ui.filters.GeneratedNoneFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.SyntheticMembersFilter" isEnabled="true"/>
+</xmlDefinedFilters>
+</customFilters>
+</viewState>
+</view>
 <view id="org.eclipse.mylyn.tasks.ui.views.tasks" partName="Task List">
 <viewState linkWithEditor="true" presentation="org.eclipse.mylyn.tasks.ui.categorized">
 <sorter groupBy="CATEGORY_QUERY">
@@ -162,24 +126,22 @@
 </sorter>
 </viewState>
 </view>
-<view id="org.eclipse.debug.ui.VariableView" partName="Variables">
-<viewState/>
-</view>
-<view id="org.eclipse.jdt.ui.SourceView" partName="Declaration"/>
-<view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
-<viewState/>
-</view>
-<view id="org.eclipse.debug.ui.DebugView" partName="Debug">
-<viewState/>
-</view>
-<view id="org.eclipse.ui.views.TaskList" partName="Tasks"/>
 <view id="org.eclipse.debug.ui.BreakpointView" partName="Breakpoints">
 <viewState>
 <isTrackingSelection value="false"/>
 </viewState>
 </view>
+<view id="org.eclipse.debug.ui.VariableView" partName="Variables">
+<viewState/>
+</view>
+<view id="org.eclipse.ui.views.TaskList" partName="Tasks"/>
+<view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
+<viewState/>
+</view>
+<view id="org.eclipse.jdt.ui.SourceView" partName="Declaration"/>
+<view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc"/>
 </views>
-<perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
+<perspectives activePart="org.eclipse.ui.console.ConsoleView" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.jdt.internal.ui.JavaPerspectiveFactory" id="org.eclipse.jdt.ui.JavaPerspective" label="Java"/>
 <alwaysOnActionSet id="org.eclipse.net4j.examples.actionSet"/>
@@ -204,7 +166,6 @@
 <alwaysOnActionSet id="org.eclipse.jdt.junit.JUnitActionSet"/>
 <alwaysOnActionSet id="org.eclipse.m2m.qvt.oml.runtime.actions"/>
 <alwaysOnActionSet id="org.eclipse.debug.ui.debugActionSet"/>
-<alwaysOnActionSet id="org.eclipse.jst.servlet.ui.internal.actions.ConvertToWebModuleTypeActionSet"/>
 <show_view_action id="org.eclipse.jdt.ui.PackageExplorer"/>
 <show_view_action id="org.eclipse.jdt.ui.TypeHierarchy"/>
 <show_view_action id="org.eclipse.jdt.ui.SourceView"/>
@@ -294,7 +255,7 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@1d25fa" ratio="0.8416801" ratioLeft="521" ratioRight="98" relationship="4" relative="org.eclipse.ui.editorss">
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@1d25fa" ratio="0.68322295" ratioLeft="619" ratioRight="287" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.jdt.ui.JavadocView" label="Javadoc"/>
@@ -412,171 +373,186 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/AgentSmartToyState.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/actions/Avanzar.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/EnvironmentSmartToyState.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/CostFunction.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/Heuristic.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/AgentSmartToy.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP-IA/src/auxiliar/CreacionHabitaciones.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/AgentSmartToyState.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="utn.frsf.cidisi.idemia.diagram.part.IdemiaDiagramEditorID" path="/TP-IA/modelSmartToy/smarttoy.idemia_diagram"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/actions/Avanzar.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/AgentSmartToyMain.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/AgentSmartToyPerception.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP-IA/src/domain/Habitacion.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/EnvironmentSmartToy.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/GoalSmartToy.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/actions/GirarDerecha.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/GoalSmartToy.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/AgentSmartToy.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/Heuristic.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/actions/Avanzar.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/actions/GirarIzquierda.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/actions/IrHabitacionContigua.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/actions/Retroceder.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP-IA/src/pantalla/Contenedor.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP-IA/src/auxiliar/CreacionHabitaciones.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/EnvironmentSmartToyState.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP-IA/src/pantalla/Ventana.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP-IA/src/domain/Escalera.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP-IA/src/domain/Objeto.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP-IA/src/domain/Obstaculo.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP-IA/src/domain/Pared.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP-IA/src/domain/PisoAlfombra.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP-IA/src/domain/PisoArena.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP-IA/src/domain/PisoBasura.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP-IA/src/domain/PisoMojado.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP-IA/src/domain/Puerta.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/AgentSmartToyState.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/AgentSmartToy.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/EnvironmentSmartToy.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP-IA/src/auxiliar/CreacionHabitaciones.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/GoalSmartToy.java"/>
 </editors>
-<item historyLabel="Avanzar.java" index="1">
-<position info="not_deleted" x="3014" y="0"/>
+<item historyLabel="AgentSmartToyPerception.java" index="9">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="GoalSmartToy.java" index="3">
-<position info="not_deleted" x="557" y="0"/>
+<item historyLabel="AgentSmartToyState.java" index="5">
+<position info="not_deleted" x="10795" y="0"/>
 </item>
-<item historyLabel="Avanzar.java" index="1">
-<position info="not_deleted" x="1978" y="0"/>
+<item historyLabel="CostFunction.java" index="1">
+<position info="not_deleted" x="381" y="0"/>
 </item>
-<item historyLabel="Avanzar.java" index="1">
-<position info="not_deleted" x="3014" y="0"/>
+<item historyLabel="EnvironmentSmartToy.java" index="11">
+<position info="not_deleted" x="959" y="0"/>
 </item>
-<item historyLabel="GoalSmartToy.java" index="3">
-<position info="not_deleted" x="557" y="0"/>
+<item historyLabel="EnvironmentSmartToyState.java" index="0">
+<position info="not_deleted" x="2572" y="0"/>
 </item>
-<item historyLabel="Avanzar.java" index="1">
-<position info="not_deleted" x="1978" y="0"/>
+<item historyLabel="GoalSmartToy.java" index="12">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="Avanzar.java" index="1">
-<position info="not_deleted" x="3014" y="0"/>
+<item historyLabel="Heuristic.java" index="2">
+<position info="not_deleted" x="439" y="0"/>
 </item>
-<item historyLabel="GoalSmartToy.java" index="3">
-<position info="not_deleted" x="557" y="0"/>
+<item historyLabel="Avanzar.java" index="7">
+<position info="not_deleted" x="1811" y="0"/>
 </item>
-<item historyLabel="Avanzar.java" index="1">
-<position info="not_deleted" x="1978" y="0"/>
+<item historyLabel="Avanzar.java" index="7">
+<position info="not_deleted" x="1267" y="36"/>
 </item>
-<item historyLabel="Avanzar.java" index="1">
-<position info="not_deleted" x="3014" y="0"/>
-</item>
-<item historyLabel="GoalSmartToy.java" index="3">
-<position info="not_deleted" x="557" y="0"/>
-</item>
-<item historyLabel="AgentSmartToy.java" index="2">
-<position info="not_deleted" x="1808" y="0"/>
-</item>
-<item historyLabel="GoalSmartToy.java" index="3">
-<position info="not_deleted" x="557" y="0"/>
-</item>
-<item historyLabel="Avanzar.java" index="1">
-<position info="not_deleted" x="1978" y="0"/>
-</item>
-<item historyLabel="Avanzar.java" index="1">
-<position info="not_deleted" x="3014" y="0"/>
-</item>
-<item historyLabel="GoalSmartToy.java" index="3">
-<position info="not_deleted" x="557" y="0"/>
-</item>
-<item historyLabel="Avanzar.java" index="1">
-<position info="not_deleted" x="1978" y="0"/>
-</item>
-<item historyLabel="Avanzar.java" index="1">
-<position info="not_deleted" x="3014" y="0"/>
-</item>
-<item historyLabel="GoalSmartToy.java" index="3">
-<position info="not_deleted" x="557" y="0"/>
-</item>
-<item historyLabel="Avanzar.java" index="1">
-<position info="not_deleted" x="1978" y="0"/>
-</item>
-<item historyLabel="Avanzar.java" index="1">
-<position info="not_deleted" x="3014" y="0"/>
-</item>
-<item historyLabel="GoalSmartToy.java" index="3">
-<position info="not_deleted" x="557" y="0"/>
-</item>
-<item historyLabel="Avanzar.java" index="1">
-<position info="not_deleted" x="1978" y="0"/>
-</item>
-<item historyLabel="Avanzar.java" index="1">
-<position info="not_deleted" x="3014" y="0"/>
-</item>
-<item historyLabel="GoalSmartToy.java" index="3">
-<position info="not_deleted" x="557" y="0"/>
-</item>
-<item historyLabel="GoalSmartToy.java" index="3">
-<position info="not_deleted" x="599" y="0"/>
-</item>
-<item historyLabel="GoalSmartToy.java" index="3">
-<position info="not_deleted" x="641" y="0"/>
-</item>
-<item historyLabel="GoalSmartToy.java" index="3">
-<position info="not_deleted" x="720" y="0"/>
-</item>
-<item historyLabel="AgentSmartToyState.java" index="0">
-<position info="not_deleted" x="13720" y="0"/>
-</item>
-<item historyLabel="AgentSmartToy.java" index="2">
-<position info="not_deleted" x="1740" y="0"/>
-</item>
-<item historyLabel="Avanzar.java" index="1">
-<position info="not_deleted" x="3014" y="0"/>
-</item>
-<item historyLabel="AgentSmartToy.java" index="2">
-<position info="not_deleted" x="1268" y="0"/>
-</item>
-<item historyLabel="GoalSmartToy.java" index="3">
-<position info="not_deleted" x="720" y="0"/>
-</item>
-<item historyLabel="GirarDerecha.java" index="4">
+<item historyLabel="GirarDerecha.java" index="13">
 <position info="not_deleted" x="4365" y="0"/>
 </item>
-<item historyLabel="GoalSmartToy.java" index="5">
+<item historyLabel="GirarIzquierda.java" index="14">
+<position info="not_deleted" x="4428" y="0"/>
+</item>
+<item historyLabel="IrHabitacionContigua.java" index="15">
+<position info="not_deleted" x="3312" y="0"/>
+</item>
+<item historyLabel="Retroceder.java" index="16">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="AgentSmartToy.java" index="6">
-<position info="not_deleted" x="1738" y="0"/>
-</item>
-<item historyLabel="Heuristic.java" index="7">
+<item historyLabel="smarttoy.idemia_diagram" index="6"/>
+<item historyLabel="AgentSmartToyMain.java" index="8">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="Avanzar.java" index="8">
+<item historyLabel="AgentSmartToy.java" index="3">
+<position info="not_deleted" x="1313" y="0"/>
+</item>
+<item historyLabel="Contenedor.java" index="17">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="Contenedor.java" index="9">
+<item historyLabel="Ventana.java" index="18">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="CreacionHabitaciones.java" index="10">
+<item historyLabel="CreacionHabitaciones.java" index="4">
 <position info="not_deleted" x="1590" y="0"/>
 </item>
-<item historyLabel="AgentSmartToy.java" index="6">
-<position info="not_deleted" x="1808" y="0"/>
-</item>
-<item historyLabel="GoalSmartToy.java" index="5">
-<position info="not_deleted" x="764" y="0"/>
-</item>
-<item historyLabel="Avanzar.java" index="8">
+<item historyLabel="Escalera.java" index="19">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="Contenedor.java" index="9">
-<position info="not_deleted" x="2326" y="0"/>
+<item historyLabel="Habitacion.java" index="10">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="EnvironmentSmartToyState.java" index="11">
+<item historyLabel="Objeto.java" index="20">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Obstaculo.java" index="21">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Pared.java" index="22">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="PisoAlfombra.java" index="23">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="PisoArena.java" index="24">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="PisoBasura.java" index="25">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="PisoMojado.java" index="26">
+<position info="not_deleted" x="185" y="0"/>
+</item>
+<item historyLabel="Puerta.java" index="27">
+<position info="not_deleted" x="599" y="0"/>
+</item>
+<item historyLabel="Contenedor.java" index="17">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Puerta.java" index="27">
+<position info="not_deleted" x="599" y="0"/>
+</item>
+<item historyLabel="Objeto.java" index="20">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Puerta.java" index="27">
+<position info="not_deleted" x="599" y="0"/>
+</item>
+<item historyLabel="PisoArena.java" index="24">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="AgentSmartToyMain.java" index="8">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="EnvironmentSmartToyState.java" index="0">
+<position info="not_deleted" x="2572" y="0"/>
+</item>
+<item historyLabel="AgentSmartToyState.java" index="28">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="EnvironmentSmartToy.java" index="29">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="EnvironmentSmartToyState.java" index="0">
+<position info="not_deleted" x="2907" y="0"/>
+</item>
+<item historyLabel="CreacionHabitaciones.java" index="30">
+<position info="not_deleted" x="53453" y="0"/>
+</item>
+<item historyLabel="EnvironmentSmartToyState.java" index="0">
+<position info="not_deleted" x="2344" y="0"/>
+</item>
+<item historyLabel="AgentSmartToyState.java" index="28">
+<position info="not_deleted" x="8343" y="0"/>
+</item>
+<item historyLabel="EnvironmentSmartToyState.java" index="0">
+<position info="not_deleted" x="2344" y="0"/>
+</item>
+<item historyLabel="AgentSmartToyState.java" index="28">
+<position info="not_deleted" x="8426" y="0"/>
+</item>
+<item historyLabel="GoalSmartToy.java" index="31">
+<position info="not_deleted" x="1117" y="0"/>
+</item>
+<item historyLabel="EnvironmentSmartToyState.java" index="0">
 <position info="not_deleted" x="2341" y="0"/>
 </item>
-<item historyLabel="AgentSmartToyState.java" index="12">
-<position info="not_deleted" x="13720" y="0"/>
+<item historyLabel="AgentSmartToyState.java" index="28">
+<position info="not_deleted" x="9327" y="0"/>
 </item>
-<item historyLabel="EnvironmentSmartToyState.java" index="11">
-<position info="not_deleted" x="2341" y="0"/>
+<item historyLabel="EnvironmentSmartToyState.java" index="0">
+<position info="not_deleted" x="2909" y="0"/>
 </item>
-<item historyLabel="AgentSmartToy.java" index="13">
-<position info="not_deleted" x="1808" y="0"/>
+<item historyLabel="CreacionHabitaciones.java" index="30">
+<position info="not_deleted" x="13576" y="0"/>
 </item>
-<item historyLabel="GoalSmartToy.java" index="14">
-<position info="not_deleted" x="764" y="0"/>
-</item>
-<item active="true" historyLabel="AgentSmartToy.java" index="13">
-<position info="not_deleted" x="1808" y="0"/>
+<item active="true" historyLabel="EnvironmentSmartToyState.java" index="0">
+<position info="not_deleted" x="2909" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -584,6 +560,13 @@
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
+<trimArea IMemento.internal.id="16384">
+<trimItem IMemento.internal.id="left"/>
+</trimArea>
+<trimArea IMemento.internal.id="131072">
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@1d25fa"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@c28400"/>
+</trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 </trimArea>
@@ -595,47 +578,47 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Avanzar.java" tooltip="TP-IA/src/frsf/cidisi/exercise/smarttoy/search/actions/Avanzar.java">
-<persistable path="/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/actions/Avanzar.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Heuristic.java" tooltip="TP-IA/src/frsf/cidisi/exercise/smarttoy/search/Heuristic.java">
-<persistable path="/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/Heuristic.java"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GoalSmartToy.java" tooltip="TP-IA/src/frsf/cidisi/exercise/smarttoy/search/GoalSmartToy.java">
 <persistable path="/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/GoalSmartToy.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Habitacion.java" tooltip="TP-IA/src/domain/Habitacion.java">
-<persistable path="/TP-IA/src/domain/Habitacion.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PisoMojado.java" tooltip="TP-IA/src/domain/PisoMojado.java">
-<persistable path="/TP-IA/src/domain/PisoMojado.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CreacionHabitaciones.java" tooltip="TP-IA/src/auxiliar/CreacionHabitaciones.java">
 <persistable path="/TP-IA/src/auxiliar/CreacionHabitaciones.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="IrHabitacionContigua.java" tooltip="TP-IA/src/frsf/cidisi/exercise/smarttoy/search/actions/IrHabitacionContigua.java">
-<persistable path="/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/actions/IrHabitacionContigua.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EnvironmentSmartToyState.java" tooltip="TP-IA/src/frsf/cidisi/exercise/smarttoy/search/EnvironmentSmartToyState.java">
+<persistable path="/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/EnvironmentSmartToyState.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GirarIzquierda.java" tooltip="TP-IA/src/frsf/cidisi/exercise/smarttoy/search/actions/GirarIzquierda.java">
-<persistable path="/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/actions/GirarIzquierda.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GirarDerecha.java" tooltip="TP-IA/src/frsf/cidisi/exercise/smarttoy/search/actions/GirarDerecha.java">
-<persistable path="/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/actions/GirarDerecha.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AgentSmartToy.java" tooltip="TP-IA/src/frsf/cidisi/exercise/smarttoy/search/AgentSmartToy.java">
-<persistable path="/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/AgentSmartToy.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AgentSmartToyMain.java" tooltip="TP-IA/src/frsf/cidisi/exercise/smarttoy/search/AgentSmartToyMain.java">
-<persistable path="/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/AgentSmartToyMain.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EnvironmentSmartToy.java" tooltip="TP-IA/src/frsf/cidisi/exercise/smarttoy/search/EnvironmentSmartToy.java">
+<persistable path="/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/EnvironmentSmartToy.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AgentSmartToyState.java" tooltip="TP-IA/src/frsf/cidisi/exercise/smarttoy/search/AgentSmartToyState.java">
 <persistable path="/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/AgentSmartToyState.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AgentSmartToyPerception.java" tooltip="TP-IA/src/frsf/cidisi/exercise/smarttoy/search/AgentSmartToyPerception.java">
-<persistable path="/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/AgentSmartToyPerception.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Puerta.java" tooltip="TP-IA/src/domain/Puerta.java">
+<persistable path="/TP-IA/src/domain/Puerta.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EnvironmentSmartToy.java" tooltip="TP-IA/src/frsf/cidisi/exercise/smarttoy/search/EnvironmentSmartToy.java">
-<persistable path="/TP-IA/src/frsf/cidisi/exercise/smarttoy/search/EnvironmentSmartToy.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PisoBasura.java" tooltip="TP-IA/src/domain/PisoBasura.java">
+<persistable path="/TP-IA/src/domain/PisoBasura.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PisoArena.java" tooltip="TP-IA/src/domain/PisoArena.java">
+<persistable path="/TP-IA/src/domain/PisoArena.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PisoAlfombra.java" tooltip="TP-IA/src/domain/PisoAlfombra.java">
+<persistable path="/TP-IA/src/domain/PisoAlfombra.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Pared.java" tooltip="TP-IA/src/domain/Pared.java">
+<persistable path="/TP-IA/src/domain/Pared.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Obstaculo.java" tooltip="TP-IA/src/domain/Obstaculo.java">
+<persistable path="/TP-IA/src/domain/Obstaculo.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Objeto.java" tooltip="TP-IA/src/domain/Objeto.java">
+<persistable path="/TP-IA/src/domain/Objeto.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Escalera.java" tooltip="TP-IA/src/domain/Escalera.java">
+<persistable path="/TP-IA/src/domain/Escalera.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Ventana.java" tooltip="TP-IA/src/pantalla/Ventana.java">
+<persistable path="/TP-IA/src/pantalla/Ventana.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Contenedor.java" tooltip="TP-IA/src/pantalla/Contenedor.java">
 <persistable path="/TP-IA/src/pantalla/Contenedor.java"/>
