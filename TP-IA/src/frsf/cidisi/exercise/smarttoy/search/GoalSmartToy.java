@@ -14,14 +14,19 @@ public class GoalSmartToy extends GoalTest {
 		int yAgent = estadoAgente.getUbicacionAgente().getSecond()[1];
 		String[][] plano = estadoAgente.getUbicacionAgente().getFirst().getPlanoHabitacion();
 		
+		return (MetaEnCeldaAdyacente(estadoAgente, plano, xAgent, yAgent) && estadoAgente.getUbicacionAgente().getFirst().getIdHabitacion() == estadoAgente.getNumeroHabitacionSmartPhone());
+	}
+	
+	private boolean MetaEnCeldaAdyacente(AgentSmartToyState estadoAgente, String[][] plano, int xAgent, int yAgent) {
 		if ((plano[xAgent + 1][yAgent] == "go"
 				|| plano[xAgent - 1][yAgent] == "go"
-				|| plano[xAgent][yAgent + 1] == "go" || plano[xAgent][yAgent - 1] == "go"
-				|| plano[xAgent][yAgent] == "go"
-				|| estadoAgente.getCeldasVisitadas()>= 7)
-				&& estadoAgente.getUbicacionAgente().getFirst().getIdHabitacion() == estadoAgente.getNumeroHabitacionSmartPhone()) {
+				|| plano[xAgent][yAgent + 1] == "go"
+				|| plano[xAgent][yAgent - 1] == "go"
+				|| plano[xAgent][yAgent] == "go" 
+				|| estadoAgente.getCeldasVisitadas() >= 7)) {
 			return true;
-		} else {
+		} 
+		else {
 			return false;
 		}
 	}
